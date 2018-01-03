@@ -11,50 +11,56 @@
 <body class="site-container">
 	<header>
 		<div class="return-to-site">
-			<a href="https://www.youtube.com/watch?v=GSyk89nUl5M">Return to ladmates.com</a>
+			<a href="">Return to ladmates.com</a>
 		</div>
+		<h1 class="a11y">Ladmates Help</h1>
 		<a href="/index.html">
 			<picture class="site-logo">
 				<source media="(min-width: 37.5rem)" srcset="/img/logo-wide.png">
-				<img src="/img/logo-narrow.png" alt="Ladmates logo">
-			</picture>
-		</a>
-		<label for="site-search" class="search-bar">Search
-			<input type="search" id="site-search"></input>
+					<img src="/img/logo-narrow.png" alt="Ladmates logo">
+				</picture>
+			</a>
+		<form id="site-search">
+			<label for="search-bar" class="search-bar">Search
+				<input type="search" id="search-bar">
+			</label>
 			<button type="submit" form="site-search"><span class="a11y">Submit Search</span></button>
-		</label>
+		</form>
 	</header>
 
 	<main>
 		<button>Select a topic&hellip;</button>
 		<nav class="topics">
+			<h2 class="a11y">Topics</h2>
 			<ul class="no-bullets">
-				<li>Account</li>
-				<li>Sports</li>
-				<li>Casino</li>
-				<li>Games</li>
-				<li>Exchange</li>
-				<li>Poker</li>
-				<li>Bingo</li>
-				<li>Lotto</li>
-				<li>Contact Us</li>
-				<li>Close &#x1f5d9;</li>
+				<li><a href="">Account</a></li>
+				<li><a href="">Sports</a></li>
+				<li><a href="">Casino</a></li>
+				<li><a href="">Games</a></li>
+				<li><a href="">Exchange</a></li>
+				<li><a href="">Poker</a></li>
+				<li><a href="">Bingo</a></li>
+				<li><a href="">Lotto</a></li>
+				<li><a href="">Contact Us</a></li>
 			</ul>
+			<button>Close &#x1f5d9;</button>
 		</nav>
 		<section class="results">
+			<h2 class="a11y">Articles</h2>
 			<ul class="no-bullets">
-				<li>result1</li>
-				<li>result2</li>
-				<li>result3</li>
-				<li>result4</li>
-				<li>result5</li>
-				<li>result6</li>
-				<li>result7</li>
-				<li>result8</li>
-				<li>result9</li>
-				<li>result10</li>
+				<li><a href="">result1</a></li>
+				<li><a href="">result2</a></li>
+				<li><a href="">result3</a></li>
+				<li><a href="">result4</a></li>
+				<li><a href="">result5</a></li>
+				<li><a href="">result6</a></li>
+				<li><a href="">result7</a></li>
+				<li><a href="">result8</a></li>
+				<li><a href="">result9</a></li>
+				<li><a href="">result10</a></li>
 			</ul>
 			<nav>
+				<h3 class="a11y">Pagination</h3>
 				<button title="First">&#x23ea;</button>
 				<button title="Previous">&#x23f4;</button>
 				<span>1</span> of <span>7</span>
@@ -63,16 +69,95 @@
 			</nav>
 		</section>
 		<section class="contact">
+			<h2 class="a11y">Contact Us</h2>
 			<button>Chat</button>
 			<details>
-				<summary>Call</summary>
+				<summary class="button">Call</summary>
 				<ul class="no-bullets">
 					<li>UK: <a href="tel:08007316191">0800 731 6191</a></li>
 					<li>Outside the UK: <a href="tel:+442085152565">+44 208 515 2565</a></li>
 				</ul>
 			</details>
-			<a href="/contact">Email</a>
+			<a href="/contact" class="button">Email</a>
 		</section>
 	</main>
+
+	<footer>
+		<section class="page-links">
+			<h2 class="a11y">Important Articles</h2>
+			<a href="pages/terms-and-conditions" class="button">Terms and Conditions</a>
+			<a href="pages/responsible-gambling" class="button">Responsible Gambling</a>
+			<a href="pages/privacy-policy#cookies" class="button">Cookie Policy</a>
+		</section>
+		<section class="icons">
+			<h2 class="a11y">Gambling Information</h2>
+			<a href="">
+				<span class="a11y">18+</span>
+				<span class="18"></span>
+			</a>
+			<a href="">
+				<span class="a11y">ESSA Sports Betting Integrity</span>
+				<span class="essa"></span>
+			</a>
+			<a href="">
+				<span class="a11y">Gambling Therapy</span>
+				<span class="therapy"></span>
+			</a>
+			<a href="">
+				<span class="a11y">Gamcare</span>
+				<span class="gamcare"></span>
+			</a>
+			<a href="">
+				<span class="a11y">Government of Gibraltar</span>
+				<span class="gib"></span>
+			</a>
+			<a href="">
+				<span class="a11y">Responsible Gambling Trust</span>
+				<span class="trust"></span>
+			</a>
+			<a href="">
+				<span class="a11y">Gambling Commission</span>
+				<span class="commission"></span>
+			</a>
+		</section>
+		<section class="about">
+			<h2>About Ladmates</h2>
+			<ul class="no-bullets">
+				<li><a href="">About Us</a></li>
+				<li><a href="">Affiliates</a></li>
+				<li><a href="">Investor Centre</a></li>
+				<li><a href="">Restricted Territories</a></li>
+			</ul>
+		</section>
+		<section class="quick-links">
+			<h2>Quick Links</h2>
+			<ul class="no-bullets">
+				<li><a href="">Ladmates.com</a></li>
+				<li><a href="">Shop Locator</a></li>
+				<li><a href="">Other Ways To Bet</a></li>
+				<li><a href="">The Grid</a></li>
+			</ul>
+		</section>
+		<section class="social">
+			<h2 class="a11y">Social Media</h2>
+			<a href="">
+				<span class="a11y">Facebook</span>
+				<span class="facebook"></span>
+			</a>
+			<a href="">
+				<span class="a11y">Twitter</span>
+				<span class="twitter"></span>
+			</a>
+			<a href="">
+				<span class="a11y">Youtube</span>
+				<span class="youtube"></span>
+			</a>
+		</section>
+		<section class="copyright">
+			<h2 class="a11y">Copyright</h2>
+			<p><small>Ladmates Betting &amp; Gaming Ltd. is licensed (<a href="">licence no. 0000</a>) and regulated by the British Gambling Commission for persons gambling in Great Britain and LM International Limited, Suites 0-0, 0th Floor, Europort, Gibraltar are licensed (RGL Nos. 000, 000) by the Government of Gibraltar and regulated by the Gibraltar Gambling Commissioner.</small></p>
+			<p><small>Copyright &copy; 2018 Ladmates</small></p>
+		</section>
+	</footer>
 </body>
 </html>
