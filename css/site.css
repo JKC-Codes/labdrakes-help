@@ -199,7 +199,7 @@
 		list-style-type: lower-roman;
 	}
 
-	ul.no-bullet {
+	ul.no-bullets {
 		list-style-type: none;
 		padding-left: 0;
 	}

@@ -1,2 +1,2 @@
-# ladmates-help
-A help site for fictional bookmaker ladmates.com
+# labdrakes-help
+A help site for fictional bookmaker labdrakes.com
