@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,166 +9,169 @@
 	<link rel="stylesheet" href="css/normalise.css">
 	<link rel="stylesheet" href="css/site.cs">
 </head>
+
 <body class="site-container">
-	<header>
-		<div class="return-to-site">
-			<a href="">Return to labdrakes.com</a>
-		</div>
-		<h1 class="a11y">Labdrakes Help</h1>
-		<a href="/index.html">
-			<picture class="site-logo">
-				<source media="(min-width: 37.5rem)" srcset="img/logo-wide.png">
-				<img src="img/logo-narrow.png" alt="Labdrakes logo">
-			</picture>
-		</a>
-		<form id="site-search">
-			<label for="search-bar" class="search-bar">Search
-				<input type="search" id="search-bar">
-			</label>
-			<button type="submit" form="site-search"><span class="a11y">Submit Search</span></button>
-		</form>
-	</header>
 
-	<main>
-		<button>Select a topic&hellip;</button>
-		<nav class="topics">
-			<h2 class="a11y">Topics</h2>
-			<button>Account</button>
-			<button>Sports</button>
-			<button>Casino</button>
-			<button>Games</button>
-			<button>Exchange</button>
-			<button>Poker</button>
-			<button>Bingo</button>
-			<button>Lotto</button>
-			<button>Contact Us</button>
-			<button>Close &#x1f5d9;</button>
+<header>
+	<div class="return-to-site">
+		<a href="">Return to labdrakes.com</a>
+	</div>
+	<h1 class="a11y">Labdrakes Help</h1>
+	<a href="/index.html">
+		<picture class="site-logo">
+			<source media="(min-width: 37.5rem)" srcset="img/logo-wide.png">
+			<img src="img/logo-narrow.png" alt="Labdrakes logo">
+		</picture>
+	</a>
+	<form id="site-search">
+		<label for="search-bar" class="search-bar">Search
+			<input type="search" id="search-bar">
+		</label>
+		<button type="submit" form="site-search"><span class="a11y">Submit Search</span></button>
+	</form>
+</header>
+
+<main>
+	<button>Select a topic&hellip;</button>
+	<nav class="topics">
+		<h2 class="a11y">Topics</h2>
+		<button>Account</button>
+		<button>Sports</button>
+		<button>Casino</button>
+		<button>Games</button>
+		<button>Exchange</button>
+		<button>Poker</button>
+		<button>Bingo</button>
+		<button>Lotto</button>
+		<button>Contact Us</button>
+		<button>Close &#x1f5d9;</button>
+	</nav>
+	<section class="results">
+		<h2 class="a11y">Articles</h2>
+		<ul class="no-bullets">
+			<li><a href="">result1</a></li>
+			<li><a href="">result2</a></li>
+			<li><a href="">result3</a></li>
+			<li><a href="">result4</a></li>
+			<li><a href="">result5</a></li>
+			<li><a href="">result6</a></li>
+			<li><a href="">result7</a></li>
+			<li><a href="">result8</a></li>
+			<li><a href="">result9</a></li>
+			<li><a href="">result10</a></li>
+		</ul>
+		<nav>
+			<h3 class="a11y">Pagination</h3>
+			<button title="First"><span class="a11y">First</span></button>
+			<button title="Previous"><span class="a11y">Previous</span></button>
+			<span id="pageLow">1</span> of <span id="pageHigh">1</span>
+			<button title="Next"><span class="a11y">Next</span></button>
+			<button title="Last"><span class="a11y">Last</span></button>
 		</nav>
-		<section class="results">
-			<h2 class="a11y">Articles</h2>
-			<ul class="no-bullets">
-				<li><a href="">result1</a></li>
-				<li><a href="">result2</a></li>
-				<li><a href="">result3</a></li>
-				<li><a href="">result4</a></li>
-				<li><a href="">result5</a></li>
-				<li><a href="">result6</a></li>
-				<li><a href="">result7</a></li>
-				<li><a href="">result8</a></li>
-				<li><a href="">result9</a></li>
-				<li><a href="">result10</a></li>
-			</ul>
-			<nav>
-				<h3 class="a11y">Pagination</h3>
-				<button title="First">&#x23ea;</button>
-				<button title="Previous">&#x23f4;</button>
-				<span>1</span> of <span>7</span>
-				<button title="Next">&#x23f5;</button>
-				<button title="Last">&#x23e9;</button>
-			</nav>
-		</section>
-	</main>
+	</section>
+</main>
 
-	<aside>
-		<section class="contact">
-			<h2 class="a11y">Contact Us</h2>
-			<ul class="no-bullets">
-				<li><button>Chat</button></li>
-				<li><details>
-						<summary class="button">Call</summary>
-						<ul class="no-bullets">
-							<li>UK: <a href="tel:08007316191">0800 731 6191</a></li>
-							<li>Outside the UK: <a href="tel:+442085152565">+44 208 515 2565</a></li>
-						</ul>
-					</details>
-				</li>
-				<li><a href="pages/contact.html" class="button">Email</a></li>
-			</ul>
-		</section>
-	</aside>
+<aside>
+	<section class="contact">
+		<h2 class="a11y">Contact Us</h2>
+		<ul class="no-bullets">
+			<li><button>Chat</button></li>
+			<li><details>
+					<summary class="button">Call</summary>
+					<ul class="no-bullets">
+						<li>UK: <a href="tel:08007316191">0800 731 6191</a></li>
+						<li>Outside the UK: <a href="tel:+442085152565">+44 208 515 2565</a></li>
+					</ul>
+				</details>
+			</li>
+			<li><a href="pages/contact.html" class="button">Email</a></li>
+		</ul>
+	</section>
+</aside>
 
-	<footer>
-		<section class="page-links">
-			<h2 class="a11y">Important Articles</h2>
-			<ul class="no-bullets">
-				<li><a href="pages/terms-and-conditions" class="button">Terms and Conditions</a></li>
-				<li><a href="pages/responsible-gambling" class="button">Responsible Gambling</a></li>
-				<li><a href="pages/privacy-policy#cookies" class="button">Cookie Policy</a></li>
-			</ul>
-		</section>
-		<section class="icons">
-			<h2 class="a11y">Gambling Information</h2>
-			<ul>
-				<li><a href="">
-					<span class="a11y">18+ Policy</span>
-					<span class="18"></span>
-				</a></li>
-				<li><a href="">
-					<span class="a11y">ESSA Sports Betting Integrity</span>
-					<span class="essa"></span>
-				</a></li>
-				<li><a href="">
-					<span class="a11y">Gambling Therapy</span>
-					<span class="therapy"></span>
-				</a></li>
-				<li><a href="">
-					<span class="a11y">Gamcare</span>
-					<span class="gamcare"></span>
-				</a></li>
-				<li><a href="">
-					<span class="a11y">Government of Gibraltar</span>
-					<span class="gib"></span>
-				</a></li>
-				<li><a href="">
-					<span class="a11y">Responsible Gambling Trust</span>
-					<span class="trust"></span>
-				</a></li>
-				<li><a href="">
-					<span class="a11y">Gambling Commission</span>
-					<span class="commission"></span>
-				</a></li>
-			</ul>
-		</section>
-		<section class="about">
-			<h2>About Labdrakes</h2>
-			<ul class="no-bullets">
-				<li><a href="">About Us</a></li>
-				<li><a href="">Affiliates</a></li>
-				<li><a href="">Investor Centre</a></li>
-				<li><a href="">Restricted Territories</a></li>
-			</ul>
-		</section>
-		<section class="quick-links">
-			<h2>Quick Links</h2>
-			<ul class="no-bullets">
-				<li><a href="">Labdrakes.com</a></li>
-				<li><a href="">Shop Locator</a></li>
-				<li><a href="">Other Ways To Bet</a></li>
-				<li><a href="">The Grid</a></li>
-			</ul>
-		</section>
-		<section class="social">
-			<h2 class="a11y">Social Media</h2>
-			<ul>
-				<li><a href="">
-					<span class="a11y">Facebook</span>
-					<span class="facebook"></span>
-				</a></li>
-				<li><a href="">
-					<span class="a11y">Twitter</span>
-					<span class="twitter"></span>
-				</a></li>
-				<li><a href="">
-					<span class="a11y">Youtube</span>
-					<span class="youtube"></span>
-				</a></li>
-			</ul>
-		</section>
-		<section class="legal">
-			<h2 class="a11y">Legal</h2>
-			<p><small>Labdrakes Betting &amp; Gaming Ltd. is licensed (<a href="">licence no. 0000</a>) and regulated by the British Gambling Commission for persons gambling in Great Britain and LM International Limited, Suites 0-0, 0th Floor, Europort, Gibraltar are licensed (RGL Nos. 000, 000) by the Government of Gibraltar and regulated by the Gibraltar Gambling Commissioner.</small></p>
-			<p><small>Copyright &copy; 2018 Labdrakes</small></p>
-		</section>
-	</footer>
+<footer>
+	<section class="page-links">
+		<h2 class="a11y">Important Articles</h2>
+		<ul class="no-bullets">
+			<li><a href="pages/terms-and-conditions" class="button">Terms and Conditions</a></li>
+			<li><a href="pages/responsible-gambling" class="button">Responsible Gambling</a></li>
+			<li><a href="pages/privacy-policy#cookies" class="button">Cookie Policy</a></li>
+		</ul>
+	</section>
+	<section class="icons">
+		<h2 class="a11y">Gambling Information</h2>
+		<ul>
+			<li><a href="">
+				<span class="a11y">18+ Policy</span>
+				<span class="18"></span>
+			</a></li>
+			<li><a href="">
+				<span class="a11y">ESSA Sports Betting Integrity</span>
+				<span class="essa"></span>
+			</a></li>
+			<li><a href="">
+				<span class="a11y">Gambling Therapy</span>
+				<span class="therapy"></span>
+			</a></li>
+			<li><a href="">
+				<span class="a11y">Gamcare</span>
+				<span class="gamcare"></span>
+			</a></li>
+			<li><a href="">
+				<span class="a11y">Government of Gibraltar</span>
+				<span class="gib"></span>
+			</a></li>
+			<li><a href="">
+				<span class="a11y">Responsible Gambling Trust</span>
+				<span class="trust"></span>
+			</a></li>
+			<li><a href="">
+				<span class="a11y">Gambling Commission</span>
+				<span class="commission"></span>
+			</a></li>
+		</ul>
+	</section>
+	<section class="about">
+		<h2>About Labdrakes</h2>
+		<ul class="no-bullets">
+			<li><a href="">About Us</a></li>
+			<li><a href="">Affiliates</a></li>
+			<li><a href="">Investor Centre</a></li>
+			<li><a href="">Restricted Territories</a></li>
+		</ul>
+	</section>
+	<section class="quick-links">
+		<h2>Quick Links</h2>
+		<ul class="no-bullets">
+			<li><a href="">Labdrakes.com</a></li>
+			<li><a href="">Shop Locator</a></li>
+			<li><a href="">Other Ways To Bet</a></li>
+			<li><a href="">The Grid</a></li>
+		</ul>
+	</section>
+	<section class="social">
+		<h2 class="a11y">Social Media</h2>
+		<ul>
+			<li><a href="">
+				<span class="a11y">Facebook</span>
+				<span class="facebook"></span>
+			</a></li>
+			<li><a href="">
+				<span class="a11y">Twitter</span>
+				<span class="twitter"></span>
+			</a></li>
+			<li><a href="">
+				<span class="a11y">Youtube</span>
+				<span class="youtube"></span>
+			</a></li>
+		</ul>
+	</section>
+	<section class="legal">
+		<h2 class="a11y">Legal</h2>
+		<p><small>Labdrakes Betting &amp; Gaming Ltd. is licensed (<a href="">licence no. 0000</a>) and regulated by the British Gambling Commission for persons gambling in Great Britain and LM International Limited, Suites 0-0, 0th Floor, Europort, Gibraltar are licensed (RGL Nos. 000, 000) by the Government of Gibraltar and regulated by the Gibraltar Gambling Commissioner.</small></p>
+		<p><small>Copyright &copy; 2018 Labdrakes</small></p>
+	</section>
+</footer>
+
 </body>
 </html>
