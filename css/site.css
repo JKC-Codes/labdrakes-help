@@ -212,55 +212,29 @@
 
 /*Tables*/
 
-table {
-	border-collapse: collapse;
-}
+	table {
+		border-collapse: collapse;
+	}
 
-th,
-td {
-	padding: 1rem 1.5rem;
-}
+	th,
+	td {
+		padding: 1rem 1.5rem;
+	}
 
-th[scope=col] {
-	border-bottom: 0.0625rem solid var(--colour-brand);
-}
+	th[scope=col] {
+		border-bottom: 0.0625rem solid var(--colour-brand);
+	}
+
 
 /*Images*/
 
 	img {
-		align-self: start;
-		justify-self: start;
-		width: auto;
-		height: auto;
-		max-width: 100%;
-		max-height: 100%;
-	}
-
-	figure {
-		display: block;
-		margin: 0.5rem 1rem 1rem 0rem;
+		max-width:100%;
 	}
 
 	figcaption {
 		font-size: 0.75em;
-		color: var(--colour-dark-light);
-		display: block;
 	}
-
-	figure a {
-		text-decoration: none;
-	}
-
-	figure a:link,
-	figure a:visited,
-	figure a:hover {
-		color: var(--colour-dark-light);
-	}
-
-	figure a:hover {
-		text-decoration: underline;
-	}
-
 
 /*Buttons*/
 
@@ -268,7 +242,7 @@ th[scope=col] {
 	.button {
 		display: block;
 		cursor: pointer;
-		background-color: var(--colour-alt-dark);
+		background-color: var(--colour-alt);
 		padding: 0.5rem 1rem;
 		min-width: 3rem;
 		line-height: 2rem;
@@ -281,11 +255,11 @@ th[scope=col] {
 
 	button:active,
 	.button:active {
-		background-color: var(--colour-alt-light);
+		background-color: var(--colour-alt);
 	}
 
 	button[disabled] {
-		background-color: var(--colour-light-med-light);
+		background-color: var(--colour-light);
 		cursor: default;
 	}
 
@@ -302,7 +276,7 @@ th[scope=col] {
 	hr {
 		margin: 0.5rem 0;
 		border: none;
-		border-top: 0.0625rem solid var(--colour-brand-light);
+		border-top: 0.0625rem solid var(--colour-brand);
 	}
 
 	input {
