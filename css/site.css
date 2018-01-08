@@ -3,6 +3,7 @@
 ========================================*/
 
 	:root {
+		--font-default: 100%/1.5 Arial, Helvetica, sans-serif;
 		--colour-brand: #cd2814;
 		--colour-alt: #282832;
 		--colour-light: #e6e6e6;
@@ -19,7 +20,7 @@
 
 	html {
 		color: #333;
-		font: 100%/1.5 Arial, Helvetica, sans-serif;
+		font: var(--font-default);
 	}
 
 	body {
@@ -240,32 +241,35 @@
 
 	button,
 	.button {
-		display: block;
+		display: inline-block;
+		box-sizing: border-box;
+		font: var(--font-default);
 		cursor: pointer;
-		background-color: var(--colour-alt);
-		padding: 0.5rem 1rem;
+		border: none;
+		padding: 0.75rem var(--gap-left);
 		min-width: 3rem;
-		line-height: 2rem;
+		min-height: 3rem;
+		background-color: var(--colour-alt);
 		color: #fff;
 		text-transform: uppercase;
-		text-decoration: none;
-		text-align: center;
 		border-radius: var(--border-rounded);
 	}
 
 	button:active,
 	.button:active {
-		background-color: var(--colour-alt);
+		filter: brightness(150%);
+		box-shadow: inset 1px 1px var(--colour-light), inset -1px -1px var(--colour-light);
 	}
 
 	button[disabled] {
-		background-color: var(--colour-light);
 		cursor: default;
+		background-color: var(--colour-light);
+		color: grey;
 	}
 
 	a.button,
-	a.button:visited,
-	a.button:link {
+	a:visited.button,
+	a:link.button {
 		color: #fff;
 		text-decoration: none;
 	}
