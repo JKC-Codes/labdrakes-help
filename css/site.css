@@ -4,6 +4,7 @@
 
 	:root {
 		--font-default: 100%/1.5 Arial, Helvetica, sans-serif;
+		--colour-default: #333;
 		--colour-brand: #cd2814;
 		--colour-alt: #282832;
 		--colour-light: #e6e6e6;
@@ -19,7 +20,7 @@
 /*Layout*/
 
 	html {
-		color: #333;
+		color: var(--colour-default);
 		font: var(--font-default);
 	}
 
@@ -207,7 +208,7 @@
 		margin: 0.5rem 0;
 		padding-left: var(--gap-left);
 		border-radius: var(--border-rounded);
-		box-shadow: inset 0.0625rem 0rem var(--colour-light), 0.0625rem 0.0625rem var(--colour-light);
+		box-shadow: inset 0.0625rem -0.0625rem var(--colour-light), -0.0625rem 0 var(--colour-light);
 	}
 
 
@@ -284,11 +285,20 @@
 	}
 
 	input {
+		font: var(--font-default);
+		color: var(--colour-default);
 		box-sizing: border-box;
-		padding: 0.5rem 1rem;
+		border: 0.0625rem solid #3b3b3b;
 		border-radius: var(--border-rounded);
+		padding: 0.5rem 1rem;
 		min-height: 3rem;
-		width: 100%;
+		min-width: 3rem;
+	}
+
+	input:focus {
+		outline: none;
+		border-color: rgba(59,59,59,0.5);
+		box-shadow: inset 1px 1px rgba(0,0,0,0.5), inset -1px -1px rgba(0,0,0,0.5);
 	}
 
 
