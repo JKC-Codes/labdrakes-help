@@ -10,25 +10,26 @@
 	<link rel="stylesheet" href="css/site.css">
 </head>
 
-<body class="site-container">
+<body>
 
-<header>
-	<div class="return-to-site">
-		<a href="">Return to labdrakes.com</a>
+<header class="site">
+	<div class="return dark row">
+		<a href="#">Return to labdrakes.com</a>
 	</div>
 	<h1 class="a11y">Labdrakes Help</h1>
-	<a href="/index.html">
-		<picture class="site-logo">
-			<source media="(min-width: 37.5rem)" srcset="img/logo-wide.png">
-			<img src="img/logo-narrow.png" alt="Labdrakes logo">
-		</picture>
-	</a>
-	<form id="site-search">
-		<label for="search-bar" class="search-bar">Search
-			<input type="search" id="search-bar">
-		</label>
-		<button type="submit" form="site-search"><span class="a11y">Submit Search</span></button>
-	</form>
+	<div class="main row">
+		<a href="/index.html">
+			<picture>
+				<source media="(min-width: 37.5rem)" srcset="img/logo-wide.png">
+				<img class="logo" src="img/logo-narrow.png" alt="Labdrakes logo">
+			</picture>
+		</a>
+		<form id="site-search">
+			<label for="site-search-bar">Search the site:</label>
+			<input type="search" id="site-search-bar" placeholder="e.g. each way terms">
+			<button type="submit" form="site-search">Search</button>
+		</form>
+	</div>
 </header>
 
 <main>
@@ -91,7 +92,7 @@
 	</section>
 </aside>
 
-<footer>
+<footer class="site">
 	<section class="page-links">
 		<h2 class="a11y">Important Articles</h2>
 		<ul class="no-bullets">
