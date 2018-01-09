@@ -220,12 +220,15 @@
 		color: #fff;
 		text-transform: uppercase;
 		border-radius: var(--border-rounded);
+		box-shadow: 2px 2px rgba(0,0,0,0.2);
 	}
 
 	button:active,
 	.button:active {
-		filter: brightness(150%);
-		box-shadow: inset 1px 1px var(--colour-light), inset -1px -1px var(--colour-light);
+		filter: brightness(110%);
+		box-shadow: none;
+		transform: translate(0.0625rem, 0.0625rem);
+		box-shadow: -2px -2px rgba(0,0,0,0.2);
 	}
 
 	button[disabled] {
