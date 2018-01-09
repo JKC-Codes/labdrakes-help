@@ -362,7 +362,7 @@
 
 	header.site .main {
 		background-color: var(--colour-brand);
-		padding: 0.5rem;
+		padding: 1rem;
 		align-items: center;
 	}
 
@@ -379,7 +379,7 @@
 	header.site form {
 		position: relative;
 		width: 100%;
-		margin-left: 0.5rem;
+		margin-left: 1rem;
 	}
 
 	header.site label {
@@ -397,12 +397,13 @@
 	header.site button {
 		width: 3rem;
 		height: 3rem;
-		padding: 0.5rem;
+		padding: 0;
 		color: var(--colour-default);
-		font-size: 0.5em;
-		line-height: 3.5rem;
+		font-size: 0.75em;
+		line-height: 4.5rem;
+		text-transform: none;
 		border-left: 0.0625rem solid var(--colour-light);
-		background: url('/img/search.svg') 50% 0/1.25rem no-repeat content-box transparent;
+		background: url('/img/search.svg') 50% 25%/1.25rem no-repeat content-box transparent;
 		position: absolute;
 		right: 0;
 	}
