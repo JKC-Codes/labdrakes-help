@@ -5,9 +5,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Labdrakes Help</title>
-	<link rel="icon" href="img/favicon.png">
-	<link rel="stylesheet" href="css/normalise.css">
-	<link rel="stylesheet" href="css/site.css">
+	<link rel="icon" href="/img/favicon.png">
+	<link rel="stylesheet" href="/css/normalise.css">
+	<link rel="stylesheet" href="/css/site.css">
 </head>
 
 <body>
@@ -20,158 +20,160 @@
 	<div class="main row">
 		<a href="/index.html">
 			<picture>
-				<source media="(min-width: 37.5rem)" srcset="img/logo-wide.png">
-				<img class="logo" src="img/logo-narrow.png" alt="Labdrakes logo">
+				<source media="(min-width: 37.5rem)" srcset="/img/logo-wide.png">
+				<img class="logo" src="/img/logo-narrow.png" alt="Labdrakes logo">
 			</picture>
 		</a>
 		<form id="site-search">
 			<label for="site-search-bar">Search the site:</label>
-			<input type="search" id="site-search-bar" placeholder="e.g. each way terms">
-			<button type="submit" form="site-search">Search</button>
+			<input type="search" id="site-search-bar" placeholder="e.g. each way terms" required autofocus>
+			<button type="submit" form="site-search"><span class="text">Search</span></button>
 		</form>
 	</div>
 </header>
 
-<main>
-	<nav class="topics">
-		<details id="topicSelection">
-			<summary><h2>Select a topic</h2></summary>
-			<ul class="no-bullets">
-				<li><button>Account</button></li>
-				<li><button>Sports</button></li>
-				<li><button>Casino</button></li>
-				<li><button>Games</button></li>
-				<li><button>Exchange</button></li>
-				<li><button>Poker</button></li>
-				<li><button>Bingo</button></li>
-				<li><button>Lotto</button></li>
-				<li><button>Contact Us</button></li>
-			</ul>
-		</details>
-	</nav>
-	<section class="results">
-		<h2 class="a11y">Articles</h2>
-		<ul class="no-bullets">
-			<li><a href="">result1</a></li>
-			<li><a href="">result2</a></li>
-			<li><a href="">result3</a></li>
-			<li><a href="">result4</a></li>
-			<li><a href="">result5</a></li>
-			<li><a href="">result6</a></li>
-			<li><a href="">result7</a></li>
-			<li><a href="">result8</a></li>
-			<li><a href="">result9</a></li>
-			<li><a href="">result10</a></li>
-		</ul>
-		<nav>
-			<h3 class="a11y">Pagination</h3>
-			<button title="First"><span class="a11y">First</span></button>
-			<button title="Previous"><span class="a11y">Previous</span></button>
-			<span id="pageLow">1</span> of <span id="pageHigh">1</span>
-			<button title="Next"><span class="a11y">Next</span></button>
-			<button title="Last"><span class="a11y">Last</span></button>
+<div class="site-background">
+	<main>
+		<nav class="topics">
+			<details id="topicSelection">
+				<summary><h2>Select a topic</h2></summary>
+				<ul class="no-bullets">
+					<li><button>Account</button></li>
+					<li><button>Sports</button></li>
+					<li><button>Casino</button></li>
+					<li><button>Games</button></li>
+					<li><button>Exchange</button></li>
+					<li><button>Poker</button></li>
+					<li><button>Bingo</button></li>
+					<li><button>Lotto</button></li>
+					<li><button>Contact Us</button></li>
+				</ul>
+			</details>
 		</nav>
-	</section>
-</main>
+		<section class="results">
+			<h2 class="a11y">Articles</h2>
+			<ul class="no-bullets">
+				<li><a href="#">result1</a></li>
+				<li><a href="#">result2</a></li>
+				<li><a href="#">result3</a></li>
+				<li><a href="#">result4</a></li>
+				<li><a href="#">result5</a></li>
+				<li><a href="#">result6</a></li>
+				<li><a href="#">result7</a></li>
+				<li><a href="#">result8</a></li>
+				<li><a href="#">result9</a></li>
+				<li><a href="#">result10</a></li>
+			</ul>
+			<nav>
+				<h3 class="a11y">Pagination</h3>
+				<button title="First"><span class="a11y">First</span></button>
+				<button title="Previous"><span class="a11y">Previous</span></button>
+				<span id="pageLow">1</span> of <span id="pageHigh">1</span>
+				<button title="Next"><span class="a11y">Next</span></button>
+				<button title="Last"><span class="a11y">Last</span></button>
+			</nav>
+		</section>
+	</main>
 
-<aside>
-	<section class="contact">
-		<h2 class="a11y">Contact Us</h2>
-		<ul class="no-bullets">
-			<li><button>Chat</button></li>
-			<li><details>
-					<summary class="button">Call</summary>
-					<ul class="no-bullets">
-						<li>UK: <a href="tel:08007316191">0800 731 6191</a></li>
-						<li>Outside the UK: <a href="tel:+442085152565">+44 208 515 2565</a></li>
-					</ul>
-				</details>
-			</li>
-			<li><a href="pages/contact.html" class="button">Email</a></li>
-		</ul>
-	</section>
-</aside>
+	<aside>
+		<section class="contact">
+			<h2 class="a11y">Contact Us</h2>
+			<ul class="no-bullets">
+				<li><button>Chat</button></li>
+				<li><details>
+						<summary class="button">Call</summary>
+						<ul class="no-bullets">
+							<li>UK: <a href="tel:08007316191">0800 731 6191</a></li>
+							<li>Outside the UK: <a href="tel:+442085152565">+44 208 515 2565</a></li>
+						</ul>
+					</details>
+				</li>
+				<li><a href="/pages/contact.html" class="button">Email</a></li>
+			</ul>
+		</section>
+	</aside>
+</div>
 
-<footer class="site">
+<footer class="site dark">
 	<section class="page-links">
 		<h2 class="a11y">Important Articles</h2>
-		<ul class="no-bullets">
-			<li><a href="pages/terms-and-conditions" class="button">Terms and Conditions</a></li>
-			<li><a href="pages/responsible-gambling" class="button">Responsible Gambling</a></li>
-			<li><a href="pages/privacy-policy#cookies" class="button">Cookie Policy</a></li>
+		<ul class="no-bullets column">
+			<li><a href="/pages/terms-and-conditions.html" class="button">Terms and Conditions</a></li>
+			<li><a href="/pages/responsible-gambling.html" class="button">Responsible Gambling</a></li>
+			<li><a href="/pages/privacy-policy#cookies.html" class="button">Cookie Policy</a></li>
 		</ul>
 	</section>
 	<section class="icons">
 		<h2 class="a11y">Gambling Information</h2>
-		<ul class="no-bullets">
+		<ul class="no-bullets row">
 			<li><a href="">
 				<span class="a11y">18+ Policy</span>
-				<span class="18"></span>
+				<span class="icon over-18"></span>
 			</a></li>
 			<li><a href="">
 				<span class="a11y">ESSA Sports Betting Integrity</span>
-				<span class="essa"></span>
+				<span class="icon essa"></span>
 			</a></li>
 			<li><a href="">
 				<span class="a11y">Gambling Therapy</span>
-				<span class="therapy"></span>
+				<span class="icon therapy"></span>
 			</a></li>
 			<li><a href="">
 				<span class="a11y">Gamcare</span>
-				<span class="gamcare"></span>
+				<span class="icon gamcare"></span>
 			</a></li>
 			<li><a href="">
 				<span class="a11y">Government of Gibraltar</span>
-				<span class="gib"></span>
+				<span class="icon gib"></span>
 			</a></li>
 			<li><a href="">
 				<span class="a11y">Responsible Gambling Trust</span>
-				<span class="trust"></span>
+				<span class="icon trust"></span>
 			</a></li>
 			<li><a href="">
 				<span class="a11y">Gambling Commission</span>
-				<span class="commission"></span>
+				<span class="icon commission"></span>
 			</a></li>
 		</ul>
 	</section>
 	<section class="about">
-		<h2>About Labdrakes</h2>
+		<h2 class="h3">About Labdrakes</h2>
 		<ul class="no-bullets">
-			<li><a href="">About Us</a></li>
-			<li><a href="">Affiliates</a></li>
-			<li><a href="">Investor Centre</a></li>
-			<li><a href="">Restricted Territories</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Affiliates</a></li>
+			<li><a href="#">Investor Centre</a></li>
+			<li><a href="#">Restricted Territories</a></li>
 		</ul>
 	</section>
 	<section class="quick-links">
-		<h2>Quick Links</h2>
+		<h2 class="h3">Quick Links</h2>
 		<ul class="no-bullets">
-			<li><a href="">Labdrakes.com</a></li>
-			<li><a href="">Shop Locator</a></li>
-			<li><a href="">Other Ways To Bet</a></li>
-			<li><a href="">The Grid</a></li>
+			<li><a href="#">Labdrakes.com</a></li>
+			<li><a href="#">Shop Locator</a></li>
+			<li><a href="#">Other Ways To Bet</a></li>
+			<li><a href="#">The Grid</a></li>
 		</ul>
 	</section>
 	<section class="social">
 		<h2 class="a11y">Social Media</h2>
-		<ul class="no-bullets">
+		<ul class="no-bullets row">
 			<li><a href="">
 				<span class="a11y">Facebook</span>
-				<span class="facebook"></span>
+				<span class="icon facebook"></span>
 			</a></li>
 			<li><a href="">
 				<span class="a11y">Twitter</span>
-				<span class="twitter"></span>
+				<span class="icon twitter"></span>
 			</a></li>
 			<li><a href="">
 				<span class="a11y">Youtube</span>
-				<span class="youtube"></span>
+				<span class="icon youtube"></span>
 			</a></li>
 		</ul>
 	</section>
 	<section class="legal">
 		<h2 class="a11y">Legal</h2>
-		<p><small>Labdrakes Betting &amp; Gaming Ltd. is licensed (<a href="">licence no. 0000</a>) and regulated by the British Gambling Commission for persons gambling in Great Britain and LM International Limited, Suites 0-0, 0th Floor, Europort, Gibraltar are licensed (RGL Nos. 000, 000) by the Government of Gibraltar and regulated by the Gibraltar Gambling Commissioner.</small></p>
+		<p><small>Labdrakes Betting &amp; Gaming Ltd. is licensed (<a href="#">licence no. 0000</a>) and regulated by the British Gambling Commission for persons gambling in Great Britain and LM International Limited, Suites 0-0, 0th Floor, Europort, Gibraltar are licensed (RGL Nos. 000, 000) by the Government of Gibraltar and regulated by the Gibraltar Gambling Commissioner.</small></p>
 		<p><small>Copyright &copy; 2018 Labdrakes</small></p>
 	</section>
 </footer>
