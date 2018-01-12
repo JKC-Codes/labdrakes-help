@@ -168,6 +168,7 @@
 		margin: 0.5rem 0;
 		background-color: var(--colour-light);
 		border-radius: var(--border-rounded);
+		box-shadow: var(--shadow-default);
 	}
 
 	details[open] summary {
@@ -178,6 +179,7 @@
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
 		margin-left: calc(var(--gap-left) * -1);
+		box-shadow: none;
 	}
 
 	details[open] :nth-child(2) {
