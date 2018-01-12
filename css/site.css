@@ -361,7 +361,8 @@
 	Site Template
 ========================================*/
 
-	html {
+	html,
+	body {
 		color: var(--colour-default);
 		font: var(--font-default);
 	}
