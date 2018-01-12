@@ -1,0 +1,69 @@
+/*========================================
+	Layout
+========================================*/
+
+	main.browse .topics,
+	main.browse .results,
+	aside.browse .contact {
+		background: #fff;
+		padding: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	aside.browse .contact {
+		margin-bottom: 0;
+	}
+
+	@media (min-width: 37.5rem) {
+		main.browse .topics {
+			background: none;
+		}
+	}
+
+
+/*========================================
+	Topics
+========================================*/
+
+	main.browse .topics summary {
+		background-color: var(--colour-alt);
+		width: auto;
+		color: #fff;
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	main.browse .topics details[open] summary {
+		margin-bottom: 1rem;
+	}
+
+	main.browse .topics summary h2 {
+		font-size: 1.46em;
+		text-transform: uppercase;
+		margin: 0;
+		display: inline;
+	}
+
+	main.browse .topics details[open] {
+		padding: 0 var(--gap-left) var(--gap-left) var(--gap-left);
+		margin: 0;
+	}
+
+	main.browse .topics details[open] summary {
+		width: calc(100% + var(--gap-left) - 0.25rem);
+	}
+
+	main.browse .topics ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	main.browse .topics button,
+	main.browse .topics .button {
+		width: 100%;
+	}
+
+	main.browse .topics button {
+		margin-bottom: 1rem;
+	}
