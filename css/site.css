@@ -466,10 +466,10 @@
 	@media (min-width: 37.5rem) {
 		footer.site {
 			grid-template-areas:
-			"page-links about quick-links"
-			"page-links . social"
-			"icons icons social"
-			"legal legal legal";
+			"page-links page-links about quick-links"
+			"page-links page-links . social"
+			"icons icons icons social"
+			"legal legal legal legal";
 			grid-row-gap: 0.5rem;
 		}
 
@@ -585,7 +585,7 @@
 		}
 	}
 
-	@media (min-width: 62.5rem) {
+	@media (min-width: 63rem) {
 		footer.site .icons ul {
 			grid-template: 1fr/repeat(24,1fr);
 		}
