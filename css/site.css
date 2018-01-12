@@ -454,7 +454,7 @@
 		padding: 1rem;
 		font-size: 90%;
 		display: grid;
-		grid-template:
+		grid-template-areas:
 			"page-links page-links"
 			"icons icons"
 			"about quick-links"
@@ -465,7 +465,7 @@
 
 	@media (min-width: 37.5rem) {
 		footer.site {
-			grid-template:
+			grid-template-areas:
 			"page-links about quick-links"
 			"page-links . social"
 			"icons icons social"
