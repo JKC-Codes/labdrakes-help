@@ -524,8 +524,15 @@
 	footer.site .icons .icon,
 	footer.site .social .icon {
 		display: inline-block;
-		background: url('/img/footer-icons.png') 0 0/36.09375rem 5.5625rem;
+		background: url('/img/footer-icons-1x.png') 0 0/36.09375rem 5.5625rem;
 		height: 2.5rem;
+	}
+
+	@media (min-resolution: 1.5dppx) {
+		footer.site .icons .icon,
+		footer.site .social .icon {
+			background-image: url('/img/footer-icons-2x.png');
+		}
 	}
 
 	footer.site .icons .over-18 {
