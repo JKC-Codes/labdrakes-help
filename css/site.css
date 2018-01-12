@@ -417,6 +417,7 @@
 		width: 100%;
 		padding-right: 3.5rem;
 		border: 0;
+		margin-right: -0.27734375rem; /*fix for button wrapping on Chrome*/
 	}
 
 	header.site button {
@@ -452,6 +453,54 @@
 		padding: 1rem;
 		font-size: 90%;
 		display: grid;
+		grid-template:
+			"page-links page-links"
+			"icons icons"
+			"about quick-links"
+			"social social"
+			"legal legal";
+		grid-gap: 2rem;
+	}
+
+	@media (min-width: 37.5rem) {
+		footer.site {
+			grid-template:
+			"page-links about quick-links"
+			"page-links . social"
+			"icons icons social"
+			"legal legal legal";
+			grid-row-gap: 0.5rem;
+		}
+
+		footer.site .social {
+			max-width: 250px;
+			justify-self: center;
+		}
+	}
+
+	footer.site .page-links {
+		grid-area: page-links;
+	}
+
+	footer.site .icons {
+		grid-area: icons;
+	}
+
+	footer.site .about {
+		grid-area: about;
+	}
+
+	footer.site .quick-links {
+		grid-area: quick-links;
+	}
+
+	footer.site .social {
+		grid-area: social;
+		align-self: center;
+	}
+
+	footer.site .legal {
+		grid-area: legal;
 	}
 
 	footer.site ul {
@@ -459,28 +508,22 @@
 		margin: 0;
 	}
 
-	footer.site .page-links {
-		justify-content: space-between;
-	}
-
 	footer.site .page-links .button {
-		display: block;
 		margin-bottom: 1rem;
+		width: 100%;
 	}
 
-	footer.site .icons .row {
-		flex-wrap: wrap;
-		justify-content: space-around;
-	}
-
-	footer.site .icons .row > * {
-		margin: 0.5rem;
+	footer.site .icons ul {
+		display:grid;
+		grid-template: repeat(4,1fr)/repeat(6,1fr);
+		grid-row-gap: 1rem;
+		justify-items: center;
 	}
 
 	footer.site .icons .icon,
 	footer.site .social .icon {
 		display: inline-block;
-		background: url('/img/footer-icons.png') no-repeat;
+		background: url('/img/footer-icons.png');
 		background-size: 36.09375rem 5.5625rem;
 		height: 2.5rem;
 	}
@@ -488,40 +531,80 @@
 	footer.site .icons .over-18 {
 		width: 2.5rem;
 		background-position-x: 0rem;
+		grid-column: span 3;
 	}
 
 	footer.site .icons .essa {
 		width: 6.5rem;
 		background-position-x: -2.53125rem;
+		grid-column: span 3;
 	}
 
 	footer.site .icons .therapy {
 		width: 2.5625rem;
 		background-position-x: -9.03125rem;
+		grid-column: span 2;
 	}
 
 	footer.site .icons .gamcare {
 		width: 2.34375rem;
 		background-position-x: -11.59375rem;
+		grid-column: span 2;
 	}
 
 	footer.site .icons .gib {
 		width: 2.28125rem;
 		background-position-x: -13.9375rem;
+		grid-column: span 2;
 	}
 
 	footer.site .icons .trust {
 		width: 10.46875rem;
 		background-position-x: -16.21875rem;
+		grid-column: span 6;
 	}
 
 	footer.site .icons .commission {
 		width: 9.40625rem;
 		background-position-x: -26.6875rem;
+		grid-column: span 6;
+	}
+
+	@media (min-width: 23rem) {
+		footer.site .icons ul {
+			grid-template: repeat(2,1fr)/repeat(12,1fr);
+		}
+
+		footer.site .icons .over-18 {
+			grid-column: span 2;
+		}
+
+		footer.site .icons .essa {
+			grid-column: span 4;
+		}
+	}
+
+	@media (min-width: 62.5rem) {
+		footer.site .icons ul {
+			grid-template: 1fr/repeat(24,1fr);
+		}
 	}
 
 	footer.site h2 {
 			color: #a6a6a6;
+			margin: 0 0 0.25em;
+	}
+
+	footer.site .about {
+		justify-self: end;
+	}
+
+	footer.site .quick-links {
+		justify-self: center;
+	}
+
+	footer.site .social ul {
+		justify-content: space-around;
 	}
 
 	footer.site .social .icon {
@@ -542,9 +625,4 @@
 
 	footer.site .social .youtube {
 		background-position-x: -6.125rem;
-	}
-
-	footer.site .icons a,
-	footer.site .social a {
-		display: contents;
 	}
