@@ -7,11 +7,11 @@
 	aside.browse .contact {
 		background: #fff;
 		padding: 1rem;
-		margin-bottom: 1rem;
+		margin-top: 1rem;
 	}
 
-	aside.browse .contact {
-		margin-bottom: 0;
+	main.browse .topics {
+		margin-top: 0;
 	}
 
 	@media (min-width: 37.5rem) {
@@ -26,12 +26,15 @@
 ========================================*/
 
 	main.browse .topics summary {
+		box-sizing: border-box;
 		background-color: var(--colour-alt);
 		width: auto;
+		height: 3rem;
 		color: #fff;
 		text-align: center;
 		margin-top: 0;
 		margin-bottom: 0;
+		padding: 0;
 	}
 
 	main.browse .topics details[open] summary {
@@ -39,9 +42,6 @@
 	}
 
 	main.browse .topics summary h2 {
-		font-size: 1.46em;
-		text-transform: uppercase;
-		margin: 0;
 		display: inline;
 	}
 
@@ -51,7 +51,7 @@
 	}
 
 	main.browse .topics details[open] summary {
-		width: calc(100% + var(--gap-left) - 0.25rem);
+		width: calc(100% + (var(--gap-left) * 2));
 	}
 
 	main.browse .topics ul {
@@ -67,3 +67,114 @@
 	main.browse .topics button {
 		margin-bottom: 1rem;
 	}
+
+
+/*========================================
+	Articles
+========================================*/
+
+	main.browse .results ul {
+		padding: 0;
+		margin: 0 0 1rem;
+	}
+
+	main.browse .results li {
+		--border: 1px solid var(--colour-light);
+		border-bottom: var(--border);
+		padding: 1rem 0;
+	}
+
+	main.browse .results li:first-child {
+		border-top: var(--border);
+	}
+
+	main.browse .results a {
+		color: var(--colour-default);
+		display: block;
+		min-height: 3rem;
+		line-height: 3rem;
+	}
+
+	main.browse .results nav {
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	main.browse .results .page-count {
+		order: 2;
+	}
+
+	main.browse .results .backward {
+		order: 1;
+	}
+
+	main.browse .results .forward {
+		order: 3;
+	}
+
+	main.browse .results .first,
+	main.browse .results .next {
+		margin-right: 1rem;
+	}
+
+	@media (max-width: 25rem) {
+		main.browse .results nav {
+			font-size: 75%;
+		}
+
+		main.browse .results .page-text {
+			position: absolute;
+			top: auto;
+			left: -100vw;
+			width: 1px;
+			height: 1px;
+			margin: 0t;
+			border: 0;
+			padding: 0;
+			overflow: hidden;
+			clip-path: inset(50%);
+		}
+
+		main.browse .results .first,
+		main.browse .results .next {
+			margin-right: 0.25rem;
+		}
+	}
+
+	main.browse .results nav button {
+		box-sizing: border-box;
+		width: 3rem;
+		height: 3rem;
+		padding: 0.5rem;
+	}
+
+	main.browse .results nav button::before {
+		content: '';
+		display: block;
+		width: 2rem;
+		height: 2rem;
+		position: relative;
+		background-image: url('/img/navigation.svg');
+		background-size: 2rem;
+	}
+
+	main.browse .results .previous::before,
+	main.browse .results .next::before {
+		width: 1.5rem;
+		left: 50%;
+		background-position-x: -0.5rem;
+		transform: translatex(-50%);
+	}
+
+	main.browse .results .next::before {
+		transform: rotate(.5turn) translateX(50%);
+	}
+
+	main.browse .results .last::before {
+		transform: rotate(.5turn);
+	}
+
+/*========================================
+	Contact
+========================================*/
+

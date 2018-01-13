@@ -227,7 +227,6 @@
 		min-height: 3rem;
 		background-color: var(--colour-alt);
 		color: #fff;
-		text-transform: uppercase;
 		border-radius: var(--border-rounded);
 		box-shadow: var(--shadow-default);
 	}
@@ -360,13 +359,13 @@
 
 
 /*========================================
-	Site Template
+	Layout
 ========================================*/
 
-	html,
-	body {
+	html {
 		color: var(--colour-default);
 		font: var(--font-default);
+		overflow-wrap: break-word;
 	}
 
 	body {
@@ -381,7 +380,7 @@
 
 
 /*========================================
-	Site Header
+	Header
 ========================================*/
 
 	header.site .return {
@@ -449,7 +448,7 @@
 
 
 /*========================================
-	Site Footer
+	Footer
 ========================================*/
 
 	footer.site {

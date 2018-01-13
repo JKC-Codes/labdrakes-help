@@ -24,7 +24,7 @@
 		<a href="/index.html">
 			<picture>
 				<source media="(min-width: 37.5rem)" srcset="/img/logo-wide.png">
-				<img class="logo" src="/img/logo-narrow.png" alt="Labdrakes logo">
+				<img class="logo" src="/img/logo-narrow.png" alt="Home page">
 			</picture>
 		</a>
 		<form id="site-search">
@@ -39,8 +39,8 @@
 <div class="site-background">
 	<main class="browse">
 		<nav class="topics">
-			<details id="topicSelection">
-				<summary><h2>Select a topic</h2></summary>
+			<details>
+				<summary><h2 class="h3">Select a topic</h2></summary>
 				<ul class="no-bullets">
 					<li><button>Account</button></li>
 					<li><button>Sports</button></li>
@@ -69,21 +69,26 @@
 				<li><a href="#">result9</a></li>
 				<li><a href="#">result10</a></li>
 			</ul>
-			<nav>
+			<nav class="row">
 				<h3 class="a11y">Pagination</h3>
-				<button title="First"><span class="a11y">First</span></button>
-				<button title="Previous"><span class="a11y">Previous</span></button>
-				<span id="pageLow">1</span> of <span id="pageHigh">1</span>
-				<button title="Next"><span class="a11y">Next</span></button>
-				<button title="Last"><span class="a11y">Last</span></button>
+				<div class="page-count">
+					<span class="page-text">Page</span>
+					<span id="pageLow">1</span> of <span id="pageHigh">1</span>
+				</div>
+				<div class="backward">
+					<button title="First" class="first"><span class="a11y">First page</span></button><button title="Previous" class="previous"><span class="a11y">Previous page</span></button>
+				</div>
+				<div class="forward">
+					<button title="Next" class="next"><span class="a11y">Next page</span></button><button title="Last" class="last"><span class="a11y">Last page</span></button>
+				</div>
 			</nav>
 		</section>
 	</main>
 
 
-	<aside class="browse">
+	<aside class="browse hide-wide">
 		<section class="contact">
-			<h2 class="a11y">Contact Us</h2>
+			<h2>Contact Us</h2>
 			<ul class="no-bullets">
 				<li><button>Chat</button></li>
 				<li><details>
