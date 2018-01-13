@@ -232,7 +232,8 @@
 	}
 
 	button:active,
-	.button:active {
+	.button:active,
+	summary:active {
 		filter: brightness(110%);
 		transform: translate(0.0625rem, 0.0625rem);
 		box-shadow: var(--shadow-active);
