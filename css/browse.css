@@ -2,7 +2,6 @@
 	Layout
 ========================================*/
 
-	main.browse .topics,
 	main.browse .results,
 	aside.browse .contact {
 		background: #fff;
@@ -25,7 +24,13 @@
 	Topics
 ========================================*/
 
+	main.browse .topics {
+		margin: 1rem 0 2rem;
+	}
+
 	main.browse .topics summary {
+		display: block;
+		position: relative;
 		box-sizing: border-box;
 		background-color: var(--colour-alt);
 		width: auto;
@@ -37,15 +42,26 @@
 		padding: 0;
 	}
 
-	main.browse .topics details[open] summary {
-		margin-bottom: 1rem;
+	main.browse .topics summary::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 3rem;
+		height: 3rem;
+		background-image: url('/img/arrow.svg');
+	}
+
+	main.browse .topics details[open] summary::before {
+		transform: rotate(0.25turn);
 	}
 
 	main.browse .topics summary h2 {
-		display: inline;
+		font-size: 1.5rem;
+		line-height: 2;
 	}
 
 	main.browse .topics details[open] {
+		background-color: #fff;
 		padding: 0 var(--gap-left) var(--gap-left) var(--gap-left);
 		margin: 0;
 	}
@@ -65,7 +81,7 @@
 	}
 
 	main.browse .topics button {
-		margin-bottom: 1rem;
+		margin-top: 1rem;
 	}
 
 

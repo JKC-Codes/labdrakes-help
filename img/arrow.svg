@@ -22,7 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -50,7 +50,8 @@
      inkscape:current-layer="svg4"
      inkscape:pagecheckerboard="true" />
   <path
-     d="M14 20l10 10 10-10z"
+     d="M 19,35 29,25 19,15 Z"
      id="path2"
-     style="fill:#ffffff;fill-opacity:1" />
+     style="fill:#ffffff;fill-opacity:1"
+     inkscape:connector-curvature="0" />
 </svg>
