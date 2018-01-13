@@ -178,3 +178,27 @@
 	Contact
 ========================================*/
 
+	aside.browse .contact h2 {
+		text-align: center;
+		margin: 0 0 .5rem;
+	}
+
+	aside.browse .contact ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	aside.browse .contact button,
+	aside.browse .contact .button {
+		width: 100%;
+	}
+
+	aside.browse .contact details[open] summary {
+		width: calc(100% + 2rem);
+		margin-left: -1rem;
+		margin-bottom: 1rem;
+	}
+
+	aside.browse .contact details[open] {
+		padding: 0 1rem 1rem;
+	}
