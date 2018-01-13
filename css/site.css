@@ -635,3 +635,7 @@
 	footer.site .social .youtube {
 		background-position-x: -6.125rem;
 	}
+
+	footer.site .legal .copyright {
+		color: #fff;
+	}
