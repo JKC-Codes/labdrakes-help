@@ -84,6 +84,12 @@
 		margin: 0 0 1rem -1rem;
 	}
 
+	main.browse .topics details[disabled] summary {
+		filter: none;
+		transform: none;
+		box-shadow: none;
+	}
+
 	main.browse .topics ul {
 		padding: 0;
 		margin: 0;
