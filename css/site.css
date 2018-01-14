@@ -374,7 +374,7 @@
 		margin: 0 auto;
 	}
 
-	.site-background {
+	main {
 		background-color: var(--colour-light);
 		padding: 1rem;
 	}
