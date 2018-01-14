@@ -168,7 +168,7 @@
 	}
 
 	main.browse .results nav button::before {
-		content: '';
+		content: '\00a0';
 		display: block;
 		height: 3rem;
 		background: url('/img/arrow.svg') 0 center/1.125rem .75rem no-repeat;
@@ -220,7 +220,7 @@
 		margin-bottom: 0;
 	}
 
-	main.browse .topics summary::-webkit-details-marker {
+	aside.browse .contact summary::-webkit-details-marker {
 		display: none;
 	}
 
