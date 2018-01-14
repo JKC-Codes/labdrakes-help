@@ -21,7 +21,8 @@
 
 		main.browse .results {
 			grid-row: span 2;
-			}
+			min-height: 55rem;
+		}
 
 		main.browse .contact {
 			grid-row-start: 2;
@@ -142,6 +143,10 @@
 /*========================================
 	Articles
 ========================================*/
+
+	main.browse .results {
+		justify-content: space-between;
+	}
 
 	main.browse .results ul {
 		padding: 0;
