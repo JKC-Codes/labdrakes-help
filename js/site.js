@@ -8,18 +8,36 @@ function init() {
 // Always open topic widget on desktop and disable toggle
 
 var isWideScreen = window.matchMedia("(min-width: 37.5rem)");
+var toggleState;
 
 function checkIfWideScreen() {
 	if (isWideScreen.matches) {
+		saveToggleState(topicWidget);
 		openWidget(topicWidget);
 		disableWidget(topicWidget);
 	}
 	else {
+		loadToggleState(topicWidget);
 		enableWidget(topicWidget);
 	}
 }
 
 isWideScreen.addListener(checkIfWideScreen);
+
+function saveToggleState(id) {
+	if (id.hasAttribute("open")) {
+		toggleState = "isOpen";
+	}
+	else {
+		toggleState = "isClosed";
+	}
+}
+
+function loadToggleState(id) {
+	if (toggleState == "isClosed") {
+		id.removeAttribute("open");
+	}
+}
 
 function openWidget(id) {
 	id.open = true;
