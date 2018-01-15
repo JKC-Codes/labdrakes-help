@@ -13,15 +13,14 @@ var toggleState;
 function checkIfWideScreen() {
 	if (isWideScreen.matches) {
 		saveToggleState(topicWidget);
-		openWidget(topicWidget);
 		disableWidget(topicWidget);
+		openWidget(topicWidget);
 	}
 	else {
 		loadToggleState(topicWidget);
 		enableWidget(topicWidget);
 	}
 }
-
 isWideScreen.addListener(checkIfWideScreen);
 
 function saveToggleState(id) {
@@ -39,13 +38,10 @@ function loadToggleState(id) {
 	}
 }
 
-function openWidget(id) {
-	id.open = true;
-}
-
 function disableWidget(id) {
 	id.addEventListener('click', preventClick);
-	id.setAttribute("disabled","");
+	id.setAttribute("data-disabled","");
+	id.firstElementChild.setAttribute("tabindex","-1");
  }
 
 function preventClick(evt) {
@@ -54,5 +50,10 @@ function preventClick(evt) {
 
 function enableWidget(id) {
 	id.removeEventListener('click', preventClick);
-	id.removeAttribute("disabled");
+	id.removeAttribute("data-disabled");
+	id.firstElementChild.removeAttribute("tabindex");
  }
+
+ function openWidget(id) {
+	id.open = true;
+}
