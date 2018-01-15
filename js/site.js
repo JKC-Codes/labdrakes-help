@@ -41,7 +41,7 @@ function loadToggleState(id) {
 function disableWidget(id) {
 	id.addEventListener('click', preventClick);
 	id.setAttribute("data-disabled","");
-	id.firstElementChild.setAttribute("tabindex","-1");
+	id.getElementsByTagName("summary")[0].setAttribute("tabindex","-1");
  }
 
 function preventClick(evt) {
@@ -51,7 +51,7 @@ function preventClick(evt) {
 function enableWidget(id) {
 	id.removeEventListener('click', preventClick);
 	id.removeAttribute("data-disabled");
-	id.firstElementChild.removeAttribute("tabindex");
+	id.getElementsByTagName("summary")[0].removeAttribute("tabindex");
  }
 
  function openWidget(id) {
