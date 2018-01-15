@@ -133,19 +133,19 @@
 			line-height: 1.5;
 			border-bottom: 0.0625rem solid var(--colour-brand);
 		}
-	}
 
-	main.browse .topics [data-selected] {
-		transform: translatex(0.5rem);
-	}
+		main.browse .topics [data-selected] {
+			transform: translatex(0.5rem);
+		}
 
-	main.browse .topics [data-selected]::after {
-		content: '';
-		position: absolute;
-		left: calc(100% - var(--shadow-x));
-		top: 0;
-		border: 1.5rem solid transparent;
-		border-left-color: var(--colour-alt);
+		main.browse .topics [data-selected]::after {
+			content: '';
+			position: absolute;
+			left: calc(100% - var(--shadow-x));
+			top: 0;
+			border: 1.5rem solid transparent;
+			border-left-color: var(--colour-alt);
+		}
 	}
 
 
