@@ -84,7 +84,7 @@
 		margin: 0 0 1rem -1rem;
 	}
 
-	main.browse .topics details[disabled] summary {
+	main.browse .topics details[data-disabled] summary {
 		filter: none;
 		transform: none;
 		box-shadow: none;
@@ -132,11 +132,11 @@
 		}
 	}
 
-	main.browse .topics .selected {
+	main.browse .topics [data-selected] {
 		transform: translatex(0.5rem);
 	}
 
-	main.browse .topics .selected::after {
+	main.browse .topics [data-selected]::after {
 		content: '';
 		position: absolute;
 		left: calc(100% - var(--shadow-x));
