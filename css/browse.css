@@ -16,12 +16,12 @@
 
 	@media (min-width: 37.5rem) {
 		main.browse {
-			grid-template-columns: 12.5rem 1fr;
+			grid-template: auto 1fr/12.5rem 1fr;
 		}
 
 		main.browse .results {
 			grid-row: span 2;
-			min-height: 55rem;
+			min-height: 60.2rem;
 		}
 
 		main.browse .contact {
@@ -85,6 +85,7 @@
 	}
 
 	main.browse .topics details[data-disabled] summary {
+		cursor: auto;
 		filter: none;
 		transform: none;
 		box-shadow: none;
@@ -115,7 +116,6 @@
 		}
 
 		main.browse .topics details[open] summary {
-			cursor: auto;
 			color: var(--colour-default);
 			background-color: #fff;
 			border: 0;
@@ -133,19 +133,6 @@
 			line-height: 1.5;
 			border-bottom: 0.0625rem solid var(--colour-brand);
 		}
-
-		main.browse .topics [data-selected] {
-			transform: translatex(0.5rem);
-		}
-
-		main.browse .topics [data-selected]::after {
-			content: '';
-			position: absolute;
-			left: calc(100% - var(--shadow-x));
-			top: 0;
-			border: 1.5rem solid transparent;
-			border-left-color: var(--colour-alt);
-		}
 	}
 
 
@@ -153,8 +140,10 @@
 	Articles
 ========================================*/
 
-	main.browse .results {
-		justify-content: space-between;
+	main.browse .results h2 {
+		margin: 0;
+		text-align: center;
+		border-bottom: 0.0625rem solid var(--colour-brand);
 	}
 
 	main.browse .results ul {
@@ -163,13 +152,8 @@
 	}
 
 	main.browse .results li {
-		--border: 1px solid var(--colour-light);
-		border-bottom: var(--border);
+		border-bottom: 1px solid var(--colour-light);
 		padding: 1rem 0;
-	}
-
-	main.browse .results li:first-child {
-		border-top: var(--border);
 	}
 
 	main.browse .results a {
@@ -180,6 +164,7 @@
 	}
 
 	main.browse .results nav {
+		margin-top: 2.5rem;
 		justify-content: space-between;
 		align-items: center;
 	}
@@ -263,6 +248,10 @@
 	Contact
 ========================================*/
 
+	main.browse .contact {
+		align-self: start;
+	}
+
 	main.browse .contact h2 {
 		font-weight: 400;
 		text-align: center;
@@ -302,23 +291,4 @@
 
 	main.browse .contact details li {
 		margin-bottom: 1rem;
-	}
-
-	main.browse .contact details li:last-child {
-		margin-bottom: 0;
-	}
-
-	@media (min-width: 37.5rem) {
-		main.browse .contact {
-			position: relative;
-		}
-
-		main.browse .contact .call {
-			height: 4rem;
-		}
-		main.browse .contact details[open] {
-			background-color: #fff;
-			position: absolute;
-			top: 0;
-		}
 	}
