@@ -3,8 +3,10 @@ window.onload = init;
 function init() {
 	const topicsWidget = document.querySelector('#topicsWidget');
 	const articlesHeading = document.querySelector('#articlesHeading');
+	const articlesList = document.querySelector('#articlesList');
 	toggleTopicsMenu();
 	activateTopicsButtons();
+	loadArticles();
 }
 
 // Always open topic widget on desktop and disable toggle
@@ -65,7 +67,7 @@ function closeWidget(id) {
 }
 
 
-// Change title and load relevant articles upon topic button press
+// Change title, disable button and load relevant articles upon topic button press
 
 var currentTopic = "Popular Articles";
 
@@ -75,8 +77,8 @@ function activateTopicsButtons() {
 			currentTopic = evt.target.textContent;
 			if(!isWideScreen.matches) {
 				closeWidget(topicsWidget);
-				document.location.replace('#articlesHeading');
 			}
+			location.replace('#articlesHeading');
 			topicsWidget.querySelectorAll('button').forEach(element => {
 				element.removeAttribute("disabled");
 			});
@@ -87,6 +89,55 @@ function activateTopicsButtons() {
 	})
 }
 
-function loadArticles(){
-	console.log('todo load articles');
+
+// Load and display relevant articles
+
+function loadArticles() {
+    var queryURL = "/js/articleslist.json";
+    fetch(queryURL)
+    	.then(function (response) {
+			return response.json();
+		})
+		.then(function (list) {
+			filterArticles(list);
+		})
+		.catch(function (error) {
+			console.log('Error during fetch: ' + error.message);
+		});
+}
+
+function filterArticles(list) {
+	if (currentTopic === "Popular Articles") {
+		sortArticles(list);
+	}
+	else {
+		var filteredList = list.filter(list => list.topic === currentTopic);
+		sortArticles(filteredList);
+	}
+}
+
+function sortArticles(list) {
+	console.log('sort started on ' + list.length + ' items');
+	list.sort(function(one, two) {
+		var a = one.hits, b = two.hits;
+		if (a < b) {
+			return -1;
+		}
+		if (b < a) {
+			return 1;
+		}
+		else {
+			return 0;
+		}
+	})
+	displayArticles(list);
+}
+
+function displayArticles(list) {
+	articlesList.innerHTML = "";
+	list.forEach(function (currentItem) {
+		var li = document.createElement('li');
+		li.innerHTML = '<a href="/pages/' + currentItem.url + '.html">' + currentItem.title + '</a>';
+		articlesList.appendChild(li);
+	});
 }

@@ -1,0 +1,38 @@
+[
+	{
+		"title": "Responsible Gambling",
+		"topic": "Account",
+		"url": "responsiblegambling",
+		"hits": "345"
+	},
+	{
+		"title": "Restricted Territories",
+		"topic": "Account",
+		"url": "restrictedterritories",
+		"hits": "645"
+	},
+	{
+		"title": "Terms and Conditions",
+		"topic": "Account",
+		"url": "termsandconditions",
+		"hits": "158"
+	},
+	{
+		"title": "Responsible Gambling",
+		"topic": "Sports",
+		"url": "responsiblegambling",
+		"hits": "345"
+	},
+	{
+		"title": "Restricted Territories",
+		"topic": "Sports",
+		"url": "restrictedterritories",
+		"hits": "645"
+	},
+	{
+		"title": "Terms and Conditions",
+		"topic": "Sports",
+		"url": "termsandconditions",
+		"hits": "158"
+	}
+  ]
