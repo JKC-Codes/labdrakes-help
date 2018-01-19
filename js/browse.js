@@ -77,8 +77,8 @@ function activateTopicsButtons() {
 			currentTopic = evt.target.textContent;
 			if(!isWideScreen.matches) {
 				closeWidget(topicsWidget);
+				location.replace('#topicsWidget');
 			}
-			location.replace('#articlesHeading');
 			topicsWidget.querySelectorAll('button').forEach(element => {
 				element.removeAttribute("disabled");
 			});
@@ -117,13 +117,12 @@ function filterArticles(list) {
 }
 
 function sortArticles(list) {
-	console.log('sort started on ' + list.length + ' items');
 	list.sort(function(one, two) {
 		var a = one.hits, b = two.hits;
-		if (a < b) {
+		if (a > b) {
 			return -1;
 		}
-		if (b < a) {
+		if (a < b) {
 			return 1;
 		}
 		else {
