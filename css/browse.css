@@ -138,7 +138,7 @@
 
 
 /*========================================
-	Articles
+	Results
 ========================================*/
 
 	main.browse .results h2 {
@@ -159,9 +159,9 @@
 
 	main.browse .results a {
 		color: var(--colour-default);
-		display: block;
+		display: flex;
+		align-items: center;
 		min-height: 3rem;
-		line-height: 3rem;
 	}
 
 	main.browse .results nav {
