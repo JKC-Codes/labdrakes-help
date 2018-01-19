@@ -1,38 +1,1502 @@
 [
 	{
-		"title": "Responsible Gambling",
-		"topic": "Account",
-		"url": "responsiblegambling",
-		"hits": "345"
+		"title": "Lorem ipsum dolor sit.",
+		"topic": "Poker",
+		"url": "cookie-policy#cookies",
+		"hits": 442
 	},
 	{
-		"title": "Restricted Territories",
-		"topic": "Account",
-		"url": "restrictedterritories",
-		"hits": "645"
-	},
-	{
-		"title": "Terms and Conditions",
-		"topic": "Account",
-		"url": "termsandconditions",
-		"hits": "158"
-	},
-	{
-		"title": "Responsible Gambling",
+		"title": "Quas commodi itaque perspiciatis.",
 		"topic": "Sports",
-		"url": "responsiblegambling",
-		"hits": "345"
+		"url": "cookie-policy#cookies",
+		"hits": 635
 	},
 	{
-		"title": "Restricted Territories",
-		"topic": "Sports",
-		"url": "restrictedterritories",
-		"hits": "645"
+		"title": "Voluptates quasi exercitationem tempora?",
+		"topic": "Casino",
+		"url": "privacy-policy",
+		"hits": 564
 	},
 	{
-		"title": "Terms and Conditions",
+		"title": "Similique fuga saepe deleniti.",
+		"topic": "Casino",
+		"url": "privacy-policy",
+		"hits": 305
+	},
+	{
+		"title": "Vero eligendi voluptas illum?",
+		"topic": "Games",
+		"url": "privacy-policy",
+		"hits": 53
+	},
+	{
+		"title": "Fuga temporibus odio pariatur?",
+		"topic": "Casino",
+		"url": "18-plus-policy",
+		"hits": 986
+	},
+	{
+		"title": "Nemo expedita dignissimos odit.",
+		"topic": "Account",
+		"url": "terms-and-conditions",
+		"hits": 724
+	},
+	{
+		"title": "Distinctio quod qui officia!",
+		"topic": "Bingo",
+		"url": "cookie-policy#cookies",
+		"hits": 518
+	},
+	{
+		"title": "Fugit eos fugiat commodi.",
+		"topic": "Games",
+		"url": "privacy-policy",
+		"hits": 824
+	},
+	{
+		"title": "Dicta ratione in officiis.",
+		"topic": "Casino",
+		"url": "sports-rules",
+		"hits": 379
+	},
+	{
+		"title": "Harum alias eveniet fugit.",
+		"topic": "Poker",
+		"url": "cookie-policy#cookies",
+		"hits": 560
+	},
+	{
+		"title": "Voluptate perferendis modi hic.",
+		"topic": "Games",
+		"url": "cookie-policy#cookies",
+		"hits": 232
+	},
+	{
+		"title": "Saepe voluptatem quo nam!",
+		"topic": "Casino",
+		"url": "privacy-policy",
+		"hits": 111
+	},
+	{
+		"title": "Reprehenderit animi molestiae natus.",
+		"topic": "Account",
+		"url": "18-plus-policy",
+		"hits": 473
+	},
+	{
+		"title": "Vel reiciendis ipsam ullam.",
+		"topic": "Bingo",
+		"url": "sports-rules",
+		"hits": 588
+	},
+	{
+		"title": "Voluptatem harum aperiam minima.",
+		"topic": "Lotto",
+		"url": "terms-and-conditions",
+		"hits": 797
+	},
+	{
+		"title": "Quas sint commodi dolores?",
 		"topic": "Sports",
-		"url": "termsandconditions",
-		"hits": "158"
+		"url": "terms-and-conditions",
+		"hits": 671
+	},
+	{
+		"title": "Corporis natus est dolor.",
+		"topic": "Poker",
+		"url": "cookie-policy#cookies",
+		"hits": 854
+	},
+	{
+		"title": "Ipsam itaque nam nemo.",
+		"topic": "Lotto",
+		"url": "privacy-policy",
+		"hits": 995
+	},
+	{
+		"title": "Rerum accusamus eum distinctio.",
+		"topic": "Casino",
+		"url": "terms-and-conditions",
+		"hits": 212
+	},
+	{
+		"title": "Qui at tenetur natus?",
+		"topic": "Games",
+		"url": "sports-rules",
+		"hits": 204
+	},
+	{
+		"title": "Labore sequi asperiores consectetur!",
+		"topic": "Lotto",
+		"url": "terms-and-conditions",
+		"hits": 918
+	},
+	{
+		"title": "Nihil dolor porro ea!",
+		"topic": "Bingo",
+		"url": "cookie-policy#cookies",
+		"hits": 904
+	},
+	{
+		"title": "Reprehenderit placeat mollitia vero.",
+		"topic": "Games",
+		"url": "sports-rules",
+		"hits": 452
+	},
+	{
+		"title": "Ut esse in quisquam?",
+		"topic": "Bingo",
+		"url": "cookie-policy#cookies",
+		"hits": 281
+	},
+	{
+		"title": "Itaque provident iure veniam.",
+		"topic": "Poker",
+		"url": "terms-and-conditions",
+		"hits": 728
+	},
+	{
+		"title": "Molestiae autem a enim.",
+		"topic": "Poker",
+		"url": "cookie-policy#cookies",
+		"hits": 760
+	},
+	{
+		"title": "Consectetur dolorum perferendis cum?",
+		"topic": "Lotto",
+		"url": "sports-rules",
+		"hits": 250
+	},
+	{
+		"title": "Vel officia eveniet asperiores.",
+		"topic": "Casino",
+		"url": "18-plus-policy",
+		"hits": 276
+	},
+	{
+		"title": "Laborum quaerat pariatur unde.",
+		"topic": "Bingo",
+		"url": "privacy-policy",
+		"hits": 424
+	},
+	{
+		"title": "Dignissimos deserunt quisquam natus.",
+		"topic": "Account",
+		"url": "sports-rules",
+		"hits": 826
+	},
+	{
+		"title": "Voluptate velit fuga quo?",
+		"topic": "Account",
+		"url": "cookie-policy#cookies",
+		"hits": 244
+	},
+	{
+		"title": "Numquam nisi soluta aperiam?",
+		"topic": "Bingo",
+		"url": "terms-and-conditions",
+		"hits": 748
+	},
+	{
+		"title": "Optio voluptates sint harum.",
+		"topic": "Sports",
+		"url": "responsible-gambling",
+		"hits": 418
+	},
+	{
+		"title": "Veritatis officiis voluptatibus nihil.",
+		"topic": "Casino",
+		"url": "terms-and-conditions",
+		"hits": 198
+	},
+	{
+		"title": "Atque quasi neque saepe.",
+		"topic": "Account",
+		"url": "responsible-gambling",
+		"hits": 34
+	},
+	{
+		"title": "Numquam libero inventore possimus.",
+		"topic": "Bingo",
+		"url": "privacy-policy",
+		"hits": 931
+	},
+	{
+		"title": "Illo fugit quaerat vero.",
+		"topic": "Poker",
+		"url": "cookie-policy#cookies",
+		"hits": 262
+	},
+	{
+		"title": "Alias consequatur necessitatibus repudiandae!",
+		"topic": "Exchange",
+		"url": "cookie-policy#cookies",
+		"hits": 817
+	},
+	{
+		"title": "Ipsam obcaecati veritatis enim.",
+		"topic": "Games",
+		"url": "terms-and-conditions",
+		"hits": 81
+	},
+	{
+		"title": "Porro expedita nam voluptas?",
+		"topic": "Poker",
+		"url": "cookie-policy#cookies",
+		"hits": 766
+	},
+	{
+		"title": "Saepe recusandae eum doloribus.",
+		"topic": "Exchange",
+		"url": "responsible-gambling",
+		"hits": 329
+	},
+	{
+		"title": "Hic iusto tempora natus.",
+		"topic": "Games",
+		"url": "18-plus-policy",
+		"hits": 827
+	},
+	{
+		"title": "Iusto nostrum officiis veniam!",
+		"topic": "Games",
+		"url": "responsible-gambling",
+		"hits": 265
+	},
+	{
+		"title": "Obcaecati architecto repellendus sint!",
+		"topic": "Account",
+		"url": "privacy-policy",
+		"hits": 723
+	},
+	{
+		"title": "Voluptate sint eligendi accusamus!",
+		"topic": "Casino",
+		"url": "responsible-gambling",
+		"hits": 152
+	},
+	{
+		"title": "Similique expedita non odit!",
+		"topic": "Lotto",
+		"url": "18-plus-policy",
+		"hits": 589
+	},
+	{
+		"title": "Soluta molestiae nisi veritatis.",
+		"topic": "Account",
+		"url": "cookie-policy#cookies",
+		"hits": 893
+	},
+	{
+		"title": "Mollitia rerum eaque tenetur.",
+		"topic": "Exchange",
+		"url": "sports-rules",
+		"hits": 71
+	},
+	{
+		"title": "Sint atque deleniti quis!",
+		"topic": "Sports",
+		"url": "terms-and-conditions",
+		"hits": 921
+	},
+	{
+		"title": "Similique ea est ullam.",
+		"topic": "Lotto",
+		"url": "responsible-gambling",
+		"hits": 126
+	},
+	{
+		"title": "Ab omnis sunt laboriosam!",
+		"topic": "Lotto",
+		"url": "terms-and-conditions",
+		"hits": 859
+	},
+	{
+		"title": "Consequatur ipsum delectus fugit!",
+		"topic": "Poker",
+		"url": "responsible-gambling",
+		"hits": 5
+	},
+	{
+		"title": "Ratione at sequi ducimus?",
+		"topic": "Games",
+		"url": "cookie-policy#cookies",
+		"hits": 915
+	},
+	{
+		"title": "Minus officia quasi corrupti.",
+		"topic": "Account",
+		"url": "cookie-policy#cookies",
+		"hits": 233
+	},
+	{
+		"title": "Sapiente tempore eos est.",
+		"topic": "Poker",
+		"url": "18-plus-policy",
+		"hits": 680
+	},
+	{
+		"title": "Aspernatur, voluptas magnam! Voluptate.",
+		"topic": "Exchange",
+		"url": "cookie-policy#cookies",
+		"hits": 113
+	},
+	{
+		"title": "Aperiam suscipit consequuntur possimus.",
+		"topic": "Sports",
+		"url": "cookie-policy#cookies",
+		"hits": 654
+	},
+	{
+		"title": "Enim assumenda nihil dolorum?",
+		"topic": "Games",
+		"url": "privacy-policy",
+		"hits": 996
+	},
+	{
+		"title": "Laudantium fugiat expedita maxime?",
+		"topic": "Bingo",
+		"url": "sports-rules",
+		"hits": 884
+	},
+	{
+		"title": "Autem sint magnam pariatur.",
+		"topic": "Exchange",
+		"url": "privacy-policy",
+		"hits": 589
+	},
+	{
+		"title": "Ex corporis beatae fugiat!",
+		"topic": "Exchange",
+		"url": "18-plus-policy",
+		"hits": 938
+	},
+	{
+		"title": "Perspiciatis deserunt fugiat natus.",
+		"topic": "Bingo",
+		"url": "cookie-policy#cookies",
+		"hits": 389
+	},
+	{
+		"title": "Eveniet ut eos perferendis.",
+		"topic": "Casino",
+		"url": "cookie-policy#cookies",
+		"hits": 631
+	},
+	{
+		"title": "Delectus blanditiis dolores ad.",
+		"topic": "Exchange",
+		"url": "18-plus-policy",
+		"hits": 207
+	},
+	{
+		"title": "Temporibus eaque eos eius!",
+		"topic": "Sports",
+		"url": "cookie-policy#cookies",
+		"hits": 110
+	},
+	{
+		"title": "Ipsum corrupti ipsam molestias!",
+		"topic": "Casino",
+		"url": "privacy-policy",
+		"hits": 817
+	},
+	{
+		"title": "Maiores iusto ducimus atque!",
+		"topic": "Bingo",
+		"url": "cookie-policy#cookies",
+		"hits": 82
+	},
+	{
+		"title": "Expedita iure hic veritatis.",
+		"topic": "Poker",
+		"url": "terms-and-conditions",
+		"hits": 114
+	},
+	{
+		"title": "Laboriosam fugiat necessitatibus ipsum?",
+		"topic": "Games",
+		"url": "responsible-gambling",
+		"hits": 987
+	},
+	{
+		"title": "Placeat veniam corporis provident.",
+		"topic": "Sports",
+		"url": "18-plus-policy",
+		"hits": 114
+	},
+	{
+		"title": "Adipisci harum doloremque vel.",
+		"topic": "Poker",
+		"url": "responsible-gambling",
+		"hits": 842
+	},
+	{
+		"title": "Maiores quas atque dolor.",
+		"topic": "Lotto",
+		"url": "terms-and-conditions",
+		"hits": 776
+	},
+	{
+		"title": "Temporibus laudantium quo ullam!",
+		"topic": "Poker",
+		"url": "privacy-policy",
+		"hits": 889
+	},
+	{
+		"title": "Debitis, nobis. Neque, unde?",
+		"topic": "Lotto",
+		"url": "terms-and-conditions",
+		"hits": 396
+	},
+	{
+		"title": "Sequi enim dignissimos accusamus.",
+		"topic": "Poker",
+		"url": "privacy-policy",
+		"hits": 875
+	},
+	{
+		"title": "Eius recusandae deleniti reprehenderit.",
+		"topic": "Account",
+		"url": "sports-rules",
+		"hits": 928
+	},
+	{
+		"title": "Iusto optio excepturi quaerat.",
+		"topic": "Games",
+		"url": "responsible-gambling",
+		"hits": 650
+	},
+	{
+		"title": "Commodi iste deleniti tenetur!",
+		"topic": "Poker",
+		"url": "privacy-policy",
+		"hits": 699
+	},
+	{
+		"title": "Suscipit possimus quasi blanditiis!",
+		"topic": "Bingo",
+		"url": "18-plus-policy",
+		"hits": 576
+	},
+	{
+		"title": "Pariatur asperiores inventore cum.",
+		"topic": "Lotto",
+		"url": "privacy-policy",
+		"hits": 238
+	},
+	{
+		"title": "Laborum iure assumenda repellendus.",
+		"topic": "Poker",
+		"url": "terms-and-conditions",
+		"hits": 286
+	},
+	{
+		"title": "Aut possimus rerum dolor.",
+		"topic": "Casino",
+		"url": "privacy-policy",
+		"hits": 532
+	},
+	{
+		"title": "Libero dolorem praesentium ex?",
+		"topic": "Account",
+		"url": "sports-rules",
+		"hits": 612
+	},
+	{
+		"title": "Fugit, autem? Laboriosam, quod!",
+		"topic": "Bingo",
+		"url": "responsible-gambling",
+		"hits": 989
+	},
+	{
+		"title": "Animi, quaerat. Soluta, nostrum!",
+		"topic": "Account",
+		"url": "18-plus-policy",
+		"hits": 943
+	},
+	{
+		"title": "Sit fugiat facere labore.",
+		"topic": "Bingo",
+		"url": "terms-and-conditions",
+		"hits": 670
+	},
+	{
+		"title": "Asperiores, omnis voluptatum! Neque.",
+		"topic": "Exchange",
+		"url": "18-plus-policy",
+		"hits": 418
+	},
+	{
+		"title": "Quae repudiandae autem voluptate?",
+		"topic": "Sports",
+		"url": "responsible-gambling",
+		"hits": 541
+	},
+	{
+		"title": "Reprehenderit blanditiis nisi quasi.",
+		"topic": "Bingo",
+		"url": "cookie-policy#cookies",
+		"hits": 626
+	},
+	{
+		"title": "Perspiciatis doloremque maiores reiciendis?",
+		"topic": "Exchange",
+		"url": "privacy-policy",
+		"hits": 708
+	},
+	{
+		"title": "Pariatur officia blanditiis eligendi?",
+		"topic": "Lotto",
+		"url": "privacy-policy",
+		"hits": 133
+	},
+	{
+		"title": "Sit commodi aut incidunt?",
+		"topic": "Bingo",
+		"url": "terms-and-conditions",
+		"hits": 311
+	},
+	{
+		"title": "Voluptatum molestias non minima.",
+		"topic": "Poker",
+		"url": "18-plus-policy",
+		"hits": 928
+	},
+	{
+		"title": "Harum nisi explicabo deleniti.",
+		"topic": "Sports",
+		"url": "responsible-gambling",
+		"hits": 244
+	},
+	{
+		"title": "Voluptates ratione officia quibusdam!",
+		"topic": "Casino",
+		"url": "18-plus-policy",
+		"hits": 69
+	},
+	{
+		"title": "Provident omnis laudantium totam?",
+		"topic": "Account",
+		"url": "cookie-policy#cookies",
+		"hits": 613
+	},
+	{
+		"title": "Magnam voluptas distinctio dolorum?",
+		"topic": "Exchange",
+		"url": "privacy-policy",
+		"hits": 106
+	},
+	{
+		"title": "Dolor perferendis rerum magnam?",
+		"topic": "Bingo",
+		"url": "responsible-gambling",
+		"hits": 443
+	},
+	{
+		"title": "Ea neque ut harum!",
+		"topic": "Bingo",
+		"url": "privacy-policy",
+		"hits": 23
+	},
+	{
+		"title": "Quibusdam ipsum deleniti assumenda.",
+		"topic": "Account",
+		"url": "cookie-policy#cookies",
+		"hits": 204
+	},
+	{
+		"title": "Quo, dolorem. Necessitatibus, nostrum.",
+		"topic": "Account",
+		"url": "cookie-policy#cookies",
+		"hits": 811
+	},
+	{
+		"title": "Dolores asperiores debitis dolor.",
+		"topic": "Casino",
+		"url": "18-plus-policy",
+		"hits": 516
+	},
+	{
+		"title": "Officiis voluptatem necessitatibus ut?",
+		"topic": "Poker",
+		"url": "terms-and-conditions",
+		"hits": 375
+	},
+	{
+		"title": "Suscipit officia quis reiciendis!",
+		"topic": "Poker",
+		"url": "cookie-policy#cookies",
+		"hits": 292
+	},
+	{
+		"title": "Cum asperiores sunt accusamus.",
+		"topic": "Account",
+		"url": "privacy-policy",
+		"hits": 54
+	},
+	{
+		"title": "Animi nihil ipsum nulla?",
+		"topic": "Lotto",
+		"url": "privacy-policy",
+		"hits": 330
+	},
+	{
+		"title": "Consequuntur modi fugiat suscipit.",
+		"topic": "Casino",
+		"url": "18-plus-policy",
+		"hits": 376
+	},
+	{
+		"title": "Totam, culpa! Delectus, distinctio.",
+		"topic": "Bingo",
+		"url": "cookie-policy#cookies",
+		"hits": 282
+	},
+	{
+		"title": "Culpa consequatur eius repellendus!",
+		"topic": "Games",
+		"url": "privacy-policy",
+		"hits": 636
+	},
+	{
+		"title": "Eaque architecto quod blanditiis!",
+		"topic": "Poker",
+		"url": "cookie-policy#cookies",
+		"hits": 791
+	},
+	{
+		"title": "Maiores consequatur eaque tenetur?",
+		"topic": "Casino",
+		"url": "18-plus-policy",
+		"hits": 838
+	},
+	{
+		"title": "Esse, maxime corrupti. Exercitationem?",
+		"topic": "Exchange",
+		"url": "cookie-policy#cookies",
+		"hits": 261
+	},
+	{
+		"title": "Vel illo eligendi ducimus.",
+		"topic": "Lotto",
+		"url": "sports-rules",
+		"hits": 592
+	},
+	{
+		"title": "Aliquid facere aperiam ab?",
+		"topic": "Exchange",
+		"url": "sports-rules",
+		"hits": 85
+	},
+	{
+		"title": "Neque reprehenderit voluptatem blanditiis!",
+		"topic": "Bingo",
+		"url": "terms-and-conditions",
+		"hits": 189
+	},
+	{
+		"title": "Iure possimus vitae culpa?",
+		"topic": "Lotto",
+		"url": "terms-and-conditions",
+		"hits": 839
+	},
+	{
+		"title": "Magnam ullam nam sint!",
+		"topic": "Casino",
+		"url": "responsible-gambling",
+		"hits": 431
+	},
+	{
+		"title": "Iure error asperiores possimus?",
+		"topic": "Account",
+		"url": "responsible-gambling",
+		"hits": 217
+	},
+	{
+		"title": "Asperiores iusto quo animi.",
+		"topic": "Games",
+		"url": "cookie-policy#cookies",
+		"hits": 578
+	},
+	{
+		"title": "At voluptatum quae soluta!",
+		"topic": "Exchange",
+		"url": "privacy-policy",
+		"hits": 208
+	},
+	{
+		"title": "Ducimus velit harum alias.",
+		"topic": "Lotto",
+		"url": "18-plus-policy",
+		"hits": 52
+	},
+	{
+		"title": "Nulla culpa dignissimos delectus.",
+		"topic": "Casino",
+		"url": "cookie-policy#cookies",
+		"hits": 76
+	},
+	{
+		"title": "Eius amet enim reprehenderit.",
+		"topic": "Games",
+		"url": "18-plus-policy",
+		"hits": 193
+	},
+	{
+		"title": "Quidem obcaecati eum sed!",
+		"topic": "Sports",
+		"url": "responsible-gambling",
+		"hits": 629
+	},
+	{
+		"title": "Cupiditate eos animi rem.",
+		"topic": "Poker",
+		"url": "18-plus-policy",
+		"hits": 51
+	},
+	{
+		"title": "Tempore quisquam repellat excepturi.",
+		"topic": "Lotto",
+		"url": "responsible-gambling",
+		"hits": 971
+	},
+	{
+		"title": "Facilis ad et corrupti!",
+		"topic": "Exchange",
+		"url": "terms-and-conditions",
+		"hits": 292
+	},
+	{
+		"title": "Laborum qui quasi natus!",
+		"topic": "Exchange",
+		"url": "responsible-gambling",
+		"hits": 359
+	},
+	{
+		"title": "Labore architecto et hic?",
+		"topic": "Games",
+		"url": "privacy-policy",
+		"hits": 116
+	},
+	{
+		"title": "Officiis similique cupiditate repellat.",
+		"topic": "Sports",
+		"url": "sports-rules",
+		"hits": 266
+	},
+	{
+		"title": "Sunt similique cumque veniam?",
+		"topic": "Account",
+		"url": "privacy-policy",
+		"hits": 239
+	},
+	{
+		"title": "Cumque nemo nihil eveniet.",
+		"topic": "Casino",
+		"url": "sports-rules",
+		"hits": 513
+	},
+	{
+		"title": "Iure consequatur corrupti labore!",
+		"topic": "Games",
+		"url": "sports-rules",
+		"hits": 931
+	},
+	{
+		"title": "Nam ipsam laudantium illo!",
+		"topic": "Sports",
+		"url": "terms-and-conditions",
+		"hits": 427
+	},
+	{
+		"title": "Reiciendis delectus possimus earum!",
+		"topic": "Games",
+		"url": "privacy-policy",
+		"hits": 335
+	},
+	{
+		"title": "Consectetur commodi eum mollitia!",
+		"topic": "Casino",
+		"url": "sports-rules",
+		"hits": 69
+	},
+	{
+		"title": "Tenetur quaerat corrupti architecto!",
+		"topic": "Exchange",
+		"url": "terms-and-conditions",
+		"hits": 605
+	},
+	{
+		"title": "Nulla assumenda eius iusto.",
+		"topic": "Casino",
+		"url": "privacy-policy",
+		"hits": 93
+	},
+	{
+		"title": "Perferendis eius quia ad.",
+		"topic": "Sports",
+		"url": "privacy-policy",
+		"hits": 635
+	},
+	{
+		"title": "Quibusdam enim placeat reiciendis.",
+		"topic": "Games",
+		"url": "sports-rules",
+		"hits": 273
+	},
+	{
+		"title": "Inventore, rerum doloribus. Minus!",
+		"topic": "Exchange",
+		"url": "cookie-policy#cookies",
+		"hits": 865
+	},
+	{
+		"title": "Consectetur officiis dolore dolorem?",
+		"topic": "Casino",
+		"url": "privacy-policy",
+		"hits": 168
+	},
+	{
+		"title": "Earum culpa ab quia.",
+		"topic": "Account",
+		"url": "cookie-policy#cookies",
+		"hits": 297
+	},
+	{
+		"title": "Iure obcaecati culpa ipsa?",
+		"topic": "Poker",
+		"url": "terms-and-conditions",
+		"hits": 450
+	},
+	{
+		"title": "Ducimus inventore sapiente velit.",
+		"topic": "Casino",
+		"url": "cookie-policy#cookies",
+		"hits": 761
+	},
+	{
+		"title": "Deleniti consequatur debitis eius.",
+		"topic": "Games",
+		"url": "privacy-policy",
+		"hits": 457
+	},
+	{
+		"title": "Officiis tenetur sequi corporis?",
+		"topic": "Lotto",
+		"url": "responsible-gambling",
+		"hits": 839
+	},
+	{
+		"title": "Quae ipsam fugiat doloremque.",
+		"topic": "Bingo",
+		"url": "18-plus-policy",
+		"hits": 66
+	},
+	{
+		"title": "Repudiandae corrupti aut nesciunt.",
+		"topic": "Sports",
+		"url": "sports-rules",
+		"hits": 9
+	},
+	{
+		"title": "Hic doloribus id facilis.",
+		"topic": "Casino",
+		"url": "responsible-gambling",
+		"hits": 519
+	},
+	{
+		"title": "Expedita officiis atque nostrum.",
+		"topic": "Lotto",
+		"url": "sports-rules",
+		"hits": 374
+	},
+	{
+		"title": "Labore ipsum eius eum.",
+		"topic": "Account",
+		"url": "responsible-gambling",
+		"hits": 216
+	},
+	{
+		"title": "Tempore amet delectus velit?",
+		"topic": "Games",
+		"url": "privacy-policy",
+		"hits": 132
+	},
+	{
+		"title": "Dolore totam dolores nam.",
+		"topic": "Poker",
+		"url": "sports-rules",
+		"hits": 589
+	},
+	{
+		"title": "Facilis voluptates iure deserunt.",
+		"topic": "Account",
+		"url": "cookie-policy#cookies",
+		"hits": 555
+	},
+	{
+		"title": "Atque voluptate tenetur ratione.",
+		"topic": "Poker",
+		"url": "cookie-policy#cookies",
+		"hits": 983
+	},
+	{
+		"title": "Dolorum blanditiis a repudiandae.",
+		"topic": "Poker",
+		"url": "terms-and-conditions",
+		"hits": 761
+	},
+	{
+		"title": "Nostrum facere maiores natus.",
+		"topic": "Account",
+		"url": "cookie-policy#cookies",
+		"hits": 344
+	},
+	{
+		"title": "Delectus libero id quae.",
+		"topic": "Casino",
+		"url": "terms-and-conditions",
+		"hits": 409
+	},
+	{
+		"title": "Dolorum repellendus error reprehenderit.",
+		"topic": "Account",
+		"url": "cookie-policy#cookies",
+		"hits": 390
+	},
+	{
+		"title": "Ut voluptatibus sed doloremque?",
+		"topic": "Games",
+		"url": "privacy-policy",
+		"hits": 781
+	},
+	{
+		"title": "Perspiciatis nulla accusantium voluptas.",
+		"topic": "Lotto",
+		"url": "18-plus-policy",
+		"hits": 589
+	},
+	{
+		"title": "Blanditiis id debitis suscipit.",
+		"topic": "Casino",
+		"url": "cookie-policy#cookies",
+		"hits": 146
+	},
+	{
+		"title": "Ratione suscipit neque impedit.",
+		"topic": "Games",
+		"url": "privacy-policy",
+		"hits": 958
+	},
+	{
+		"title": "Illo laboriosam maiores culpa.",
+		"topic": "Casino",
+		"url": "responsible-gambling",
+		"hits": 263
+	},
+	{
+		"title": "Sed est ex aspernatur.",
+		"topic": "Casino",
+		"url": "18-plus-policy",
+		"hits": 355
+	},
+	{
+		"title": "Cumque cum rem consectetur!",
+		"topic": "Casino",
+		"url": "responsible-gambling",
+		"hits": 466
+	},
+	{
+		"title": "Corrupti sapiente aliquam neque?",
+		"topic": "Exchange",
+		"url": "responsible-gambling",
+		"hits": 120
+	},
+	{
+		"title": "Rem animi distinctio placeat?",
+		"topic": "Games",
+		"url": "privacy-policy",
+		"hits": 842
+	},
+	{
+		"title": "Facilis error unde blanditiis.",
+		"topic": "Games",
+		"url": "privacy-policy",
+		"hits": 285
+	},
+	{
+		"title": "Labore nisi perspiciatis quam!",
+		"topic": "Bingo",
+		"url": "18-plus-policy",
+		"hits": 482
+	},
+	{
+		"title": "Minus, possimus. Iusto, vel.",
+		"topic": "Exchange",
+		"url": "18-plus-policy",
+		"hits": 388
+	},
+	{
+		"title": "Ipsum corrupti velit quaerat.",
+		"topic": "Exchange",
+		"url": "cookie-policy#cookies",
+		"hits": 99
+	},
+	{
+		"title": "Culpa soluta quidem ex!",
+		"topic": "Exchange",
+		"url": "cookie-policy#cookies",
+		"hits": 305
+	},
+	{
+		"title": "Quas voluptatum quo tempora!",
+		"topic": "Poker",
+		"url": "terms-and-conditions",
+		"hits": 9
+	},
+	{
+		"title": "Modi veritatis eaque impedit.",
+		"topic": "Account",
+		"url": "responsible-gambling",
+		"hits": 110
+	},
+	{
+		"title": "Provident illum rerum dolor.",
+		"topic": "Games",
+		"url": "cookie-policy#cookies",
+		"hits": 266
+	},
+	{
+		"title": "Dicta debitis inventore repudiandae!",
+		"topic": "Exchange",
+		"url": "sports-rules",
+		"hits": 883
+	},
+	{
+		"title": "Saepe ullam aut aperiam.",
+		"topic": "Account",
+		"url": "18-plus-policy",
+		"hits": 39
+	},
+	{
+		"title": "Consectetur quis sed corporis.",
+		"topic": "Account",
+		"url": "sports-rules",
+		"hits": 7
+	},
+	{
+		"title": "Vero est asperiores vitae?",
+		"topic": "Account",
+		"url": "privacy-policy",
+		"hits": 47
+	},
+	{
+		"title": "Hic nihil quas qui.",
+		"topic": "Account",
+		"url": "privacy-policy",
+		"hits": 187
+	},
+	{
+		"title": "Ut quod animi voluptatum.",
+		"topic": "Bingo",
+		"url": "sports-rules",
+		"hits": 586
+	},
+	{
+		"title": "Natus eius iusto praesentium.",
+		"topic": "Lotto",
+		"url": "terms-and-conditions",
+		"hits": 454
+	},
+	{
+		"title": "Voluptatibus illum quos qui!",
+		"topic": "Casino",
+		"url": "cookie-policy#cookies",
+		"hits": 391
+	},
+	{
+		"title": "Iure iste et voluptates.",
+		"topic": "Account",
+		"url": "responsible-gambling",
+		"hits": 200
+	},
+	{
+		"title": "Unde incidunt quia ex?",
+		"topic": "Sports",
+		"url": "cookie-policy#cookies",
+		"hits": 572
+	},
+	{
+		"title": "Saepe voluptate impedit cum!",
+		"topic": "Sports",
+		"url": "sports-rules",
+		"hits": 886
+	},
+	{
+		"title": "Nostrum vero ipsam libero.",
+		"topic": "Casino",
+		"url": "18-plus-policy",
+		"hits": 555
+	},
+	{
+		"title": "Necessitatibus nemo esse accusantium!",
+		"topic": "Sports",
+		"url": "18-plus-policy",
+		"hits": 103
+	},
+	{
+		"title": "Expedita, sunt! Commodi, voluptas!",
+		"topic": "Games",
+		"url": "18-plus-policy",
+		"hits": 343
+	},
+	{
+		"title": "Sapiente accusamus iusto saepe?",
+		"topic": "Account",
+		"url": "terms-and-conditions",
+		"hits": 581
+	},
+	{
+		"title": "Nobis cupiditate ad facere.",
+		"topic": "Bingo",
+		"url": "privacy-policy",
+		"hits": 760
+	},
+	{
+		"title": "Magnam quam eveniet porro?",
+		"topic": "Bingo",
+		"url": "cookie-policy#cookies",
+		"hits": 271
+	},
+	{
+		"title": "Quasi ea doloribus odio!",
+		"topic": "Account",
+		"url": "18-plus-policy",
+		"hits": 13
+	},
+	{
+		"title": "Quae reiciendis dolore quam.",
+		"topic": "Lotto",
+		"url": "18-plus-policy",
+		"hits": 257
+	},
+	{
+		"title": "Impedit illum magnam fuga.",
+		"topic": "Games",
+		"url": "sports-rules",
+		"hits": 447
+	},
+	{
+		"title": "Nostrum magni doloribus fuga?",
+		"topic": "Games",
+		"url": "responsible-gambling",
+		"hits": 227
+	},
+	{
+		"title": "Corporis eos ratione rem!",
+		"topic": "Bingo",
+		"url": "privacy-policy",
+		"hits": 214
+	},
+	{
+		"title": "Ratione incidunt minus laudantium?",
+		"topic": "Exchange",
+		"url": "responsible-gambling",
+		"hits": 814
+	},
+	{
+		"title": "Voluptates eaque aperiam quis?",
+		"topic": "Games",
+		"url": "privacy-policy",
+		"hits": 501
+	},
+	{
+		"title": "Corporis minus in eligendi.",
+		"topic": "Games",
+		"url": "18-plus-policy",
+		"hits": 948
+	},
+	{
+		"title": "Sit cum eum ab.",
+		"topic": "Account",
+		"url": "terms-and-conditions",
+		"hits": 456
+	},
+	{
+		"title": "Dolores, nisi! Iure, placeat.",
+		"topic": "Games",
+		"url": "cookie-policy#cookies",
+		"hits": 315
+	},
+	{
+		"title": "Commodi architecto quas debitis?",
+		"topic": "Lotto",
+		"url": "responsible-gambling",
+		"hits": 783
+	},
+	{
+		"title": "Animi praesentium esse eveniet!",
+		"topic": "Lotto",
+		"url": "cookie-policy#cookies",
+		"hits": 249
+	},
+	{
+		"title": "Consequatur dolorum vel expedita!",
+		"topic": "Casino",
+		"url": "responsible-gambling",
+		"hits": 796
+	},
+	{
+		"title": "Dolor magnam laborum omnis.",
+		"topic": "Bingo",
+		"url": "18-plus-policy",
+		"hits": 636
+	},
+	{
+		"title": "Porro voluptas at ipsam.",
+		"topic": "Casino",
+		"url": "terms-and-conditions",
+		"hits": 296
+	},
+	{
+		"title": "Saepe reprehenderit quas molestias.",
+		"topic": "Casino",
+		"url": "cookie-policy#cookies",
+		"hits": 789
+	},
+	{
+		"title": "Nemo harum quis reiciendis!",
+		"topic": "Lotto",
+		"url": "sports-rules",
+		"hits": 184
+	},
+	{
+		"title": "Placeat autem deleniti consequuntur!",
+		"topic": "Games",
+		"url": "terms-and-conditions",
+		"hits": 745
+	},
+	{
+		"title": "Vitae culpa mollitia ullam!",
+		"topic": "Lotto",
+		"url": "18-plus-policy",
+		"hits": 758
+	},
+	{
+		"title": "Vel consequatur earum quibusdam?",
+		"topic": "Sports",
+		"url": "terms-and-conditions",
+		"hits": 261
+	},
+	{
+		"title": "Delectus aperiam magni laudantium?",
+		"topic": "Casino",
+		"url": "cookie-policy#cookies",
+		"hits": 294
+	},
+	{
+		"title": "Recusandae veritatis fugit eligendi.",
+		"topic": "Bingo",
+		"url": "terms-and-conditions",
+		"hits": 760
+	},
+	{
+		"title": "Illo explicabo repellendus inventore.",
+		"topic": "Bingo",
+		"url": "responsible-gambling",
+		"hits": 234
+	},
+	{
+		"title": "A exercitationem nesciunt doloremque!",
+		"topic": "Lotto",
+		"url": "responsible-gambling",
+		"hits": 617
+	},
+	{
+		"title": "Ducimus hic ipsum saepe?",
+		"topic": "Exchange",
+		"url": "responsible-gambling",
+		"hits": 693
+	},
+	{
+		"title": "Quos repellat dignissimos perferendis.",
+		"topic": "Account",
+		"url": "privacy-policy",
+		"hits": 317
+	},
+	{
+		"title": "Corporis suscipit expedita accusantium!",
+		"topic": "Account",
+		"url": "terms-and-conditions",
+		"hits": 615
+	},
+	{
+		"title": "Excepturi pariatur veniam molestias.",
+		"topic": "Lotto",
+		"url": "sports-rules",
+		"hits": 524
+	},
+	{
+		"title": "Dolore saepe exercitationem ducimus.",
+		"topic": "Account",
+		"url": "terms-and-conditions",
+		"hits": 431
+	},
+	{
+		"title": "Ipsa odit expedita dolores!",
+		"topic": "Sports",
+		"url": "sports-rules",
+		"hits": 463
+	},
+	{
+		"title": "Reiciendis rerum totam at?",
+		"topic": "Account",
+		"url": "privacy-policy",
+		"hits": 538
+	},
+	{
+		"title": "Magni aperiam eveniet molestiae.",
+		"topic": "Poker",
+		"url": "18-plus-policy",
+		"hits": 385
+	},
+	{
+		"title": "Asperiores atque eveniet facere!",
+		"topic": "Poker",
+		"url": "18-plus-policy",
+		"hits": 353
+	},
+	{
+		"title": "Ratione ipsa debitis quae.",
+		"topic": "Games",
+		"url": "terms-and-conditions",
+		"hits": 114
+	},
+	{
+		"title": "Maiores nesciunt adipisci et.",
+		"topic": "Exchange",
+		"url": "sports-rules",
+		"hits": 990
+	},
+	{
+		"title": "Ad et asperiores incidunt.",
+		"topic": "Poker",
+		"url": "responsible-gambling",
+		"hits": 336
+	},
+	{
+		"title": "Corporis, perferendis? Quis, dolores.",
+		"topic": "Poker",
+		"url": "18-plus-policy",
+		"hits": 388
+	},
+	{
+		"title": "Nulla optio iusto neque.",
+		"topic": "Lotto",
+		"url": "terms-and-conditions",
+		"hits": 191
+	},
+	{
+		"title": "Obcaecati provident saepe quam.",
+		"topic": "Bingo",
+		"url": "cookie-policy#cookies",
+		"hits": 251
+	},
+	{
+		"title": "Quo consequatur soluta accusamus!",
+		"topic": "Lotto",
+		"url": "terms-and-conditions",
+		"hits": 393
+	},
+	{
+		"title": "Ducimus saepe quo eligendi!",
+		"topic": "Account",
+		"url": "18-plus-policy",
+		"hits": 36
+	},
+	{
+		"title": "Culpa nesciunt delectus corrupti.",
+		"topic": "Sports",
+		"url": "sports-rules",
+		"hits": 200
+	},
+	{
+		"title": "Unde ex quam quia.",
+		"topic": "Lotto",
+		"url": "cookie-policy#cookies",
+		"hits": 631
+	},
+	{
+		"title": "Quidem voluptas id itaque.",
+		"topic": "Poker",
+		"url": "18-plus-policy",
+		"hits": 532
+	},
+	{
+		"title": "Cupiditate laudantium corporis unde.",
+		"topic": "Games",
+		"url": "terms-and-conditions",
+		"hits": 314
+	},
+	{
+		"title": "Quam dolorum nostrum fugiat.",
+		"topic": "Games",
+		"url": "responsible-gambling",
+		"hits": 803
+	},
+	{
+		"title": "Voluptatem error suscipit alias!",
+		"topic": "Bingo",
+		"url": "responsible-gambling",
+		"hits": 767
+	},
+	{
+		"title": "Cumque corrupti pariatur nesciunt!",
+		"topic": "Games",
+		"url": "terms-and-conditions",
+		"hits": 294
+	},
+	{
+		"title": "Neque nesciunt quidem fugiat?",
+		"topic": "Sports",
+		"url": "terms-and-conditions",
+		"hits": 325
+	},
+	{
+		"title": "Consectetur doloribus eos quisquam?",
+		"topic": "Poker",
+		"url": "cookie-policy#cookies",
+		"hits": 967
+	},
+	{
+		"title": "Dicta vel ut maxime.",
+		"topic": "Poker",
+		"url": "terms-and-conditions",
+		"hits": 648
+	},
+	{
+		"title": "Ab dignissimos porro aut?",
+		"topic": "Lotto",
+		"url": "privacy-policy",
+		"hits": 425
+	},
+	{
+		"title": "Enim natus sunt veritatis?",
+		"topic": "Poker",
+		"url": "cookie-policy#cookies",
+		"hits": 382
+	},
+	{
+		"title": "Praesentium accusamus commodi officia.",
+		"topic": "Lotto",
+		"url": "terms-and-conditions",
+		"hits": 826
+	},
+	{
+		"title": "Dolorem distinctio laborum animi.",
+		"topic": "Sports",
+		"url": "cookie-policy#cookies",
+		"hits": 579
 	}
-  ]
+]
