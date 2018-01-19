@@ -237,6 +237,7 @@
 		filter: brightness(110%);
 		transform: translate(0.0625rem, 0.0625rem);
 		box-shadow: var(--shadow-active);
+		outline: none;
 	}
 
 	button[disabled] {
@@ -245,6 +246,7 @@
 		color: grey;
 		filter: none;
 		transform: none;
+		outline: none;
 	}
 
 	button[disabled]:active {
