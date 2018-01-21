@@ -5,8 +5,9 @@ function init() {
 	const articlesHeading = document.querySelector('#articlesHeading');
 	const articlesList = document.querySelector('#articlesList');
 	toggleTopicsMenu();
-	activateTopicsButtons();
 	loadArticles();
+	activateTopicsButtons();
+	activatePaginationButtons();
 }
 
 // Always open topic widget on desktop and disable toggle
@@ -67,7 +68,7 @@ function closeWidget(id) {
 }
 
 
-// Change title, disable button and load relevant articles upon topic button press
+// Change title, disable button and load relevant articles upon button press
 
 var currentTopic = "Popular Articles";
 
@@ -75,13 +76,16 @@ function activateTopicsButtons() {
 	topicsWidget.addEventListener('click', function (evt) {
 		if (evt.target.tagName === 'BUTTON') {
 			currentTopic = evt.target.textContent;
+
 			if(!isWideScreen.matches) {
 				closeWidget(topicsWidget);
 				location.replace('#topicsWidget');
 			}
+
 			topicsWidget.querySelectorAll('button').forEach(element => {
 				element.removeAttribute("disabled");
 			});
+
 			evt.target.setAttribute("disabled","");
 			articlesHeading.innerHTML = currentTopic;
 			loadArticles();
@@ -93,7 +97,7 @@ function activateTopicsButtons() {
 // Load and display relevant articles
 
 function loadArticles() {
-    var queryURL = "/js/articleslist.json";
+    var queryURL = "js/articleslist.json";
     fetch(queryURL)
     	.then(function (response) {
 			return response.json();
@@ -129,14 +133,29 @@ function sortArticles(list) {
 			return 0;
 		}
 	})
+	articlesCount = list.length;
 	displayArticles(list);
 }
 
+var pageStart = 0;
+
 function displayArticles(list) {
 	articlesList.innerHTML = "";
-	list.forEach(function (currentItem) {
+	for (i = pageStart; i < pageStart + 10; i++) {
 		var li = document.createElement('li');
-		li.innerHTML = '<a href="/pages/' + currentItem.url + '.html">' + currentItem.title + '</a>';
+		var a = document.createElement('a');
+		a.setAttribute('href', '/pages/' + list[i].url + '.html');
+		a.innerHTML = list[i].title;
+		li.appendChild(a);
 		articlesList.appendChild(li);
-	});
+	}
+}
+
+
+// Pagination
+
+var articlesCount;
+
+function activatePaginationButtons() {
+	console.log(articlesCount);
 }
