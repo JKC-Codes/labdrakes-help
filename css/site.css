@@ -431,7 +431,7 @@
 		padding: 0;
 		box-shadow: none;
 		border-left: 0.0625rem solid var(--colour-light);
-		background: url('/img/search.svg') 50% 25%/1.5rem no-repeat content-box transparent;
+		background: url('../img/search.svg') 50% 25%/1.5rem no-repeat content-box transparent;
 		position: absolute;
 		right: 0;
 	}
@@ -528,14 +528,14 @@
 	footer.site .icons .icon,
 	footer.site .social .icon {
 		display: inline-block;
-		background: url('/img/footer-icons-1x.png') 0 0/36.09375rem 5.5625rem;
+		background: url('../img/footer-icons-1x.png') 0 0/36.09375rem 5.5625rem;
 		height: 2.5rem;
 	}
 
 	@media (min-resolution: 1.5dppx) {
 		footer.site .icons .icon,
 		footer.site .social .icon {
-			background-image: url('/img/footer-icons-2x.png');
+			background-image: url('../img/footer-icons-2x.png');
 		}
 	}
 

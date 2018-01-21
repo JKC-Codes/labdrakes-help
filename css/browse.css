@@ -57,7 +57,7 @@
 		width: 1rem;
 		height: 1rem;
 		float: left;
-		background: url('/img/arrow.svg') -0.5rem center/1.5rem 1rem no-repeat;
+		background: url('../img/arrow.svg') -0.5rem center/1.5rem 1rem no-repeat;
 		--translate: translatey(calc((3rem - 100%) / 2));
 		transform: var(--translate) rotate(0.5turn);
 	}
@@ -196,7 +196,7 @@
 		content: '\00a0';
 		display: block;
 		height: 3rem;
-		background: url('/img/arrow.svg') 0 center/1.125rem .75rem no-repeat;
+		background: url('../img/arrow.svg') 0 center/1.125rem .75rem no-repeat;
 	}
 
 	main.browse .results .first::before,
