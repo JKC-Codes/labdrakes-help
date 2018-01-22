@@ -79,7 +79,7 @@ function activateTopicsButtons() {
 
 			if(!isWideScreen.matches) {
 				closeWidget(topicsWidget);
-				location.replace('#topicsWidget');
+				window.scroll(0,155);
 			}
 
 			topicsWidget.querySelectorAll('button').forEach(element => {
