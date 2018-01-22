@@ -469,6 +469,7 @@
 
 	@media (min-width: 37.5rem) {
 		footer.site {
+			grid-template-columns: repeat(4, 1fr);
 			grid-template-areas:
 			"page-links page-links about quick-links"
 			"page-links page-links . social"
@@ -493,10 +494,12 @@
 
 	footer.site .about {
 		grid-area: about;
+		justify-self: center;
 	}
 
 	footer.site .quick-links {
 		grid-area: quick-links;
+		justify-self: center;
 	}
 
 	footer.site .social {
@@ -511,6 +514,14 @@
 	footer.site ul {
 		padding: 0;
 		margin: 0;
+	}
+
+	footer.site .page-links ul {
+		align-items: center;
+	}
+
+	footer.site .page-links li {
+		width: 85%;
 	}
 
 	footer.site .page-links .button {
@@ -604,14 +615,6 @@
 	footer.site h2 {
 			color: #a6a6a6;
 			margin: 0 0 0.25em;
-	}
-
-	footer.site .about {
-		justify-self: end;
-	}
-
-	footer.site .quick-links {
-		justify-self: center;
 	}
 
 	footer.site .social ul {
