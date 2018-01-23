@@ -10,7 +10,12 @@
 	<link rel="stylesheet" href="css/site.css">
 	<link rel="stylesheet" href="css/browse.css">
 	<script src="js/browse.js"></script>
-	<script src="js/details-summary-polyfill.js" defer></script>
+	<script>
+		// Check for Details element support
+		if (!('open' in document.createElement('details'))) {
+			document.write('<script src="js/details-summary-polyfill.js"><\/script>');
+		}
+	</script>
 </head>
 
 <body>
