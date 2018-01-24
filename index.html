@@ -12,6 +12,7 @@
 	<script>
 		// Check for Details element support
 		if (!('open' in document.createElement('details'))) {
+			// Load polyfill if unsupported
 			document.write('<script src="js/details-summary-polyfill.js"><\/script>');
 		}
 	</script>
