@@ -6,7 +6,7 @@
 [x]	open topics menu on desktop
 [x]		disable summary button on desktop
 [x]		prevent focus of summary button on desktop
-[]		save/load toggle state
+[x]		save/load toggle state
 []	enable buttons to change topic
 []		filter articles
 []		change title
@@ -35,7 +35,7 @@ var currentTopic = "Popular Articles";
 var relevantArticles;
 var pageStart = 0;
 var isWideScreen = window.matchMedia("(min-width: 37.5rem)");
-
+var toggleState;
 
 // Download and sort all articles
 
@@ -109,14 +109,14 @@ function displayArticles() {
 function toggleTopicsMenu(mq) {
 
 	const topicsMenu = document.querySelector('#topicsWidget');
-	let toggleState;
 
 	if (mq.matches) {
-		// Save closed menu state
-		if (!topicsMenu.hasAttribute('open')) {
-			console.log(toggleState);
+		// Save menu state
+		if (topicsMenu.hasAttribute('open')) {
+			toggleState = 'wasOpen';
+		} else {
 			toggleState = 'wasClosed';
-		};
+		}
 
 		// Open menu
 		topicsMenu.setAttribute('open', '');
@@ -128,8 +128,7 @@ function toggleTopicsMenu(mq) {
 	}
 
 	else {
-		// Load menu closed state
-		console.log(toggleState);
+		// Load menu state
 		if (toggleState === 'wasClosed') {
 			topicsMenu.removeAttribute('open');
 		}
