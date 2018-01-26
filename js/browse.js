@@ -1,3 +1,195 @@
+/*
+[x]	load articles
+[x]		sort articles
+[x]	filter articles
+[x]		display articles
+[x]	open topics menu on desktop
+[x]		disable summary button on desktop
+[x]		prevent focus of summary button on desktop
+[]		save/load toggle state
+[]	enable buttons to change topic
+[]		filter articles
+[]		change title
+[]		close menu on mobile
+[]		scroll to top on mobile
+[]		disable current topic button
+[]	enable pagination
+[]		filter articles
+[]		disable buttons if not enough articles
+[]		scroll to top on mobile
+*/
+
+
+window.onload = init;
+
+function init() {
+	loadArticles();
+	isWideScreen.addListener(toggleTopicsMenu);
+	toggleTopicsMenu(isWideScreen);
+	//activateTopicsButtons();
+	//activatePaginationButtons();
+}
+
+var rawArticlesList;
+var currentTopic = "Popular Articles";
+var relevantArticles;
+var pageStart = 0;
+var isWideScreen = window.matchMedia("(min-width: 37.5rem)");
+
+
+// Download and sort all articles
+
+function loadArticles() {
+
+    var queryURL = "js/articleslist.json";
+	fetch(queryURL)
+
+	.then(function (response) {
+		return response.json();
+	})
+
+	.then(function (list) {
+		list.sort(function(one, two) {
+			var a = one.hits, b = two.hits;
+			if (a > b) {
+				return -1;
+			}
+			else if (a < b) {
+				return 1;
+			}
+			else {
+				return 0;
+			}
+		})
+
+		rawArticlesList = list;
+		displayArticles();
+	})
+
+	.catch(function (error) {
+		console.log('Error during fetch: ' + error.message);
+	});
+}
+
+
+// Filter and display articles
+
+function displayArticles() {
+
+	let filteredArticles;
+	const articlesDisplayArea = document.querySelector('#articlesList');
+
+	// Filter
+	if (currentTopic === 'Popular Articles') {
+		// Don't filter if a topic isn't selected
+		filteredArticles = rawArticlesList;
+	}
+
+	else {
+		// Filter by topic if one is selected
+		filteredArticles = rawArticlesList.filter(rawArticlesList => rawArticlesList.topic === currentTopic);
+	}
+
+	// Display results
+	articlesDisplayArea.innerHTML = "";
+
+	for (i = pageStart; i < pageStart + 10; i++) {
+		var li = document.createElement('li');
+
+		// Create list item with article link and title
+		li.innerHTML = '<a href="pages/' + filteredArticles[i].url + '.html">' + filteredArticles[i].title + '</a>';
+
+		articlesDisplayArea.appendChild(li);
+	}
+}
+
+
+// Always open topics menu on wide screens
+
+function toggleTopicsMenu(mq) {
+
+	const topicsMenu = document.querySelector('#topicsWidget');
+	let toggleState;
+
+	if (mq.matches) {
+		// Save closed menu state
+		if (!topicsMenu.hasAttribute('open')) {
+			console.log(toggleState);
+			toggleState = 'wasClosed';
+		};
+
+		// Open menu
+		topicsMenu.setAttribute('open', '');
+
+		// Disable summary button
+		topicsMenu.addEventListener('click', disableToggle);
+		topicsMenu.setAttribute('data-disabled','');
+		topicsMenu.querySelector('summary').setAttribute('tabindex', '-1');
+	}
+
+	else {
+		// Load menu closed state
+		console.log(toggleState);
+		if (toggleState === 'wasClosed') {
+			topicsMenu.removeAttribute('open');
+		}
+
+		// Enable summary button
+		topicsMenu.removeEventListener('click', disableToggle);
+		topicsMenu.removeAttribute('data-disabled');
+		topicsMenu.querySelector('summary').removeAttribute('tabindex');
+	}
+}
+
+function disableToggle(tgt) {
+	tgt.preventDefault();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 window.onload = init;
 
 function init() {
@@ -151,11 +343,4 @@ function displayArticles(list) {
 	}
 }
 
-
-// Pagination
-
-var articlesCount;
-
-function activatePaginationButtons() {
-	console.log(articlesCount);
-}
+*/
