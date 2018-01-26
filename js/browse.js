@@ -7,12 +7,12 @@
 [x]		disable summary button on desktop
 [x]		prevent focus of summary button on desktop
 [x]		save/load toggle state
-[]	enable buttons to change topic
-[]		filter articles
-[]		change title
-[]		close menu on mobile
-[]		scroll to top on mobile
-[]		disable current topic button
+[x]	enable buttons to change topic
+[x]		filter articles
+[x]		change title
+[x]		disable current topic button
+[x]		close menu on mobile
+[x]		scroll to top on mobile
 []	enable pagination
 []		filter articles
 []		disable buttons if not enough articles
@@ -26,7 +26,7 @@ function init() {
 	loadArticles();
 	isWideScreen.addListener(toggleTopicsMenu);
 	toggleTopicsMenu(isWideScreen);
-	//activateTopicsButtons();
+	activateTopicsButtons();
 	//activatePaginationButtons();
 }
 
@@ -36,6 +36,7 @@ var relevantArticles;
 var pageStart = 0;
 var isWideScreen = window.matchMedia("(min-width: 37.5rem)");
 var toggleState;
+
 
 // Download and sort all articles
 
@@ -119,7 +120,7 @@ function toggleTopicsMenu(mq) {
 		}
 
 		// Open menu
-		topicsMenu.setAttribute('open', '');
+		topicsMenu.open = true;
 
 		// Disable summary button
 		topicsMenu.addEventListener('click', disableToggle);
@@ -130,7 +131,7 @@ function toggleTopicsMenu(mq) {
 	else {
 		// Load menu state
 		if (toggleState === 'wasClosed') {
-			topicsMenu.removeAttribute('open');
+			topicsMenu.open = false;
 		}
 
 		// Enable summary button
@@ -145,9 +146,57 @@ function disableToggle(tgt) {
 }
 
 
+// Change topic on button press
 
+function activateTopicsButtons() {
 
+	const topicsMenu = document.querySelector('#topicsWidget');
 
+	// Check for button press
+	topicsMenu.addEventListener('click', function(evt) {
+		if (evt.target.matches('button')) {
+			changeTopic(evt);
+		}
+	})
+}
+
+function changeTopic(button) {
+
+	const resultsHeading = document.querySelector('#articlesHeading');
+	const topicsMenu = document.querySelector('#topicsWidget');
+
+	// Change topic
+	currentTopic = button.target.value;
+
+	// Display relevant articles
+	displayArticles();
+
+	// Change heading
+	switch (currentTopic) {
+		case 'account': resultsHeading.innerHTML = 'Account'; break
+		case 'sports': resultsHeading.innerHTML = 'Sports'; break
+		case 'casino': resultsHeading.innerHTML = 'Casino'; break
+		case 'games': resultsHeading.innerHTML = 'Games'; break
+		case 'exchange': resultsHeading.innerHTML = 'Exchange'; break
+		case 'poker': resultsHeading.innerHTML = 'Poker'; break
+		case 'bingo': resultsHeading.innerHTML = 'Bingo'; break
+		case 'lotto': resultsHeading.innerHTML = 'Lotto'; break
+		case 'search': resultsHeading.innerHTML = 'Search Results'; break
+		default: resultsHeading.innerHTML = 'Popular Articles';
+	}
+
+	// Disable current topic button only
+	topicsMenu.querySelectorAll('button').forEach(element => {
+		element.removeAttribute('disabled');
+	})
+	button.target.setAttribute('disabled', '');
+
+	// Close menu on mobile
+	if (!isWideScreen.matches) {
+		topicsMenu.open = false;
+		window.scroll(0,155);
+	}
+}
 
 
 
