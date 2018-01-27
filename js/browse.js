@@ -1,161 +1,232 @@
 window.onload = init;
 
 function init() {
-	const topicsWidget = document.querySelector('#topicsWidget');
-	const articlesHeading = document.querySelector('#articlesHeading');
-	const articlesList = document.querySelector('#articlesList');
-	toggleTopicsMenu();
+	topicsMenu = document.querySelector('#topicsWidget');
+	paginationButtons = document.querySelector('#pagination');
+
 	loadArticles();
+	isWideScreen.addListener(toggleTopicsMenu);
+	toggleTopicsMenu(isWideScreen);
 	activateTopicsButtons();
 	activatePaginationButtons();
 }
 
-// Always open topic widget on desktop and disable toggle
-
+var rawArticlesList;
+var filteredArticles;
+var currentTopic = "Popular Articles";
+var topicsMenu;
+var pageStart = 0;
 var isWideScreen = window.matchMedia("(min-width: 37.5rem)");
 var toggleState;
+var paginationButtons;
+var articlesToDisplay = 10;
 
-function toggleTopicsMenu() {
-	if (isWideScreen.matches) {
-		saveToggleState(topicsWidget);
-		disableWidget(topicsWidget);
-		openWidget(topicsWidget);
+
+// Download and sort all articles
+
+function loadArticles() {
+
+    var queryURL = "js/articleslist.json";
+	fetch(queryURL)
+
+	.then(function (response) {
+		return response.json();
+	})
+
+	.then(function (list) {
+		list.sort(function(one, two) {
+			var a = one.hits, b = two.hits;
+			if (a > b) {
+				return -1;
+			}
+			else if (a < b) {
+				return 1;
+			}
+			else {
+				return 0;
+			}
+		})
+
+		rawArticlesList = list;
+		displayArticles();
+	})
+
+	.catch(function (error) {
+		console.log('Error during fetch: ' + error.message);
+	});
+}
+
+
+// Filter and display articles
+
+function displayArticles() {
+
+	const articlesDisplayArea = document.querySelector('#articlesList');
+
+	// Filter
+	if (currentTopic === 'Popular Articles') {
+		// Don't filter if a topic isn't selected
+		filteredArticles = rawArticlesList;
 	}
+
 	else {
-		loadToggleState(topicsWidget);
-		enableWidget(topicsWidget);
+		// Filter by topic if one is selected
+		filteredArticles = rawArticlesList.filter(rawArticlesList => rawArticlesList.topic === currentTopic);
 	}
-}
-isWideScreen.addListener(toggleTopicsMenu);
 
-function saveToggleState(id) {
-	if (id.hasAttribute("open")) {
-		toggleState = "isOpen";
+	// Display results
+	articlesDisplayArea.innerHTML = "";
+
+	for (i = pageStart; i < pageStart + articlesToDisplay; i++) {
+		var li = document.createElement('li');
+
+		// Create list item with article link and title
+		li.innerHTML = '<a href="pages/' + filteredArticles[i].url + '.html">' + filteredArticles[i].title + '</a>';
+
+		articlesDisplayArea.appendChild(li);
 	}
+
+	checkButtonsValidity();
+}
+
+
+// Always open topics menu on wide screens
+
+function toggleTopicsMenu(mq) {
+
+	if (mq.matches) {
+		// Save menu state
+		if (topicsMenu.hasAttribute('open')) {
+			toggleState = 'wasOpen';
+		} else {
+			toggleState = 'wasClosed';
+		}
+
+		// Open menu
+		topicsMenu.open = true;
+
+		// Disable summary button
+		topicsMenu.addEventListener('click', disableToggle);
+		topicsMenu.setAttribute('data-disabled','');
+		topicsMenu.querySelector('summary').setAttribute('tabindex', '-1');
+	}
+
 	else {
-		toggleState = "isClosed";
+		// Load menu state
+		if (toggleState === 'wasClosed') {
+			topicsMenu.open = false;
+		}
+
+		// Enable summary button
+		topicsMenu.removeEventListener('click', disableToggle);
+		topicsMenu.removeAttribute('data-disabled');
+		topicsMenu.querySelector('summary').removeAttribute('tabindex');
 	}
 }
 
-function loadToggleState(id) {
-	if (toggleState === "isClosed") {
-		id.removeAttribute("open");
-	}
-}
-
-function disableWidget(id) {
-	id.addEventListener('click', preventClick);
-	id.setAttribute("data-disabled","");
-	id.getElementsByTagName("summary")[0].setAttribute("tabindex","-1");
- }
-
-function preventClick(tgt) {
+function disableToggle(tgt) {
 	tgt.preventDefault();
 }
 
-function enableWidget(id) {
-	id.removeEventListener('click', preventClick);
-	id.removeAttribute("data-disabled");
-	id.getElementsByTagName("summary")[0].removeAttribute("tabindex");
- }
 
-function openWidget(id) {
-	id.open = true;
-}
-
-function closeWidget(id) {
-	id.open = false;
-}
-
-
-// Change title, disable button and load relevant articles upon button press
-
-var currentTopic = "Popular Articles";
+// Change topic on button press
 
 function activateTopicsButtons() {
-	topicsWidget.addEventListener('click', function (evt) {
-		if (evt.target.tagName === 'BUTTON') {
-			currentTopic = evt.target.textContent;
 
-			if(!isWideScreen.matches) {
-				closeWidget(topicsWidget);
-				window.scroll(0,155);
-			}
-
-			topicsWidget.querySelectorAll('button').forEach(element => {
-				element.removeAttribute("disabled");
-			});
-
-			evt.target.setAttribute("disabled","");
-			articlesHeading.innerHTML = currentTopic;
-			loadArticles();
+	// Check for button press
+	topicsMenu.addEventListener('click', evt => {
+		if (evt.target.matches('button')) {
+			changeTopic(evt);
 		}
 	})
 }
 
+function changeTopic(button) {
 
-// Load and display relevant articles
+	const resultsHeading = document.querySelector('#articlesHeading');
 
-function loadArticles() {
-    var queryURL = "js/articleslist.json";
-    fetch(queryURL)
-    	.then(function (response) {
-			return response.json();
-		})
-		.then(function (list) {
-			filterArticles(list);
-		})
-		.catch(function (error) {
-			console.log('Error during fetch: ' + error.message);
-		});
-}
+	// Change topic
+	currentTopic = button.target.value;
 
-function filterArticles(list) {
-	if (currentTopic === "Popular Articles") {
-		sortArticles(list);
+	// Display relevant articles
+	pageStart = 0;
+	checkButtonsValidity();
+	displayArticles();
+
+	// Change heading
+	switch (currentTopic) {
+		case 'account': resultsHeading.innerHTML = 'Account'; break
+		case 'sports': resultsHeading.innerHTML = 'Sports'; break
+		case 'casino': resultsHeading.innerHTML = 'Casino'; break
+		case 'games': resultsHeading.innerHTML = 'Games'; break
+		case 'exchange': resultsHeading.innerHTML = 'Exchange'; break
+		case 'poker': resultsHeading.innerHTML = 'Poker'; break
+		case 'bingo': resultsHeading.innerHTML = 'Bingo'; break
+		case 'lotto': resultsHeading.innerHTML = 'Lotto'; break
+		case 'search': resultsHeading.innerHTML = 'Search Results'; break
+		default: resultsHeading.innerHTML = 'Popular Articles';
 	}
-	else {
-		var filteredList = list.filter(list => list.topic === currentTopic);
-		sortArticles(filteredList);
-	}
-}
 
-function sortArticles(list) {
-	list.sort(function(one, two) {
-		var a = one.hits, b = two.hits;
-		if (a > b) {
-			return -1;
-		}
-		if (a < b) {
-			return 1;
-		}
-		else {
-			return 0;
-		}
+	// Disable current topic button only
+	topicsMenu.querySelectorAll('button').forEach(element => {
+		element.removeAttribute('disabled');
 	})
-	articlesCount = list.length;
-	displayArticles(list);
-}
+	button.target.setAttribute('disabled', '');
 
-var pageStart = 0;
-
-function displayArticles(list) {
-	articlesList.innerHTML = "";
-	for (i = pageStart; i < pageStart + 10; i++) {
-		var li = document.createElement('li');
-		var a = document.createElement('a');
-		a.setAttribute('href', '/pages/' + list[i].url + '.html');
-		a.innerHTML = list[i].title;
-		li.appendChild(a);
-		articlesList.appendChild(li);
+	// Close menu on mobile
+	if (!isWideScreen.matches) {
+		topicsMenu.open = false;
+		window.scroll(0,155);
 	}
 }
 
 
 // Pagination
 
-var articlesCount;
-
 function activatePaginationButtons() {
-	console.log(articlesCount);
+
+	// Change page number
+	paginationButtons.addEventListener('click', evt => {
+		if (evt.target.matches('button')) {
+			switch (evt.target.id) {
+				case 'firstPage': pageStart = 0; break
+				case 'previousPage': pageStart -= articlesToDisplay; break
+				case 'nextPage': pageStart += articlesToDisplay; break
+				case 'lastPage': pageStart = filteredArticles.length - articlesToDisplay; break
+			}
+
+			checkButtonsValidity();
+			displayArticles();
+
+			// Scroll to top on mobile
+			if (!isWideScreen.matches) {
+				window.scroll(0,155);
+			}
+		}
+	});
+}
+
+function checkButtonsValidity() {
+
+	// Disable buttons if not enough articles
+	if (pageStart <= 0) {
+		document.querySelector('#firstPage').setAttribute('disabled', '');
+		document.querySelector('#previousPage').setAttribute('disabled', '');
+		pageStart = 0;
+	}
+
+	else {
+		document.querySelector('#firstPage').removeAttribute('disabled', '');
+		document.querySelector('#previousPage').removeAttribute('disabled', '');
+	}
+
+	if (pageStart >= (filteredArticles.length - articlesToDisplay)) {
+		document.querySelector('#nextPage').setAttribute('disabled', '');
+		document.querySelector('#lastPage').setAttribute('disabled', '');
+	}
+
+	else {
+		document.querySelector('#nextPage').removeAttribute('disabled', '');
+		document.querySelector('#lastPage').removeAttribute('disabled', '');
+	}
 }

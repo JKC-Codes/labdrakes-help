@@ -48,14 +48,14 @@
 		<details id="topicsWidget">
 			<summary><h2 class="h4">Select A Topic</h2></summary>
 			<ul class="no-bullets">
-				<li><button>Account</button></li>
-				<li><button>Sports</button></li>
-				<li><button>Casino</button></li>
-				<li><button>Games</button></li>
-				<li><button>Exchange</button></li>
-				<li><button>Poker</button></li>
-				<li><button>Bingo</button></li>
-				<li><button>Lotto</button></li>
+				<li><button value="account">Account</button></li>
+				<li><button value="sports">Sports</button></li>
+				<li><button value="casino">Casino</button></li>
+				<li><button value="games">Games</button></li>
+				<li><button value="exchange">Exchange</button></li>
+				<li><button value="poker">Poker</button></li>
+				<li><button value="bingo">Bingo</button></li>
+				<li><button value="lotto">Lotto</button></li>
 			</ul>
 		</details>
 	</nav>
@@ -116,17 +116,17 @@
 			<li><a href="#"></a></li>
 			<li><a href="#"></a></li>
 		</ul>
-		<nav class="row">
+		<nav class="row" id="pagination">
 			<h3 class="a11y">Pagination</h3>
 			<div class="page-count">
 				<span class="page-text">Page</span>
 				<span id="pageLow">1</span> of <span id="pageHigh">1</span>
 			</div>
 			<div class="backward">
-				<button title="First" class="first" id="firstPage"><span class="a11y">First page</span></button><button title="Previous" class="previous" id="previousButton"><span class="a11y">Previous page</span></button>
+				<button title="First" class="first" id="firstPage"><span class="a11y">First page</span></button><button title="Previous" class="previous" id="previousPage"><span class="a11y">Previous page</span></button>
 			</div>
 			<div class="forward">
-				<button title="Next" class="next" id="nextButton"><span class="a11y">Next page</span></button><button title="Last" class="last" id="lastButton"><span class="a11y">Last page</span></button>
+				<button title="Next" class="next" id="nextPage"><span class="a11y">Next page</span></button><button title="Last" class="last" id="lastPage"><span class="a11y">Last page</span></button>
 			</div>
 		</nav>
 	</section>
