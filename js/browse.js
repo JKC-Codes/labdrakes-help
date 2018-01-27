@@ -1,41 +1,25 @@
-/*
-[x]	load articles
-[x]		sort articles
-[x]	filter articles
-[x]		display articles
-[x]	open topics menu on desktop
-[x]		disable summary button on desktop
-[x]		prevent focus of summary button on desktop
-[x]		save/load toggle state
-[x]	enable buttons to change topic
-[x]		filter articles
-[x]		change title
-[x]		disable current topic button
-[x]		close menu on mobile
-[x]		scroll to top on mobile
-[]	enable pagination
-[]		filter articles
-[]		disable buttons if not enough articles
-[]		scroll to top on mobile
-*/
-
-
 window.onload = init;
 
 function init() {
+	topicsMenu = document.querySelector('#topicsWidget');
+	paginationButtons = document.querySelector('#pagination');
+
 	loadArticles();
 	isWideScreen.addListener(toggleTopicsMenu);
 	toggleTopicsMenu(isWideScreen);
 	activateTopicsButtons();
-	//activatePaginationButtons();
+	activatePaginationButtons();
 }
 
 var rawArticlesList;
+var filteredArticles;
 var currentTopic = "Popular Articles";
-var relevantArticles;
+var topicsMenu;
 var pageStart = 0;
 var isWideScreen = window.matchMedia("(min-width: 37.5rem)");
 var toggleState;
+var paginationButtons;
+var articlesToDisplay = 10;
 
 
 // Download and sort all articles
@@ -77,7 +61,6 @@ function loadArticles() {
 
 function displayArticles() {
 
-	let filteredArticles;
 	const articlesDisplayArea = document.querySelector('#articlesList');
 
 	// Filter
@@ -94,7 +77,7 @@ function displayArticles() {
 	// Display results
 	articlesDisplayArea.innerHTML = "";
 
-	for (i = pageStart; i < pageStart + 10; i++) {
+	for (i = pageStart; i < pageStart + articlesToDisplay; i++) {
 		var li = document.createElement('li');
 
 		// Create list item with article link and title
@@ -102,14 +85,14 @@ function displayArticles() {
 
 		articlesDisplayArea.appendChild(li);
 	}
+
+	checkButtonsValidity();
 }
 
 
 // Always open topics menu on wide screens
 
 function toggleTopicsMenu(mq) {
-
-	const topicsMenu = document.querySelector('#topicsWidget');
 
 	if (mq.matches) {
 		// Save menu state
@@ -150,10 +133,8 @@ function disableToggle(tgt) {
 
 function activateTopicsButtons() {
 
-	const topicsMenu = document.querySelector('#topicsWidget');
-
 	// Check for button press
-	topicsMenu.addEventListener('click', function(evt) {
+	topicsMenu.addEventListener('click', evt => {
 		if (evt.target.matches('button')) {
 			changeTopic(evt);
 		}
@@ -163,12 +144,13 @@ function activateTopicsButtons() {
 function changeTopic(button) {
 
 	const resultsHeading = document.querySelector('#articlesHeading');
-	const topicsMenu = document.querySelector('#topicsWidget');
 
 	// Change topic
 	currentTopic = button.target.value;
 
 	// Display relevant articles
+	pageStart = 0;
+	checkButtonsValidity();
 	displayArticles();
 
 	// Change heading
@@ -199,196 +181,52 @@ function changeTopic(button) {
 }
 
 
+// Pagination
 
+function activatePaginationButtons() {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-window.onload = init;
-
-function init() {
-	const topicsWidget = document.querySelector('#topicsWidget');
-	const articlesHeading = document.querySelector('#articlesHeading');
-	const articlesList = document.querySelector('#articlesList');
-	toggleTopicsMenu();
-	loadArticles();
-	activateTopicsButtons();
-	activatePaginationButtons();
-}
-
-// Always open topic widget on desktop and disable toggle
-
-var isWideScreen = window.matchMedia("(min-width: 37.5rem)");
-var toggleState;
-
-function toggleTopicsMenu() {
-	if (isWideScreen.matches) {
-		saveToggleState(topicsWidget);
-		disableWidget(topicsWidget);
-		openWidget(topicsWidget);
-	}
-	else {
-		loadToggleState(topicsWidget);
-		enableWidget(topicsWidget);
-	}
-}
-isWideScreen.addListener(toggleTopicsMenu);
-
-function saveToggleState(id) {
-	if (id.hasAttribute("open")) {
-		toggleState = "isOpen";
-	}
-	else {
-		toggleState = "isClosed";
-	}
-}
-
-function loadToggleState(id) {
-	if (toggleState === "isClosed") {
-		id.removeAttribute("open");
-	}
-}
-
-function disableWidget(id) {
-	id.addEventListener('click', preventClick);
-	id.setAttribute("data-disabled","");
-	id.getElementsByTagName("summary")[0].setAttribute("tabindex","-1");
- }
-
-function preventClick(tgt) {
-	tgt.preventDefault();
-}
-
-function enableWidget(id) {
-	id.removeEventListener('click', preventClick);
-	id.removeAttribute("data-disabled");
-	id.getElementsByTagName("summary")[0].removeAttribute("tabindex");
- }
-
-function openWidget(id) {
-	id.open = true;
-}
-
-function closeWidget(id) {
-	id.open = false;
-}
-
-
-// Change title, disable button and load relevant articles upon button press
-
-var currentTopic = "Popular Articles";
-
-function activateTopicsButtons() {
-	topicsWidget.addEventListener('click', function (evt) {
-		if (evt.target.tagName === 'BUTTON') {
-			currentTopic = evt.target.textContent;
-
-			if(!isWideScreen.matches) {
-				closeWidget(topicsWidget);
-				window.scroll(0,155);
+	// Change page number
+	paginationButtons.addEventListener('click', evt => {
+		if (evt.target.matches('button')) {
+			switch (evt.target.id) {
+				case 'firstPage': pageStart = 0; break
+				case 'previousPage': pageStart -= articlesToDisplay; break
+				case 'nextPage': pageStart += articlesToDisplay; break
+				case 'lastPage': pageStart = filteredArticles.length - articlesToDisplay; break
 			}
 
-			topicsWidget.querySelectorAll('button').forEach(element => {
-				element.removeAttribute("disabled");
-			});
+			checkButtonsValidity();
+			displayArticles();
 
-			evt.target.setAttribute("disabled","");
-			articlesHeading.innerHTML = currentTopic;
-			loadArticles();
+			// Scroll to top on mobile
+			if (!isWideScreen.matches) {
+				window.scroll(0,155);
+			}
 		}
-	})
+	});
 }
 
+function checkButtonsValidity() {
 
-// Load and display relevant articles
-
-function loadArticles() {
-    var queryURL = "js/articleslist.json";
-    fetch(queryURL)
-    	.then(function (response) {
-			return response.json();
-		})
-		.then(function (list) {
-			filterArticles(list);
-		})
-		.catch(function (error) {
-			console.log('Error during fetch: ' + error.message);
-		});
-}
-
-function filterArticles(list) {
-	if (currentTopic === "Popular Articles") {
-		sortArticles(list);
+	// Disable buttons if not enough articles
+	if (pageStart <= 0) {
+		document.querySelector('#firstPage').setAttribute('disabled', '');
+		document.querySelector('#previousPage').setAttribute('disabled', '');
+		pageStart = 0;
 	}
+
 	else {
-		var filteredList = list.filter(list => list.topic === currentTopic);
-		sortArticles(filteredList);
+		document.querySelector('#firstPage').removeAttribute('disabled', '');
+		document.querySelector('#previousPage').removeAttribute('disabled', '');
+	}
+
+	if (pageStart >= (filteredArticles.length - articlesToDisplay)) {
+		document.querySelector('#nextPage').setAttribute('disabled', '');
+		document.querySelector('#lastPage').setAttribute('disabled', '');
+	}
+
+	else {
+		document.querySelector('#nextPage').removeAttribute('disabled', '');
+		document.querySelector('#lastPage').removeAttribute('disabled', '');
 	}
 }
-
-function sortArticles(list) {
-	list.sort(function(one, two) {
-		var a = one.hits, b = two.hits;
-		if (a > b) {
-			return -1;
-		}
-		if (a < b) {
-			return 1;
-		}
-		else {
-			return 0;
-		}
-	})
-	articlesCount = list.length;
-	displayArticles(list);
-}
-
-var pageStart = 0;
-
-function displayArticles(list) {
-	articlesList.innerHTML = "";
-	for (i = pageStart; i < pageStart + 10; i++) {
-		var li = document.createElement('li');
-		var a = document.createElement('a');
-		a.setAttribute('href', '/pages/' + list[i].url + '.html');
-		a.innerHTML = list[i].title;
-		li.appendChild(a);
-		articlesList.appendChild(li);
-	}
-}
-
-*/
