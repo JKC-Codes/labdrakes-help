@@ -827,6 +827,7 @@
 	body {
 		max-width: 75rem;
 		margin: 0 auto;
+		scroll-behavior: smooth;
 	}
 
 	main {
