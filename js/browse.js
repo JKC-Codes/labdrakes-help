@@ -21,7 +21,7 @@ var pageStart = 0;
 var isWideScreen = window.matchMedia("(min-width: 37.5rem)");
 var toggleState;
 var paginationButtons;
-var articlesToDisplay = 10;
+var articlesToDisplay = 8;
 var currentPage;
 var totalPages;
 
