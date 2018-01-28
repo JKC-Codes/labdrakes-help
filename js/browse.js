@@ -3,6 +3,8 @@ window.onload = init;
 function init() {
 	topicsMenu = document.querySelector('#topicsWidget');
 	paginationButtons = document.querySelector('#pagination');
+	currentPage = document.querySelector('#pageLow');
+	totalPages = document.querySelector('#pageHigh');
 
 	loadArticles();
 	isWideScreen.addListener(toggleTopicsMenu);
@@ -20,6 +22,8 @@ var isWideScreen = window.matchMedia("(min-width: 37.5rem)");
 var toggleState;
 var paginationButtons;
 var articlesToDisplay = 10;
+var currentPage;
+var totalPages;
 
 
 // Download and sort all articles
@@ -87,6 +91,7 @@ function displayArticles() {
 	}
 
 	checkButtonsValidity();
+	updatePageCount();
 }
 
 
@@ -133,7 +138,6 @@ function disableToggle(tgt) {
 
 function activateTopicsButtons() {
 
-	// Check for button press
 	topicsMenu.addEventListener('click', evt => {
 		if (evt.target.matches('button')) {
 			changeTopic(evt);
@@ -195,7 +199,6 @@ function activatePaginationButtons() {
 				case 'lastPage': pageStart = filteredArticles.length - articlesToDisplay; break
 			}
 
-			checkButtonsValidity();
 			displayArticles();
 
 			// Scroll to top on mobile
@@ -229,4 +232,9 @@ function checkButtonsValidity() {
 		document.querySelector('#nextPage').removeAttribute('disabled', '');
 		document.querySelector('#lastPage').removeAttribute('disabled', '');
 	}
+}
+
+function updatePageCount() {
+	currentPage.innerHTML = (pageStart / articlesToDisplay) + 1;
+	totalPages.innerHTML = Math.ceil(filteredArticles.length / articlesToDisplay);
 }
