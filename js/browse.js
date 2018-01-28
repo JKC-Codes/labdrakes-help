@@ -67,7 +67,7 @@ function displayArticles() {
 
 	const articlesDisplayArea = document.querySelector('#articlesList');
 
-	// Filter
+	// Filter JSON list
 	if (currentTopic === 'Popular Articles') {
 		// Don't filter if a topic isn't selected
 		filteredArticles = rawArticlesList;
@@ -78,20 +78,54 @@ function displayArticles() {
 		filteredArticles = rawArticlesList.filter(rawArticlesList => rawArticlesList.topic === currentTopic);
 	}
 
+	// Ensure results don't extend beyond articles available
+	let articlesCount = articlesToDisplay;
+
+	if (pageStart < 0) {
+		pageStart = 0;
+	}
+
+	else if (pageStart + articlesToDisplay > filteredArticles.length) {
+		if (filteredArticles.length % articlesToDisplay !== 0) {
+			articlesCount = filteredArticles.length % articlesToDisplay;
+		}
+		pageStart = filteredArticles.length - articlesCount;
+	}
+
+	else {
+		articlesCount = articlesToDisplay;
+	}
+
 	// Display results
 	articlesDisplayArea.innerHTML = "";
 
-	for (i = pageStart; i < pageStart + articlesToDisplay; i++) {
+	for (i = 0; i < articlesCount; i++) {
 		var li = document.createElement('li');
 
 		// Create list item with article link and title
-		li.innerHTML = '<a href="pages/' + filteredArticles[i].url + '.html">' + filteredArticles[i].title + '</a>';
+		li.innerHTML = '<a href="pages/' + filteredArticles[i + pageStart].url + '.html">' + filteredArticles[i + pageStart].title + '</a>';
 
 		articlesDisplayArea.appendChild(li);
 	}
 
-	checkButtonsValidity();
-	updatePageCount();
+	// Disable pagination if not enough articles
+	paginationButtons.querySelectorAll('button').forEach(button => {
+		button.removeAttribute('disabled', '');
+	})
+
+	if (pageStart <= 0) {
+		document.querySelector('#firstPage').setAttribute('disabled', '');
+		document.querySelector('#previousPage').setAttribute('disabled', '');
+	}
+
+	else if (pageStart >= (filteredArticles.length - articlesToDisplay)) {
+		document.querySelector('#nextPage').setAttribute('disabled', '');
+		document.querySelector('#lastPage').setAttribute('disabled', '');
+	}
+
+	// Update "page x of y" text
+	currentPage.innerHTML = Math.ceil(pageStart / articlesToDisplay) + 1;
+	totalPages.innerHTML = Math.ceil(filteredArticles.length / articlesToDisplay);
 }
 
 
@@ -154,7 +188,6 @@ function changeTopic(button) {
 
 	// Display relevant articles
 	pageStart = 0;
-	checkButtonsValidity();
 	displayArticles();
 
 	// Change heading
@@ -185,7 +218,7 @@ function changeTopic(button) {
 }
 
 
-// Pagination
+// Pagination buttons
 
 function activatePaginationButtons() {
 
@@ -196,7 +229,7 @@ function activatePaginationButtons() {
 				case 'firstPage': pageStart = 0; break
 				case 'previousPage': pageStart -= articlesToDisplay; break
 				case 'nextPage': pageStart += articlesToDisplay; break
-				case 'lastPage': pageStart = filteredArticles.length - articlesToDisplay; break
+				case 'lastPage': pageStart = filteredArticles.length; break
 			}
 
 			displayArticles();
@@ -207,34 +240,4 @@ function activatePaginationButtons() {
 			}
 		}
 	});
-}
-
-function checkButtonsValidity() {
-
-	// Disable buttons if not enough articles
-	if (pageStart <= 0) {
-		document.querySelector('#firstPage').setAttribute('disabled', '');
-		document.querySelector('#previousPage').setAttribute('disabled', '');
-		pageStart = 0;
-	}
-
-	else {
-		document.querySelector('#firstPage').removeAttribute('disabled', '');
-		document.querySelector('#previousPage').removeAttribute('disabled', '');
-	}
-
-	if (pageStart >= (filteredArticles.length - articlesToDisplay)) {
-		document.querySelector('#nextPage').setAttribute('disabled', '');
-		document.querySelector('#lastPage').setAttribute('disabled', '');
-	}
-
-	else {
-		document.querySelector('#nextPage').removeAttribute('disabled', '');
-		document.querySelector('#lastPage').removeAttribute('disabled', '');
-	}
-}
-
-function updatePageCount() {
-	currentPage.innerHTML = (pageStart / articlesToDisplay) + 1;
-	totalPages.innerHTML = Math.ceil(filteredArticles.length / articlesToDisplay);
 }
