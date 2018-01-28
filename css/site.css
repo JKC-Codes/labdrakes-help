@@ -822,12 +822,12 @@
 		color: var(--colour-default);
 		font: var(--font-default);
 		overflow-wrap: break-word;
+		scroll-behavior: smooth;
 	}
 
 	body {
 		max-width: 75rem;
 		margin: 0 auto;
-		scroll-behavior: smooth;
 	}
 
 	main {
