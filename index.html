@@ -16,6 +16,13 @@
 			document.write('<script src="js/details-summary-polyfill.js"><\/script>');
 		}
 	</script>
+	<script>
+		// Check for Dialog element support
+		if (!('show' in document.createElement('dialog'))) {
+			// Load polyfill if unsupported
+			document.write('<script src="js/dialog-polyfill.js"><\/script><link rel="stylesheet" href="css/dialog-polyfill.css">');
+		}
+	</script>
 </head>
 
 <body>
@@ -138,6 +145,13 @@
 					<a class="button" href="https://github.com/HalcyonHush/labdrakes-help">Log In</a>
 					<button id="chatClose">Cancel</button>
 				</dialog>
+				<script>
+					// Check for Dialog element support
+					if (!('show' in document.createElement('dialog'))) {
+						// Load polyfill if unsupported
+						dialogPolyfill.registerDialog(chatDialogue);
+					}
+				</script>
 			</li>
 			<li><details>
 					<summary class="button">Call</summary>
