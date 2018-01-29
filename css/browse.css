@@ -257,11 +257,14 @@
 		transform: translateX(calc((3rem - 100%) / 2)) rotate(0.5turn);
 	}
 
-	@media (max-width: 25rem) {
+	@media (max-width: 21rem),
+		(min-width: 37.5rem) and (max-width: 40rem) {
 		main.browse .results nav {
 			font-size: 75%;
 		}
+	}
 
+	@media (max-width: 25rem) {
 		main.browse .results .page-text {
 			position: absolute;
 			top: auto;
