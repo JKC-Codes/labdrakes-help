@@ -5,12 +5,16 @@ function init() {
 	paginationButtons = document.querySelector('#pagination');
 	currentPage = document.querySelector('#pageLow');
 	totalPages = document.querySelector('#pageHigh');
+	chatButton = document.querySelector('#chatButton');
+	chatPopUp = document.querySelector('#chatDialogue');
+	chatClose = document.querySelector('#chatClose');
 
 	loadArticles();
 	isWideScreen.addListener(toggleTopicsMenu);
 	toggleTopicsMenu(isWideScreen);
 	activateTopicsButtons();
 	activatePaginationButtons();
+	chatButton.addEventListener('click', requestLogIn);
 }
 
 var rawArticlesList;
@@ -24,6 +28,8 @@ var paginationButtons;
 var articlesToDisplay = 8;
 var currentPage;
 var totalPages;
+var chatPopUp;
+var chatClose
 
 
 // Download and sort all articles
@@ -240,4 +246,18 @@ function activatePaginationButtons() {
 			}
 		}
 	});
+}
+
+
+// Pop up log in box when chat button is pressed
+function requestLogIn() {
+	chatPopUp.show();
+	chatClose.addEventListener('click', closeChatPopUp);
+}
+
+
+// Close chat pop up
+function closeChatPopUp() {
+	chatPopUp.close();
+	chatClose.removeEventListener('click', closeChatPopUp);
 }
