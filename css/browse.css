@@ -21,7 +21,6 @@
 
 		main.browse .results {
 			grid-row: span 2;
-			min-height: 60.2rem;
 		}
 
 		main.browse .contact {
@@ -187,6 +186,7 @@
 	main.browse .results ul {
 		padding: 0;
 		margin: 0 0 1rem;
+		flex-grow: 1;
 	}
 
 	main.browse .results li {
@@ -202,7 +202,6 @@
 	}
 
 	main.browse .results nav {
-		margin-top: 2.5rem;
 		justify-content: space-between;
 		align-items: center;
 	}
@@ -255,6 +254,12 @@
 	main.browse .results .last::before,
 	main.browse .results .next::before {
 		transform: translateX(calc((3rem - 100%) / 2)) rotate(0.5turn);
+	}
+
+	@media (min-width: 37.5rem) {
+		main.browse .results nav {
+			margin-bottom: 1.75rem;
+		}
 	}
 
 	@media (max-width: 21rem),
