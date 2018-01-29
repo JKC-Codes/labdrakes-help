@@ -320,6 +320,30 @@
 		margin-bottom: 0;
 	}
 
+	main.browse .contact dialog {
+		top: -0.5rem;
+		padding: 0rem 2rem;
+		text-align: center;
+	}
+
+	main.browse .contact dialog .button {
+		display: block;
+		margin: 1rem auto;
+		width: 10.5rem;
+	}
+
+	main.browse .contact dialog button {
+		display: block;
+		width: auto;
+		margin: 0 auto 1rem;
+		background-color: transparent;
+		color: var(--colour-default);
+		text-decoration: underline;
+		box-shadow: none;
+		padding: 0;
+		min-height: 0;
+	}
+
 	main.browse .contact summary::-webkit-details-marker {
 		display: none;
 	}
