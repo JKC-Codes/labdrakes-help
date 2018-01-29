@@ -213,7 +213,7 @@ function changeTopic(button) {
 	// Close menu on mobile
 	if (!isWideScreen.matches) {
 		topicsMenu.open = false;
-		window.scroll(0,155);
+		window.scroll(0,128);
 	}
 }
 
@@ -236,7 +236,7 @@ function activatePaginationButtons() {
 
 			// Scroll to top on mobile
 			if (!isWideScreen.matches) {
-				window.scroll(0,155);
+				window.scroll(0,128);
 			}
 		}
 	});
