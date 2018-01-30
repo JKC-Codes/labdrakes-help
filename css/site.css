@@ -520,6 +520,10 @@
 		padding-left: var(--gap-left);
 	}
 
+	ul.no-bullets {
+		padding-left: 0;
+	}
+
 	li > ul,
 	li > ol	{
 		margin-top: 0.5em;
