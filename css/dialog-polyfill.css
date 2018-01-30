@@ -10,7 +10,7 @@ dialog:not([open]) {
 	display: none;
 }
 
-@supports not ((width: -moz-fit-content) and (width: -webkit-fit-content)) {
+@supports not ((width: -moz-fit-content) or (width: -webkit-fit-content)) {
 	dialog {
 		width: 100%;
 	}
