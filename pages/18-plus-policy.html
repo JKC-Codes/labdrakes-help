@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> &mdash; Labdrakes Help</title>
+	<link rel="icon" href="../img/favicon.png">
+	<link rel="stylesheet" href="../css/site.css">
+	<link rel="stylesheet" href="../css/article.css">
+	<script src="../js/article.js"></script>
+	<script>
+		// Check for Details element support
+		if (!('open' in document.createElement('details'))) {
+			// Load polyfill if unsupported
+			document.write('<script src="../js/details-summary-polyfill.js"><\/script>');
+		}
+	</script>
+	<script>
+		// Check for Dialog element support
+		if (!('show' in document.createElement('dialog'))) {
+			// Load polyfill if unsupported
+			document.write('<script src="../js/dialog-polyfill.js"><\/script><link rel="stylesheet" href="../css/dialog-polyfill.css">');
+		}
+	</script>
+</head>
+
+<body>
+
+	<header class="site">
+		<script src="../js/header.js"></script>
+	</header>
+
+
+	<main class="article">
+		<article>
+			<header>
+				<h2>Lorem Ipsum</h2>
+			</header>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quia minima quas porro voluptatum laboriosam asperiores quo dolorum, ipsum commodi ipsa temporibus odio possimus minus, doloribus delectus hic! Fugiat, et voluptatem! Facilis quae porro, pariatur officia repellat sint laboriosam necessitatibus totam nihil quidem dolor tempore distinctio omnis dicta, a at.</p>
+		</article>
+
+		<aside>
+			<h2 class="h4">Related Articles</h2>
+			<ul class="no-bullets">
+				<li><a href="">Lorem ipsum dolor sit amet.</a></li>
+				<li><a href="">Lorem ipsum dolor sit amet.</a></li>
+				<li><a href="">Lorem ipsum dolor sit amet.</a></li>
+				<li><a href="">Lorem ipsum dolor sit amet.</a></li>
+				<li><a href="">Lorem ipsum dolor sit amet.</a></li>
+			</ul>
+		</aside>
+
+		<aside class="contact">
+			<h2 class="h4">Contact Us</h2>
+			<ul class="no-bullets">
+				<li><button id="chatButton">Chat</button>
+					<dialog id="chatDialogue">
+						<p>You must be logged in to chat</p>
+						<a class="button" href="https://github.com/HalcyonHush/labdrakes-help">Log In</a>
+						<button id="chatClose">Cancel</button>
+					</dialog>
+					<script>
+						// Check for Dialog element support
+						if (!('show' in document.createElement('dialog'))) {
+							// Load polyfill if unsupported
+							dialogPolyfill.registerDialog(chatDialogue);
+						}
+					</script>
+				</li>
+				<li><details>
+						<summary class="button">Call</summary>
+						<ul class="no-bullets">
+							<li>UK: <a class="no-wrap" href="tel:08081571234">0808 157 1234</a></li>
+							<li>Outside the UK: <a class="no-wrap" href="tel:+441632961234">+44 1632 961 234</a></li>
+						</ul>
+					</details>
+				</li>
+				<li><a href="contact.html" class="button">Email</a></li>
+			</ul>
+		</aside>
+	</main>
+
+
+	<footer class="site dark">
+		<script src="../js/footer.js"></script>
+	</footer>
+
+</body>
+</html>
