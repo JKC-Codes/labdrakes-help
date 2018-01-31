@@ -252,12 +252,14 @@ function activatePaginationButtons() {
 // Pop up log in box when chat button is pressed
 function requestLogIn() {
 	chatPopUp.show();
-	chatClose.addEventListener('click', closeChatPopUp);
+	window.addEventListener('click', closeChatPopUp);
 }
 
 
 // Close chat pop up
-function closeChatPopUp() {
-	chatPopUp.close();
-	chatClose.removeEventListener('click', closeChatPopUp);
+function closeChatPopUp(click) {
+	if(click.target !== chatButton && (!chatDialogue.contains(click.target) || click.target === chatClose)) {
+		chatPopUp.close();
+		window.removeEventListener('click', closeChatPopUp);
+	}
 }
