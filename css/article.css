@@ -17,7 +17,7 @@
 
 	@media (min-width: 56.25rem) {
 		main.article {
-			grid-template: repeat(3, auto) / minmax(60ch, auto) auto;
+			grid-template: repeat(3, auto) / minmax(60ch, 3fr) 1fr;
 		}
 	}
 
