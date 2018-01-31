@@ -1,1 +1,98 @@
-document.querySelector('footer').innerHTML = '<section class="page-links">\n<h2 class="a11y">Important Articles</h2>\n<ul class="no-bullets column">\n<li><a href="../pages/terms-and-conditions.html" class="button">Terms and Conditions</a></li>\n<li><a href="../pages/responsible-gambling.html" class="button">Responsible Gambling</a></li>\n<li><a href="../pages/privacy-policy.html#cookies" class="button">Cookie Policy</a></li>\n</ul>\n</section>\n\n<section class="icons">\n<h2 class="a11y">Gambling Information</h2>\n<ul class="no-bullets">\n<li class="over-18"><a href="../pages/18-plus-policy.html" class="icon over-18">\n<span class="a11y">18 and over Policy</span>\n</a>\n</li>\n<li class="essa"><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener" class="icon essa">\n<span class="a11y">ESSA Sports Betting Integrity</span>\n</a>\n</li>\n<li class="therapy"><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener" class="icon therapy">\n<span class="a11y">Gambling Therapy</span>\n</a>\n</li>\n<li class="gamcare"><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener" class="icon gamcare">\n<span class="a11y">Gamcare</span>\n</a>\n</li>\n<li class="gib"><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener" class="icon gib">\n<span class="a11y">Government of Gibraltar</span>\n</a>\n</li>\n<li class="commission"><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener" class="icon commission">\n<span class="a11y">Gambling Commission</span>\n</a>\n</li>\n<li class="trust"><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener" class="icon trust">\n<span class="a11y">Responsible Gambling Trust</span>\n</a>\n</li>\n</ul>\n</section>\n\n<section class="about">\n<h2 class="h4">About Labdrakes</h2>\n<ul class="no-bullets">\n<li><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener">About Us</a></li>\n<li><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener">Affiliates</a></li>\n<li><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener">Investor Centre</a></li>\n<li><a href="../pages/restricted-territories.html">Restricted Territories</a></li>\n</ul>\n</section>\n\n<section class="quick-links">\n<h2 class="h4">Quick Links</h2>\n<ul class="no-bullets">\n<li><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener">Labdrakes.com</a></li>\n<li><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener">Shop Locator</a></li>\n<li><a href="../pages/other-ways-to-bet.html">Other Ways To Bet</a></li>\n<li><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener">The Grid</a></li>\n</ul>\n</section>\n\n<section class="social">\n<h2 class="a11y">Social Media</h2>\n<ul class="no-bullets row">\n<li><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener" class="icon facebook">\n<span class="a11y">Facebook</span>\n</a></li>\n<li><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener" class="icon twitter">\n<span class="a11y">Twitter</span>\n</a></li>\n<li><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener" class="icon youtube">\n<span class="a11y">YouTube</span>\n</a></li>\n</ul>\n</section>\n\n<section class="legal">\n<h2 class="a11y">Legal</h2>\n<p><small>Labdrakes Betting &amp; Gaming Ltd. is licensed (<a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener">licence no. 0000</a>) and regulated by the British Gambling Commission for persons gambling in Great Britain and LM International Limited, Suites 0-0, 0th Floor, Europort, Gibraltar are licensed (RGL Nos. 000, 000) by the Government of Gibraltar and regulated by the Gibraltar Gambling Commissioner.</small></p>\n<p class="copyright"><small>Copyright &copy; 2018 Labdrakes</small></p>\n</section>';
+document.querySelector('footer').innerHTML = `
+<section class="page-links">
+	<h2 class="a11y">Important Articles</h2>
+	<ul class="no-bullets column">
+		<li><a href="../pages/terms-and-conditions.html" class="button">Terms and Conditions</a></li>
+		<li><a href="../pages/responsible-gambling.html" class="button">Responsible Gambling</a></li>
+		<li><a href="../pages/privacy-policy.html#cookies" class="button">Cookie Policy</a></li>
+	</ul>
+</section>
+
+<section class="icons">
+	<h2 class="a11y">Gambling Information</h2>
+	<ul class="no-bullets">
+		<li class="over-18">
+			<a href="../pages/18-plus-policy.html" class="icon over-18">
+				<span class="a11y">18 and over Policy</span>
+			</a>
+		</li>
+		<li class="essa">
+			<a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener" class="icon essa">
+				<span class="a11y">ESSA Sports Betting Integrity</span>
+			</a>
+		</li>
+		<li class="therapy">
+			<a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener" class="icon therapy">
+				<span class="a11y">Gambling Therapy</span>
+			</a>
+		</li>
+		<li class="gamcare">
+			<a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener" class="icon gamcare">
+				<span class="a11y">Gamcare</span>
+			</a>
+		</li>
+		<li class="gib">
+			<a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener" class="icon gib">
+				<span class="a11y">Government of Gibraltar</span>
+			</a>
+		</li>
+		<li class="commission">
+			<a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener" class="icon commission">
+				<span class="a11y">Gambling Commission</span>
+			</a>
+		</li>
+		<li class="trust">
+			<a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener" class="icon trust">
+				<span class="a11y">Responsible Gambling Trust</span>
+			</a>
+		</li>
+	</ul>
+</section>
+
+<section class="about">
+	<h2 class="h4">About Labdrakes</h2>
+	<ul class="no-bullets">
+		<li><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener">About Us</a></li>
+		<li><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener">Affiliates</a></li>
+		<li><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener">Investor Centre</a></li>
+		<li><a href="../pages/restricted-territories.html">Restricted Territories</a></li>
+	</ul>
+</section>
+
+<section class="quick-links">
+	<h2 class="h4">Quick Links</h2>
+	<ul class="no-bullets">
+		<li><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener">Labdrakes.com</a></li>
+		<li><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener">Shop Locator</a></li>
+		<li><a href="../pages/other-ways-to-bet.html">Other Ways To Bet</a></li>
+		<li><a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener">The Grid</a></li>
+	</ul>
+</section>
+
+<section class="social">
+	<h2 class="a11y">Social Media</h2>
+	<ul class="no-bullets row">
+		<li>
+			<a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener" class="icon facebook">
+				<span class="a11y">Facebook</span>
+			</a>
+		</li>
+		<li>
+			<a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener" class="icon twitter">
+				<span class="a11y">Twitter</span>
+			</a>
+		</li>
+		<li>
+			<a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener" class="icon youtube">
+				<span class="a11y">YouTube</span>
+			</a>
+		</li>
+	</ul>
+</section>
+
+<section class="legal">
+	<h2 class="a11y">Legal</h2>
+	<p><small>Labdrakes Betting &amp; Gaming Ltd. is licensed (<a href="https://github.com/HalcyonHush/labdrakes-help" rel="noopener">licence no. 0000</a>) and regulated by the British Gambling Commission for persons gambling in Great Britain and LM International Limited, Suites 0-0, 0th Floor, Europort, Gibraltar are licensed (RGL Nos. 000, 000) by the Government of Gibraltar and regulated by the Gibraltar Gambling Commissioner.</small></p>
+	<p class="copyright"><small>Copyright &copy; 2018 Labdrakes</small></p>
+</section>
+`;
