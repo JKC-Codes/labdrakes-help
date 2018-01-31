@@ -29,6 +29,7 @@ var articlesToDisplay = 8;
 var currentPage;
 var totalPages;
 var chatPopUp;
+var chatButton;
 var chatClose
 
 
@@ -258,7 +259,7 @@ function requestLogIn() {
 
 // Close chat pop up
 function closeChatPopUp(click) {
-	if(click.target !== chatButton && (!chatDialogue.contains(click.target) || click.target === chatClose)) {
+	if(click.target !== chatButton && (!chatPopUp.contains(click.target) || click.target === chatClose)) {
 		chatPopUp.close();
 		window.removeEventListener('click', closeChatPopUp);
 	}
