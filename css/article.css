@@ -4,7 +4,21 @@
 
 	main.article {
 		display: grid;
+		grid-template: repeat(3, auto) / 1fr;
 		grid-gap: 1rem;
+		align-items: start;
+	}
+
+	@media (min-width: 37.5rem) {
+		main.article {
+			grid-template: repeat(2, auto) / 2fr 1fr;
+		}
+	}
+
+	@media (min-width: 56.25rem) {
+		main.article {
+			grid-template: repeat(3, auto) / minmax(60ch, auto) auto;
+		}
 	}
 
 	main.article > article,
@@ -18,10 +32,32 @@
 	Article
 ========================================*/
 
+	main.article > article {
+		align-self: stretch;
+	}
+
 	main.article > article > header h2 {
 		margin: 0 0 2rem;
 		text-align: center;
 		border-bottom: 0.0625rem solid var(--colour-brand);
+	}
+
+	main.article > article > .background {
+		max-width: 80ch;
+		margin: auto;
+	}
+
+	@media (min-width: 37.5rem) {
+		main.article > article {
+			grid-column: span 2;
+		}
+	}
+
+	@media (min-width: 56.25rem) {
+		main.article > article {
+			grid-column: span 1;
+			grid-row: span 3;
+		}
 	}
 
 
@@ -49,7 +85,9 @@
 		color: var(--colour-default);
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		min-height: 3rem;
+		word-break: break-all;
 	}
 
 
