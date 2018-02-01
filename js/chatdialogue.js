@@ -2,7 +2,7 @@ var chatButton;
 var chatPopUp;
 var chatClose;
 
-window.addEventListener('load', init, {once:true});
+window.addEventListener('DOMContentLoaded', init(), {once:true});
 
 function init() {
 	chatButton = document.querySelector('#chatButton');
