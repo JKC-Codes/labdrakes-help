@@ -11,13 +11,13 @@
 
 	@media (min-width: 37.5rem) {
 		main.article {
-			grid-template: repeat(2, auto) / 2fr 1fr;
+			grid-template: auto 1fr / 2fr 1fr;
 		}
 	}
 
 	@media (min-width: 56.25rem) {
 		main.article {
-			grid-template: repeat(3, auto) / minmax(60ch, 3fr) 1fr;
+			grid-template-columns: minmax(60ch, 3fr) 1fr;
 		}
 	}
 
@@ -56,7 +56,7 @@
 	@media (min-width: 56.25rem) {
 		main.article > article {
 			grid-column: span 1;
-			grid-row: span 3;
+			grid-row: span 2;
 		}
 	}
 
