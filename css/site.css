@@ -533,16 +533,14 @@
 	ul.no-bullets,
 	li.tick,
 	li.cross,
-	ol.cascade li,
-	ol.cascade li.heading :first-child {
+	ol.cascade li {
 		list-style-type: none;
 		position: relative;
 	}
 
 	li.tick::before,
 	li.cross::before,
-	ol.cascade li::before,
-	ol.cascade li.heading :first-child::before	{
+	ol.cascade li::before {
 		position: absolute;
 		right: 100%;
 	}
@@ -573,7 +571,13 @@
 		content: '';
 	}
 
+	ol.cascade li.heading > ol {
+		padding: 0;
+	}
+
 	ol.cascade li.heading > :first-child::before {
+		position: absolute;
+		right: 100%;
 		content: counters(section, ".") ".\00a0";
 	}
 
@@ -597,13 +601,19 @@
 	}
 
 	ol.alpha,
+	ol.cascade ol.reset li,
 	ol.cascade ul ol li {
 		list-style-type: lower-alpha;
 	}
 
 	ol.roman,
+	ol.cascade ol.reset ol li,
 	ol.cascade ul ol ol li {
 		list-style-type: lower-roman;
+	}
+
+	ol.cascade ol.reset li::before {
+		content: '';
 	}
 
 	dt {
