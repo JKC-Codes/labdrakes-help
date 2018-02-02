@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> - Labdrakes Help</title>
+	<link rel="icon" href="../img/favicon.png">
+	<link rel="stylesheet" href="../css/site.css">
+	<link rel="stylesheet" href="../css/contact.css">
+	<script src="../js/contact.js" defer></script>
+	<script src="../js/chatdialogue.js" defer></script>
+	<script>
+		// Check for Dialog element support
+		if (!('show' in document.createElement('dialog'))) {
+			// Load polyfill if unsupported
+			document.write('<script src="../js/dialog-polyfill.js"><\/script><link rel="stylesheet" href="../css/dialog-polyfill.css">');
+		}
+	</script>
+</head>
+
+<body>
+
+	<header class="site">
+		<!--Work around for GitHub not allowing a back end-->
+		<script src="../js/header.js"></script>
+	</header>
+
+
+	<main class="contact">
+		<header>
+			<h2 id="articleTitle">Contact Us</h2>
+		</header>
+
+		<section class="chat">
+			<h3>Chat</h3>
+			<button id="chatButton">Chat</button>
+			<dialog id="chatDialogue">
+				<p>You must be logged in to chat</p>
+				<a class="button" href="https://github.com/HalcyonHush/labdrakes-help">Log In</a>
+				<button id="chatClose">Cancel</button>
+			</dialog>
+			<script>
+				// Check for Dialog element support
+				if (!('show' in document.createElement('dialog'))) {
+					// Load polyfill if unsupported
+					dialogPolyfill.registerDialog(chatDialogue);
+				}
+			</script>
+		</section>
+
+		<section class="call">
+			<h3>Call</h3>
+			<ul class="no-bullets">
+				<li>UK: <a class="no-wrap" href="tel:08081571234">0808 157 1234</a></li>
+				<li>Outside the UK: <a class="no-wrap" href="tel:+441632961234">+44 1632 961 234</a></li>
+			</ul>
+		</section>
+
+		<section class="email">
+			<h3>Email</h3>
+			<form>
+
+			</form>
+		</section>
+
+		<!-- <aside class="related">
+			<h2 class="h4">Related Articles</h2>
+			<ul class="no-bullets" id="relatedArticlesList">
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+		</aside> -->
+
+	</main>
+
+
+	<footer class="site dark">
+		<!--Work around for GitHub not allowing a back end-->
+		<script src="../js/footer.js"></script>
+	</footer>
+
+</body>
+</html>
