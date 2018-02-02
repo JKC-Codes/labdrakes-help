@@ -1,0 +1,96 @@
+/*========================================
+	Layout
+========================================*/
+
+	main.contact {
+		display: grid;
+		grid-template: repeat(4, auto) / 1fr;
+		grid-gap: 1rem;
+	}
+
+	@media (min-width: 37.5rem) {
+		main.contact {
+			grid-template: auto auto 1fr / 1fr 1fr;
+		}
+	}
+
+	main.contact > header,
+	main.contact > section,
+	main.article > aside {
+		background: #fff;
+		padding: 1rem;
+	}
+
+	main.contact > header > h2,
+	main.contact > section > h3 {
+		margin: 0 0 1rem;
+		text-align: center;
+	}
+
+	main.contact > header > h2 {
+		border-bottom: 0.0625rem solid var(--colour-brand);
+	}
+
+	main.contact > section > h3 {
+		font-weight: 400;
+	}
+
+
+/*========================================
+	Header
+========================================*/
+
+	@media (min-width: 37.5rem) {
+		main.contact > header {
+			grid-column: span 2;
+		}
+	}
+
+
+/*========================================
+	Chat
+========================================*/
+
+	main.contact section.chat dialog {
+		top: -0.5rem;
+		padding: 0rem 2rem;
+		text-align: center;
+	}
+
+	main.contact section.chat dialog .button {
+		display: block;
+		margin: 1rem auto;
+		width: 10.5rem;
+	}
+
+	main.contact section.chat dialog button {
+		display: block;
+		width: auto;
+		margin: 0 auto 1rem;
+		background-color: transparent;
+		color: var(--colour-default);
+		text-decoration: underline;
+		box-shadow: none;
+		padding: 0;
+		min-height: 0;
+	}
+
+
+/*========================================
+	Call
+========================================*/
+
+	main.contact section.call {
+		foo: bar;
+	}
+
+
+/*========================================
+	Email
+========================================*/
+
+	@media (min-width: 37.5rem) {
+		main.contact section.email {
+			grid-column: span 2;
+		}
+	}
