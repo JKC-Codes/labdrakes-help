@@ -42,7 +42,7 @@
 		border-bottom: 0.0625rem solid var(--colour-brand);
 	}
 
-	main.article > article > .background {
+	main.article > article > .content {
 		max-width: 80ch;
 		margin: auto;
 	}
