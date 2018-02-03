@@ -154,7 +154,6 @@
 
 	main.browse .results .loading svg {
 		width: 100%;
-
 		animation: 1s step-end reveal, 1.5s linear 20 loading;
 	}
 

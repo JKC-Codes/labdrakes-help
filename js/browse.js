@@ -30,7 +30,7 @@ var totalPages;
 
 function loadArticles() {
 
-    var queryURL = "../js/articleslist.json";
+    var queryURL = "js/articleslist.json";
 	fetch(queryURL)
 
 	.then(function (response) {
@@ -103,7 +103,7 @@ function displayArticles() {
 		var li = document.createElement('li');
 
 		// Create list item with article link and title
-		li.innerHTML = '<a href="' + filteredArticles[i + pageStart].url + '.html">' + filteredArticles[i + pageStart].title + '</a>';
+		li.innerHTML = '<a href="pages/' + filteredArticles[i + pageStart].url + '.html">' + filteredArticles[i + pageStart].title + '</a>';
 
 		articlesDisplayArea.appendChild(li);
 	}
