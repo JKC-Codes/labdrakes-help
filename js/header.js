@@ -1,6 +1,6 @@
 document.querySelector('header').innerHTML = `
 <div class="return dark row">
-	<a href="https://github.com/JKC-Codes/labdrakes-help" rel="noopener">Return to labdrakes.com</a>
+	<a href="https://jkc.codes/" rel="noopener">Return to labdrakes.com</a>
 </div>
 
 <h1 class="a11y">Labdrakes Help</h1>
