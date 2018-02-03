@@ -2,9 +2,9 @@ document.querySelector('footer').innerHTML = `
 <section class="page-links">
 	<h2 class="a11y">Important Articles</h2>
 	<ul class="no-bullets column">
-		<li><a href="/pages/terms-and-conditions.html" class="button">Terms and Conditions</a></li>
-		<li><a href="/pages/responsible-gambling.html" class="button">Responsible Gambling</a></li>
-		<li><a href="/pages/privacy-policy.html#cookies" class="button">Cookie Policy</a></li>
+		<li><a href="terms-and-conditions.html" class="button">Terms and Conditions</a></li>
+		<li><a href="responsible-gambling.html" class="button">Responsible Gambling</a></li>
+		<li><a href="privacy-policy.html#cookies" class="button">Cookie Policy</a></li>
 	</ul>
 </section>
 
@@ -12,7 +12,7 @@ document.querySelector('footer').innerHTML = `
 	<h2 class="a11y">Gambling Information</h2>
 	<ul class="no-bullets">
 		<li class="over-18">
-			<a href="/pages/18-plus-policy.html" class="icon over-18">
+			<a href="18-plus-policy.html" class="icon over-18">
 				<span class="a11y">18 and over Policy</span>
 			</a>
 		</li>
@@ -55,7 +55,7 @@ document.querySelector('footer').innerHTML = `
 		<li><a href="#" rel="noopener">About Us</a></li>
 		<li><a href="#" rel="noopener">Affiliates</a></li>
 		<li><a href="#" rel="noopener">Investor Centre</a></li>
-		<li><a href="/pages/restricted-territories.html">Restricted Territories</a></li>
+		<li><a href="restricted-territories.html">Restricted Territories</a></li>
 	</ul>
 </section>
 
@@ -64,7 +64,7 @@ document.querySelector('footer').innerHTML = `
 	<ul class="no-bullets">
 		<li><a href="#" rel="noopener">Labdrakes.com</a></li>
 		<li><a href="#" rel="noopener">Shop Locator</a></li>
-		<li><a href="/pages/other-ways-to-bet.html">Other Ways To Bet</a></li>
+		<li><a href="other-ways-to-bet.html">Other Ways To Bet</a></li>
 		<li><a href="#" rel="noopener">The Grid</a></li>
 	</ul>
 </section>
