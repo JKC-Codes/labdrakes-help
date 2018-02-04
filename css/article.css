@@ -33,6 +33,7 @@
 ========================================*/
 
 	main.article > article {
+		padding-bottom: 2rem;
 		align-self: stretch;
 	}
 
