@@ -22,7 +22,7 @@
 	}
 
 	main.article > article,
-	main.article > aside {
+	main.article > footer {
 		background: #fff;
 		padding: 1rem;
 	}
