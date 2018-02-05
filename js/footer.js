@@ -1,4 +1,4 @@
-document.querySelector('footer').innerHTML = `
+document.querySelector('footer.site').innerHTML = `
 <section class="page-links">
 	<h2 class="a11y">Important Articles</h2>
 	<ul class="no-bullets column">

@@ -1,4 +1,4 @@
-document.querySelector('header').innerHTML = `
+document.querySelector('header.site').innerHTML = `
 <div class="return dark row">
 	<a href="https://jkc.codes" rel="noopener">Return to labdrakes.com</a>
 </div>
