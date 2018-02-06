@@ -612,6 +612,12 @@
 		list-style-type: lower-roman;
 	}
 
+	ol.decimal,
+	ol.cascade ol.reset ol ol li,
+	ol.cascade ul ol ol ol li {
+		list-style-type: decimal-leading-zero;
+	}
+
 	ol.cascade ol.reset li::before {
 		content: '';
 	}
