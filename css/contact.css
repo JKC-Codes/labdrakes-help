@@ -2,37 +2,39 @@
 	Layout
 ========================================*/
 
-	main.contact {
+	main.contact .container {
+		background-color: #fff;
 		display: grid;
 		grid-template: repeat(4, auto) / 1fr;
 		grid-gap: 1rem;
+		padding: 0 1rem 1rem;
 	}
 
 	@media (min-width: 37.5rem) {
-		main.contact {
-			grid-template: auto auto 1fr / 1fr 1fr;
+		main.contact .container {
+			grid-template: repeat(3, auto) / 1fr 1fr;
 		}
 	}
 
-	main.contact > header,
-	main.contact > section,
-	main.article > aside {
+	main.contact .container > header,
+	main.contact .container > section,
+	main.article .container > aside {
 		background: #fff;
 		padding: 1rem;
 	}
 
-	main.contact > header > h2,
-	main.contact > section > h3 {
+	main.contact .container > header > h2,
+	main.contact .container > section > h3 {
 		margin: 0 0 1rem;
 		text-align: center;
 	}
 
-	main.contact > header > h2 {
-		border-bottom: 0.0625rem solid var(--colour-brand);
+	main.contact .container > section > h3 {
+		font-weight: 400;
 	}
 
-	main.contact > section > h3 {
-		font-weight: 400;
+	main.contact .container > section {
+		border: 0.0625rem solid var(--colour-light);
 	}
 
 
@@ -40,8 +42,16 @@
 	Header
 ========================================*/
 
+	main.contact .container > header {
+		padding-bottom: 0;
+	}
+
+	main.contact .container > header > h2 {
+		border-bottom: 0.0625rem solid var(--colour-brand);
+	}
+
 	@media (min-width: 37.5rem) {
-		main.contact > header {
+		main.contact .container > header {
 			grid-column: span 2;
 		}
 	}
@@ -51,19 +61,23 @@
 	Chat
 ========================================*/
 
-	main.contact section.chat dialog {
-		top: -0.5rem;
+	main.contact .chat {
+		position: relative;
+	}
+
+	main.contact .chat dialog {
+		top: 0.5rem;
 		padding: 0rem 2rem;
 		text-align: center;
 	}
 
-	main.contact section.chat dialog .button {
+	main.contact .chat dialog .button {
 		display: block;
 		margin: 1rem auto;
 		width: 10.5rem;
 	}
 
-	main.contact section.chat dialog button {
+	main.contact .chat dialog button {
 		display: block;
 		width: auto;
 		margin: 0 auto 1rem;
@@ -80,7 +94,7 @@
 	Call
 ========================================*/
 
-	main.contact section.call {
+	main.contact .call {
 		foo: bar;
 	}
 
@@ -90,7 +104,7 @@
 ========================================*/
 
 	@media (min-width: 37.5rem) {
-		main.contact section.email {
+		main.contact .email {
 			grid-column: span 2;
 		}
 	}

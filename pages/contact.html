@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> - Labdrakes Help</title>
+	<title>Contact Us - Labdrakes Help</title>
 	<link rel="icon" href="../img/favicon.png">
 	<link rel="stylesheet" href="../css/site.css">
 	<link rel="stylesheet" href="../css/contact.css">
@@ -27,53 +27,54 @@
 
 
 	<main class="contact">
-		<header>
-			<h2 id="articleTitle">Contact Us</h2>
-		</header>
+		<div class="container">
+			<header>
+				<h2 id="articleTitle">Contact Us</h2>
+			</header>
 
-		<section class="chat">
-			<h3>Chat</h3>
-			<button id="chatButton">Chat</button>
-			<dialog id="chatDialogue">
-				<p>You must be logged in to chat</p>
-				<a class="button" href="#">Log In</a>
-				<button id="chatClose">Cancel</button>
-			</dialog>
-			<script>
-				// Check for Dialog element support
-				if (!('show' in document.createElement('dialog'))) {
-					// Load polyfill if unsupported
-					dialogPolyfill.registerDialog(chatDialogue);
-				}
-			</script>
-		</section>
+			<section class="chat">
+				<h3>Chat</h3>
+				<button id="chatButton">Chat</button>
+				<dialog id="chatDialogue">
+					<p>You must be logged in to chat</p>
+					<a class="button" href="#">Log In</a>
+					<button id="chatClose">Cancel</button>
+				</dialog>
+				<script>
+					// Check for Dialog element support
+					if (!('show' in document.createElement('dialog'))) {
+						// Load polyfill if unsupported
+						dialogPolyfill.registerDialog(chatDialogue);
+					}
+				</script>
+			</section>
 
-		<section class="call">
-			<h3>Call</h3>
-			<ul class="no-bullets">
-				<li>UK: <a class="no-wrap" href="tel:08081571234">0808 157 1234</a></li>
-				<li>Outside the UK: <a class="no-wrap" href="tel:+441632961234">+44 1632 961 234</a></li>
-			</ul>
-		</section>
+			<section class="call">
+				<h3>Call</h3>
+				<ul class="no-bullets">
+					<li>UK: <a class="no-wrap" href="tel:08081571234">0808 157 1234</a></li>
+					<li>Outside the UK: <a class="no-wrap" href="tel:+441632961234">+44 1632 961 234</a></li>
+				</ul>
+			</section>
 
-		<section class="email">
-			<h3>Email</h3>
-			<form>
+			<section class="email">
+				<h3>Email</h3>
+				<form>
 
-			</form>
-		</section>
+				</form>
+			</section>
 
-		<!-- <aside class="related">
-			<h2 class="h4">Related Articles</h2>
-			<ul class="no-bullets" id="relatedArticlesList">
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-			</ul>
-		</aside> -->
-
+			<!-- <footer class="related">
+				<h2 class="h4">Related Articles</h2>
+				<ul class="no-bullets" id="relatedArticlesList">
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+				</ul>
+			</footer> -->
+		</div>
 	</main>
 
 
