@@ -4,15 +4,8 @@
 
 	main.article {
 		display: grid;
-		grid-template: repeat(3, auto) / 1fr;
+		grid-template-columns: 1fr;
 		grid-gap: 1rem;
-		align-items: start;
-	}
-
-	@media (min-width: 37.5rem) {
-		main.article {
-			grid-template: auto 1fr / 2fr 1fr;
-		}
 	}
 
 	@media (min-width: 56.25rem) {
@@ -22,7 +15,8 @@
 	}
 
 	main.article > article,
-	main.article > footer {
+	main.article .related,
+	main.article .contact {
 		background: #fff;
 		padding: 1rem;
 	}
@@ -34,7 +28,6 @@
 
 	main.article > article {
 		padding-bottom: 2rem;
-		align-self: stretch;
 	}
 
 	main.article > article > header h2 {
@@ -48,16 +41,28 @@
 		margin: auto;
 	}
 
-	@media (min-width: 37.5rem) {
-		main.article > article {
-			grid-column: span 2;
+
+/*========================================
+	Footer
+========================================*/
+
+	main.article footer.article {
+		align-self: start;
+		display: grid;
+		grid-gap: 1rem;
+		align-items: start;
+	}
+
+	@media (min-width: 37.5rem) and (max-width: 56.249rem) {
+		main.article footer.article {
+			grid-template-columns: auto 1fr;
 		}
 	}
 
-	@media (min-width: 56.25rem) {
-		main.article > article {
-			grid-column: span 1;
-			grid-row: span 2;
+	@media (min-width: 56.25rem) and (min-height: 60rem) {
+		main.article footer.article {
+			position: sticky;
+			top: 1rem;
 		}
 	}
 

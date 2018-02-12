@@ -285,44 +285,46 @@
 			</div>
 		</article>
 
-		<footer class="related">
-			<h2 class="h4">Related Articles</h2>
-			<ul class="no-bullets" id="relatedArticlesList">
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-			</ul>
-		</footer>
+		<footer class="article">
+			<section class="related">
+				<h2 class="h4">Related Articles</h2>
+				<ul class="no-bullets" id="relatedArticlesList">
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+				</ul>
+			</section>
 
-		<footer class="contact">
-			<h2 class="h4">Contact Us</h2>
-			<ul class="no-bullets">
-				<li><button id="chatButton">Chat</button>
-					<dialog id="chatDialogue">
-						<p>You must be logged in to chat</p>
-						<a class="button" href="#">Log In</a>
-						<button id="chatClose">Cancel</button>
-					</dialog>
-					<script>
-						// Check for Dialog element support
-						if (!('show' in document.createElement('dialog'))) {
-							// Load polyfill if unsupported
-							dialogPolyfill.registerDialog(chatDialogue);
-						}
-					</script>
-				</li>
-				<li><details>
-						<summary class="button">Call</summary>
-						<ul class="no-bullets">
-							<li>UK: <a class="no-wrap" href="#">0808 157 1234</a></li>
-							<li>Outside the UK: <a class="no-wrap" href="#">+44 1632 961 234</a></li>
-						</ul>
-					</details>
-				</li>
-				<li><a href="contact.html" class="button">Email</a></li>
-			</ul>
+			<section class="contact">
+				<h2 class="h4">Contact Us</h2>
+				<ul class="no-bullets">
+					<li><button id="chatButton">Chat</button>
+						<dialog id="chatDialogue">
+							<p>You must be logged in to chat</p>
+							<a class="button" href="#">Log In</a>
+							<button id="chatClose">Cancel</button>
+						</dialog>
+						<script>
+							// Check for Dialog element support
+							if (!('show' in document.createElement('dialog'))) {
+								// Load polyfill if unsupported
+								dialogPolyfill.registerDialog(chatDialogue);
+							}
+						</script>
+					</li>
+					<li><details>
+							<summary class="button">Call</summary>
+							<ul class="no-bullets">
+								<li>UK: <a class="no-wrap" href="#">0808 157 1234</a></li>
+								<li>Outside the UK: <a class="no-wrap" href="#">+44 1632 961 234</a></li>
+							</ul>
+						</details>
+					</li>
+					<li><a href="contact.html" class="button">Email</a></li>
+				</ul>
+			</section>
 		</footer>
 	</main>
 
