@@ -107,6 +107,38 @@
 	Email
 ========================================*/
 
+	main.contact .email > h3 + p {
+		margin-top: 0;
+	}
+
+	main.contact .email input,
+	main.contact .email select,
+	main.contact .email textarea {
+		width: 100%;
+	}
+
+	main.contact .email input,
+	main.contact .email select,
+	main.contact .email textarea {
+		margin-bottom: 2rem;
+	}
+
+	main.contact .email .fieldset-next {
+		display: flex;
+		flex-direction: row-reverse;
+		flex-wrap: wrap;
+	}
+
+	main.contact .email .fieldset-next > button,
+	main.contact .email .fieldset-next > a {
+		margin-bottom: 1rem;
+	}
+
+	main.contact .email .fieldset-next > button {
+		margin-right: 3rem;
+
+	}
+
 	@media (min-width: 37.5rem) {
 		main.contact .email {
 			grid-column: span 2;
