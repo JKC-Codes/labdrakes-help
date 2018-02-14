@@ -515,6 +515,13 @@
 		color: var(--colour-link-hover);
 	}
 
+	a.button,
+	a:visited.button,
+	a:link.button {
+		color: #fff;
+		text-decoration: none;
+	}
+
 	ul,
 	ol {
 		padding-left: var(--gap-left);
@@ -726,11 +733,18 @@
 		box-shadow: var(--shadow-default);
 	}
 
-	a.button,
-	a:visited.button,
-	a:link.button {
-		color: #fff;
-		text-decoration: none;
+	button.link {
+		padding: 0;
+		min-width: 0;
+		min-height: 0;
+		background-color: transparent;
+		color: var(--colour-default);
+		box-shadow: none;
+		text-decoration: underline;
+	}
+
+	button.link:hover {
+		color: var(--colour-link-hover);
 	}
 
 	hr {
