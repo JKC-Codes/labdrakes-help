@@ -48,6 +48,7 @@
 						dialogPolyfill.registerDialog(chatDialogue);
 					}
 				</script>
+				<p>Response time:<br><b>0&ndash;1 minutes</b></p>
 			</section>
 
 			<section class="call">
@@ -56,25 +57,70 @@
 					<li>UK: <a class="no-wrap" href="#">0808 157 1234</a></li>
 					<li>Outside the UK: <a class="no-wrap" href="#">+44 1632 961 234</a></li>
 				</ul>
+				<p>Response time:<br><b>1&ndash;4 minutes</b></p>
 			</section>
 
 			<section class="email">
 				<h3>Email</h3>
-				<form>
+				<p>Response time:<br><b>36&ndash;48 hours</b></p>
+				<form id="contact-form">
+					<fieldset id="your-details">
+						<legend>Your Details</legend>
+						<label for="input-name" required>Name:
+							<input id="input-name" type="text">
+						</label>
+						<label for="input-email">Email:
+							<input id="input-email" type="email" required>
+						</label>
+						<label for="input-username">Username:<br><small>(if applicable)</small>
+							<input id="input-username" type="text">
+						</label>
+						<button type="reset" class="link">Cancel</button>
+						<a href="#query-details" class="button">Next Step</a>
+					</fieldset>
 
+					<fieldset id="query-details">
+						<legend>Query Details</legend>
+						<label for="input-topic">Topic:
+							<select id="input-topic" required>
+								<option selected disabled hidden>Select a topic&hellip;</option>
+								<option>Account</option>
+								<option>Sports</option>
+								<option>Casino</option>
+								<option>Games</option>
+								<option>Exchange</option>
+								<option>Poker</option>
+								<option>Bingo</option>
+								<option>Lotto</option>
+							</select>
+						</label>
+						<label for="input-query">Query:
+							<textarea id="input-query" required></textarea>
+						</label>
+						<button type="reset" class="link">Cancel</button>
+						<a href="#related-articles" class="button">Next Step</a>
+					</fieldset>
+
+					<fieldset id="related-articles">
+						<legend>Related Articles</legend>
+						<p>Do these answer your query?<br><small>(progress will be saved if you leave the page)</small></p>
+						<ul class="no-bullets" id="related-articles-list">
+							<li><a href="#">lorem</a></li>
+							<li><a href="#">ipsum</a></li>
+							<li><a href="#">dolor</a></li>
+							<li><a href="#">sit</a></li>
+							<li><a href="#">amet</a></li>
+						</ul>
+						<button type="submit">No, I still have a question</button>
+					</fieldset>
 				</form>
-			</section>
 
-			<!-- <footer class="related">
-				<h2 class="h4">Related Articles</h2>
-				<ul class="no-bullets" id="relatedArticlesList">
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-				</ul>
-			</footer> -->
+				<fieldset id="success">
+					<legend>Success</legend>
+					<p>Your email has been sent.</p>
+					<p>We will respond to <span id="customers-email">foo@bar.com</span> within 48 hours.</p>
+				</fieldset>
+			</section>
 		</div>
 	</main>
 
