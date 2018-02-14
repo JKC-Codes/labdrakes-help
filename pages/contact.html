@@ -72,11 +72,13 @@
 						<label for="input-email">Email:
 							<input id="input-email" type="email" required>
 						</label>
-						<label for="input-username">Username:<br><small>(if applicable)</small>
+						<label for="input-username">Username <small>(if applicable)</small>:
 							<input id="input-username" type="text">
 						</label>
-						<button type="reset" class="link">Cancel</button>
-						<a href="#query-details" class="button">Next Step</a>
+						<div class="fieldset-next">
+							<a href="#query-details" class="button">Next Step</a>
+							<button type="reset" class="link">Cancel</button>
+						</div>
 					</fieldset>
 
 					<fieldset id="query-details">
@@ -97,8 +99,10 @@
 						<label for="input-query">Query:
 							<textarea id="input-query" required></textarea>
 						</label>
-						<button type="reset" class="link">Cancel</button>
-						<a href="#related-articles" class="button">Next Step</a>
+						<div class="fieldset-next">
+							<a href="#related-articles" class="button">Next Step</a>
+							<button type="reset" class="link">Cancel</button>
+						</div>
 					</fieldset>
 
 					<fieldset id="related-articles">
@@ -116,7 +120,7 @@
 				</form>
 
 				<fieldset id="success">
-					<legend>Success</legend>
+					<legend>Success!</legend>
 					<p>Your email has been sent.</p>
 					<p>We will respond to <span id="customers-email">foo@bar.com</span> within 48 hours.</p>
 				</fieldset>
