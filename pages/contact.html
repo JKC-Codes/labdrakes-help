@@ -75,10 +75,10 @@
 						<label for="input-username">Username <small>(if applicable)</small>:
 							<input id="input-username" type="text">
 						</label>
-						<div class="fieldset-next">
+						<nav class="fieldset-next">
 							<a href="#query-details" class="button">Next Step</a>
-							<button type="reset" class="link">Cancel</button>
-						</div>
+							<button type="reset" class="button-opposite">Cancel</button>
+						</nav>
 					</fieldset>
 
 					<fieldset id="query-details">
@@ -99,10 +99,10 @@
 						<label for="input-query">Query:
 							<textarea id="input-query" required></textarea>
 						</label>
-						<div class="fieldset-next">
+						<nav class="fieldset-next">
 							<a href="#related-articles" class="button">Next Step</a>
-							<button type="reset" class="link">Cancel</button>
-						</div>
+							<a href="#your-details" class="button-opposite">Back</a>
+						</nav>
 					</fieldset>
 
 					<fieldset id="related-articles">
@@ -115,7 +115,10 @@
 							<li><a href="#">sit</a></li>
 							<li><a href="#">amet</a></li>
 						</ul>
-						<button type="submit">No, I still have a question</button>
+						<nav class="fieldset-next">
+							<button type="submit">Submit</button>
+							<a href="#query-details" class="button-opposite">Back</a>
+						</nav>
 					</fieldset>
 				</form>
 

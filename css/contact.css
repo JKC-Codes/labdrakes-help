@@ -115,12 +115,11 @@
 	main.contact .email select,
 	main.contact .email textarea {
 		width: 100%;
+		margin-bottom: 2rem;
 	}
 
-	main.contact .email input,
-	main.contact .email select,
 	main.contact .email textarea {
-		margin-bottom: 2rem;
+		min-height: 9rem;
 	}
 
 	main.contact .email .fieldset-next {
@@ -134,9 +133,17 @@
 		margin-bottom: 1rem;
 	}
 
-	main.contact .email .fieldset-next > button {
+	main.contact .email .button-opposite {
 		margin-right: 3rem;
-
+		padding: 0;
+		min-width: 0;
+		min-height: 0;
+		background-color: transparent;
+		color: var(--colour-default);
+		box-shadow: none;
+		text-decoration: underline;
+		display: flex;
+		align-self: center;
 	}
 
 	@media (min-width: 37.5rem) {
