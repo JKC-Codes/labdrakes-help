@@ -78,21 +78,12 @@
 		border-bottom: 0.0625rem solid var(--colour-brand);
 	}
 
-	main.article .related ul {
+	main.article .related .articles.list {
 		margin: 0;
 	}
 
-	main.article .related li {
-		border-bottom: 1px solid var(--colour-light);
-		padding: 1rem 0;
-	}
-
-	main.article .related a {
-		color: var(--colour-default);
-		display: flex;
-		align-items: center;
+	main.article .related .articles-list a {
 		justify-content: center;
-		min-height: 3rem;
 	}
 
 

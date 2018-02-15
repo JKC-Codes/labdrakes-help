@@ -183,21 +183,7 @@
 	}
 
 	main.browse .results ul {
-		padding: 0;
-		margin: 0 0 1rem;
 		flex-grow: 1;
-	}
-
-	main.browse .results li {
-		border-bottom: 1px solid var(--colour-light);
-		padding: 1rem 0;
-	}
-
-	main.browse .results a {
-		color: var(--colour-default);
-		display: flex;
-		align-items: center;
-		min-height: 3rem;
 	}
 
 	main.browse .results nav {

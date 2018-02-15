@@ -527,7 +527,8 @@
 		padding-left: var(--gap-left);
 	}
 
-	ul.no-bullets {
+	ul.no-bullets,
+	ul.articles-list {
 		padding-left: 0;
 	}
 
@@ -540,7 +541,8 @@
 	ul.no-bullets,
 	li.tick,
 	li.cross,
-	ol.cascade li {
+	ol.cascade li,
+	ul.articles-list {
 		list-style-type: none;
 		position: relative;
 	}
@@ -627,6 +629,23 @@
 
 	ol.cascade ol.reset li::before {
 		content: '';
+	}
+
+	ul.articles-list {
+		padding: 0;
+		margin: 0 0 1rem;
+	}
+
+	ul.articles-list > li {
+		border-bottom: 1px solid var(--colour-light);
+		padding: 1rem 0;
+	}
+
+	ul.articles-list > li > a {
+		color: var(--colour-default);
+		display: flex;
+		align-items: center;
+		min-height: 3rem;
 	}
 
 	dt {
