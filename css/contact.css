@@ -122,18 +122,18 @@
 		min-height: 9rem;
 	}
 
-	main.contact .email .fieldset-next {
+	main.contact .email .form-nav {
 		display: flex;
 		flex-direction: row-reverse;
 		flex-wrap: wrap;
 	}
 
-	main.contact .email .fieldset-next > button,
-	main.contact .email .fieldset-next > a {
+	main.contact .email .form-nav > button,
+	main.contact .email .form-nav > a {
 		margin-bottom: 1rem;
 	}
 
-	main.contact .email .button-opposite {
+	main.contact .email .secondary-nav {
 		margin-right: 3rem;
 		padding: 0;
 		min-width: 0;

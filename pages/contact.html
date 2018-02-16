@@ -75,13 +75,13 @@
 						<label for="input-username">Username <small>(if applicable)</small>:
 							<input id="input-username" type="text">
 						</label>
-						<nav class="fieldset-next">
+						<nav class="form-nav">
 							<a href="#query-details" class="button">Next Step</a>
-							<button type="reset" class="button-opposite">Cancel</button>
+							<button type="reset" class="secondary-nav">Cancel</button>
 						</nav>
 					</fieldset>
 
-					<fieldset id="query-details">
+					<fieldset id="query-details" class="next-step">
 						<legend>Query Details</legend>
 						<label for="input-topic">Topic:
 							<select id="input-topic" required>
@@ -99,13 +99,13 @@
 						<label for="input-query">Query:
 							<textarea id="input-query" required></textarea>
 						</label>
-						<nav class="fieldset-next">
+						<nav class="form-nav">
 							<a href="#related-articles" class="button">Next Step</a>
-							<a href="#your-details" class="button-opposite">Back</a>
+							<a href="#your-details" class="secondary-nav">Back</a>
 						</nav>
 					</fieldset>
 
-					<fieldset id="related-articles">
+					<fieldset id="related-articles" class="next-step">
 						<legend>Related Articles</legend>
 						<p>Do these answer your query?<br><small>(progress will be saved if you leave this page)</small></p>
 						<ul class="articles-list" id="related-articles-list">
@@ -115,18 +115,18 @@
 							<li><a href="#">sit</a></li>
 							<li><a href="#">amet</a></li>
 						</ul>
-						<nav class="fieldset-next">
+						<nav class="form-nav">
 							<button type="submit">Submit</button>
-							<a href="#query-details" class="button-opposite">Back</a>
+							<a href="#query-details" class="secondary-nav">Back</a>
 						</nav>
 					</fieldset>
-				</form>
 
-				<fieldset id="success">
-					<legend>Success!</legend>
-					<p>Your email has been sent.</p>
-					<p>We will respond to <span id="customers-email">foo@bar.com</span> within 48 hours.</p>
-				</fieldset>
+					<fieldset id="success" class="next-step">
+						<legend>Success!</legend>
+						<p>Your email has been sent.</p>
+						<p>We will respond to <span id="customers-email">foo@bar.com</span> within 48 hours.</p>
+					</fieldset>
+				</form>
 			</section>
 		</div>
 	</main>
