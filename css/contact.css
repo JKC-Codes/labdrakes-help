@@ -146,6 +146,23 @@
 		align-self: center;
 	}
 
+	main.contact .email {
+		overflow-x: hidden;
+	}
+
+	main.contact .email form {
+		width: 100%;
+		--current-step: 0;
+		display: grid;
+		grid-template-columns: repeat(4, 100%);
+		align-items: start;
+		transform: translatex(calc(-100% * var(--current-step)));
+	}
+
+	main.contact .email fieldset[data-hidden] {
+		opacity: 0;
+	}
+
 	@media (min-width: 37.5rem) {
 		main.contact .email {
 			grid-column: span 2;
