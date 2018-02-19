@@ -157,15 +157,7 @@
 
 	main.contact .email .secondary-nav {
 		margin-right: 3rem;
-		padding: 0;
-		min-width: 0;
-		min-height: 0;
-		background-color: transparent;
 		color: var(--colour-default);
-		box-shadow: none;
-		text-decoration: underline;
-		display: flex;
-		align-self: center;
 	}
 
 	@media (min-width: 37.5rem) {
