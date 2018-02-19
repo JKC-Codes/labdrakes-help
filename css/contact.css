@@ -148,6 +148,7 @@
 		display: flex;
 		flex-direction: row-reverse;
 		flex-wrap: wrap;
+		align-items: center;
 	}
 
 	main.contact .email .form-nav > button,
@@ -156,7 +157,7 @@
 	}
 
 	main.contact .email .secondary-nav {
-		margin-right: 3rem;
+		margin-right: 2.75rem;
 		color: var(--colour-default);
 	}
 
