@@ -77,14 +77,13 @@
 						</label>
 						<nav class="form-nav">
 							<a href="#query-details" class="button">Next Step</a>
-							<button type="reset" class="secondary-nav">Clear fields</button>
 						</nav>
 					</fieldset>
 
 					<fieldset id="query-details">
 						<legend>Query Details</legend>
 						<label for="input-topic">Topic:
-							<select id="input-topic" required>
+							<select id="input-topic" name="topic" required>
 								<option selected disabled hidden>Select a topic&hellip;</option>
 								<option value="account">Account</option>
 								<option value="sports">Sports</option>
@@ -97,7 +96,7 @@
 							</select>
 						</label>
 						<label for="input-query">Query:
-							<textarea id="input-query" name="details" required></textarea>
+							<textarea id="input-query" name="query" required></textarea>
 						</label>
 						<nav class="form-nav">
 							<a href="#related-articles" class="button">Next Step</a>
