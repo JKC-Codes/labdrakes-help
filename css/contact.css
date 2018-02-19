@@ -111,6 +111,28 @@
 		margin-top: 0;
 	}
 
+	main.contact .email {
+		overflow-x: hidden;
+	}
+
+	main.contact .email form {
+		width: 100%;
+		--current-step: 0;
+		display: grid;
+		grid-template-columns: repeat(4, 100%);
+		align-items: start;
+		transform: translatex(calc(-100% * var(--current-step)));
+		transition: transform 200ms ease-in-out;
+	}
+
+	main.contact .email fieldset {
+		transition: opacity 200ms ease-in-out;
+	}
+
+	main.contact .email fieldset[data-hidden] {
+		opacity: 0;
+	}
+
 	main.contact .email input,
 	main.contact .email select,
 	main.contact .email textarea {
@@ -144,23 +166,6 @@
 		text-decoration: underline;
 		display: flex;
 		align-self: center;
-	}
-
-	main.contact .email {
-		overflow-x: hidden;
-	}
-
-	main.contact .email form {
-		width: 100%;
-		--current-step: 0;
-		display: grid;
-		grid-template-columns: repeat(4, 100%);
-		align-items: start;
-		transform: translatex(calc(-100% * var(--current-step)));
-	}
-
-	main.contact .email fieldset[data-hidden] {
-		opacity: 0;
 	}
 
 	@media (min-width: 37.5rem) {
