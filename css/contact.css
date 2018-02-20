@@ -122,11 +122,11 @@
 		grid-template-columns: repeat(4, 100%);
 		align-items: start;
 		transform: translatex(calc(-100% * var(--current-step)));
-		transition: transform 200ms ease-in-out;
+		transition: transform 150ms ease-in-out;
 	}
 
 	main.contact .email fieldset {
-		transition: opacity 200ms ease-in-out;
+		transition: opacity 150ms ease-in-out;
 	}
 
 	main.contact .email fieldset[data-hidden] {
