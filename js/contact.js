@@ -1,64 +1,87 @@
 /*
-[x] hide and remove focus from inactive sections
+[x] hide inactive sections
+[x] correct behviour when pressing enter
 [] validate form before next step
 [] save progress
-[x] change page
+[] change step
+[] change focus
 [] get related articles
 [] disable form submission
 */
 
-document.addEventListener('DOMContentLoaded', init => {
-	form = document.querySelector('#contact-form');
-	emailSection = document.querySelector('.email')
 
-	hideInactiveSteps();
-	activateFormButtons();
+var allSteps;
+var currentStepIndex = 0;
+var currentStep;
+
+document.addEventListener('DOMContentLoaded', init => {
+	allSteps = document.querySelectorAll('#contact-form fieldset');
+	currentStep = allSteps[currentStepIndex];
+
+	initialiseForm();
 }, {once:true});
 
-var form;
-var currentStepIndex = 0;
-var emailSection;
+function initialiseForm() {
+	hideInactiveSteps();
 
-function hideInactiveSteps() {
-	let allSteps = form.querySelectorAll('fieldset');
-	let currentStep = allSteps[currentStepIndex];
+	// Line up fieldsets horizontally
+	document.querySelector('main.contact .email form').style.display = 'grid';
 
-	allSteps.forEach( step => {
-		if (step === currentStep) {
-			step.removeAttribute('data-hidden')
-			step.querySelectorAll('*').forEach( element => {
-				element.removeAttribute('tabindex')
-			})
-		} else {
-			step.setAttribute('data-hidden', 'true')
-			step.querySelectorAll('*').forEach( element => {
-				element.setAttribute('tabindex', '-1')
-			})
-		}
-	})
-}
+	// Activate buttons
+	let navSections = document.querySelectorAll('main.contact .email .form-nav');
 
-function activateFormButtons() {
-	emailSection.addEventListener('click', evt => {
-		if (evt.target.matches('a')) {
-			evt.preventDefault();
-			if (evt.target.className === 'button') {
+	navSections.forEach(section => {
+		section.addEventListener('click', evt => {
+			if(evt.target.classList.contains('next')) {
 				nextStep();
-			} else if (evt.target.className === 'secondary-nav') {
+			} else if(evt.target.classList.contains('previous')) {
 				previousStep();
+			} else if(evt.target.hasAttribute('type', 'submit')) {
+				submitForm();
+			}
+		})
+	})
+
+	//  Dictate flow
+	let form = document.querySelector('#contact-form');
+	let interactiveElements = form.querySelectorAll('input, a.next, select, textarea');
+
+	// Go to next element when enter is pressed
+	form.addEventListener('keypress', evt => {
+
+		// Check enter is pressed inside input or select element
+		if((evt.target.tagName === 'INPUT' || evt.target.tagName === 'SELECT') && evt.key === 'Enter') {
+			evt.preventDefault();
+
+			// Jump to next element
+			for(i=0; i < interactiveElements.length; i++) {
+				if(evt.target.name === interactiveElements[i].name) {
+					interactiveElements[i + 1].focus();
+				}
 			}
 		}
 	})
 }
 
+function hideInactiveSteps() {
+	// Display current step only
+	for(i=0; i < allSteps.length; i++) {
+		if(allSteps[i] === currentStep) {
+			allSteps[i].removeAttribute('style')
+		} else {
+			allSteps[i].style.display='none';
+		}
+	}
+}
+
 function nextStep() {
-	currentStepIndex += 1;
-	hideInactiveSteps()
-	form.style.setProperty('--current-step', currentStepIndex);
+	console.log('next step');
 }
 
 function previousStep() {
-	currentStepIndex -= 1;
-	hideInactiveSteps()
-	form.style.setProperty('--current-step', currentStepIndex);
+	console.log('previous step');
+}
+
+function submitForm() {
+	console.log('submit form');
 }
