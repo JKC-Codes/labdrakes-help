@@ -3,20 +3,17 @@
 [x] correct behviour when pressing enter
 [] validate form before next step
 [] save progress
-[] change step
-[] change focus
+[x] change step
 [] get related articles
-[] disable form submission
+[x] disable form submission
 */
 
 
 var allSteps;
 var currentStepIndex = 0;
-var currentStep;
 
 document.addEventListener('DOMContentLoaded', init => {
 	allSteps = document.querySelectorAll('#contact-form fieldset');
-	currentStep = allSteps[currentStepIndex];
 
 	initialiseForm();
 }, {once:true});
@@ -37,7 +34,7 @@ function initialiseForm() {
 			} else if(evt.target.classList.contains('previous')) {
 				previousStep();
 			} else if(evt.target.hasAttribute('type', 'submit')) {
-				submitForm();
+				submitForm(evt);
 			}
 		})
 	})
@@ -51,9 +48,9 @@ function initialiseForm() {
 
 		// Check enter is pressed inside input or select element
 		if((evt.target.tagName === 'INPUT' || evt.target.tagName === 'SELECT') && evt.key === 'Enter') {
-			evt.preventDefault();
 
 			// Jump to next element
+			evt.preventDefault();
 			for(i=0; i < interactiveElements.length; i++) {
 				if(evt.target.name === interactiveElements[i].name) {
 					interactiveElements[i + 1].focus();
@@ -66,7 +63,7 @@ function initialiseForm() {
 function hideInactiveSteps() {
 	// Display current step only
 	for(i=0; i < allSteps.length; i++) {
-		if(allSteps[i] === currentStep) {
+		if(allSteps[i] === allSteps[currentStepIndex]) {
 			allSteps[i].removeAttribute('style')
 		} else {
 			allSteps[i].style.display='none';
@@ -75,13 +72,18 @@ function hideInactiveSteps() {
 }
 
 function nextStep() {
-	console.log('next step');
+	// Change step
+	currentStepIndex += 1;
+	hideInactiveSteps();
 }
 
 function previousStep() {
-	console.log('previous step');
+	// Change step
+	currentStepIndex -= 1;
+	hideInactiveSteps();
 }
 
-function submitForm() {
+function submitForm(evt) {
+	evt.preventDefault;
 	console.log('submit form');
 }
