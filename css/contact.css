@@ -153,6 +153,31 @@
 		color: var(--colour-default);
 	}
 
+	main.contact .email .email-warning {
+		position: fixed;
+		top: 2rem;
+		width: 70%;
+		max-width: 30rem;
+		background: #ffe5e5;
+		border: 0.125rem solid #c81a21;
+	}
+
+	main.contact .email .email-warning > a {
+		float: right;
+		width: 1rem;
+		height: 1rem;
+		margin-left: 1rem;
+	}
+
+	main.contact .email .email-warning p,
+	main.contact .email .email-warning ul {
+		margin: 0;
+	}
+
+	main.contact .email .email-warning li::first-letter {
+		text-transform: capitalize;
+	}
+
 	@media (min-width: 37.5rem) {
 		main.contact .email {
 			grid-column: span 2;
