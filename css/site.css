@@ -811,7 +811,6 @@
 		border: 0.0625rem solid var(--colour-light);
 		border-radius: var(--border-rounded);
 		padding: 1rem;
-		margin: 2rem;
 		box-shadow: var(--shadow-default);
 	}
 
