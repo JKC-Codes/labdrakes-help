@@ -1,7 +1,7 @@
 /*
 [x] hide inactive sections
 [x] correct behviour when pressing enter
-[] validate form before next step
+[x] validate form before next step
 [] save progress
 [x] change step
 [] get related articles
@@ -9,34 +9,31 @@
 */
 
 
-var allSteps;
 var currentStepIndex = 0;
+var invalidFields = [];
+var errorDialogue;
 
-document.addEventListener('DOMContentLoaded', init => {
-	allSteps = document.querySelectorAll('#contact-form fieldset');
+document.addEventListener('DOMContentLoaded', () => {
+	errorDialogue = document.querySelector('#emailErrors');
 
-	initialiseForm();
-}, {once:true});
-
-function initialiseForm() {
 	hideInactiveSteps();
 
 	// Line up fieldsets horizontally
 	document.querySelector('main.contact .email form').style.display = 'grid';
 
-	// Activate buttons
-	let navSections = document.querySelectorAll('main.contact .email .form-nav');
+	// Activate click listeners
+	document.addEventListener('click', evt => {
+		// Listen for next step
+		if(evt.target.classList.contains('next')) {
+			nextStep();
+		} else {
+			closeWarning(evt);
+		}
 
-	navSections.forEach(section => {
-		section.addEventListener('click', evt => {
-			if(evt.target.classList.contains('next')) {
-				nextStep();
-			} else if(evt.target.classList.contains('previous')) {
-				previousStep();
-			} else if(evt.target.hasAttribute('type', 'submit')) {
-				submitForm(evt);
-			}
-		})
+		// Listen for previous step
+		if(evt.target.classList.contains('previous')) {
+			previousStep();
+		}
 	})
 
 	//  Dictate flow
@@ -58,10 +55,18 @@ function initialiseForm() {
 			}
 		}
 	})
-}
+
+	// Prevent form submission since there is no server
+	form.addEventListener('submit', evt => {
+		evt.preventDefault();
+		currentStepIndex += 1;
+		hideInactiveSteps();
+	})
+}, {once:true});
 
 function hideInactiveSteps() {
 	// Display current step only
+	let allSteps = document.querySelectorAll('#contact-form fieldset');
 	for(i=0; i < allSteps.length; i++) {
 		if(allSteps[i] === allSteps[currentStepIndex]) {
 			allSteps[i].removeAttribute('style')
@@ -72,9 +77,39 @@ function hideInactiveSteps() {
 }
 
 function nextStep() {
-	// Change step
-	currentStepIndex += 1;
-	hideInactiveSteps();
+	let currentStep = document.querySelectorAll('#contact-form fieldset')[currentStepIndex];
+	let requiredFields = currentStep.querySelectorAll('[required]');
+
+	// Reset invalid fields list
+	invalidFields = [];
+
+	// Ensure fields are valid
+	requiredFields.forEach(field => {
+		if(!field.validity.valid) {
+			invalidFields.push(field)
+		}
+	})
+
+	// Change step if all fields are valid
+	if(!invalidFields[0]) {
+		currentStepIndex += 1;
+		hideInactiveSteps();
+		return;
+	}
+
+	// Update error warning text
+	let textArea = errorDialogue.querySelector('ul');
+
+	textArea.innerHTML = '';
+	invalidFields.forEach(field => {
+		let li = document.createElement('li');
+
+		li.innerHTML = field.name + ' — ' + field.validationMessage;
+		textArea.appendChild(li);
+	})
+
+	// Display error warning
+	errorDialogue.show();
 }
 
 function previousStep() {
@@ -83,7 +118,17 @@ function previousStep() {
 	hideInactiveSteps();
 }
 
-function submitForm(evt) {
-	evt.preventDefault;
-	console.log('submit form');
+// Close invalid fields warning
+function closeWarning(evt) {
+	if(errorDialogue.hasAttribute('open')) {
+		errorDialogue.close();
+
+		// Force focus on an invalid element
+		for(i=0; i<invalidFields.length; i++) {
+			if(evt.target === invalidFields[i]) {
+				return;
+			}
+		}
+		invalidFields[0].focus();
+	}
 }
