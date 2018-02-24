@@ -4,7 +4,7 @@
 [x] validate form before next step
 [x] change step
 [] get related articles
-[] save progress
+[x] save progress
 [x] disable form submission
 */
 
@@ -172,17 +172,22 @@ function closeWarning(evt) {
 }
 
 // Save form progress before leaving page
+window.addEventListener('beforeunload', ()=> {
+	let formFields = new Object();
 
-// let testForm = {
-// 	name: 'a',
-// 	email: 'b@b.b',
-// 	username: 'c',
-// 	topic: '',
-// 	query: ''
-// }
+	editableFields.forEach(field => {
+		// Ignore empty fields
+		if(field.value === '' ||
+			(field.tagName === 'SELECT' &&
+				field.selectedOptions[0].hasAttribute('hidden'))
+		) {
+			return;
+		}
 
-// sessionStorage.setItem('savedForm', JSON.stringify(testForm));
+		// Add form values to list
+		formFields[field.name] = field.value;
+	})
 
-// window.addEventListener('beforeunload', ()=> {
-// 	sessionStorage.setItem('savedForm', JSON.stringify(formFields));
-// })
+	// Save field values
+	sessionStorage.setItem('savedForm', JSON.stringify(formFields));
+})
