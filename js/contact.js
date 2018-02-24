@@ -2,9 +2,9 @@
 [x] hide inactive sections
 [x] correct behviour when pressing enter
 [x] validate form before next step
-[] save progress
 [x] change step
 [] get related articles
+[] save progress
 [x] disable form submission
 */
 
@@ -12,6 +12,7 @@
 var currentStepIndex = 0;
 var invalidFields = [];
 var errorDialogue;
+var editableFields = [];
 
 document.addEventListener('DOMContentLoaded', () => {
 	errorDialogue = document.querySelector('#emailErrors');
@@ -55,6 +56,43 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		}
 	})
+
+	// Get user editable fields
+	for(i=0; i<form.length; i++) {
+		if(form[i].hasAttribute('name')) {
+			editableFields.push(form[i]);
+		}
+	}
+
+	// Load previously saved fields
+	if(sessionStorage.getItem('savedForm')) {
+		let savedForm = JSON.parse(sessionStorage.getItem('savedForm'));
+
+		editableFields.forEach(field => {
+			switch(field.name) {
+				case 'name':
+					if(savedForm.name) {
+						field.value = savedForm.name
+					}; break
+				case 'email':
+					if(savedForm.email) {
+						field.value = savedForm.email
+					}; break
+				case 'username':
+					if(savedForm.username) {
+						field.value = savedForm.username
+					}; break
+				case 'topic':
+					if(savedForm.topic) {
+						field.value = savedForm.topic
+					}; break
+				case 'query':
+					if(savedForm.query) {
+						field.value = savedForm.query
+				}; break
+			}
+		})
+	}
 
 	// Prevent form submission since there is no server
 	form.addEventListener('submit', evt => {
@@ -132,3 +170,19 @@ function closeWarning(evt) {
 		invalidFields[0].focus();
 	}
 }
+
+// Save form progress before leaving page
+
+// let testForm = {
+// 	name: 'a',
+// 	email: 'b@b.b',
+// 	username: 'c',
+// 	topic: '',
+// 	query: ''
+// }
+
+// sessionStorage.setItem('savedForm', JSON.stringify(testForm));
+
+// window.addEventListener('beforeunload', ()=> {
+// 	sessionStorage.setItem('savedForm', JSON.stringify(formFields));
+// })
