@@ -118,11 +118,36 @@
 	main.contact .email form {
 		width: 100%;
 		grid-template-columns: repeat(4, 100%);
-		transition: transform 150ms ease-in-out;
+		align-items: start;
 	}
 
-	main.contact .email fieldset {
-		transition: opacity 150ms ease-in-out;
+	main.contact .email form.sliding,
+	main.contact .email fieldset.fade-in,
+	main.contact .email fieldset.fade-out {
+		animation: 150ms linear;
+	}
+
+	main.contact .email form.sliding {
+		animation-name: 'form-slide';
+	}
+
+	@keyframes form-slide {
+		from {transform: translateX(0%);}
+		to {transform: translateX(-100%);}
+	}
+
+	main.contact .email fieldset.fade-in,
+	main.contact .email fieldset.fade-out {
+		animation-name: 'fieldset-fade';
+	}
+
+	main.contact .email fieldset.fade-out {
+		animation-direction: reverse;
+	}
+
+	@keyframes fieldset-fade {
+		from {opacity: 0;}
+		to {opacity: 1;}
 	}
 
 	main.contact .email input,

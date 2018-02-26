@@ -3,29 +3,36 @@
 [x] correct behviour when pressing enter
 [x] validate form before next step
 [x] change step
+[x] animate changing step
+[] move steps back/forwards on browser back/forward
 [] get related articles
 [x] save progress
 [x] disable form submission
 */
 
 
+var form;
 var currentStepIndex = 0;
+var allSteps;
 var invalidFields = [];
 var errorDialogue;
 var editableFields = [];
 
 document.addEventListener('DOMContentLoaded', () => {
+	form = document.querySelector('#contact-form');
+	allSteps = document.querySelectorAll('#contact-form fieldset');
 	errorDialogue = document.querySelector('#emailErrors');
 
 	hideInactiveSteps();
 
 	// Line up fieldsets horizontally
-	document.querySelector('main.contact .email form').style.display = 'grid';
+	form.style.display = 'grid';
 
 	// Activate click listeners
 	document.addEventListener('click', evt => {
 		// Listen for next step
 		if(evt.target.classList.contains('next')) {
+			evt.preventDefault();
 			nextStep();
 		} else {
 			closeWarning(evt);
@@ -33,15 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		// Listen for previous step
 		if(evt.target.classList.contains('previous')) {
+			evt.preventDefault();
 			previousStep();
 		}
 	})
 
-	//  Dictate flow
-	let form = document.querySelector('#contact-form');
+	// Go to next element when enter is pressed
 	let interactiveElements = form.querySelectorAll('input, a.next, select, textarea');
 
-	// Go to next element when enter is pressed
 	form.addEventListener('keypress', evt => {
 
 		// Check enter is pressed inside input or select element
@@ -94,28 +100,34 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	}
 
-	// Prevent form submission since there is no server
+	// Submit form
 	form.addEventListener('submit', evt => {
+		// Prevent form submission since there is no server
 		evt.preventDefault();
+
+		// Change page to success page
 		currentStepIndex += 1;
-		hideInactiveSteps();
+		stepTransition('forward');
+
+		// Clear form
+		form.reset();
+		sessionStorage.removeItem('savedForm');
 	})
 }, {once:true});
 
 function hideInactiveSteps() {
 	// Display current step only
-	let allSteps = document.querySelectorAll('#contact-form fieldset');
 	for(i=0; i < allSteps.length; i++) {
 		if(allSteps[i] === allSteps[currentStepIndex]) {
-			allSteps[i].removeAttribute('style')
+			allSteps[i].style.display = 'block';
 		} else {
-			allSteps[i].style.display='none';
+			allSteps[i].style.display = 'none';
 		}
 	}
 }
 
 function nextStep() {
-	let currentStep = document.querySelectorAll('#contact-form fieldset')[currentStepIndex];
+	let currentStep = allSteps[currentStepIndex];
 	let requiredFields = currentStep.querySelectorAll('[required]');
 
 	// Reset invalid fields list
@@ -131,7 +143,7 @@ function nextStep() {
 	// Change step if all fields are valid
 	if(!invalidFields[0]) {
 		currentStepIndex += 1;
-		hideInactiveSteps();
+		stepTransition('forward');
 		return;
 	}
 
@@ -153,7 +165,36 @@ function nextStep() {
 function previousStep() {
 	// Change step
 	currentStepIndex -= 1;
-	hideInactiveSteps();
+	stepTransition('backward');
+}
+
+function stepTransition(direction) {
+	let delay = window.getComputedStyle(form).getPropertyValue('--animation-duration');
+	let enteringStep = allSteps[currentStepIndex];
+	let leavingStep;
+	let slideDirection = 'normal';
+
+	enteringStep.style.display = 'block';
+
+	if(direction === 'forward') {
+		slideDirection = 'normal';
+		leavingStep = allSteps[currentStepIndex -1];
+	} else if(direction === 'backward') {
+		slideDirection = 'reverse';
+		leavingStep = allSteps[currentStepIndex +1];
+	}
+
+	form.style.animationDirection = slideDirection;
+	form.classList.add('sliding');
+	enteringStep.classList.add('fade-in');
+	leavingStep.classList.add('fade-out');
+
+	window.setTimeout( ()=> {
+		form.classList.remove('sliding');
+		enteringStep.classList.remove('fade-in');
+		leavingStep.classList.remove('fade-out');
+		hideInactiveSteps();
+	}, 150);
 }
 
 // Close invalid fields warning
