@@ -124,7 +124,7 @@
 	main.contact .email form.sliding,
 	main.contact .email fieldset.fade-in,
 	main.contact .email fieldset.fade-out {
-		animation: 150ms linear;
+		animation: 100ms linear;
 	}
 
 	main.contact .email form.sliding {
