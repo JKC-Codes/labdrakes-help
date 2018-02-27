@@ -128,7 +128,7 @@
 	}
 
 	main.contact .email form.sliding {
-		animation-name: 'form-slide';
+		animation-name: form-slide;
 	}
 
 	@keyframes form-slide {
@@ -138,7 +138,7 @@
 
 	main.contact .email fieldset.fade-in,
 	main.contact .email fieldset.fade-out {
-		animation-name: 'fieldset-fade';
+		animation-name: fieldset-fade;
 	}
 
 	main.contact .email fieldset.fade-out {
