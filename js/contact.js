@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			for(i=0; i < interactiveElements.length; i++) {
 				if(evt.target.name === interactiveElements[i].name) {
 					interactiveElements[i + 1].focus();
+					return;
 				}
 			}
 		}
@@ -99,10 +100,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	}
 
-	// Submit form
+	// Listen for form submission
 	form.addEventListener('submit', evt => {
 		// Prevent form submission since there is no server
 		evt.preventDefault();
+
+		// Add email address to success page
+		let emailField = document.querySelector('#input-email');
+		let successText = document.querySelector('#customers-email');
+		successText.innerHTML = emailField.value;
 
 		// Change page to success page
 		currentStepIndex += 1;
@@ -223,10 +229,7 @@ window.addEventListener('beforeunload', ()=> {
 
 	editableFields.forEach(field => {
 		// Ignore empty fields
-		if(field.value === '' ||
-			(field.tagName === 'SELECT' &&
-				field.selectedOptions[0].hasAttribute('hidden'))
-		) {
+		if(field.value === '') {
 			return;
 		}
 
