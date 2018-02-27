@@ -4,7 +4,6 @@
 [x] validate form before next step
 [x] change step
 [x] animate changing step
-[] move steps back/forwards on browser back/forward
 [] get related articles
 [x] save progress
 [x] disable form submission
@@ -169,32 +168,38 @@ function previousStep() {
 }
 
 function stepTransition(direction) {
-	let delay = window.getComputedStyle(form).getPropertyValue('--animation-duration');
 	let enteringStep = allSteps[currentStepIndex];
 	let leavingStep;
 	let slideDirection = 'normal';
 
+	// Display next/previous step
 	enteringStep.style.display = 'block';
 
+	// Reverse animation
 	if(direction === 'forward') {
-		slideDirection = 'normal';
+		form.style.animationDirection = 'normal';
 		leavingStep = allSteps[currentStepIndex -1];
 	} else if(direction === 'backward') {
-		slideDirection = 'reverse';
+		form.style.animationDirection = 'reverse';
 		leavingStep = allSteps[currentStepIndex +1];
 	}
 
-	form.style.animationDirection = slideDirection;
+	// Apply animation
 	form.classList.add('sliding');
 	enteringStep.classList.add('fade-in');
 	leavingStep.classList.add('fade-out');
+
+	// Remove animation once complete
+	let selector = document.querySelector('main.contact .email form.sliding');
+	let delayInSeconds = window.getComputedStyle(selector).getPropertyValue('animation-duration');
+	let delay = delayInSeconds.slice(0,-1) * 1000;
 
 	window.setTimeout( ()=> {
 		form.classList.remove('sliding');
 		enteringStep.classList.remove('fade-in');
 		leavingStep.classList.remove('fade-out');
 		hideInactiveSteps();
-	}, 150);
+	}, delay);
 }
 
 // Close invalid fields warning
