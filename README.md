@@ -5,6 +5,5 @@ A help site for fictional bookmaker labdrakes
 Internet Explorer is not supported due to Custom Properties and Grid.
 
 ## Incomplete
-- Contact page
 - Find better design for the open contact us widget on home page
 - Site search
