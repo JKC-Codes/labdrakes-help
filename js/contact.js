@@ -1,21 +1,10 @@
-/*
-[x] hide inactive sections
-[x] correct behviour when pressing enter
-[x] validate form before next step
-[x] change step
-[x] animate changing step
-[] get related articles
-[x] save progress
-[x] disable form submission
-*/
-
-
 var form;
 var currentStepIndex = 0;
 var allSteps;
 var invalidFields = [];
 var errorDialogue;
 var editableFields = [];
+var downloadedArticles;
 
 document.addEventListener('DOMContentLoaded', () => {
 	form = document.querySelector('#contact-form');
@@ -108,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		// Add email address to success page
 		let emailField = document.querySelector('#input-email');
 		let successText = document.querySelector('#customers-email');
-		successText.innerHTML = emailField.value;
+		successText.textContent = emailField.value;
 
 		// Change page to success page
 		currentStepIndex += 1;
@@ -148,6 +137,7 @@ function nextStep() {
 	// Change step if all fields are valid
 	if(!invalidFields[0]) {
 		currentStepIndex += 1;
+		getRelevantArticles();
 		stepTransition('forward');
 		return;
 	}
@@ -181,7 +171,7 @@ function stepTransition(direction) {
 	// Display next/previous step
 	enteringStep.style.display = 'block';
 
-	// Reverse animation
+	// Set animation slide direction
 	if(direction === 'forward') {
 		form.style.animationDirection = 'normal';
 		leavingStep = allSteps[currentStepIndex -1];
@@ -240,3 +230,49 @@ window.addEventListener('beforeunload', ()=> {
 	// Save field values
 	sessionStorage.setItem('savedForm', JSON.stringify(formFields));
 })
+
+// Display relevant articles
+function getRelevantArticles() {
+	if(currentStepIndex === 1 && !downloadedArticles) {
+		downloadArticles();
+	} else if(currentStepIndex === 2) {
+		displayArticles();
+	}
+}
+
+function downloadArticles() {
+	let queryURL = "../js/articleslist.json";
+
+	fetch(queryURL)
+
+	.then(response => {
+		return response.json()
+	})
+
+	.then(list => {
+		downloadedArticles = list.sort( (a,b) => {
+			return b.hits - a.hits;
+		})
+	})
+
+	.catch(function (error) {
+		console.log('Error during fetch: ' + error.message);
+	});
+}
+
+function displayArticles() {
+	let selectedTopic = document.querySelector('#input-topic');
+	let displayArea = document.querySelector('#related-articles-list');
+
+	// Filter articles by topic
+	let filteredList = downloadedArticles.filter(article => article.topic === selectedTopic.value);
+
+	// Display articles
+	displayArea.innerHTML = '';
+
+	for (i = 0; i < 5; i++) {
+		let li = document.createElement('li');
+		li.innerHTML = '<a href="' + filteredList[i].url + '.html">' + filteredList[i].title + '</a>';
+		displayArea.appendChild(li);
+	}
+}
