@@ -347,3 +347,48 @@
 	main.browse .contact details li {
 		margin-bottom: 1rem;
 	}
+
+	@media (min-width: 37.5rem) {
+		main.browse .contact details[open] {
+			position: relative;
+			padding-bottom: 0;
+			margin-bottom: 1rem;
+			box-shadow: none;
+		}
+
+		main.browse .contact details[open] summary {
+			border-bottom: none;
+			margin-bottom: 0;
+		}
+
+		main.browse .contact details[open] .pop-out {
+			position: absolute;
+			left: calc(100% + 1rem);
+			top: 50%;
+			transform: translateY(-50%);
+			background: #fff;
+			padding: 1rem;
+			border: 0.0625rem solid var(--colour-alt);
+			border-radius: var(--border-rounded);
+		}
+
+		main.browse .contact details[open] .pop-out::before {
+			--size: 1.5rem;
+			content: '';
+			display: block;
+			position: absolute;
+			transform: rotate(45deg);
+			top: calc(50% - (var(--size)/2));
+			left: calc(-1 * (var(--size)/2) - 0.0625rem);
+			border: 0 solid var(--colour-alt);
+			border-bottom-width: 0.0625rem;
+			border-left-width: 0.0625rem;
+			width: var(--size);
+			height: var(--size);
+			background: #fff;
+		}
+
+		main.browse .contact details[open] .pop-out li:last-child {
+			margin-bottom: 0;
+		}
+	}
