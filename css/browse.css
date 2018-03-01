@@ -363,13 +363,14 @@
 
 		main.browse .contact details[open] .pop-out {
 			position: absolute;
-			left: calc(100% + 1rem);
+			left: calc(100% + 1.0625rem);
 			top: 50%;
 			transform: translateY(-50%);
 			background: #fff;
-			padding: 1rem;
-			border: 0.0625rem solid var(--colour-alt);
+			padding: 1.5rem;
+			border: 0.0625rem solid var(--colour-light);
 			border-radius: var(--border-rounded);
+			box-shadow: var(--shadow-default);
 		}
 
 		main.browse .contact details[open] .pop-out::before {
@@ -380,7 +381,7 @@
 			transform: rotate(45deg);
 			top: calc(50% - (var(--size)/2));
 			left: calc(-1 * (var(--size)/2) - 0.0625rem);
-			border: 0.0625rem solid var(--colour-alt);
+			border: 0.0625rem solid var(--colour-light);
 			border-top: none;
 			border-right: none;
 			width: var(--size);
