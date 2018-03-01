@@ -380,9 +380,9 @@
 			transform: rotate(45deg);
 			top: calc(50% - (var(--size)/2));
 			left: calc(-1 * (var(--size)/2) - 0.0625rem);
-			border: 0 solid var(--colour-alt);
-			border-bottom-width: 0.0625rem;
-			border-left-width: 0.0625rem;
+			border: 0.0625rem solid var(--colour-alt);
+			border-top: none;
+			border-right: none;
 			width: var(--size);
 			height: var(--size);
 			background: #fff;
