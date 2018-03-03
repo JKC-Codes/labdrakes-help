@@ -78,6 +78,29 @@ function displayArticles() {
 		filteredArticles = rawArticlesList.filter(rawArticlesList => rawArticlesList.topic === currentTopic);
 	}
 
+	// Filter search terms
+	let searchURL = document.location.search;
+	let searchString = searchURL.substring(searchURL.indexOf('=')+1);
+
+	if(searchString !== '') {
+		let searchTerms = searchString.split('+');
+
+		filteredArticles.forEach(article => {
+			let relevance = 0;
+			searchTerms.forEach(word => {
+				if(RegExp(word, 'i').test(article.title)) {
+					relevance += word.length;
+				}
+			})
+			article.searchRelevance = relevance;
+		});
+
+		filteredArticles = filteredArticles.filter(article => article.searchRelevance > 0);
+		filteredArticles.sort((a,b) => {
+			return b.searchRelevance - a.searchRelevance;
+		});
+	}
+
 	// Ensure results don't extend beyond articles available
 	let articlesCount = articlesToDisplay;
 
@@ -200,7 +223,6 @@ function changeTopic(button) {
 		case 'poker': resultsHeading.innerHTML = 'Poker'; break
 		case 'bingo': resultsHeading.innerHTML = 'Bingo'; break
 		case 'lotto': resultsHeading.innerHTML = 'Lotto'; break
-		case 'search': resultsHeading.innerHTML = 'Search Results'; break
 		default: resultsHeading.innerHTML = 'Popular Articles';
 	}
 
