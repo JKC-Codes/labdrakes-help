@@ -12,9 +12,9 @@ document.querySelector('header.site').innerHTML = `
 			<img class="logo" src="../img/logo-narrow.png" alt="Home page">
 		</picture>
 	</a>
-	<form id="site-search">
+	<form action="../index.html" method="get" id="site-search">
 		<label for="site-search-bar" class="a11y">Search the site:</label>
-		<input type="search" id="site-search-bar" placeholder="How can we help?" required>
+		<input type="search" id="site-search-bar" name="search" placeholder="How can we help?" required>
 		<button type="submit" form="site-search"><span class="text">Search</span></button>
 	</form>
 </div>
