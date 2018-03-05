@@ -78,7 +78,7 @@ function displayArticles() {
 		filteredArticles = rawArticlesList.filter(rawArticlesList => rawArticlesList.topic === currentTopic);
 	}
 
-	// Filter search terms
+	// Filter if search triggered
 	let searchURL = document.location.search;
 	let searchString = searchURL.substring(searchURL.indexOf('=')+1);
 
@@ -89,7 +89,7 @@ function displayArticles() {
 			let relevance = 0;
 			searchTerms.forEach(word => {
 				if(RegExp(word, 'i').test(article.title)) {
-					relevance += word.length;
+					relevance++;
 				}
 			})
 			article.searchRelevance = relevance;
@@ -123,6 +123,11 @@ function displayArticles() {
 	articlesDisplayArea.innerHTML = "";
 
 	for (i = 0; i < articlesCount; i++) {
+		if (filteredArticles.length === 0) {
+			articlesDisplayArea.innerHTML = '<p>No articles matching your search have been found.</p>';
+			break;
+		}
+
 		var li = document.createElement('li');
 
 		// Create list item with article link and title
@@ -141,7 +146,7 @@ function displayArticles() {
 		document.querySelector('#previousPage').setAttribute('disabled', '');
 	}
 
-	else if (pageStart >= (filteredArticles.length - articlesToDisplay)) {
+	if (pageStart >= (filteredArticles.length - articlesToDisplay)) {
 		document.querySelector('#nextPage').setAttribute('disabled', '');
 		document.querySelector('#lastPage').setAttribute('disabled', '');
 	}
