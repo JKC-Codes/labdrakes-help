@@ -15,7 +15,7 @@ function init() {
 
 var rawArticlesList;
 var filteredArticles;
-var currentTopic = "Popular Articles";
+var currentTopic = "popular articles";
 var topicsMenu;
 var pageStart = 0;
 var isWideScreen = window.matchMedia("(min-width: 37.5rem)");
@@ -68,7 +68,7 @@ function displayArticles() {
 	const articlesDisplayArea = document.querySelector('#articlesList');
 
 	// Filter JSON list
-	if (currentTopic === 'Popular Articles') {
+	if (currentTopic === 'popular articles') {
 		// Don't filter if a topic isn't selected
 		filteredArticles = rawArticlesList;
 	}
@@ -99,6 +99,8 @@ function displayArticles() {
 		filteredArticles.sort((a,b) => {
 			return b.searchRelevance - a.searchRelevance;
 		});
+
+		document.querySelector('#articlesHeading').innerHTML = 'Search Results';
 	}
 
 	// Ensure results don't extend beyond articles available
@@ -228,7 +230,8 @@ function changeTopic(button) {
 		case 'poker': resultsHeading.innerHTML = 'Poker'; break
 		case 'bingo': resultsHeading.innerHTML = 'Bingo'; break
 		case 'lotto': resultsHeading.innerHTML = 'Lotto'; break
-		default: resultsHeading.innerHTML = 'Popular Articles';
+		case 'popular articles': resultsHeading.innerHTML = 'Popular Articles'; break
+		default: resultsHeading.innerHTML = 'Search Results';
 	}
 
 	// Disable current topic button only
