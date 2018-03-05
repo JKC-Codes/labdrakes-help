@@ -186,6 +186,15 @@
 		flex-grow: 1;
 	}
 
+	ul.articles-list > li > p {
+		margin: 0;
+		color: var(--colour-default);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 3rem;
+	}
+
 	main.browse .results nav {
 		justify-content: space-between;
 		align-items: center;

@@ -126,7 +126,7 @@ function displayArticles() {
 
 	for (i = 0; i < articlesCount; i++) {
 		if (filteredArticles.length === 0) {
-			articlesDisplayArea.innerHTML = '<p>No articles found.</p>';
+			articlesDisplayArea.innerHTML = '<li><p>No articles found</p></li>';
 			break;
 		}
 
