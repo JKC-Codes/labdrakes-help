@@ -126,7 +126,7 @@ function displayArticles() {
 
 	for (i = 0; i < articlesCount; i++) {
 		if (filteredArticles.length === 0) {
-			articlesDisplayArea.innerHTML = '<p>No articles matching your search have been found.</p>';
+			articlesDisplayArea.innerHTML = '<p>No articles found.</p>';
 			break;
 		}
 
@@ -233,6 +233,12 @@ function changeTopic(button) {
 		case 'popular articles': resultsHeading.innerHTML = 'Popular Articles'; break
 		default: resultsHeading.innerHTML = 'Search Results';
 	}
+
+	// Modify heading for searches
+	if (document.location.search) {
+		resultsHeading.innerHTML = 'Search Results In ' + resultsHeading.innerHTML;
+	}
+
 
 	// Disable current topic button only
 	topicsMenu.querySelectorAll('button').forEach(element => {
