@@ -819,18 +819,6 @@
 	Utility Classes
 ========================================*/
 
-	@media (max-width: 37.4375rem) {
-		.hide-narrow {
-			display: none !important;
-		}
-	}
-
-	@media (min-width: 37.5rem) {
-		.hide-wide {
-			display: none !important;
-		}
-	}
-
 	.a11y {
 		position: absolute !important;
 		top: auto !important;
@@ -842,16 +830,6 @@
 		padding: 0 !important;
 		overflow: hidden !important;
 		clip-path: inset(50%) !important;
-	}
-
-	.group {
-		display: flow-root;
-	}
-
-	.group::after {
-		content: "";
-		display: table;
-		clear: both;
 	}
 
 	.column,
@@ -869,16 +847,6 @@
 
 	.no-wrap {
 		white-space: nowrap;
-	}
-
-	.tick::before {
-		content: '\2714\00a0';
-		color: #007b20;
-	}
-
-	.cross::before {
-		content: '\2718\00a0';
-		color: #c81a21;
 	}
 
 	.dark {
