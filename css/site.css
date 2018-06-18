@@ -263,6 +263,15 @@
   }
 
   /**
+  * Remove platform native styling.
+  */
+
+  input[type="search"] {
+	  -webkit-appearance: none;
+	  -moz-appearance: none;
+  }
+
+  /**
   * Remove the inheritance of text transform in Edge, Firefox, and IE.
   * 1. Remove the inheritance of text transform in Firefox.
   */
