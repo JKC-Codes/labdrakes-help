@@ -25,7 +25,7 @@ ol {
 }
 
 ul.articles-list > li {
-	border-bottom-color: #e6e6e6;
+	border-bottom: 1px solid #e6e6e6;
 }
 
 ul.articles-list > li > a {
@@ -37,15 +37,14 @@ dd {
 }
 
 summary {
-	padding-left: calc(2.5rem - 2ch);
-	padding-right: calc(2.5rem - 2ch);
+	padding: 0.75rem calc(2.5rem - 2ch);
 	background-color: #e6e6e6;
 	border-radius: 0.25em;
 	box-shadow: 0.125rem 0.125rem 0.125rem rgba(0,0,0,0.25);
 }
 
 details[open] summary {
-	border-bottom-color: #cd2814;
+	border-bottom: 0.0625rem solid #cd2814;
 	margin-left: -2.5rem;
 }
 
@@ -56,14 +55,13 @@ details[open] {
 }
 
 th[scope=col] {
-	border-bottom-color: #cd2814;
+	border-bottom: 0.0625rem solid #cd2814;
 }
 
 button,
 .button {
 	font: 100%/1.5 Arial, Helvetica, sans-serif;
-	padding-left: 2.5rem;
-	padding-right: 2.5rem;
+	padding: 0.75rem 2.5rem;
 	background-color: #282832;
 	border-radius: 0.25em;
 	box-shadow: 0.125rem 0.125rem 0.125rem rgba(0,0,0,0.25);
@@ -92,7 +90,7 @@ button.link:hover {
 }
 
 hr {
-	border-top-color: #cd2814;
+	border-top: 0.0625rem solid #cd2814;
 }
 
 input,
@@ -105,11 +103,11 @@ select {
 }
 
 fieldset {
-	border-color: #e6e6e6;
+	border: 0.0625rem solid #e6e6e6;
 }
 
 dialog {
-	border-color: #e6e6e6;
+	border: 0.0625rem solid #e6e6e6;
 	border-radius: 0.25em;
 	box-shadow: 0.125rem 0.125rem 0.125rem rgba(0,0,0,0.25);
 }
@@ -148,7 +146,7 @@ header.site .main {
 }
 
 header.site button {
-	border-left-color: #e6e6e6;
+	border-left: 0.0625rem solid #e6e6e6;
 }
 
 header.site button .text {
@@ -210,7 +208,7 @@ main.browse .topics details[open] summary::before {
 	}
 
 	main.browse .topics summary h2 {
-		border-bottom-color: #cd2814;
+		border-bottom: 0.0625rem solid #cd2814;
 	}
 }
 
@@ -220,7 +218,7 @@ Results
 ========================================*/
 
 main.browse .results h2 {
-	border-bottom-color: #cd2814;
+	border-bottom: 0.0625rem solid #cd2814;
 }
 
 ul.articles-list > li > p {
@@ -233,7 +231,7 @@ Contact
 ========================================*/
 
 main.browse .contact h2 {
-	border-bottom-color: #cd2814;
+	border-bottom: 0.0625rem solid #cd2814;
 }
 
 main.browse .contact dialog button {
@@ -242,7 +240,7 @@ main.browse .contact dialog button {
 
 @media (min-width: 37.5rem) {
 	main.browse .contact details[open] .pop-out {
-		border-color: #e6e6e6;
+		border: 0.0625rem solid #e6e6e6;
 		border-radius: 0.25em;
 		box-shadow: 0.125rem 0.125rem 0.125rem rgba(0,0,0,0.25);
 	}
@@ -250,7 +248,7 @@ main.browse .contact dialog button {
 	main.browse .contact details[open] .pop-out::before {
 		top: calc(50% - 0.75rem);
 		left: calc(-0.8125rem);
-		border-color: #e6e6e6;
+		border: 0.0625rem solid #e6e6e6;
 		width: 0.75rem;
 		height: 0.75rem;
 	}
@@ -266,7 +264,7 @@ main.browse .contact dialog button {
 ========================================*/
 
 main.article > article > header h2 {
-	border-bottom-color: #cd2814;
+	border-bottom: 0.0625rem solid #cd2814;
 }
 
 
@@ -275,7 +273,7 @@ Related
 ========================================*/
 
 main.article .related h2 {
-	border-bottom-color: #cd2814;
+	border-bottom: 0.0625rem solid #cd2814;
 }
 
 
@@ -284,7 +282,7 @@ Contact
 ========================================*/
 
 main.article .contact h2 {
-	border-bottom-color: #cd2814;
+	border-bottom: 0.0625rem solid #cd2814;
 }
 
 main.article .contact dialog button {
@@ -301,7 +299,7 @@ Contact.css
 ========================================*/
 
 main.contact .container > section {
-	border-color: #e6e6e6;
+	border: 0.0625rem solid #e6e6e6;
 }
 
 
@@ -310,7 +308,7 @@ Header
 ========================================*/
 
 main.contact .container > header > h2 {
-	border-bottom-color: #cd2814;
+	border-bottom: 0.0625rem solid #cd2814;
 }
 
 
