@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,8 +13,11 @@
 	<script>
 		// Check for Dialog element support
 		if (!('show' in document.createElement('dialog'))) {
-			// Load polyfill if unsupported
-			document.write('<script src="../js/dialog-polyfill.js"><\/script><link rel="stylesheet" href="../css/dialog-polyfill.css">');
+			document.write('<script src="../js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="../css/polyfill-dialog.css">');
+		}
+		// Check for Custom Properties support
+		if (!this.CSS||!CSS.supports('--foo','bar')) {
+			document.write('<link rel="stylesheet" href="../css/fallback-customproperties-site.css"><link rel="stylesheet" href="../css/fallback-customproperties-browse.css">');
 		}
 	</script>
 	<script src="../js/disable-dummy-links.js" defer></script>

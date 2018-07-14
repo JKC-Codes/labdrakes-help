@@ -13,11 +13,15 @@
 	<script>
 		// Check for Details element support
 		if (!('open' in document.createElement('details'))) {
-			document.write('<script src="js/details-summary-polyfill.js"><\/script>');
+			document.write('<script src="js/polyfill-details-summary.js"><\/script>');
 		}
 		// Check for Dialog element support
 		if (!('show' in document.createElement('dialog'))) {
-			document.write('<script src="js/dialog-polyfill.js"><\/script><link rel="stylesheet" href="css/dialog-polyfill.css">');
+			document.write('<script src="js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="css/polyfill-dialog.css">');
+		}
+		// Check for Custom Properties support
+		if (!this.CSS||!CSS.supports('--foo','bar')) {
+			document.write('<link rel="stylesheet" href="css/fallback-customproperties-site.css"><link rel="stylesheet" href="css/fallback-customproperties-browse.css">');
 		}
 	</script>
 	<script src="js/disable-dummy-links.js" defer></script>
