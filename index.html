@@ -13,12 +13,10 @@
 	<script>
 		// Check for Details element support
 		if (!('open' in document.createElement('details'))) {
-			// Load polyfill if unsupported
 			document.write('<script src="js/details-summary-polyfill.js"><\/script>');
 		}
 		// Check for Dialog element support
 		if (!('show' in document.createElement('dialog'))) {
-			// Load polyfill if unsupported
 			document.write('<script src="js/dialog-polyfill.js"><\/script><link rel="stylesheet" href="css/dialog-polyfill.css">');
 		}
 	</script>
@@ -65,6 +63,11 @@
 				<li><button value="lotto">Lotto</button></li>
 			</ul>
 		</details>
+		<script>
+			if (window.matchMedia("(min-width: 37.5rem)").matches) {
+				document.querySelector('#topicsWidget').open = true;
+			}
+		</script>
 	</nav>
 
 	<section class="column results">
