@@ -1,0 +1,29 @@
+/*========================================
+	Article
+========================================*/
+
+	main.article > article > header h2 {
+		border-bottom-color: #cd2814;
+	}
+
+
+/*========================================
+	Related
+========================================*/
+
+	main.article .related h2 {
+		border-bottom-color: #cd2814;
+	}
+
+
+/*========================================
+	Contact
+========================================*/
+
+	main.article .contact h2 {
+		border-bottom-color: #cd2814;
+	}
+
+	main.article .contact dialog button {
+		color: #333;
+	}
