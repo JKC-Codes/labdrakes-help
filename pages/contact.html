@@ -24,8 +24,6 @@
 			document.write('<link rel="stylesheet" href="../css/fallback-grid.css">');
 		}
 	</script>
-	</script>
-	<script src="../js/disable-dummy-links.js" defer></script>
 </head>
 
 <body>
@@ -47,7 +45,7 @@
 				<button id="chatButton">Chat</button>
 				<dialog id="chatDialogue">
 					<p>You must be logged in to chat</p>
-					<a class="button" href="#">Log In</a>
+					<a class="button" href="javascript:void(0)">Log In</a>
 					<button id="chatClose" class="link">Cancel</button>
 				</dialog>
 				<script>
@@ -63,8 +61,8 @@
 			<section class="call">
 				<h3>Call</h3>
 				<ul class="no-bullets">
-					<li>UK: <a class="no-wrap" href="#">0808 157 1234</a></li>
-					<li>Outside the UK: <a class="no-wrap" href="#">+44 1632 961 234</a></li>
+					<li>UK: <a class="no-wrap" href="tel:08081571234">0808 157 1234</a></li>
+					<li>Outside the UK: <a class="no-wrap" href="tel:+441632961234">+44 1632 961 234</a></li>
 				</ul>
 				<p>Response time:<br><b>1&ndash;4 minutes</b></p>
 			</section>
@@ -133,7 +131,7 @@
 				</form>
 
 				<dialog id="emailErrors" class="email-warning">
-					<a href="#" class="warning-close-icon">
+					<a href="javascript:void(0)" class="warning-close-icon">
 						<svg
 							viewBox="0 0 4.2333335 4.2333335"
 							height="16"
