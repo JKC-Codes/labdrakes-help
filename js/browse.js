@@ -8,6 +8,7 @@ function init() {
 
 	loadArticles();
 	isWideScreen.addListener(toggleTopicsMenu);
+	topicsMenu.open = false;
 	toggleTopicsMenu(isWideScreen);
 	activateTopicsButtons();
 	activatePaginationButtons();
