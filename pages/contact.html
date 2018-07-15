@@ -15,10 +15,15 @@
 		if (!('show' in document.createElement('dialog'))) {
 			document.write('<script src="../js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="../css/polyfill-dialog.css">');
 		}
-		// Check for modern browser support
-		if (!this.CSS||!CSS.supports('--foo','bar')||!CSS.supports('grid-area','auto')) {
-			document.write('<link rel="stylesheet" href="../css/fallback.css"><script src="../js/fallback.js"><\/script>');
+		// Check for Custom Properties support
+		if (!this.CSS||!CSS.supports('--custom','properties')) {
+			document.write('<link rel="stylesheet" href="../css/fallback-customproperties.css">');
 		}
+		// Check for Grid support
+		if (!this.CSS||!CSS.supports('grid-area','auto')) {
+			document.write('<link rel="stylesheet" href="../css/fallback-grid.css">');
+		}
+	</script>
 	</script>
 	<script src="../js/disable-dummy-links.js" defer></script>
 </head>

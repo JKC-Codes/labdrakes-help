@@ -194,14 +194,6 @@ main.browse .topics summary {
 	background-color: #282832;
 }
 
-main.browse .topics summary::before {
-	transform: translatey(calc((3rem - 100%) / 2)) rotate(0.5turn);
-}
-
-main.browse .topics details[open] summary::before {
-	transform: translatey(calc((3rem - 100%) / 2)) rotate(-0.25turn);
-}
-
 @media (min-width: 37.5rem) {
 	main.browse .topics details[open] summary {
 		color: #333;
