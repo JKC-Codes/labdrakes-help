@@ -66,23 +66,59 @@ footer.site .quick-links {
 ========================================*/
 
 main.browse {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-gap: 1rem;
+	display: block;
+}
+
+main.browse .results {
+	margin: 1rem 0;
 }
 
 @media (min-width: 37.5rem) {
-	main.browse {
-		grid-template: auto 1fr/12.5rem 1fr;
-	}
-
-	main.browse .results {
-		grid-row: span 2;
+	main.browse .topics,
+	main.browse .contact {
+		float: left;
+		width: 12.5rem;
 	}
 
 	main.browse .contact {
-		grid-row-start: 2;
-		align-self: stretch;
+		width: 10.5rem;
+		margin-top: 1rem;
+	}
+
+	main.browse .results {
+		margin: 0;
+		float: right;
+		width: calc(100% - 15.5rem);
+	}
+
+	main.browse::after {
+		display: table;
+		content: '';
+		clear: both;
+	}
+}
+
+
+/*========================================
+	Results
+========================================*/
+
+main.browse .results nav {
+	margin: 1.75rem 0;
+}
+
+main.browse .results nav > * {
+	margin: auto;
+}
+
+
+/*========================================
+	Contact
+========================================*/
+
+@media (min-width: 37.5rem) {
+	main.browse .contact dialog {
+		width: 100%;
 	}
 }
 
