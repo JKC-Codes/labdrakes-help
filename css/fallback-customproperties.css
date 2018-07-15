@@ -209,7 +209,7 @@ main.browse .topics summary {
 Results
 ========================================*/
 
-main.browse .results h2 {
+main.browse .results h1 {
 	border-bottom: 0.0625rem solid #cd2814;
 }
 
@@ -255,7 +255,7 @@ main.browse .contact dialog button {
 	Article
 ========================================*/
 
-main.article > article > header h2 {
+main.article > article > header h1 {
 	border-bottom: 0.0625rem solid #cd2814;
 }
 
@@ -299,7 +299,7 @@ main.contact .container > section {
 Header
 ========================================*/
 
-main.contact .container > header > h2 {
+main.contact .container > header > h1 {
 	border-bottom: 0.0625rem solid #cd2814;
 }
 
