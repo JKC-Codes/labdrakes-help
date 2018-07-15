@@ -30,17 +30,17 @@
 ========================================*/
 
 	main.contact p,
-	main.contact h2,
-	main.contact h3 {
+	main.contact h1,
+	main.contact h2 {
 		text-align: center;
 	}
 
-	main.contact .container > header > h2,
-	main.contact .container > section > h3 {
+	main.contact .container > header > h1,
+	main.contact .container > section > h2 {
 		margin: 0 0 1rem;
 	}
 
-	main.contact .container > section > h3 {
+	main.contact .container > section > h2 {
 		font-weight: 400;
 	}
 
@@ -53,7 +53,7 @@
 		padding-top: 1rem;
 	}
 
-	main.contact .container > header > h2 {
+	main.contact .container > header > h1 {
 		border-bottom: 0.0625rem solid var(--colour-brand);
 	}
 
@@ -107,7 +107,7 @@
 	Email
 ========================================*/
 
-	main.contact .email > h3 + p {
+	main.contact .email > h2 + p {
 		margin-top: 0;
 	}
 

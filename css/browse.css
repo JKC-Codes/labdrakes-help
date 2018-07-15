@@ -142,7 +142,7 @@
 	Results
 ========================================*/
 
-	main.browse .results h2 {
+	main.browse .results h1 {
 		margin: 0;
 		text-align: center;
 		border-bottom: 0.0625rem solid var(--colour-brand);
