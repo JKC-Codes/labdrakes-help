@@ -17,7 +17,7 @@
 		}
 		// Check for Dialog element support
 		if (!('show' in document.createElement('dialog'))) {
-			document.write('<script src="../js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="css/polyfill-dialog.css">');
+			document.write('<script src="../js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="../css/polyfill-dialog.css">');
 		}
 		// Check for Custom Properties support
 		if (!this.CSS||!CSS.supports('--custom','properties')) {
@@ -33,15 +33,30 @@
 <body>
 
 	<header class="site">
-		<!--Work around for GitHub not allowing a back end-->
-		<script src="../js/header.js"></script>
+		<div class="return dark row">
+			<a href="https://jkc.codes" rel="noopener">Return to labdrakes.com</a>
+		</div>
+
+		<div class="main row">
+			<a href="../index.html">
+				<picture>
+					<source media="(min-width: 37.5rem)" srcset="../img/logo-wide.png">
+					<img class="logo" src="../img/logo-narrow.png" alt="Labdrakes logo">
+				</picture>
+			</a>
+			<form action="../index.html" method="get" id="site-search">
+				<label for="site-search-bar" class="a11y">Search the site:</label>
+				<input type="search" id="site-search-bar" name="search" placeholder="How can we help?" required>
+				<button type="submit" form="site-search"><span class="text">Search</span></button>
+			</form>
+		</div>
 	</header>
 
 
 	<main class="article">
 		<article>
 			<header>
-				<h2 id="articleTitle">18+ Policy</h2>
+				<h1 id="articleTitle">18+ Policy</h1>
 			</header>
 			<div class="content">
 				<p>Mus enim ea pede 49 eaque id eum id clenodia eum ut class a aut. Sed honorem regressu est optio in nam dui mazim si mus eget eum symbolum, per conferre symbolum non ab occumbere illud potentissime lorem te sem mi colubros.</p>

@@ -17,7 +17,7 @@
 		}
 		// Check for Dialog element support
 		if (!('show' in document.createElement('dialog'))) {
-			document.write('<script src="../js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="css/polyfill-dialog.css">');
+			document.write('<script src="../js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="../css/polyfill-dialog.css">');
 		}
 		// Check for Custom Properties support
 		if (!this.CSS||!CSS.supports('--custom','properties')) {
@@ -33,15 +33,30 @@
 <body>
 
 	<header class="site">
-		<!--Work around for GitHub not allowing a back end-->
-		<script src="../js/header.js"></script>
+		<div class="return dark row">
+			<a href="https://jkc.codes" rel="noopener">Return to labdrakes.com</a>
+		</div>
+
+		<div class="main row">
+			<a href="../index.html">
+				<picture>
+					<source media="(min-width: 37.5rem)" srcset="../img/logo-wide.png">
+					<img class="logo" src="../img/logo-narrow.png" alt="Labdrakes logo">
+				</picture>
+			</a>
+			<form action="../index.html" method="get" id="site-search">
+				<label for="site-search-bar" class="a11y">Search the site:</label>
+				<input type="search" id="site-search-bar" name="search" placeholder="How can we help?" required>
+				<button type="submit" form="site-search"><span class="text">Search</span></button>
+			</form>
+		</div>
 	</header>
 
 
 	<main class="article">
 		<article>
 			<header>
-				<h2 id="articleTitle">Responsible Gambling</h2>
+				<h1 id="articleTitle">Responsible Gambling</h1>
 			</header>
 			<div class="content">
 				<nav>
@@ -60,7 +75,7 @@
 				</nav>
 
 				<section id="1">
-					<h3>Per Secundam Ea Caesarianis Sublirne</h3>
+					<h2>Per Secundam Ea Caesarianis Sublirne</h2>
 					<p>Iteratis te monoculus caduca est atque pede hic nisi ea louor ex cras generis id 8040. Nemo facer hic coniunctio at partus a dui sem dis filtru mi placida.  Civitas diebus ex ad intendis, hosticum sem prophetas hac in augue sint. Sunt’a quo ti perpftuam at ex ex valorem. Quas est Parum Stataria et dui Sed Ullam, aut Discedat te vel Error Orci; tempor crimine subsistere wisi tertium rutrum zzril at hic dolor mi hac iudicium tibi.</p>
 
 					<p>Si Congressu, eu’ad illum non accussat ex nosset alique mi eget non vestrorum est odio proveniens quas sunt regnum te quasi a dis – ea sinuni urna, magna ac nec diam quis et ex ti. Ex esse sed benevolam sed me arcu vel eius publicis in fuga nobis zzril rationes ut a eget eos consectetur deorum. Mi’a sit nibh at multaque aut Comparere illo. Ab antecedentia pactum dis credit te non consequat non ullo te asylum incarcerata angeum non saepe mi methodum si expedita te ad ab.</p>
@@ -77,7 +92,7 @@
 				</section>
 
 				<section id="2">
-					<h3>Rem Interregnum Quotquot Gloria</h3>
+					<h2>Rem Interregnum Quotquot Gloria</h2>
 					<p>Consumere:</p>
 					<ul>
 						<li>refugium director exerci eu a hic praevcnire</li>
@@ -99,7 +114,7 @@
 				</section>
 
 				<section id="3">
-					<h3>Civibus Eos Odio Eu Incolas</h3>
+					<h2>Civibus Eos Odio Eu Incolas</h2>
 					<p>Nobili dis victoris ut probat ac specie fugiat alias rerum: dui quos, legiones quo mppono a seacula. Si nec fuga hac te nemo incolas ac haeredissam aut similique:</p>
 					<ul>
 						<li>Parietes nostra ac antichristus mus dui sed qui modo ea a hac ut caedis harum</li>
@@ -131,7 +146,7 @@
 				</section>
 
 				<section id="4">
-					<h3>Eu'me Nemo Eu Modi</h3>
+					<h2>Eu'me Nemo Eu Modi</h2>
 					<p>Te per minim odit sed vitae eu imperiosus a scelera wisi pede laborant, ea consumere odit rem sunt quod iste et usilata ad quam partus equestri successione. Te cum nisi nisl arcu opposito te ea physim leo hac attendentiam, ipsa il’a gravatam nisl mi enim quam fortem te odio iste est nobilitas.</p>
 
 					<p>Per <a href="javascript:void(0)">Sangvine Apparet</a> enim eos sunt nam quae scaturiat bannis mirum per at louor pede publicum quam assum fortuna cum non regula absentem est dimittere minus:</p>
@@ -153,7 +168,7 @@
 				</section>
 
 				<section id="5">
-					<h3>Oppressus Atque A Agitur Curae; Me Bannis?</h3>
+					<h2>Oppressus Atque A Agitur Curae; Me Bannis?</h2>
 					<p>Ex provocatus wisi eros natura eos laborum a cxcusat nisl dicta absentia sem’i nomina regalia li. Ut quo nam assumenda lacus a regibus, divini quorum ea status, rem partem corporis dulcedo vel civilatcm dicta quasi at dis quorum eos per eventum proin:</p>
 					<ul>
 						<li>Eu per animi  etiam hosticum hac neque id hilari clari quam, fortuna ex vestibulum studium?</li>
@@ -169,10 +184,10 @@
 				</section>
 
 				<section id="6">
-					<h3>Centimanos Rerum Quo Incendia</h3>
+					<h2>Centimanos Rerum Quo Incendia</h2>
 					<p>Actiones moliri porro vel sem si 75 et a antistes origine non Occumbere mazim tot praestantissimum si facunda angeum ea massa cum quas provident. Calumniarum nam sufficientem caduca nec sodales est sensum iis per proveniens. Ut quo pennata wisi corpore neque vel quo te 12 in materias nisi Regnandum sonini, longas publice ea <a href="javascript:void(0)">quam</a> reputationi. At mus conjuso wisi adverso eaque est non at 34 te aliuando ut a Quocumque cras, regula sint id a sensum mi vel unde ante ea incolae me <a href="javascript:void(0)">pede</a>.</p>
 
-					<h4>Languida Quidquid</h4>
+					<h3>Languida Quidquid</h3>
 					<p>Occumbere modo appellationem hac rationaliter tempora quo personarum ut spiritus hic modi te secundam possujnus sunt magni non ex-sint urgebant. Circumvenire, ex regressum lius apparet nec peregrina non nam a tutori-arduas suspncta mi littera statuitis partibus id magna ut animalis claritas aureos at laconice sed sapien. Saepe mus a aenean si opponite iustitiae substitam iste mus ad quam te augusti ea victimam moreae mi leo Maiestas:</p>
 
 					<ul>
@@ -183,7 +198,7 @@
 				</section>
 
 				<section id="7">
-					<h3>Galliae Parcam</h3>
+					<h2>Galliae Parcam</h2>
 					<p>A Galliae Eaque te januario at iure sem vel pietas et metallo a sint gubernium si fusce mus ille dominus ad me-ornare supellectili porttitor vel debila te nisl rem urna fames laesae.</p>
 
 					<p>Eum Sortiri Purus elit metus esse sem mus conscii ad Rerum, Mutuum, Quis Quidem, Risus, Ullam quo Nisi Eaque ab est Congressu lius. Ut ille aut atque mi Loquor Vindici, MuS assum est.</p>
@@ -204,7 +219,7 @@
 				</section>
 
 				<section id="8">
-					<h3>Nibh-Hic Esse Extremis</h3>
+					<h2>Nibh-Hic Esse Extremis</h2>
 					<p>Partinuculam, quae gentes animus in quis a "nisl-vel" diam liber sapiente me a quo ut eminentiam est throno te sint eu massa orci hac gubernia. Fastus a nisi-contrario, typi-aut nisi nec foveam quo erat hac quo alias non iure te modi pericula nimiam sint me. Ea recentem a odit-est, inncem iure wisi-fermentum, equestrem quas pede difficilius netus cum diam orci enim at iure refugium dis, moenia amet quam a nisi falli dolorem quam duis. Verius nisi-est, sem elit ab consulere ante fructum sint quam Regressum maiores hic qui saluis operis renovo. Sed illo hic ab quia te meritos, sequitur ea class enim illud hic nisi-leo per invidiae. Urna eu quas rcpublica unde iste-est, hac illa qui ad fuga si claram ti.</p>
 
 					<p>Ab iudicit hac nisi-leo officiis, ex mi est Crudele eaque (augue est "Occulte" calcat si qui est) sem modi eodem est "Carthaginem Oleantem" regulam nec modurn dis victum te odit typi hac fuga te hic dui vel:</p>
@@ -215,7 +230,7 @@
 				</section>
 
 				<section id="9">
-					<h3>Iste-Divertere</h3>
+					<h2>Iste-Divertere</h2>
 					<p>Usus noverca carbone vel optio error ipsa ullo nibh quo ex castra cuncta fabula non nulla duis victus si in odio probitatem, diam ac quae aut sufficit te liber meruerunt in modi praesentis publicum. Conscios custodes si ad iste-consultor, est arendom si intestinum ea leo princeps nunc duis natione nisi diam quae ut ipsa sit actiones ut optio quis te mazim ea indolem odit vitae protunc.</p>
 
 					<p>Eu optio te eius magni prophetas cum typi iste iusto pulvinar si qui id habetis sem odio sem laudabatur te fuga orci ante.</p>
@@ -236,7 +251,7 @@
 
 					<p>Nemo quo wisi-pignora modi Regnandum harum, ex oppressus odit per amet ullo-eiusdem quis facer actionum necessitatibus te leo vero/calcat, ad odit elit victum sed in studium iure lectores ullam eum quos enim te eius lius quam saepius.</p>
 
-					<h4>Nisi-Prosperit — nunc plenitudine &amp; URNa</h4>
+					<h3>Nisi-Prosperit — nunc plenitudine &amp; URNa</h3>
 					<p>Ac cum sed sint-supplices militari, natura odit  Volscens Occidas ab <b>8234 461 2947</b> ab quae me ullam et <a href="javascript:void(0)">absolutissime@prosperis.sem</a> typi effectu te ita dui terrenos nec cras mus dis mentes odit nec fuga qui nisi-contrario et natus. Te a ditiones notare in dis autem, ad tibi saecula hac qui est hostico probat ut 9 buccis.</p>
 
 					<p>ORNARE te sem ipsa mi aut Erubescam Eorum at Malesuada eum ad a proposueram mi ullo, arcu typi-procinctu wisi Assumenda, ad nec sunt optandum te nisi-eiusdem cum augusta(a) sint sem hac quis typi non.PARCAM.cum. Ex saepe at verbum sint cum memoriam diam typi nec.CURSUS.non quam usus hostem quo natione si est Assumenda Sint Deportari Fretum, ea sed sed si nemine eros me leo crabrones at cum utrumque nisi eum mus erat sint PERARE. Largitionibus, per sed erat occulte SEMPER fortiaue si <a href="javascript:void(0)">scandala@exequi.nam</a>. Vero ullo-perpftuam elit ad eveniet dui est usus plenis id throno ex iure clari. Id dui eum arenam morbi te a coronadonis in fervore te dis fretus in qui servire parabolas, ea tibi risus est termino aemulos notare.</p>
@@ -275,7 +290,7 @@
 				</section>
 
 				<section id="10">
-					<h3>Morbi Corpore Te Diam</h3>
+					<h2>Morbi Corpore Te Diam</h2>
 					<p>Competens sed futuri arcades mus sem consectetuer lacaenae wisi director partus quos erat. Et sem nunc ut nisi te persona mazim viscera imperium eius putabat:</p>
 
 					<p>Id non iste mi vel AD per esse te ullo ut securus natus species utrinque enim gradivi AnnUere: NovErca mi a contractus ratione iste utramque gratitudinis oppressit cum piscis vestram non reipublicac id obesse animalis pusillus ea familiares ab spirans meliorem. Sed QuaEdam Iniuriam Misteria quo ex provident ac himenaeos aureos <b>0563 6384 375</b> (nibh vitae duis sit AD aequitate cum eget mazim habitu proposui) praesens orci hac te impletas. Comestibilium, felis <a href="javascript:void(0)">Numquam</a></p>

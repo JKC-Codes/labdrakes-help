@@ -17,7 +17,7 @@
 		}
 		// Check for Dialog element support
 		if (!('show' in document.createElement('dialog'))) {
-			document.write('<script src="../js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="css/polyfill-dialog.css">');
+			document.write('<script src="../js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="../css/polyfill-dialog.css">');
 		}
 		// Check for Custom Properties support
 		if (!this.CSS||!CSS.supports('--custom','properties')) {
@@ -34,15 +34,30 @@
 <body>
 
 	<header class="site">
-		<!--Work around for GitHub not allowing a back end-->
-		<script src="../js/header.js"></script>
+		<div class="return dark row">
+			<a href="https://jkc.codes" rel="noopener">Return to labdrakes.com</a>
+		</div>
+
+		<div class="main row">
+			<a href="../index.html">
+				<picture>
+					<source media="(min-width: 37.5rem)" srcset="../img/logo-wide.png">
+					<img class="logo" src="../img/logo-narrow.png" alt="Labdrakes logo">
+				</picture>
+			</a>
+			<form action="../index.html" method="get" id="site-search">
+				<label for="site-search-bar" class="a11y">Search the site:</label>
+				<input type="search" id="site-search-bar" name="search" placeholder="How can we help?" required>
+				<button type="submit" form="site-search"><span class="text">Search</span></button>
+			</form>
+		</div>
 	</header>
 
 
 	<main class="article">
 		<article>
 			<header>
-				<h2 id="articleTitle">Sports Rules</h2>
+				<h1 id="articleTitle">Sports Rules</h1>
 			</header>
 			<div class="content">
 				<ul>
@@ -61,19 +76,19 @@
 
 				<p>Unde a tempus eos ripensi exlusis et a contemptor, amet elit ipsum ac enim vel effectum praesidium atticas converso. Te duis ipsa incantus hic quo arcana insultum duis elit ad relicto ea patres.</p>
 
-				<h3 id="one">Fames baltico</h3>
+				<h2 id="one">Fames baltico</h2>
 				<p>Te rem ordine captivare ea ut qualitalibus etiam hic facit vel quo cras gratiarum, dis beatae subseguetur et est ipsa massa ex iste at quaedam est minus ex hic primum ille ab supponebat dis dignus. Si leo velit est eum aut quam portorium, ita Minus Eget ille me erat.</p>
 
 				<p>Te a class quam qui earum a noviter reclamente, per excepto (ordines Quasi Directi) lius sed aut deliberatissime publicarum elit ea fuga.</p>
 
 				<p>Eu est minus te a congue te frustra dominus, harum me erosem modi humani arcui et commodi sed ipsa harum, ita enim fames.</p>
 
-				<h3 id="two">Ferrens Dui Fioniam</h3>
+				<h2 id="two">Ferrens Dui Fioniam</h2>
 				<p>Non illa vacare te duis methodum ut est aut proin enim ad palestram. Ut a forsan mi mercede est culpa culpa si hic illa arenam id ante uidem prosperit, ita Symbola Leo impedit ex lius omnis illo ab ipsa.</p>
 
-				<h3>Qui Me Modi</h3>
+				<h2>Qui Me Modi</h2>
 
-				<h4 id="three">Modo ex Quae Meritis</h4>
+				<h3 id="three">Modo ex Quae Meritis</h3>
 				<p>A quas id impetus ex ad progredi arcu (qui a ita purus) metus te sequentia ac hic nunc hac wisi li congressu. Fuga est id defunctis ea incolae enim.</p>
 
 				<p>Eaque nam vitae dominium noviter est a modo:</p>
@@ -96,35 +111,35 @@
 
 				<p>Quia ac a modo lacus adlaborabunt quaedam a iis assum ille ab potenti eu ante.
 
-				<h4 id="four">Est me Est Aetatis</h4>
+				<h3 id="four">Est me Est Aetatis</h3>
 				<p>Si a dextre crimine ante a metus iusto a est at si generoso, aut nomina wisi hic quo unde praefixum, nisl est clari ex capere et eu voluptatum eos sit nactus alias ac scelerum.</p>
 
-				<h3 id="five">Advcrsis Retitum</h3>
+				<h2 id="five">Advcrsis Retitum</h2>
 				<p>Nibh dui in donec eu aut versus ut neque quos cantum fuga ut a risus autem. A.a. a bannis risus a 5.7 modo liber ac aut utramque, nam quasi 8-8, 8-6, 0-3, natus ea est pactum est corporis occidit numerose.</p>
 
 				<p>Et a sancta te quaeque est class non et a electionem risus in hic elit amorem te enim quasi captivare, ita respectu eius ad nisi minus ille ea iure debent, te est nisi ut hic probitatem, aut turpis si aut corporis meritis te regulam necessitas.</p>
 
-				<h3 id="six">MODO (Deliberatione Dulcedo Possim Capere)</h3>
+				<h2 id="six">MODO (Deliberatione Dulcedo Possim Capere)</h2>
 
-				<h4>Intulerunt Senatus</h4>
+				<h3>Intulerunt Senatus</h3>
 				<p>Et clades a est a doming te testimonium, EUM ante convallis "leo in quia" ille culpa.</p>
 
 				<p>Te a vel eorum'i etiam nisi est iucunda democriti, SEM quis ea nisi est elit ac quis.</p>
 
-				<h4>Est Contra</h4>
+				<h3>Est Contra</h3>
 				<p>In qui Quam Dolor arcu at Utriuque, dis velit Leo Claram ille ad tributa me dis illum Foveam id 8 Eaque; orci nisi iusto gaudere ita diam mariae Ea-Orci tibi ac ad est Esse si vel est Ipsum.</p>
 
-				<h3 id="seven">Minim Eodem</h3>
+				<h2 id="seven">Minim Eodem</h2>
 				<p>Leo ea opponat est nihil magnae at eorum at a proin ille ad pede ex porro a reiciendis sensum, a.a. 00 ea sunt/ 46 me eros.</p>
 
 				<p>Te a omnium te persona dui mirum eum id a displicere minus id est tibi sensum id odio autem principes, sit illum donec sunt ab iste fames illo ab ante dulcem, mi est nisl si qui detrimenta, est laesio si est illud earum at eripere publicarum.</p>
 
 				<p>a.a. il aut sequi mi recedendo te 1–0 2–3, iure ab Modo/Error 18.1 porro ab facer si qui lorem sed plurali ea dominus/semine oboedientiam, fusce sem occidentem si hic facer risus vero mi quae nec si optio 16 donec.</p>
 
-				<h3 id="eight">Ea Aut/Quae aut Est quo Est est Mazim</h3>
+				<h2 id="eight">Ea Aut/Quae aut Est quo Est est Mazim</h2>
 				<p>Ut molunt quovis assistere diam dui atque polona dis velit qui invidiae, modi orci elit ex eius. Et qui nihil qui eos quam regalibus, eget est morbi odio si leo leo elit ea septembris me dis dolorem decursu leo ipsam.</p>
 
-				<h3 id="nine">Quasi Adiurando</h3>
+				<h2 id="nine">Quasi Adiurando</h2>
 				<p>Eu quae gratulatione, me inducere iis-earum (Magni Scandala - contrario regnandi in ea a "Purus Volscens") te magnis si minus ut a fiant urgentis dui. Rem legationis personom, odit Netus Sociosqu illa ad laborandum eu rem aut (hic vel-expedit putamus) eos per quod (dis quas-iuribus naturom).</p>
 
 				<p>Rem viscera, et a 'Nibh te autem ipsa' arcui, li Modo A eum leo felis hic 5-4, Unde A mus est semper est 1-4 nam enim Quos A fuga eu id qui vel Fusce Conscios. duis qui nemine Leo Videtis fusce ex levitas ad 9-5 mi Quas A'a exequi. Hac paucis Clari Harum culpa ad occidit perltum a facit si 27 harum.</p>

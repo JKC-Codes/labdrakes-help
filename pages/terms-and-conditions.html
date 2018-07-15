@@ -17,7 +17,7 @@
 		}
 		// Check for Dialog element support
 		if (!('show' in document.createElement('dialog'))) {
-			document.write('<script src="../js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="css/polyfill-dialog.css">');
+			document.write('<script src="../js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="../css/polyfill-dialog.css">');
 		}
 		// Check for Custom Properties support
 		if (!this.CSS||!CSS.supports('--custom','properties')) {
@@ -34,20 +34,35 @@
 <body>
 
 	<header class="site">
-		<!--Work around for GitHub not allowing a back end-->
-		<script src="../js/header.js"></script>
+		<div class="return dark row">
+			<a href="https://jkc.codes" rel="noopener">Return to labdrakes.com</a>
+		</div>
+
+		<div class="main row">
+			<a href="../index.html">
+				<picture>
+					<source media="(min-width: 37.5rem)" srcset="../img/logo-wide.png">
+					<img class="logo" src="../img/logo-narrow.png" alt="Labdrakes logo">
+				</picture>
+			</a>
+			<form action="../index.html" method="get" id="site-search">
+				<label for="site-search-bar" class="a11y">Search the site:</label>
+				<input type="search" id="site-search-bar" name="search" placeholder="How can we help?" required>
+				<button type="submit" form="site-search"><span class="text">Search</span></button>
+			</form>
+		</div>
 	</header>
 
 
 	<main class="article">
 		<article>
 			<header>
-				<h2 id="articleTitle">Terms &amp; Conditions</h2>
+				<h1 id="articleTitle">Terms &amp; Conditions</h1>
 			</header>
 			<div class="content">
 				<p><b>Hominem: 92/10/7763</b></p>
 				<ol class="cascade">
-					<li class="heading"><h3>Pellentesque</h3>
+					<li class="heading"><h2>Pellentesque</h2>
 						<ol>
 							<li>Eum per dolor lius nobilis facundissima:
 								<ol class="reset">
@@ -75,7 +90,7 @@
 						</ol>
 					</li>
 
-					<li class="heading"><h3>Meritos</h3>
+					<li class="heading"><h2>Meritos</h2>
 						<ol>
 							<li><p>Nec Error et Sed alias ea amorem maximum rem nec est activitas floret mi qui Successum Eorum, protegere eros ipsam gratiam te qui Statera cum mus ipsam:</p>
 								<ol class="reset">
@@ -99,13 +114,13 @@
 						</li>
 					</ol>
 
-					<li class="heading"><h3>Proposui qui Error at Eos</h3>
+					<li class="heading"><h2>Proposui qui Error at Eos</h2>
 						<ol>
 							<li>Ea bonorum hic animi si modo corpore in est Massa si Sed et nam wisi. Ac tibi erosem wisi nec simpliciter reprobo te hic Magna mi Non illo eu insldiis te hac ex ex perferendis leones (dis vivamus, ex totam eu aut a legunt ad est Vivendi) gentes esse secunda quas wisi tertio. Ut mi usus transtulissent at aenean nisi per assum wisi sed debilitatem gennere quae te hic Massa et Eos mus unde sequentia nam in dui Castigo tibi ac proper mi me arcu opprobrium ut sed serpens typi ea mus nemo.</li>
 						</ol>
 					</li>
 
-					<li class="heading"><h3>Cumque te eum eum si est Troiano</h3>
+					<li class="heading"><h2>Cumque te eum eum si est Troiano</h2>
 						<ol>
 							<li>Haeres at sem Civibus mi postulatu ac a consulere netus, hac ab orandum dui iusto id opponite, reprobo ea donec sem certum ea saeviat ut est Minimum victima minori. Ut qui vero tempus, eu quo commune pressa in atque si mus Firmare ad est restat Piscari vel inauguratus converso. Eu tibi est me nobili ii, vel rem advena, cum Ripensi te practicatum te rem nisl me leo eos reddet.</li>
 							<li>Ab non, in nec meliorem scientibus, proper dis frustra (duplicate felicem conscios ab tyrannis mi hic iunctis exemplo) in eos Saeviat mi per nisl (argentea quam rhoncus ac est laedit parum mus/ea quis medicus te oppresso).</li>
@@ -118,7 +133,7 @@
 						</ol>
 					</li>
 
-					<li class="heading"><h3>Interponitur mus Pereunt Laborant</h3>
+					<li class="heading"><h2>Interponitur mus Pereunt Laborant</h2>
 						<ol>
 							<li>Ea miscere eu ordinem nisi me mus/ea ab ipsam aut Tenetur mus tempora wisi quo:
 								<ol class="reset">

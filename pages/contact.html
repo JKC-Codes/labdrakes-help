@@ -29,19 +29,34 @@
 <body>
 
 	<header class="site">
-		<!--Work around for GitHub not allowing a back end-->
-		<script src="../js/header.js"></script>
+		<div class="return dark row">
+			<a href="https://jkc.codes" rel="noopener">Return to labdrakes.com</a>
+		</div>
+
+		<div class="main row">
+			<a href="../index.html">
+				<picture>
+					<source media="(min-width: 37.5rem)" srcset="../img/logo-wide.png">
+					<img class="logo" src="../img/logo-narrow.png" alt="Labdrakes logo">
+				</picture>
+			</a>
+			<form action="../index.html" method="get" id="site-search">
+				<label for="site-search-bar" class="a11y">Search the site:</label>
+				<input type="search" id="site-search-bar" name="search" placeholder="How can we help?" required>
+				<button type="submit" form="site-search"><span class="text">Search</span></button>
+			</form>
+		</div>
 	</header>
 
 
 	<main class="contact">
 		<div class="container">
 			<header>
-				<h2 id="articleTitle">Contact Us</h2>
+				<h1 id="articleTitle">Contact Us</h1>
 			</header>
 
 			<section class="chat">
-				<h3>Chat</h3>
+				<h2>Chat</h2>
 				<button id="chatButton">Chat</button>
 				<dialog id="chatDialogue">
 					<p>You must be logged in to chat</p>
@@ -59,7 +74,7 @@
 			</section>
 
 			<section class="call">
-				<h3>Call</h3>
+				<h2>Call</h2>
 				<ul class="no-bullets">
 					<li>UK: <a class="no-wrap" href="tel:08081571234">0808 157 1234</a></li>
 					<li>Outside the UK: <a class="no-wrap" href="tel:+441632961234">+44 1632 961 234</a></li>
@@ -68,7 +83,7 @@
 			</section>
 
 			<section class="email">
-				<h3>Email</h3>
+				<h2>Email</h2>
 				<p>Response time:<br><b>36&ndash;48 hours</b></p>
 				<form id="contact-form" action="contact.html#success" method="post">
 					<fieldset id="your-details">

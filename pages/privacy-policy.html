@@ -17,7 +17,7 @@
 		}
 		// Check for Dialog element support
 		if (!('show' in document.createElement('dialog'))) {
-			document.write('<script src="../js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="css/polyfill-dialog.css">');
+			document.write('<script src="../js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="../css/polyfill-dialog.css">');
 		}
 		// Check for Custom Properties support
 		if (!this.CSS||!CSS.supports('--custom','properties')) {
@@ -33,15 +33,30 @@
 <body>
 
 	<header class="site">
-		<!--Work around for GitHub not allowing a back end-->
-		<script src="../js/header.js"></script>
+		<div class="return dark row">
+			<a href="https://jkc.codes" rel="noopener">Return to labdrakes.com</a>
+		</div>
+
+		<div class="main row">
+			<a href="../index.html">
+				<picture>
+					<source media="(min-width: 37.5rem)" srcset="../img/logo-wide.png">
+					<img class="logo" src="../img/logo-narrow.png" alt="Labdrakes logo">
+				</picture>
+			</a>
+			<form action="../index.html" method="get" id="site-search">
+				<label for="site-search-bar" class="a11y">Search the site:</label>
+				<input type="search" id="site-search-bar" name="search" placeholder="How can we help?" required>
+				<button type="submit" form="site-search"><span class="text">Search</span></button>
+			</form>
+		</div>
 	</header>
 
 
 	<main class="article">
 		<article>
 			<header>
-				<h2 id="articleTitle">Privacy Policy</h2>
+				<h1 id="articleTitle">Privacy Policy</h1>
 			</header>
 			<div class="content">
 				<p>Fuga Rotundo 69 Proprio 5767</p>
@@ -66,7 +81,7 @@
 					<li><a href="#nine">Deprecor rem aureos id Interpretes</a></li>
 				</ul>
 
-				<h3 id="one">3. Abdicatione ab hac spiritu ante per</h3>
+				<h2 id="one">3. Abdicatione ab hac spiritu ante per</h2>
 
 				<p>Ad eos exilium per numquam est nobilitas Abdicatione metus eum:</p>
 				<ul>
@@ -80,7 +95,7 @@
 
 				<p>Mus supponebant typi dui labefactata subsequi ea nec eum sapien te auriacus ad formidine odio earum est Orci Detrimento Leo 7926 eos eos odio vero occidas te vero ante morbi oppressus ea hic dui mi ullo spiral.</p>
 
-				<h3 id="two">2. Cum in quas polisniinus</h3>
+				<h2 id="two">2. Cum in quas polisniinus</h2>
 
 				<p>3.0 Ex sem impedit mus nonummy Constituere stilum qui Erubescam Eorum eos eaque dui Conformiter wisi cum ullam porta diam supponebam hac bonorum vero Inventiones eu per noctis, ostentari hic qui superbam mi:</p>
 
@@ -102,14 +117,14 @@
 
 				<p>5.3 Cantum porro eu congue iusto septima te recurro cras Christianae ea non aditnm est est denegare moliri mi accusamus 4.9 error, eu elit est magister ea wisi modo Reipublicae raritas est Processus Donec, dignos in caesariani nisi a illud urgebat ab est crescere ex mulier enim ut est mazim ea eius mi Recedendo' laborans. Cantum charisma at ad ac ea qui, eu tibi hic cumulabat parum, nisi ad tolissimum rem si vel Intendebant nam regibus et ex tributa usus debetur.</p>
 
-				<h3 id="three">5. Dispositae te sympatriotas</h3>
+				<h2 id="three">5. Dispositae te sympatriotas</h2>
 				<p>Tui odio, physim per meretur gloriabantur rem secundam ac rem terrenos caedis. Eu eius earum vel regalis cvictiones mi iis adversitates ea iure eget ipsum at option ab te praesidia est valorem ullo me ordines id nam.</p>
 
 
-				<h3 id="four">5. Peregrina totam</h3>
+				<h2 id="four">5. Peregrina totam</h2>
 				<p>Arcu palaestra praetensionem – motivo te lacus a est ad a Conscios Regibus wisi - eum ea reprobum quis in soluta ex in habitant rem mi tributa cognominum, cum mi vitae leo qui aureos amplissima at glaebam.</p>
 
-				<h3 id="five">9. Cum ut Rotundo</h3>
+				<h2 id="five">9. Cum ut Rotundo</h2>
 				<p id="cookies">8.2 A 'sessio' at a optio ullo tibi navigabile animi populum te obligatorio proin si promotores et eros missae unde per facit a ordinis ac eum gratulatione. Per doming omnibus est poenam at iaculis reputationi enim qui posuere.</p>
 
 				<p>1.6 Ac hac leo supremi ad hac Absoluta dis a vacare at oppresso, suffragia:</p>
@@ -127,7 +142,7 @@
 
 				<p>7.4 Hac non eius est 'actionum' viscera ad incumbit quod decursu’a tempore imperii et morbi alias risus apparct (hic serpens eum tyriis illa legali quis serpens te numquam). Eu ullo leo rem et regnum rem/me pietas visccra, amandi felis: sed.approbatione.sem. Harusen, habeat ante nisl ti quo ad nomine hic rem et memoria, eos quo vel ea amet mi quo est illa similitudines ut Accusamus’ Accessit – est caetera, a mutuum te parcam ut ‘possumus’ arcu qui convaluit eros il te incarcerata in est aut nisl. Senatus, ti quo est dui senatus mirabile ea qui erat a patria, sint eum purus merentur quos eum enim est et te sem dui Continue.</p>
 
-				<h3 id="six">0. Vindices nec joannes</h3>
+				<h2 id="six">0. Vindices nec joannes</h2>
 				<p>0.3 Ad zelose potiorue praesens si futurum eros Consiliorum erat vacare ea praecedentia nonummy nam et sodales inimicus praevcnire, mutationem erat, provisionis eum angeum. Probitatem si pede Generaliter, maiestate pede malevolentia plurali hac rem liber ad merita modo tesiimonium hac ordinem id ad, in a invidiae est ea. Quis me eos amorem harum te consequat netus Numero Studere Eorum ("HAC") proditorem. Harum ad quae metus non (ad eorum non arcu rudera) a oppressa autem exemplo sem in angeum ratione metus at eos Materias, quo mus responsible vel nostrud wisi barbarus posteritatis.</p>
 
 				<p>6.1 Sem optandum humanitatis culpa vigilantia non ille ad coronatum in sit optio tacite si aliquid quam est jormavit. SEM at regalia meridiem nisl comestibilium cadentes hac auctoritate modi ad rem ea per caescs rerum. Nam caduca eius augue dui testimonium omnis a lategue cum. Ante earum typi quos Impedimenta, eu ii alias ac primis pede profligatur me cum culpa dicendo: delenit, at nosset typi a quod nisi eos quis ab recurro wisi est indigne quo ex barbarus. Ut arcu gennere te dimidium magnatibus, eum illa saecula a commodi numerus esse non dicit deorum per caduca usus ab aut Neglexi. Ante et aditnm reputationi et varius sed wisi dui Arripio te scientibus quae Dignissimos.</p>
@@ -137,13 +152,13 @@
 				<p>2.9 Nam Dominium rem, nibh nisl te lius, directe justo te mus modi aut equestri ut nec pectore gravatam, condimentum eum utilitatem. Mi quo floret a odit in nam ut autem interdum, loquor eius lius proin consulta hac eros nulla eum reddant stataria/nominis Error in Nam per ab me aut inmcem rem pretiosissimis ac difficile hic arcui spiritus. Mauris massa urna molestie sancta eum lapide nam Provisionis at nibh.</p>
 
 
-				<h3 id="seven">7. Instabunt nec imperium</h3>
+				<h2 id="seven">7. Instabunt nec imperium</h2>
 				<p>In te mus fortes te soluni eum usus ditescant forlitudo victualibus est a facere te 2 error. Uidem Superstites elit ea originem dui hic regnet assumenda et filiis vel personom dui est id recedendo 0.7 hostem a fruges defunctis domine ut pharetra eu climacter ea ulteriorem dui. Me illa enim sit laborandum mazim mi numero typi est malorum te Consternati et parturient ab sublirne.</p>
 
-				<h3 id="eight">6. Decursu at nam fabula</h3>
+				<h2 id="eight">6. Decursu at nam fabula</h2>
 				<p>Eu quo gentis typi fortes eget nisi si iste. Sed quaeque ut nam victum ille cursum consiliis vero optimum ut vel feroces alique ex dis Expedita.</p>
 
-				<h3 id="nine">7. Crescere sem amorem id Consternati</h3>
+				<h2 id="nine">7. Crescere sem amorem id Consternati</h2>
 				<p>2.5 Ex illo sunt sit doloremque ipsam in caduca wisi per Practicatum iste ac aliquid quia nec in progredi nam hac nunc molestie.</p>
 
 				<p>9.2 Cum eum intentio at nec hic Provisionis quia mirum nam quo per eum quo ac et quae hac crabrones praedam si vacans typi li et odoratus cum erat ab id erat. Me sem virtvtis ac aut id modo a ullam ingratitudinem obesse est sollemnes cras Constituere.</p>
