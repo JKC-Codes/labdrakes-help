@@ -3,6 +3,15 @@
 ========================================*/
 
 /*========================================
+	Contact
+========================================*/
+
+main .contact dialog {
+	width: 15rem;
+}
+
+
+/*========================================
 	Footer
 ========================================*/
 
@@ -113,17 +122,6 @@ main.browse .results nav > * {
 
 
 /*========================================
-	Contact
-========================================*/
-
-@media (min-width: 37.5rem) {
-	main.browse .contact dialog {
-		width: 100%;
-	}
-}
-
-
-/*========================================
 	Article.css
 ========================================*/
 
@@ -132,14 +130,51 @@ main.browse .results nav > * {
 ========================================*/
 
 main.article {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-gap: 1rem;
+	display: block;
+}
+
+main.article footer.article .related {
+	margin: 1rem 0;
+}
+
+@media (min-width: 37.5rem) {
+	main.article footer.article {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	main.article footer.article .related,
+	main.article footer.article .contact {
+		margin: 1rem 0 0 0;
+		flex-grow: 1;
+	}
+
+	main.article footer.article .related {
+		margin-right: 1rem;
+		flex-grow: 3;
+	}
 }
 
 @media (min-width: 56.25rem) {
 	main.article {
-		grid-template-columns: minmax(60ch, 3fr) 1fr;
+		display: flex;
+		align-items: flex-start;
+	}
+
+	main.article article {
+		align-self: stretch;
+		margin-right: 1rem;
+		flex: 2 1 40rem;
+	}
+
+	main.article footer.article {
+		flex-wrap: wrap;
+		flex: 1 1 18rem;
+	}
+
+	main.article footer.article .related {
+		margin: 0;
+		width: 100%;
 	}
 }
 
@@ -147,18 +182,6 @@ main.article {
 	Footer
 ========================================*/
 
-main.article footer.article {
-	align-self: start;
-	display: grid;
-	grid-gap: 1rem;
-	align-items: start;
-}
-
-@media (min-width: 37.5rem) and (max-width: 56.249rem) {
-	main.article footer.article {
-		grid-template-columns: auto 1fr;
-	}
-}
 
 
 /*========================================
