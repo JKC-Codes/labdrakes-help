@@ -178,11 +178,6 @@ main.article footer.article .related {
 	}
 }
 
-/*========================================
-	Footer
-========================================*/
-
-
 
 /*========================================
 	Contact.css
@@ -192,39 +187,39 @@ main.article footer.article .related {
 	Layout
 ========================================*/
 
-main.contact .container {
-	display: grid;
-	grid-template: repeat(4, auto) / 1fr;
-	grid-gap: 1rem;
+main.contact {
+	display: block;
+}
+
+main.contact .container > header {
+	margin-bottom: 2rem;
+}
+
+main.contact .container > section {
+	margin-top: 1rem;
 }
 
 @media (min-width: 37.5rem) {
 	main.contact .container {
-		grid-template: repeat(3, auto) / 1fr 1fr;
+		display: flex;
+		flex-wrap: wrap;
 	}
-}
 
-/*========================================
-	Header
-========================================*/
-
-@media (min-width: 37.5rem) {
 	main.contact .container > header {
-		grid-column: span 2;
+		width: 100%;
+		margin-bottom: 0;
 	}
-}
 
-/*========================================
-	Email
-========================================*/
+	main.contact .container .chat,
+	main.contact .container .call {
+		flex: 1 0 1rem;
+	}
 
-main.contact .email form {
-	grid-template-columns: repeat(4, 100%);
-	align-items: start;
-}
+	main.contact .container .chat {
+		margin-right: 1rem;
+	}
 
-@media (min-width: 37.5rem) {
-	main.contact .email {
-		grid-column: span 2;
+	main.contact .container .email {
+		width: 100%;
 	}
 }
