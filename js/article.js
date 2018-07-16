@@ -45,7 +45,9 @@ function removeCurrentPage(articles) {
 }
 
 function displayArticles(list, topic) {
-	var filteredList = list.filter(article => article.topic === topic);
+	var filteredList = list.filter(function(article) {
+		return article.topic === topic;
+	});
 
 	var sortedList = filteredList.sort(function(a, b) {
 		return b.hits - a.hits;

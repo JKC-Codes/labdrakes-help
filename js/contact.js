@@ -6,7 +6,7 @@ var errorDialogue;
 var editableFields = [];
 var downloadedArticles;
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
 	form = document.querySelector('#contact-form');
 	allSteps = document.querySelectorAll('#contact-form fieldset');
 	errorDialogue = document.querySelector('#emailErrors');
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	form.style.display = 'grid';
 
 	// Activate click listeners
-	document.addEventListener('click', evt => {
+	document.addEventListener('click', function(evt) {
 		// Listen for next step
 		if(evt.target.classList.contains('next')) {
 			evt.preventDefault();
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Go to next element when enter is pressed
 	let interactiveElements = form.querySelectorAll('input, a.next, select, textarea');
 
-	form.addEventListener('keypress', evt => {
+	form.addEventListener('keypress', function(evt) {
 
 		// Check enter is pressed inside input or select element
 		if((evt.target.tagName === 'INPUT' || evt.target.tagName === 'SELECT') && evt.key === 'Enter') {
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	if(sessionStorage.getItem('savedForm')) {
 		let savedForm = JSON.parse(sessionStorage.getItem('savedForm'));
 
-		editableFields.forEach(field => {
+		editableFields.forEach(function(field) {
 			switch(field.name) {
 				case 'name':
 					if(savedForm.name) {
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	// Listen for form submission
-	form.addEventListener('submit', evt => {
+	form.addEventListener('submit', function(evt) {
 		// Prevent form submission since there is no server
 		evt.preventDefault();
 
@@ -128,7 +128,7 @@ function nextStep() {
 	invalidFields = [];
 
 	// Ensure fields are valid
-	requiredFields.forEach(field => {
+	requiredFields.forEach(function(field) {
 		if(!field.validity.valid) {
 			invalidFields.push(field)
 		}
@@ -146,7 +146,7 @@ function nextStep() {
 	let textArea = errorDialogue.querySelector('ul');
 
 	textArea.innerHTML = '';
-	invalidFields.forEach(field => {
+	invalidFields.forEach(function(field) {
 		let li = document.createElement('li');
 
 		li.innerHTML = field.name + ' — ' + field.validationMessage;
@@ -190,7 +190,7 @@ function stepTransition(direction) {
 	let delayInSeconds = window.getComputedStyle(selector).getPropertyValue('animation-duration');
 	let delay = delayInSeconds.slice(0,-1) * 1000;
 
-	window.setTimeout( ()=> {
+	window.setTimeout( function() {
 		form.classList.remove('sliding');
 		enteringStep.classList.remove('fade-in');
 		leavingStep.classList.remove('fade-out');
@@ -214,10 +214,10 @@ function closeWarning(evt) {
 }
 
 // Save form progress before leaving page
-window.addEventListener('beforeunload', ()=> {
+window.addEventListener('beforeunload', function() {
 	let formFields = new Object();
 
-	editableFields.forEach(field => {
+	editableFields.forEach(function(field) {
 		// Ignore empty fields
 		if(field.value === '') {
 			return;
@@ -265,7 +265,9 @@ function displayArticles() {
 	let displayArea = document.querySelector('#related-articles-list');
 
 	// Filter articles by topic
-	let filteredList = downloadedArticles.filter(article => article.topic === selectedTopic.value);
+	let filteredList = downloadedArticles.filter(function(article) {
+		return article.topic === selectedTopic.value;
+	});
 
 	// Display articles
 	displayArea.innerHTML = '';

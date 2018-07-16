@@ -76,7 +76,9 @@ function displayArticles() {
 
 	else {
 		// Filter by topic if one is selected
-		filteredArticles = rawArticlesList.filter(rawArticlesList => rawArticlesList.topic === currentTopic);
+		filteredArticles = rawArticlesList.filter(function(list) {
+			return list.topic == currentTopic;
+		});
 	}
 
 	// Filter if search triggered
@@ -86,9 +88,9 @@ function displayArticles() {
 	if(searchString !== '') {
 		let searchTerms = searchString.split('+');
 
-		filteredArticles.forEach(article => {
+		filteredArticles.forEach(function(article) {
 			let relevance = 0;
-			searchTerms.forEach(word => {
+			searchTerms.forEach(function(word) {
 				if(RegExp(word, 'i').test(article.title)) {
 					relevance++;
 				}
@@ -96,8 +98,11 @@ function displayArticles() {
 			article.searchRelevance = relevance;
 		});
 
-		filteredArticles = filteredArticles.filter(article => article.searchRelevance > 0);
-		filteredArticles.sort((a,b) => {
+		filteredArticles = filteredArticles.filter(function(article) {
+			return article.searchRelevance > 0;
+		});
+
+		filteredArticles.sort(function(a,b) {
 			return b.searchRelevance - a.searchRelevance;
 		});
 
@@ -140,7 +145,7 @@ function displayArticles() {
 	}
 
 	// Disable pagination if not enough articles
-	paginationButtons.querySelectorAll('button').forEach(button => {
+	paginationButtons.querySelectorAll('button').forEach(function(button) {
 		button.removeAttribute('disabled', '');
 	})
 
@@ -203,7 +208,7 @@ function disableToggle(tgt) {
 
 function activateTopicsButtons() {
 
-	topicsMenu.addEventListener('click', evt => {
+	topicsMenu.addEventListener('click', function(evt) {
 		if (evt.target.matches('button')) {
 			changeTopic(evt);
 		}
@@ -242,7 +247,7 @@ function changeTopic(button) {
 
 
 	// Disable current topic button only
-	topicsMenu.querySelectorAll('button').forEach(element => {
+	topicsMenu.querySelectorAll('button').forEach(function(element) {
 		element.removeAttribute('disabled');
 	})
 	button.target.setAttribute('disabled', '');
@@ -260,7 +265,7 @@ function changeTopic(button) {
 function activatePaginationButtons() {
 
 	// Change page number
-	paginationButtons.addEventListener('click', evt => {
+	paginationButtons.addEventListener('click', function(evt) {
 		if (evt.target.matches('button')) {
 			switch (evt.target.id) {
 				case 'firstPage': pageStart = 0; break
