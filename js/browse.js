@@ -29,17 +29,15 @@ var totalPages;
 
 // Download and sort all articles
 
-function loadArticles() {
+function loadArticles () {
+	var query = new XMLHttpRequest();
+	query.addEventListener('load', sortList);
+	query.open('GET', 'js/articleslist.json');
+	query.send();
 
-    var queryURL = "js/articleslist.json";
-	fetch(queryURL)
-
-	.then(function (response) {
-		return response.json();
-	})
-
-	.then(function (list) {
-		list.sort(function(one, two) {
+	function sortList () {
+		var response = JSON.parse(this.responseText);
+		rawArticlesList = response.sort(function(one, two) {
 			var a = one.hits, b = two.hits;
 			if (a > b) {
 				return -1;
@@ -51,14 +49,8 @@ function loadArticles() {
 				return 0;
 			}
 		})
-
-		rawArticlesList = list;
 		displayArticles();
-	})
-
-	.catch(function (error) {
-		console.log('Error during fetch: ' + error.message);
-	});
+	}
 }
 
 

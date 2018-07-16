@@ -233,23 +233,17 @@ function getRelevantArticles() {
 }
 
 function downloadArticles() {
-	let queryURL = "../js/articleslist.json";
+	var query = new XMLHttpRequest();
+	query.addEventListener('load', parse);
+	query.open('GET', '../js/articleslist.json');
+	query.send();
 
-	fetch(queryURL)
-
-	.then(response => {
-		return response.json()
-	})
-
-	.then(list => {
+	function parse () {
+		var list = JSON.parse(this.responseText);
 		downloadedArticles = list.sort( (a,b) => {
 			return b.hits - a.hits;
 		})
-	})
-
-	.catch(function (error) {
-		console.log('Error during fetch: ' + error.message);
-	});
+	}
 }
 
 function displayArticles() {
