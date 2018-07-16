@@ -33,21 +33,13 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	})
 
-	// Go to next element when enter is pressed
+	// Go to next element when field completed
 	let interactiveElements = form.querySelectorAll('input, a.next, select, textarea');
 
-	form.addEventListener('keypress', function(evt) {
-
-		// Check enter is pressed inside input or select element
-		if((evt.target.tagName === 'INPUT' || evt.target.tagName === 'SELECT') && evt.key === 'Enter') {
-
-			// Jump to next element
-			evt.preventDefault();
-			for(i=0; i < interactiveElements.length; i++) {
-				if(evt.target.name === interactiveElements[i].name) {
-					interactiveElements[i + 1].focus();
-					return;
-				}
+	form.addEventListener('change', function(evt) {
+		for(i=0; i < interactiveElements.length; i++) {
+			if(evt.target.name === interactiveElements[i].name) {
+				interactiveElements[i + 1].focus();
 			}
 		}
 	})
