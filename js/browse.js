@@ -137,9 +137,10 @@ function displayArticles() {
 	}
 
 	// Disable pagination if not enough articles
-	paginationButtons.querySelectorAll('button').forEach(function(button) {
-		button.removeAttribute('disabled', '');
-	})
+	var buttons = paginationButtons.querySelectorAll('button');
+	for(i = 0 ; i < buttons.length; i++) {
+		buttons[i].removeAttribute('disabled', '');
+	}
 
 	if (pageStart <= 0) {
 		document.querySelector('#firstPage').setAttribute('disabled', '');
@@ -239,9 +240,10 @@ function changeTopic(button) {
 
 
 	// Disable current topic button only
-	topicsMenu.querySelectorAll('button').forEach(function(element) {
-		element.removeAttribute('disabled');
-	})
+	var elements = topicsMenu.querySelectorAll('button');
+	for(i = 0; i < elements.length; i++) {
+		elements[i].removeAttribute('disabled');
+	}
 	button.target.setAttribute('disabled', '');
 
 	// Close menu on mobile
