@@ -120,11 +120,11 @@ function nextStep() {
 	invalidFields = [];
 
 	// Ensure fields are valid
-	requiredFields.forEach(function(field) {
-		if(!field.validity.valid) {
-			invalidFields.push(field)
+	for(i = 0; i < requiredFields.length; i++) {
+		if(!requiredFields[i].validity.valid) {
+			invalidFields.push(requiredFields[i])
 		}
-	})
+	}
 
 	// Change step if all fields are valid
 	if(!invalidFields[0]) {
