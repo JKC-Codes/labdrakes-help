@@ -240,7 +240,7 @@ function downloadArticles() {
 
 	function parse () {
 		var list = JSON.parse(this.responseText);
-		downloadedArticles = list.sort( (a,b) => {
+		downloadedArticles = list.sort(function(a,b) {
 			return b.hits - a.hits;
 		})
 	}
