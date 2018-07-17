@@ -98,6 +98,7 @@ main.browse .results {
 		margin: 0;
 		float: right;
 		width: calc(100% - 15.5rem);
+		height: 51.5rem;
 	}
 
 	main.browse::after {
@@ -111,10 +112,6 @@ main.browse .results {
 /*========================================
 	Results
 ========================================*/
-
-main.browse .results nav {
-	margin: 1.75rem 0;
-}
 
 main.browse .results nav > * {
 	margin: auto;
