@@ -149,6 +149,7 @@ main.article footer.article .related {
 	main.article footer.article .related {
 		margin-right: 1rem;
 		flex-grow: 3;
+		flex-basis: 30rem;
 	}
 }
 
@@ -166,7 +167,7 @@ main.article footer.article .related {
 
 	main.article footer.article {
 		flex-wrap: wrap;
-		flex: 1 1 18rem;
+		flex: 1 1 14rem;
 	}
 
 	main.article footer.article .related {
