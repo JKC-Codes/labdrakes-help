@@ -13,16 +13,21 @@
 	<script>
 		// Check for Details element support
 		if (!('open' in document.createElement('details'))) {
-			// Load polyfill if unsupported
-			document.write('<script src="js/details-summary-polyfill.js"><\/script>');
+			document.write('<script src="js/polyfill-details-summary.js"><\/script>');
 		}
 		// Check for Dialog element support
 		if (!('show' in document.createElement('dialog'))) {
-			// Load polyfill if unsupported
-			document.write('<script src="js/dialog-polyfill.js"><\/script><link rel="stylesheet" href="css/dialog-polyfill.css">');
+			document.write('<script src="js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="css/polyfill-dialog.css">');
+		}
+		// Check for Custom Properties support
+		if (!this.CSS||!CSS.supports('--custom','properties')) {
+			document.write('<link rel="stylesheet" href="css/fallback-customproperties.css">');
+		}
+		// Check for Grid support
+		if (!this.CSS||!CSS.supports('grid-area','auto')) {
+			document.write('<link rel="stylesheet" href="css/fallback-grid.css">');
 		}
 	</script>
-	<script src="js/disable-dummy-links.js" defer></script>
 </head>
 
 <body>
@@ -31,8 +36,6 @@
 	<div class="return dark row">
 		<a href="https://jkc.codes" rel="noopener">Return to labdrakes.com</a>
 	</div>
-
-	<h1 class="a11y">Labdrakes Help</h1>
 
 	<div class="main row">
 		<a href="index.html">
@@ -65,28 +68,35 @@
 				<li><button value="lotto">Lotto</button></li>
 			</ul>
 		</details>
+		<script>
+			if (window.matchMedia("(min-width: 37.5rem)").matches) {
+				document.querySelector('#topicsWidget').open = true;
+			}
+		</script>
 	</nav>
 
 	<section class="column results">
-		<h2 id="articlesHeading">Popular Articles</h2>
+		<h1 id="articlesHeading">Popular Articles</h1>
 		<ul class="articles-list" id="articlesList">
 			<li><div class="loading">
 				<svg
 					viewBox="0 0 42.333332 42.333332"
 					height="80"
 					width="80">
-						<defs>
+					<defs>
 						<linearGradient
 								id="linearGradient2293">
 							<stop
 								id="stop2289"
 								offset="0"
-								style="stop-color:#cd2814;stop-opacity:1;" />
+								style="stop-color:#cd2814;stop-opacity:1;">
+							</stop>
 							<stop
 								id="stop2291"
 								offset="1"
-								style="stop-color:#fff;stop-opacity:0;" />
-						</linearGradient>
+								style="stop-color:#fff;stop-opacity:0;">
+							</stop>
+						></linearGradient>
 						<linearGradient
 							gradientTransform="matrix(2.0232456,0,0,2.7328914,-16.705402,-459.72942)"
 							gradientUnits="userSpaceOnUse"
@@ -96,7 +106,7 @@
 							x1="8.4284135"
 							id="linearGradient2295"
 							xlink:href="#linearGradient2293"
-						/>
+						></linearGradient>
 					</defs>
 					<g
 						transform="translate(0,-254.66668)"
@@ -107,19 +117,19 @@
 							cx="21.166666"
 							id="path819"
 							style="opacity:1;fill:none;fill-opacity:1;stroke:url(#linearGradient2295);stroke-width:4.97723246;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-						/>
+						></circle>
 					</g>
 				</svg>
 				<p>Loading&hellip;</p>
-				</div><a href="#"></a>
+				</div><a href="javascript:void(0)"></a>
 			</li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
+			<li><a href="javascript:void(0)"></a></li>
+			<li><a href="javascript:void(0)"></a></li>
+			<li><a href="javascript:void(0)"></a></li>
+			<li><a href="javascript:void(0)"></a></li>
+			<li><a href="javascript:void(0)"></a></li>
+			<li><a href="javascript:void(0)"></a></li>
+			<li><a href="javascript:void(0)"></a></li>
 		</ul>
 		<nav class="row" id="pagination">
 			<h3 class="a11y">Pagination</h3>
@@ -142,7 +152,7 @@
 			<li><button id="chatButton">Chat</button>
 				<dialog id="chatDialogue">
 					<p>You must be logged in to chat</p>
-					<a class="button" href="#">Log In</a>
+					<a class="button" href="javascript:void(0)">Log In</a>
 					<button id="chatClose">Cancel</button>
 				</dialog>
 				<script>
@@ -156,8 +166,8 @@
 			<li><details>
 					<summary class="button">Call</summary>
 					<ul class="no-bullets pop-out">
-						<li>UK: <a class="no-wrap" href="#">0808 157 1234</a></li>
-						<li>Outside the UK: <a class="no-wrap" href="#">+44 1632 961 234</a></li>
+						<li>UK: <a class="no-wrap" href="tel:08081571234">0808 157 1234</a></li>
+						<li>Outside the UK: <a class="no-wrap" href="tel:+441632961234">+44 1632 961 234</a></li>
 					</ul>
 				</details>
 			</li>
@@ -186,32 +196,32 @@
 				</a>
 			</li>
 			<li class="essa">
-				<a href="#" rel="noopener" class="icon essa">
+				<a href="javascript:void(0)" rel="noopener" class="icon essa">
 					<span class="a11y">ESSA Sports Betting Integrity</span>
 				</a>
 			</li>
 			<li class="therapy">
-				<a href="#" rel="noopener" class="icon therapy">
+				<a href="javascript:void(0)" rel="noopener" class="icon therapy">
 					<span class="a11y">Gambling Therapy</span>
 				</a>
 			</li>
 			<li class="gamcare">
-				<a href="#" rel="noopener" class="icon gamcare">
+				<a href="javascript:void(0)" rel="noopener" class="icon gamcare">
 					<span class="a11y">Gamcare</span>
 				</a>
 			</li>
 			<li class="gib">
-				<a href="#" rel="noopener" class="icon gib">
+				<a href="javascript:void(0)" rel="noopener" class="icon gib">
 					<span class="a11y">Government of Gibraltar</span>
 				</a>
 			</li>
 			<li class="commission">
-				<a href="#" rel="noopener" class="icon commission">
+				<a href="javascript:void(0)" rel="noopener" class="icon commission">
 					<span class="a11y">Gambling Commission</span>
 				</a>
 			</li>
 			<li class="trust">
-				<a href="#" rel="noopener" class="icon trust">
+				<a href="javascript:void(0)" rel="noopener" class="icon trust">
 					<span class="a11y">Responsible Gambling Trust</span>
 				</a>
 			</li>
@@ -221,9 +231,9 @@
 	<section class="about">
 		<h2 class="h4">About Labdrakes</h2>
 		<ul class="no-bullets">
-			<li><a href="#" rel="noopener">About Us</a></li>
-			<li><a href="#" rel="noopener">Affiliates</a></li>
-			<li><a href="#" rel="noopener">Investor Centre</a></li>
+			<li><a href="javascript:void(0)" rel="noopener">About Us</a></li>
+			<li><a href="javascript:void(0)" rel="noopener">Affiliates</a></li>
+			<li><a href="javascript:void(0)" rel="noopener">Investor Centre</a></li>
 			<li><a href="pages/restricted-territories.html">Restricted Territories</a></li>
 		</ul>
 	</section>
@@ -231,10 +241,10 @@
 	<section class="quick-links">
 		<h2 class="h4">Quick Links</h2>
 		<ul class="no-bullets">
-			<li><a href="#" rel="noopener">Labdrakes.com</a></li>
-			<li><a href="#" rel="noopener">Shop Locator</a></li>
+			<li><a href="javascript:void(0)" rel="noopener">Labdrakes.com</a></li>
+			<li><a href="javascript:void(0)" rel="noopener">Shop Locator</a></li>
 			<li><a href="pages/other-ways-to-bet.html">Other Ways To Bet</a></li>
-			<li><a href="#" rel="noopener">The Grid</a></li>
+			<li><a href="javascript:void(0)" rel="noopener">The Grid</a></li>
 		</ul>
 	</section>
 
@@ -242,17 +252,17 @@
 		<h2 class="a11y">Social Media</h2>
 		<ul class="no-bullets row">
 			<li>
-				<a href="#" rel="noopener" class="icon facebook">
+				<a href="javascript:void(0)" rel="noopener" class="icon facebook">
 					<span class="a11y">Facebook</span>
 				</a>
 			</li>
 			<li>
-				<a href="#" rel="noopener" class="icon twitter">
+				<a href="javascript:void(0)" rel="noopener" class="icon twitter">
 					<span class="a11y">Twitter</span>
 				</a>
 			</li>
 			<li>
-				<a href="#" rel="noopener" class="icon youtube">
+				<a href="javascript:void(0)" rel="noopener" class="icon youtube">
 					<span class="a11y">YouTube</span>
 				</a>
 			</li>
@@ -261,7 +271,7 @@
 
 	<section class="legal">
 		<h2 class="a11y">Legal</h2>
-		<p><small>Labdrakes Betting &amp; Gaming Ltd. is licensed (<a href="#" rel="noopener">licence no. 0000</a>) and regulated by the British Gambling Commission for persons gambling in Great Britain and LM International Limited, Suites 0-0, 0th Floor, Europort, Gibraltar are licensed (RGL Nos. 000, 000) by the Government of Gibraltar and regulated by the Gibraltar Gambling Commissioner.</small></p>
+		<p><small>Labdrakes Betting &amp; Gaming Ltd. is licensed (<a href="javascript:void(0)" rel="noopener">licence no. 0000</a>) and regulated by the British Gambling Commission for persons gambling in Great Britain and LM International Limited, Suites 0-0, 0th Floor, Europort, Gibraltar are licensed (RGL Nos. 000, 000) by the Government of Gibraltar and regulated by the Gibraltar Gambling Commissioner.</small></p>
 		<p class="copyright"><small>Copyright &copy; 2018 Labdrakes</small></p>
 	</section>
 </footer>

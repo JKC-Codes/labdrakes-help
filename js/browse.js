@@ -8,6 +8,7 @@ function init() {
 
 	loadArticles();
 	isWideScreen.addListener(toggleTopicsMenu);
+	topicsMenu.open = false;
 	toggleTopicsMenu(isWideScreen);
 	activateTopicsButtons();
 	activatePaginationButtons();
@@ -28,17 +29,15 @@ var totalPages;
 
 // Download and sort all articles
 
-function loadArticles() {
+function loadArticles () {
+	var query = new XMLHttpRequest();
+	query.addEventListener('load', sortList);
+	query.open('GET', 'js/articleslist.json');
+	query.send();
 
-    var queryURL = "js/articleslist.json";
-	fetch(queryURL)
-
-	.then(function (response) {
-		return response.json();
-	})
-
-	.then(function (list) {
-		list.sort(function(one, two) {
+	function sortList () {
+		var response = JSON.parse(this.responseText);
+		rawArticlesList = response.sort(function(one, two) {
 			var a = one.hits, b = two.hits;
 			if (a > b) {
 				return -1;
@@ -50,14 +49,8 @@ function loadArticles() {
 				return 0;
 			}
 		})
-
-		rawArticlesList = list;
 		displayArticles();
-	})
-
-	.catch(function (error) {
-		console.log('Error during fetch: ' + error.message);
-	});
+	}
 }
 
 
@@ -75,7 +68,9 @@ function displayArticles() {
 
 	else {
 		// Filter by topic if one is selected
-		filteredArticles = rawArticlesList.filter(rawArticlesList => rawArticlesList.topic === currentTopic);
+		filteredArticles = rawArticlesList.filter(function(list) {
+			return list.topic == currentTopic;
+		});
 	}
 
 	// Filter if search triggered
@@ -85,9 +80,9 @@ function displayArticles() {
 	if(searchString !== '') {
 		let searchTerms = searchString.split('+');
 
-		filteredArticles.forEach(article => {
+		filteredArticles.forEach(function(article) {
 			let relevance = 0;
-			searchTerms.forEach(word => {
+			searchTerms.forEach(function(word) {
 				if(RegExp(word, 'i').test(article.title)) {
 					relevance++;
 				}
@@ -95,8 +90,11 @@ function displayArticles() {
 			article.searchRelevance = relevance;
 		});
 
-		filteredArticles = filteredArticles.filter(article => article.searchRelevance > 0);
-		filteredArticles.sort((a,b) => {
+		filteredArticles = filteredArticles.filter(function(article) {
+			return article.searchRelevance > 0;
+		});
+
+		filteredArticles.sort(function(a,b) {
 			return b.searchRelevance - a.searchRelevance;
 		});
 
@@ -139,9 +137,10 @@ function displayArticles() {
 	}
 
 	// Disable pagination if not enough articles
-	paginationButtons.querySelectorAll('button').forEach(button => {
-		button.removeAttribute('disabled', '');
-	})
+	var buttons = paginationButtons.querySelectorAll('button');
+	for(i = 0 ; i < buttons.length; i++) {
+		buttons[i].removeAttribute('disabled', '');
+	}
 
 	if (pageStart <= 0) {
 		document.querySelector('#firstPage').setAttribute('disabled', '');
@@ -202,7 +201,7 @@ function disableToggle(tgt) {
 
 function activateTopicsButtons() {
 
-	topicsMenu.addEventListener('click', evt => {
+	topicsMenu.addEventListener('click', function(evt) {
 		if (evt.target.matches('button')) {
 			changeTopic(evt);
 		}
@@ -241,9 +240,10 @@ function changeTopic(button) {
 
 
 	// Disable current topic button only
-	topicsMenu.querySelectorAll('button').forEach(element => {
-		element.removeAttribute('disabled');
-	})
+	var elements = topicsMenu.querySelectorAll('button');
+	for(i = 0; i < elements.length; i++) {
+		elements[i].removeAttribute('disabled');
+	}
 	button.target.setAttribute('disabled', '');
 
 	// Close menu on mobile
@@ -259,7 +259,7 @@ function changeTopic(button) {
 function activatePaginationButtons() {
 
 	// Change page number
-	paginationButtons.addEventListener('click', evt => {
+	paginationButtons.addEventListener('click', function(evt) {
 		if (evt.target.matches('button')) {
 			switch (evt.target.id) {
 				case 'firstPage': pageStart = 0; break
@@ -276,4 +276,9 @@ function activatePaginationButtons() {
 			}
 		}
 	});
+}
+
+// Matches polyfill
+if (!Element.prototype.matches) {
+    Element.prototype.matches = Element.prototype.msMatchesSelector;
 }

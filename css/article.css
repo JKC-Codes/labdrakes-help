@@ -30,7 +30,7 @@
 		padding-bottom: 2rem;
 	}
 
-	main.article > article > header h2 {
+	main.article > article > header h1 {
 		margin: 0 0 2rem;
 		text-align: center;
 		border-bottom: 0.0625rem solid var(--colour-brand);

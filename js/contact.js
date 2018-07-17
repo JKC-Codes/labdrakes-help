@@ -6,7 +6,7 @@ var errorDialogue;
 var editableFields = [];
 var downloadedArticles;
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
 	form = document.querySelector('#contact-form');
 	allSteps = document.querySelectorAll('#contact-form fieldset');
 	errorDialogue = document.querySelector('#emailErrors');
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	form.style.display = 'grid';
 
 	// Activate click listeners
-	document.addEventListener('click', evt => {
+	document.addEventListener('click', function(evt) {
 		// Listen for next step
 		if(evt.target.classList.contains('next')) {
 			evt.preventDefault();
@@ -33,21 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	})
 
-	// Go to next element when enter is pressed
+	// Go to next element when field completed
 	let interactiveElements = form.querySelectorAll('input, a.next, select, textarea');
 
-	form.addEventListener('keypress', evt => {
-
-		// Check enter is pressed inside input or select element
-		if((evt.target.tagName === 'INPUT' || evt.target.tagName === 'SELECT') && evt.key === 'Enter') {
-
-			// Jump to next element
-			evt.preventDefault();
-			for(i=0; i < interactiveElements.length; i++) {
-				if(evt.target.name === interactiveElements[i].name) {
-					interactiveElements[i + 1].focus();
-					return;
-				}
+	form.addEventListener('change', function(evt) {
+		for(i=0; i < interactiveElements.length; i++) {
+			if(evt.target.name === interactiveElements[i].name) {
+				interactiveElements[i + 1].focus();
 			}
 		}
 	})
@@ -63,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	if(sessionStorage.getItem('savedForm')) {
 		let savedForm = JSON.parse(sessionStorage.getItem('savedForm'));
 
-		editableFields.forEach(field => {
+		editableFields.forEach(function(field) {
 			switch(field.name) {
 				case 'name':
 					if(savedForm.name) {
@@ -90,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	// Listen for form submission
-	form.addEventListener('submit', evt => {
+	form.addEventListener('submit', function(evt) {
 		// Prevent form submission since there is no server
 		evt.preventDefault();
 
@@ -128,11 +120,11 @@ function nextStep() {
 	invalidFields = [];
 
 	// Ensure fields are valid
-	requiredFields.forEach(field => {
-		if(!field.validity.valid) {
-			invalidFields.push(field)
+	for(i = 0; i < requiredFields.length; i++) {
+		if(!requiredFields[i].validity.valid) {
+			invalidFields.push(requiredFields[i])
 		}
-	})
+	}
 
 	// Change step if all fields are valid
 	if(!invalidFields[0]) {
@@ -146,7 +138,7 @@ function nextStep() {
 	let textArea = errorDialogue.querySelector('ul');
 
 	textArea.innerHTML = '';
-	invalidFields.forEach(field => {
+	invalidFields.forEach(function(field) {
 		let li = document.createElement('li');
 
 		li.innerHTML = field.name + ' — ' + field.validationMessage;
@@ -190,7 +182,7 @@ function stepTransition(direction) {
 	let delayInSeconds = window.getComputedStyle(selector).getPropertyValue('animation-duration');
 	let delay = delayInSeconds.slice(0,-1) * 1000;
 
-	window.setTimeout( ()=> {
+	window.setTimeout( function() {
 		form.classList.remove('sliding');
 		enteringStep.classList.remove('fade-in');
 		leavingStep.classList.remove('fade-out');
@@ -214,10 +206,10 @@ function closeWarning(evt) {
 }
 
 // Save form progress before leaving page
-window.addEventListener('beforeunload', ()=> {
+window.addEventListener('beforeunload', function() {
 	let formFields = new Object();
 
-	editableFields.forEach(field => {
+	editableFields.forEach(function(field) {
 		// Ignore empty fields
 		if(field.value === '') {
 			return;
@@ -241,23 +233,17 @@ function getRelevantArticles() {
 }
 
 function downloadArticles() {
-	let queryURL = "../js/articleslist.json";
+	var query = new XMLHttpRequest();
+	query.addEventListener('load', parse);
+	query.open('GET', '../js/articleslist.json');
+	query.send();
 
-	fetch(queryURL)
-
-	.then(response => {
-		return response.json()
-	})
-
-	.then(list => {
-		downloadedArticles = list.sort( (a,b) => {
+	function parse () {
+		var list = JSON.parse(this.responseText);
+		downloadedArticles = list.sort(function(a,b) {
 			return b.hits - a.hits;
 		})
-	})
-
-	.catch(function (error) {
-		console.log('Error during fetch: ' + error.message);
-	});
+	}
 }
 
 function displayArticles() {
@@ -265,7 +251,9 @@ function displayArticles() {
 	let displayArea = document.querySelector('#related-articles-list');
 
 	// Filter articles by topic
-	let filteredList = downloadedArticles.filter(article => article.topic === selectedTopic.value);
+	let filteredList = downloadedArticles.filter(function(article) {
+		return article.topic === selectedTopic.value;
+	});
 
 	// Display articles
 	displayArea.innerHTML = '';

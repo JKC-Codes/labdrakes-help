@@ -58,10 +58,12 @@
 		float: left;
 		background: url('../img/arrow.svg') -0.5rem center/1.5rem 1rem no-repeat;
 		--translate: translatey(calc((3rem - 100%) / 2));
+		transform: matrix(-1, 0, 0, -1, 0, 16);
 		transform: var(--translate) rotate(0.5turn);
 	}
 
 	main.browse .topics details[open] summary::before {
+		transform: matrix(0, -1, 1, 0, 0, 16);
 		transform: var(--translate) rotate(-0.25turn);
 	}
 
@@ -140,7 +142,7 @@
 	Results
 ========================================*/
 
-	main.browse .results h2 {
+	main.browse .results h1 {
 		margin: 0;
 		text-align: center;
 		border-bottom: 0.0625rem solid var(--colour-brand);
@@ -242,11 +244,13 @@
 
 	main.browse .results .first::before,
 	main.browse .results .previous::before {
+		transform: matrix(1, 0, 0, 1, 18, 0);
 		transform: translateX(calc((3rem - 100%) / 2));
 	}
 
 	main.browse .results .last::before,
 	main.browse .results .next::before {
+		transform: matrix(-1, 0, 0, -1, 18, 0);
 		transform: translateX(calc((3rem - 100%) / 2)) rotate(0.5turn);
 	}
 

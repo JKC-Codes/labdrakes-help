@@ -10,21 +10,16 @@ function init() {
 	loadArticles();
 }
 
-function loadArticles() {
-    var queryURL = "../js/articleslist.json";
-	fetch(queryURL)
+function loadArticles () {
+	var query = new XMLHttpRequest();
+	query.addEventListener('load', parse);
+	query.open('GET', '../js/articleslist.json');
+	query.send();
 
-	.then(function (response) {
-		return response.json();
-	})
-
-	.then(function (list) {
+	function parse () {
+		var list = JSON.parse(this.responseText);
 		removeCurrentPage(list);
-	})
-
-	.catch(function (error) {
-		console.log('Error during fetch: ' + error.message);
-	});
+	}
 }
 
 function removeCurrentPage(articles) {
@@ -45,7 +40,9 @@ function removeCurrentPage(articles) {
 }
 
 function displayArticles(list, topic) {
-	var filteredList = list.filter(article => article.topic === topic);
+	var filteredList = list.filter(function(article) {
+		return article.topic === topic;
+	});
 
 	var sortedList = filteredList.sort(function(a, b) {
 		return b.hits - a.hits;

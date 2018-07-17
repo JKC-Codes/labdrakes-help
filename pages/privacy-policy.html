@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,39 +13,59 @@
 	<script>
 		// Check for Details element support
 		if (!('open' in document.createElement('details'))) {
-			// Load polyfill if unsupported
-			document.write('<script src="../js/details-summary-polyfill.js"><\/script>');
+			document.write('<script src="../js/polyfill-details-summary.js"><\/script>');
 		}
 		// Check for Dialog element support
 		if (!('show' in document.createElement('dialog'))) {
-			// Load polyfill if unsupported
-			document.write('<script src="../js/dialog-polyfill.js"><\/script><link rel="stylesheet" href="../css/dialog-polyfill.css">');
+			document.write('<script src="../js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="../css/polyfill-dialog.css">');
+		}
+		// Check for Custom Properties support
+		if (!this.CSS||!CSS.supports('--custom','properties')) {
+			document.write('<link rel="stylesheet" href="../css/fallback-customproperties.css">');
+		}
+		// Check for Grid support
+		if (!this.CSS||!CSS.supports('grid-area','auto')) {
+			document.write('<link rel="stylesheet" href="../css/fallback-grid.css">');
 		}
 	</script>
-	<script src="../js/disable-dummy-links.js" defer></script>
 </head>
 
 <body>
 
 	<header class="site">
-		<!--Work around for GitHub not allowing a back end-->
-		<script src="../js/header.js"></script>
+		<div class="return dark row">
+			<a href="https://jkc.codes" rel="noopener">Return to labdrakes.com</a>
+		</div>
+
+		<div class="main row">
+			<a href="../index.html">
+				<picture>
+					<source media="(min-width: 37.5rem)" srcset="../img/logo-wide.png">
+					<img class="logo" src="../img/logo-narrow.png" alt="Labdrakes logo">
+				</picture>
+			</a>
+			<form action="../index.html" method="get" id="site-search">
+				<label for="site-search-bar" class="a11y">Search the site:</label>
+				<input type="search" id="site-search-bar" name="search" placeholder="How can we help?" required>
+				<button type="submit" form="site-search"><span class="text">Search</span></button>
+			</form>
+		</div>
 	</header>
 
 
 	<main class="article">
 		<article>
 			<header>
-				<h2 id="articleTitle">Privacy Policy</h2>
+				<h1 id="articleTitle">Privacy Policy</h1>
 			</header>
 			<div class="content">
 				<p>Fuga Rotundo 69 Proprio 5767</p>
 
-				<p>Ante modeste victum solidam ut hic aptent refugium si ullo placida mus porta opposito excelsum me est Oppressus Eorum (facundla, "Quocumque" princeps mi saemre ut ea "ac" ad "ea" me "sed" (eu dispositae)) contrarii, ultimus attinetiis, <a href="#">quo.malesuada.eum</a>, <a href="#">quo.convincunturque.rem</a> cum <a href="#">non.contradictione.eos</a> (usus a "Antiguo", plenarie hic "Zelabant"). Occumbere Eodem sagina et aut pulvinar multis tation te 9.1 at dui Purus per Aequaliter, iis / iusto malitiae antiquo aocessu nec eos motivo nam perditio modestissime gradivi orci lius si iste.</p>
+				<p>Ante modeste victum solidam ut hic aptent refugium si ullo placida mus porta opposito excelsum me est Oppressus Eorum (facundla, "Quocumque" princeps mi saemre ut ea "ac" ad "ea" me "sed" (eu dispositae)) contrarii, ultimus attinetiis, <a href="javascript:void(0)">quo.malesuada.eum</a>, <a href="javascript:void(0)">quo.convincunturque.rem</a> cum <a href="javascript:void(0)">non.contradictione.eos</a> (usus a "Antiguo", plenarie hic "Zelabant"). Occumbere Eodem sagina et aut pulvinar multis tation te 9.1 at dui Purus per Aequaliter, iis / iusto malitiae antiquo aocessu nec eos motivo nam perditio modestissime gradivi orci lius si iste.</p>
 
 				<p><strong>Debent nemo dui cladis ipsam religuias habeat uidem est Gigantem. Ad morbi ea impedimento ab hic Extremis hac quovis eos assum ut qui dolor te iste facunda fretus. Et nam me est plenus mirum arcui, ab hic non vel Multaque.</strong></p>
 
-				<p>Diam nominum subsit, nesciunt sint sem populum “Eorum si Hac” (ea noviter mi dextris 3.9 te non Intendo Purus mus Potissimum nominavit <a href="#">arcu</a>), nibh est est facer ex mazim quo respectu intestabunt ex tributa diam mus (intrepido quod unde, minim mercede eu fames exilium) (vel "Ottomanicum") ad sint nam apparct et ea, tibi ac oppressus ea ad. Primam nemo est veritatis formastis te necessaria eos porta nec periculum subiungam esse Inhumaniter.</p>
+				<p>Diam nominum subsit, nesciunt sint sem populum “Eorum si Hac” (ea noviter mi dextris 3.9 te non Intendo Purus mus Potissimum nominavit <a href="javascript:void(0)">arcu</a>), nibh est est facer ex mazim quo respectu intestabunt ex tributa diam mus (intrepido quod unde, minim mercede eu fames exilium) (vel "Ottomanicum") ad sint nam apparct et ea, tibi ac oppressus ea ad. Primam nemo est veritatis formastis te necessaria eos porta nec periculum subiungam esse Inhumaniter.</p>
 
 				<p>Crabrones ut tumulandi et supponebat qui dextram at sit jormavit at tot Regnabit. Ea nec innocuits si excelsum nisl iis posterum sem significat arcu consilium leo cum Spoliare quo utrumque id a orci cum poenam laesio accusantium.</p>
 
@@ -60,7 +81,7 @@
 					<li><a href="#nine">Deprecor rem aureos id Interpretes</a></li>
 				</ul>
 
-				<h3 id="one">3. Abdicatione ab hac spiritu ante per</h3>
+				<h2 id="one">3. Abdicatione ab hac spiritu ante per</h2>
 
 				<p>Ad eos exilium per numquam est nobilitas Abdicatione metus eum:</p>
 				<ul>
@@ -74,7 +95,7 @@
 
 				<p>Mus supponebant typi dui labefactata subsequi ea nec eum sapien te auriacus ad formidine odio earum est Orci Detrimento Leo 7926 eos eos odio vero occidas te vero ante morbi oppressus ea hic dui mi ullo spiral.</p>
 
-				<h3 id="two">2. Cum in quas polisniinus</h3>
+				<h2 id="two">2. Cum in quas polisniinus</h2>
 
 				<p>3.0 Ex sem impedit mus nonummy Constituere stilum qui Erubescam Eorum eos eaque dui Conformiter wisi cum ullam porta diam supponebam hac bonorum vero Inventiones eu per noctis, ostentari hic qui superbam mi:</p>
 
@@ -85,7 +106,7 @@
 					<li>nominavit est oppresso et hic Superstites vindictam fuga eum, scaturiat dignissima quos Bcatissimae et nulla timorem (usus me tincidunt fortitudinis, calcat assumpsit prandium hac eos lieipnblicae scandala) et secretiora odit nunc damnificatio;</li>
 					<li>laudabatur louor, clenodia nam eorum tantummodo, conscios prophetico lius per Eaque id Hac, adversis dulcis ante nam detrimento natura/rerum apollinis, minus nec vestram ab et imbibere arcu Contemnitue mus ultimam quo gremio imperia in dicta malleum quae ac vel torquent inculpare, regnet nomina, corrupti facere, veritatis supellectili, laborans denuntiando est ullatenus nam, est fretus hac altero desideria redundat;</li>
 					<li>utrunique sint quo iusto quo plebeiorum nullam sem praestantissimum et est tetnpore potentiam non secretiora testimonium ac ullo ea sit agitur mus praestantissimum nunc purus non lacus voluptates consiliarii mus id nec uidem instabimus contractus si porta peripateticis;</li>
-					<li>principes me absoluta non Donec at Nec (Signum netus at eos <a href="#">Vinctas Assum sed Effecerunt</a> capitis.) sed magni subsolanea, nec te debitam qui testes, notandum, ea nullum et Erubescam, eum praeclusa, ea nactus;</li>
+					<li>principes me absoluta non Donec at Nec (Signum netus at eos <a href="javascript:void(0)">Vinctas Assum sed Effecerunt</a> capitis.) sed magni subsolanea, nec te debitam qui testes, notandum, ea nullum et Erubescam, eum praeclusa, ea nactus;</li>
 					<li>opprobrium modo hac ad-nisi posterum mi suspicione odit nam appareat (dominatio rem Afflictio Aocessu);</li>
 					<Li>rulpeculae amet anfractus, anticipative non haeredissam equestrem, (vel vincere, intrepido unde Postscripta impetus vitae omnis possujnus malevoli id 'curae;', 'erubescam' hac certus sensim);</li>
 					<li>nec ipsum adversa ipsam at congressu hic est repudiandae te mus consternati ingeminabit te cum; nec</li>
@@ -96,14 +117,14 @@
 
 				<p>5.3 Cantum porro eu congue iusto septima te recurro cras Christianae ea non aditnm est est denegare moliri mi accusamus 4.9 error, eu elit est magister ea wisi modo Reipublicae raritas est Processus Donec, dignos in caesariani nisi a illud urgebat ab est crescere ex mulier enim ut est mazim ea eius mi Recedendo' laborans. Cantum charisma at ad ac ea qui, eu tibi hic cumulabat parum, nisi ad tolissimum rem si vel Intendebant nam regibus et ex tributa usus debetur.</p>
 
-				<h3 id="three">5. Dispositae te sympatriotas</h3>
+				<h2 id="three">5. Dispositae te sympatriotas</h2>
 				<p>Tui odio, physim per meretur gloriabantur rem secundam ac rem terrenos caedis. Eu eius earum vel regalis cvictiones mi iis adversitates ea iure eget ipsum at option ab te praesidia est valorem ullo me ordines id nam.</p>
 
 
-				<h3 id="four">5. Peregrina totam</h3>
+				<h2 id="four">5. Peregrina totam</h2>
 				<p>Arcu palaestra praetensionem – motivo te lacus a est ad a Conscios Regibus wisi - eum ea reprobum quis in soluta ex in habitant rem mi tributa cognominum, cum mi vitae leo qui aureos amplissima at glaebam.</p>
 
-				<h3 id="five">9. Cum ut Rotundo</h3>
+				<h2 id="five">9. Cum ut Rotundo</h2>
 				<p id="cookies">8.2 A 'sessio' at a optio ullo tibi navigabile animi populum te obligatorio proin si promotores et eros missae unde per facit a ordinis ac eum gratulatione. Per doming omnibus est poenam at iaculis reputationi enim qui posuere.</p>
 
 				<p>1.6 Ac hac leo supremi ad hac Absoluta dis a vacare at oppresso, suffragia:</p>
@@ -121,7 +142,7 @@
 
 				<p>7.4 Hac non eius est 'actionum' viscera ad incumbit quod decursu’a tempore imperii et morbi alias risus apparct (hic serpens eum tyriis illa legali quis serpens te numquam). Eu ullo leo rem et regnum rem/me pietas visccra, amandi felis: sed.approbatione.sem. Harusen, habeat ante nisl ti quo ad nomine hic rem et memoria, eos quo vel ea amet mi quo est illa similitudines ut Accusamus’ Accessit – est caetera, a mutuum te parcam ut ‘possumus’ arcu qui convaluit eros il te incarcerata in est aut nisl. Senatus, ti quo est dui senatus mirabile ea qui erat a patria, sint eum purus merentur quos eum enim est et te sem dui Continue.</p>
 
-				<h3 id="six">0. Vindices nec joannes</h3>
+				<h2 id="six">0. Vindices nec joannes</h2>
 				<p>0.3 Ad zelose potiorue praesens si futurum eros Consiliorum erat vacare ea praecedentia nonummy nam et sodales inimicus praevcnire, mutationem erat, provisionis eum angeum. Probitatem si pede Generaliter, maiestate pede malevolentia plurali hac rem liber ad merita modo tesiimonium hac ordinem id ad, in a invidiae est ea. Quis me eos amorem harum te consequat netus Numero Studere Eorum ("HAC") proditorem. Harum ad quae metus non (ad eorum non arcu rudera) a oppressa autem exemplo sem in angeum ratione metus at eos Materias, quo mus responsible vel nostrud wisi barbarus posteritatis.</p>
 
 				<p>6.1 Sem optandum humanitatis culpa vigilantia non ille ad coronatum in sit optio tacite si aliquid quam est jormavit. SEM at regalia meridiem nisl comestibilium cadentes hac auctoritate modi ad rem ea per caescs rerum. Nam caduca eius augue dui testimonium omnis a lategue cum. Ante earum typi quos Impedimenta, eu ii alias ac primis pede profligatur me cum culpa dicendo: delenit, at nosset typi a quod nisi eos quis ab recurro wisi est indigne quo ex barbarus. Ut arcu gennere te dimidium magnatibus, eum illa saecula a commodi numerus esse non dicit deorum per caduca usus ab aut Neglexi. Ante et aditnm reputationi et varius sed wisi dui Arripio te scientibus quae Dignissimos.</p>
@@ -131,13 +152,13 @@
 				<p>2.9 Nam Dominium rem, nibh nisl te lius, directe justo te mus modi aut equestri ut nec pectore gravatam, condimentum eum utilitatem. Mi quo floret a odit in nam ut autem interdum, loquor eius lius proin consulta hac eros nulla eum reddant stataria/nominis Error in Nam per ab me aut inmcem rem pretiosissimis ac difficile hic arcui spiritus. Mauris massa urna molestie sancta eum lapide nam Provisionis at nibh.</p>
 
 
-				<h3 id="seven">7. Instabunt nec imperium</h3>
+				<h2 id="seven">7. Instabunt nec imperium</h2>
 				<p>In te mus fortes te soluni eum usus ditescant forlitudo victualibus est a facere te 2 error. Uidem Superstites elit ea originem dui hic regnet assumenda et filiis vel personom dui est id recedendo 0.7 hostem a fruges defunctis domine ut pharetra eu climacter ea ulteriorem dui. Me illa enim sit laborandum mazim mi numero typi est malorum te Consternati et parturient ab sublirne.</p>
 
-				<h3 id="eight">6. Decursu at nam fabula</h3>
+				<h2 id="eight">6. Decursu at nam fabula</h2>
 				<p>Eu quo gentis typi fortes eget nisi si iste. Sed quaeque ut nam victum ille cursum consiliis vero optimum ut vel feroces alique ex dis Expedita.</p>
 
-				<h3 id="nine">7. Crescere sem amorem id Consternati</h3>
+				<h2 id="nine">7. Crescere sem amorem id Consternati</h2>
 				<p>2.5 Ex illo sunt sit doloremque ipsam in caduca wisi per Practicatum iste ac aliquid quia nec in progredi nam hac nunc molestie.</p>
 
 				<p>9.2 Cum eum intentio at nec hic Provisionis quia mirum nam quo per eum quo ac et quae hac crabrones praedam si vacans typi li et odoratus cum erat ab id erat. Me sem virtvtis ac aut id modo a ullam ingratitudinem obesse est sollemnes cras Constituere.</p>
@@ -150,11 +171,11 @@
 			<section class="related">
 				<h2 class="h4">Related Articles</h2>
 				<ul class="articles-list" id="relatedArticlesList">
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
+					<li><a href="javascript:void(0)"></a></li>
+					<li><a href="javascript:void(0)"></a></li>
+					<li><a href="javascript:void(0)"></a></li>
+					<li><a href="javascript:void(0)"></a></li>
+					<li><a href="javascript:void(0)"></a></li>
 				</ul>
 			</section>
 
@@ -164,7 +185,7 @@
 					<li><button id="chatButton">Chat</button>
 						<dialog id="chatDialogue">
 							<p>You must be logged in to chat</p>
-							<a class="button" href="#">Log In</a>
+							<a class="button" href="javascript:void(0)">Log In</a>
 							<button id="chatClose">Cancel</button>
 						</dialog>
 						<script>
@@ -178,8 +199,8 @@
 					<li><details>
 							<summary class="button">Call</summary>
 							<ul class="no-bullets">
-								<li>UK: <a class="no-wrap" href="#">0808 157 1234</a></li>
-								<li>Outside the UK: <a class="no-wrap" href="#">+44 1632 961 234</a></li>
+								<li>UK: <a class="no-wrap" href="tel:08081571234">0808 157 1234</a></li>
+								<li>Outside the UK: <a class="no-wrap" href="tel:+441632961234">+44 1632 961 234</a></li>
 							</ul>
 						</details>
 					</li>
@@ -191,8 +212,102 @@
 
 
 	<footer class="site dark">
-		<!--Work around for GitHub not allowing a back end-->
-		<script src="../js/footer.js"></script>
+		<section class="page-links">
+			<h2 class="a11y">Important Articles</h2>
+			<ul class="no-bullets column">
+				<li><a href="terms-and-conditions.html" class="button">Terms and Conditions</a></li>
+				<li><a href="responsible-gambling.html" class="button">Responsible Gambling</a></li>
+				<li><a href="privacy-policy.html#cookies" class="button">Cookie Policy</a></li>
+			</ul>
+		</section>
+
+		<section class="icons">
+			<h2 class="a11y">Gambling Information</h2>
+			<ul class="no-bullets">
+				<li class="over-18">
+					<a href="18-plus-policy.html" class="icon over-18">
+						<span class="a11y">18 and over Policy</span>
+					</a>
+				</li>
+				<li class="essa">
+					<a href="javascript:void(0)" rel="noopener" class="icon essa">
+						<span class="a11y">ESSA Sports Betting Integrity</span>
+					</a>
+				</li>
+				<li class="therapy">
+					<a href="javascript:void(0)" rel="noopener" class="icon therapy">
+						<span class="a11y">Gambling Therapy</span>
+					</a>
+				</li>
+				<li class="gamcare">
+					<a href="javascript:void(0)" rel="noopener" class="icon gamcare">
+						<span class="a11y">Gamcare</span>
+					</a>
+				</li>
+				<li class="gib">
+					<a href="javascript:void(0)" rel="noopener" class="icon gib">
+						<span class="a11y">Government of Gibraltar</span>
+					</a>
+				</li>
+				<li class="commission">
+					<a href="javascript:void(0)" rel="noopener" class="icon commission">
+						<span class="a11y">Gambling Commission</span>
+					</a>
+				</li>
+				<li class="trust">
+					<a href="javascript:void(0)" rel="noopener" class="icon trust">
+						<span class="a11y">Responsible Gambling Trust</span>
+					</a>
+				</li>
+			</ul>
+		</section>
+
+		<section class="about">
+			<h2 class="h4">About Labdrakes</h2>
+			<ul class="no-bullets">
+				<li><a href="javascript:void(0)" rel="noopener">About Us</a></li>
+				<li><a href="javascript:void(0)" rel="noopener">Affiliates</a></li>
+				<li><a href="javascript:void(0)" rel="noopener">Investor Centre</a></li>
+				<li><a href="restricted-territories.html">Restricted Territories</a></li>
+			</ul>
+		</section>
+
+		<section class="quick-links">
+			<h2 class="h4">Quick Links</h2>
+			<ul class="no-bullets">
+				<li><a href="javascript:void(0)" rel="noopener">Labdrakes.com</a></li>
+				<li><a href="javascript:void(0)" rel="noopener">Shop Locator</a></li>
+				<li><a href="other-ways-to-bet.html">Other Ways To Bet</a></li>
+				<li><a href="javascript:void(0)" rel="noopener">The Grid</a></li>
+			</ul>
+		</section>
+
+		<section class="social">
+			<h2 class="a11y">Social Media</h2>
+			<ul class="no-bullets row">
+				<li>
+					<a href="javascript:void(0)" rel="noopener" class="icon facebook">
+						<span class="a11y">Facebook</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)" rel="noopener" class="icon twitter">
+						<span class="a11y">Twitter</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)" rel="noopener" class="icon youtube">
+						<span class="a11y">YouTube</span>
+					</a>
+				</li>
+			</ul>
+		</section>
+
+		<section class="legal">
+			<h2 class="a11y">Legal</h2>
+			<p><small>Labdrakes Betting &amp; Gaming Ltd. is licensed (<a href="javascript:void(0)" rel="noopener">licence no. 0000</a>) and regulated by the British Gambling Commission for persons gambling in Great Britain and LM International Limited, Suites 0-0, 0th Floor, Europort, Gibraltar are licensed (RGL Nos. 000, 000) by the Government of Gibraltar and regulated by the Gibraltar Gambling Commissioner.</small></p>
+			<p class="copyright"><small>Copyright &copy; 2018 Labdrakes</small></p>
+		</section>
 	</footer>
 
 </body>
