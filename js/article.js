@@ -1,12 +1,6 @@
 window.onload = init;
 
 function init() {
-	// Update page tab's title
-	let pageTitle = document.querySelector('head > title');
-	let pageHeading = document.querySelector('#articleTitle');
-	pageTitle.innerHTML = pageHeading.textContent + pageTitle.innerHTML;
-
-	// Load related articles
 	loadArticles();
 }
 
