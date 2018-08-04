@@ -230,6 +230,10 @@ main.browse .contact dialog button {
 	color: #333;
 }
 
+main.browse .contact details[open] summary {
+	border-radius: 0.25em;
+}
+
 @media (min-width: 37.5rem) {
 	main.browse .contact details[open] .pop-out {
 		border: 0.0625rem solid #e6e6e6;
