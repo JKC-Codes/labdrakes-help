@@ -1,0 +1,28 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Labdrakes Help</title>
+	<link rel="icon" href="img/favicon.png">
+	<link rel="stylesheet" href="css/site.css">
+	<link rel="stylesheet" href="css/browse.css">
+	<script src="js/browse.js" async></script>
+	<script src="js/chatdialogue.js" defer></script>
+	<script>
+		// Check for Details element support
+		if (!('open' in document.createElement('details'))) {
+			document.write('<script src="js/polyfill-details-summary.js"><\/script>');
+		}
+		// Check for Dialog element support
+		if (!('show' in document.createElement('dialog'))) {
+			document.write('<script src="js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="css/polyfill-dialog.css">');
+		}
+		// Check for Custom Properties support
+		if (!this.CSS||!CSS.supports('--custom','properties')) {
+			document.write('<link rel="stylesheet" href="css/fallback-customproperties.css">');
+		}
+		// Check for Grid support
+		if (!this.CSS||!CSS.supports('grid-area','auto')) {
+			document.write('<link rel="stylesheet" href="css/fallback-grid.css">');
+		}
+	</script>
+</head>
