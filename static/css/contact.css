@@ -1,0 +1,210 @@
+/*========================================
+	Layout
+========================================*/
+
+	main.contact .container {
+		background-color: #fff;
+		display: grid;
+		grid-template: repeat(4, auto) / 1fr;
+		grid-gap: 1rem;
+		padding: 0 1rem 1rem;
+	}
+
+	@media (min-width: 37.5rem) {
+		main.contact .container {
+			grid-template: repeat(3, auto) / 1fr 1fr;
+		}
+	}
+
+	main.contact .container > section {
+		padding: 1rem;
+		border: 0.0625rem solid var(--colour-light);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+
+/*========================================
+	Elements
+========================================*/
+
+	main.contact p,
+	main.contact h1,
+	main.contact h2 {
+		text-align: center;
+	}
+
+	main.contact .container > header > h1,
+	main.contact .container > section > h2 {
+		margin: 0 0 1rem;
+	}
+
+	main.contact .container > section > h2 {
+		font-weight: 400;
+	}
+
+
+/*========================================
+	Header
+========================================*/
+
+	main.contact .container > header {
+		padding-top: 1rem;
+	}
+
+	main.contact .container > header > h1 {
+		border-bottom: 0.0625rem solid var(--colour-brand);
+	}
+
+	@media (min-width: 37.5rem) {
+		main.contact .container > header {
+			grid-column: span 2;
+		}
+	}
+
+
+/*========================================
+	Chat
+========================================*/
+
+	main.contact .chat {
+		position: relative;
+	}
+
+	main.contact .chat dialog {
+		top: 0.5rem;
+		padding: 0rem 2rem;
+		text-align: center;
+	}
+
+	main.contact .chat dialog .button {
+		display: block;
+		margin: 1rem auto;
+		width: 10.5rem;
+	}
+
+	main.contact .chat dialog button {
+		margin-bottom: 1rem;
+	}
+
+
+/*========================================
+	Call
+========================================*/
+
+	main.contact .call ul.no-bullets {
+		margin: 0;
+		text-align: center;
+	}
+
+	main.contact .call li {
+		margin-bottom: 0.5rem;
+	}
+
+
+/*========================================
+	Email
+========================================*/
+
+	main.contact .email > h2 + p {
+		margin-top: 0;
+	}
+
+	main.contact .email {
+		overflow-x: hidden;
+	}
+
+	main.contact .email form {
+		width: 100%;
+		grid-template-columns: repeat(4, 100%);
+		align-items: start;
+	}
+
+	main.contact .email form.sliding,
+	main.contact .email fieldset.fade-in,
+	main.contact .email fieldset.fade-out {
+		animation: 100ms linear;
+	}
+
+	main.contact .email form.sliding {
+		animation-name: form-slide;
+	}
+
+	@keyframes form-slide {
+		from {transform: translateX(0%);}
+		to {transform: translateX(-100%);}
+	}
+
+	main.contact .email fieldset.fade-in,
+	main.contact .email fieldset.fade-out {
+		animation-name: fieldset-fade;
+	}
+
+	main.contact .email fieldset.fade-out {
+		animation-direction: reverse;
+	}
+
+	@keyframes fieldset-fade {
+		from {opacity: 0;}
+		to {opacity: 1;}
+	}
+
+	main.contact .email input,
+	main.contact .email select,
+	main.contact .email textarea {
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+
+	main.contact .email textarea {
+		min-height: 9rem;
+	}
+
+	main.contact .email .form-nav {
+		display: flex;
+		flex-direction: row-reverse;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	main.contact .email .form-nav > button,
+	main.contact .email .form-nav > a {
+		margin-bottom: 1rem;
+	}
+
+	main.contact .email .previous {
+		margin-right: 2.75rem;
+		color: var(--colour-default);
+	}
+
+	main.contact .email .email-warning {
+		position: fixed;
+		top: 2rem;
+		width: 70%;
+		max-width: 30rem;
+		background: #ffe5e5;
+		border: 0.125rem solid #c81a21;
+	}
+
+	main.contact .email .email-warning > a {
+		float: right;
+		width: 1rem;
+		height: 1rem;
+		margin-left: 1rem;
+	}
+
+	main.contact .email .email-warning p,
+	main.contact .email .email-warning ul {
+		margin: 0;
+	}
+
+	main.contact .email .email-warning li::first-letter {
+		text-transform: capitalize;
+	}
+
+	@media (min-width: 37.5rem) {
+		main.contact .email {
+			grid-column: span 2;
+		}
+	}

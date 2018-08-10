@@ -1,0 +1,157 @@
+/*========================================
+	Layout
+========================================*/
+
+	main.article {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 1rem;
+	}
+
+	@media (min-width: 56.25rem) {
+		main.article {
+			grid-template-columns: minmax(60ch, 3fr) 1fr;
+		}
+	}
+
+	main.article > article,
+	main.article .related,
+	main.article .contact {
+		background: #fff;
+		padding: 1rem;
+	}
+
+
+/*========================================
+	Article
+========================================*/
+
+	main.article > article {
+		padding-bottom: 2rem;
+	}
+
+	main.article > article > header h1 {
+		margin: 0 0 2rem;
+		text-align: center;
+		border-bottom: 0.0625rem solid var(--colour-brand);
+	}
+
+	main.article > article > .content {
+		max-width: 80ch;
+		margin: auto;
+	}
+
+
+/*========================================
+	Footer
+========================================*/
+
+	main.article footer.article {
+		align-self: start;
+		display: grid;
+		grid-gap: 1rem;
+		align-items: start;
+	}
+
+	@media (min-width: 37.5rem) and (max-width: 56.249rem) {
+		main.article footer.article {
+			grid-template-columns: auto 1fr;
+		}
+	}
+
+	@media (min-width: 56.25rem) and (min-height: 60rem) {
+		main.article footer.article {
+			position: sticky;
+			top: 1rem;
+		}
+	}
+
+
+/*========================================
+	Related
+========================================*/
+
+	main.article .related h2 {
+		font-weight: 400;
+		text-align: center;
+		margin: 0;
+		border-bottom: 0.0625rem solid var(--colour-brand);
+	}
+
+	main.article .related .articles.list {
+		margin: 0;
+	}
+
+	main.article .related .articles-list a {
+		justify-content: center;
+	}
+
+
+/*========================================
+	Contact
+========================================*/
+
+	main.article .contact h2 {
+		font-weight: 400;
+		text-align: center;
+		margin: 0 0 1rem;
+		border-bottom: 0.0625rem solid var(--colour-brand);
+	}
+
+	main.article .contact ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	main.article .contact button,
+	main.article .contact .button {
+		width: 100%;
+		margin: 0 0 1rem;
+	}
+
+	main.article .contact .button:last-child {
+		margin-bottom: 0;
+	}
+
+	main.article .contact dialog {
+		top: -0.5rem;
+		padding: 0rem 2rem;
+		text-align: center;
+	}
+
+	main.article .contact dialog .button {
+		display: block;
+		margin: 1rem auto;
+		width: 10.5rem;
+	}
+
+	main.article .contact dialog button {
+		display: block;
+		width: auto;
+		margin: 0 auto 1rem;
+		background-color: transparent;
+		color: var(--colour-default);
+		text-decoration: underline;
+		box-shadow: none;
+		padding: 0;
+		min-height: 0;
+	}
+
+	main.article .contact summary::-webkit-details-marker {
+		display: none;
+	}
+
+	main.article .contact details[open] summary {
+		width: calc(100% + 2rem);
+		margin-left: -1rem;
+		margin-bottom: 1rem;
+	}
+
+	main.article .contact details[open] {
+		padding: 0 1rem 1rem;
+		margin-top: 0;
+	}
+
+	main.article .contact details li {
+		margin-bottom: 1rem;
+	}
