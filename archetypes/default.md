@@ -1,3 +1,4 @@
 {
-	"title": "{{ replace .Name `-` ` ` | title }} - Labdrakes Help"
+	"title": "{{ replace .Name `-` ` ` | title }} - Labdrakes Help",
+	"link": "article"
 }
