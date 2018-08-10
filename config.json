@@ -3,7 +3,7 @@
 	"disableKinds": ["taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT"],
 	"ignoreFiles": ["\\.scss$"],
 	"metaDataFormat": "json",
-	"uglyURLs": true,
+	"uglyURLs": false,
 	"baseURL": "https://jkc.codes/labdrakes-help/",
 	"defaultContentLanguage": "en-GB",
 	"languageCode": "en-GB",
