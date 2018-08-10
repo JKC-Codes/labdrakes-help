@@ -1,7 +1,7 @@
 {
 	"publishDir": "docs",
 	"disableKinds": ["taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT"],
-	"ignoreFiles": ["\\.foo$", "\\.boo$"],
+	"ignoreFiles": ["\\.scss$"],
 	"metaDataFormat": "json",
 	"uglyURLs": true,
 	"baseURL": "https://jkc-codes/labdrakes-help/",
