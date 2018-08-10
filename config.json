@@ -1,4 +1,5 @@
 {
+	"publishDir": "docs",
 	"disableKinds": ["taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT"],
 	"ignoreFiles": ["\\.scss$"],
 	"metaDataFormat": "json",
