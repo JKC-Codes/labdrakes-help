@@ -4,7 +4,6 @@
 	"ignoreFiles": ["\\.scss$"],
 	"metaDataFormat": "json",
 	"uglyURLs": true,
-	"baseURL": "https://jkc.codes/labdrakes-help/",
 	"defaultContentLanguage": "en-GB",
 	"languageCode": "en-GB",
 	"title": "Labdrakes Help"
