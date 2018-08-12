@@ -12,19 +12,19 @@
 	<script src="https://jkc.codes/labdrakes-help/js/browse.js" defer></script>
 	<script src="https://jkc.codes/labdrakes-help/js/chatdialogue.js" defer></script>
 	<script>
-
+		
 		if (!('open' in document.createElement('details'))) {
 			document.write('<script src="https:\/\/jkc.codes\/labdrakes-help\/js/polyfill-details-summary.js"><\/script>');
 		}
-
+		
 		if (!('show' in document.createElement('dialog'))) {
 			document.write('<script src="https:\/\/jkc.codes\/labdrakes-help\/js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="https:\/\/jkc.codes\/labdrakes-help\/css/polyfill-dialog.css">');
 		}
-
+		
 		if (!this.CSS||!CSS.supports('--custom','properties')) {
 			document.write('<link rel="stylesheet" href="https:\/\/jkc.codes\/labdrakes-help\/css/fallback-customproperties.css">');
 		}
-
+		
 		if (!this.CSS||!CSS.supports('grid-area','auto')) {
 			document.write('<link rel="stylesheet" href="https:\/\/jkc.codes\/labdrakes-help\/css/fallback-grid.css">');
 		}
@@ -39,7 +39,7 @@
 	</div>
 
 	<div class="main row">
-		<a href="https://jkc.codes/labdrakes-help/index">
+		<a href="https://jkc.codes/labdrakes-help/">
 			<picture>
 				<source media="(min-width: 37.5rem)" srcset="https://jkc.codes/labdrakes-help/img/logo-wide.png">
 				<img class="logo" src="https://jkc.codes/labdrakes-help/img/logo-narrow.png" alt="Labdrakes' logo">
@@ -53,7 +53,7 @@
 	</div>
 </header>
 
-
+	
 
 <main class="browse">
 	<nav class="topics">
@@ -158,9 +158,9 @@
 					<button id="chatClose">Cancel</button>
 				</dialog>
 				<script>
-
+					
 					if (!('show' in document.createElement('dialog'))) {
-
+						
 						dialogPolyfill.registerDialog(chatDialogue);
 					}
 				</script>

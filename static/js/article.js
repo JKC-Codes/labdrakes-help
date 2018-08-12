@@ -23,7 +23,7 @@ function removeCurrentPage(articles) {
 
 	// Get page's topic and then remove current article from array
 	for(i = 0; i < articles.length; i++) {
-		if(articles[i].url + '.html' === currentPage) {
+		if(articles[i].url === currentPage) {
 			currentTopic = articles[i].topic;
 			articles.splice([i],1);
 			i--;
@@ -48,7 +48,7 @@ function displayArticles(list, topic) {
 
 	for (i = 0; i < 5; i++) {
 		let li = document.createElement('li');
-		li.innerHTML = '<a href="' + sortedList[i].url + '.html">' + sortedList[i].title + '</a>';
+		li.innerHTML = '<a href="' + sortedList[i].url + '">' + sortedList[i].title + '</a>';
 		displayArea.appendChild(li);
 	}
 }
