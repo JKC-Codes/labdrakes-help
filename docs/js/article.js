@@ -18,8 +18,14 @@ function loadArticles () {
 
 function removeCurrentPage(articles) {
 	var urlArray = document.location.pathname.split('/');
-	var currentPage = urlArray[urlArray.length -2];
+	var currentPage;
 	var currentTopic = 'unknown';
+
+	var cleanArray = urlArray.filter(function(slug) {
+		return slug;
+	});
+
+	currentPage = cleanArray[cleanArray.length -1];
 
 	// Get page's topic and then remove current article from array
 	for(i = 0; i < articles.length; i++) {
