@@ -7,7 +7,7 @@ function init() {
 function loadArticles () {
 	var query = new XMLHttpRequest();
 	query.addEventListener('load', parse);
-	query.open('GET', '../../js/articleslist.json');
+	query.open('GET', '../js/articleslist.json');
 	query.send();
 
 	function parse () {
@@ -48,7 +48,7 @@ function displayArticles(list, topic) {
 
 	for (i = 0; i < 5; i++) {
 		let li = document.createElement('li');
-		li.innerHTML = '<a href="../' + sortedList[i].url + '">' + sortedList[i].title + '</a>';
+		li.innerHTML = '<a href="' + sortedList[i].url + '">' + sortedList[i].title + '</a>';
 		displayArea.appendChild(li);
 	}
 }
