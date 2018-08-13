@@ -7,7 +7,7 @@ function init() {
 function loadArticles () {
 	var query = new XMLHttpRequest();
 	query.addEventListener('load', parse);
-	query.open('GET', '../js/articleslist.json');
+	query.open('GET', '../../js/articleslist.json');
 	query.send();
 
 	function parse () {
@@ -17,8 +17,8 @@ function loadArticles () {
 }
 
 function removeCurrentPage(articles) {
-	var url = document.location.pathname;
-	var currentPage = url.slice(url.lastIndexOf('/') + 1);
+	var urlArray = document.location.pathname.split('/');
+	var currentPage = urlArray[urlArray.length -2];
 	var currentTopic = 'unknown';
 
 	// Get page's topic and then remove current article from array
@@ -48,7 +48,7 @@ function displayArticles(list, topic) {
 
 	for (i = 0; i < 5; i++) {
 		let li = document.createElement('li');
-		li.innerHTML = '<a href="' + sortedList[i].url + '">' + sortedList[i].title + '</a>';
+		li.innerHTML = '<a href="../' + sortedList[i].url + '">' + sortedList[i].title + '</a>';
 		displayArea.appendChild(li);
 	}
 }
