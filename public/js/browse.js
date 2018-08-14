@@ -119,6 +119,12 @@ function displayArticles() {
 		articlesCount = articlesToDisplay;
 	}
 
+	// Add .html extension in testing environment
+	let extension;
+	if(document.domain.includes('localhost')) {
+		extension = '.html';
+	}
+
 	// Display results
 	articlesDisplayArea.innerHTML = "";
 
@@ -128,10 +134,10 @@ function displayArticles() {
 			break;
 		}
 
-		var li = document.createElement('li');
+		let li = document.createElement('li');
 
 		// Create list item with article link and title
-		li.innerHTML = '<a href="pages/' + filteredArticles[i + pageStart].url + '.html">' + filteredArticles[i + pageStart].title + '</a>';
+		li.innerHTML = '<a href="pages/' + filteredArticles[i + pageStart].url + extension + '">' + filteredArticles[i + pageStart].title + '</a>';
 
 		articlesDisplayArea.appendChild(li);
 	}
