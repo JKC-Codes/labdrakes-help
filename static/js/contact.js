@@ -258,9 +258,15 @@ function displayArticles() {
 	// Display articles
 	displayArea.innerHTML = '';
 
+	// Add .html extension in testing environment
+	let extension;
+	if(document.domain.includes('localhost')) {
+		extension = '.html';
+	}
+
 	for (i = 0; i < 5; i++) {
 		let li = document.createElement('li');
-		li.innerHTML = '<a href="' + filteredList[i].url + '.html">' + filteredList[i].title + '</a>';
+		li.innerHTML = '<a href="' + filteredList[i].url + extension + '">' + filteredList[i].title + '</a>';
 		displayArea.appendChild(li);
 	}
 }
