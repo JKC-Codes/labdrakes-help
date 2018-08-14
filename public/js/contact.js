@@ -259,7 +259,7 @@ function displayArticles() {
 	displayArea.innerHTML = '';
 
 	// Add .html extension in testing environment
-	let extension;
+	let extension = '';
 	if(document.domain.includes('localhost')) {
 		extension = '.html';
 	}
