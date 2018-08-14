@@ -260,7 +260,7 @@ function displayArticles() {
 
 	for (i = 0; i < 5; i++) {
 		let li = document.createElement('li');
-		li.innerHTML = '<a href="' + filteredList[i].url + '">' + filteredList[i].title + '</a>';
+		li.innerHTML = '<a href="' + filteredList[i].url + '.html">' + filteredList[i].title + '</a>';
 		displayArea.appendChild(li);
 	}
 }

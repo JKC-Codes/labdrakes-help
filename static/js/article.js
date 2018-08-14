@@ -17,15 +17,14 @@ function loadArticles () {
 }
 
 function removeCurrentPage(articles) {
-	var urlArray = document.location.pathname.split('/');
-	var currentPage;
-	var currentTopic = 'unknown';
-
-	var cleanArray = urlArray.filter(function(slug) {
+	let urlArray = document.location.pathname.split('/');
+	let currentTopic = 'unknown';
+	let cleanArray = urlArray.filter(function(slug) {
 		return slug;
 	});
-
-	currentPage = cleanArray[cleanArray.length -1];
+	let currentPageURL = cleanArray[cleanArray.length -1];
+	let htmlPosition = currentPageURL.lastIndexOf('.html');
+	let currentPage = currentPageURL.slice(0, htmlPosition);
 
 	// Get page's topic and then remove current article from array
 	for(i = 0; i < articles.length; i++) {
@@ -54,7 +53,7 @@ function displayArticles(list, topic) {
 
 	for (i = 0; i < 5; i++) {
 		let li = document.createElement('li');
-		li.innerHTML = '<a href="' + sortedList[i].url + '">' + sortedList[i].title + '</a>';
+		li.innerHTML = '<a href="' + sortedList[i].url + '.html">' + sortedList[i].title + '</a>';
 		displayArea.appendChild(li);
 	}
 }
