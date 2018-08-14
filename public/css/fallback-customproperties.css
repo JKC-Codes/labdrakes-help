@@ -1,0 +1,317 @@
+/*========================================
+	Site.css
+========================================*/
+
+/*========================================
+	Elements
+========================================*/
+
+a,
+a:link {
+	color: #cd2814;
+}
+
+a:visited {
+	color: #8c190f;
+}
+
+a:hover {
+	color: #767676;
+}
+
+ul,
+ol {
+	padding-left: 2.5rem;
+}
+
+ul.articles-list > li {
+	border-bottom: 0.0625rem solid #e6e6e6;
+}
+
+ul.articles-list > li > a {
+	color: #333;
+}
+
+dd {
+	margin-left: 2.5rem;
+}
+
+summary {
+	padding: 0.75rem calc(2.5rem - 2ch);
+	background-color: #e6e6e6;
+	border-radius: 0.25em;
+	box-shadow: 0.125rem 0.125rem 0.125rem rgba(0,0,0,0.25);
+}
+
+details[open] summary {
+	border-bottom: 0.0625rem solid #cd2814;
+	margin-left: -2.5rem;
+}
+
+details[open] {
+	padding-left: 2.5rem;
+	border-radius: 0.25em;
+	box-shadow: inset 0.0625rem -0.0625rem #e6e6e6, inset -0.0625rem 0 #e6e6e6;
+}
+
+th[scope=col] {
+	border-bottom: 0.0625rem solid #cd2814;
+}
+
+button,
+.button {
+	font: 100%/1.5 Arial, Helvetica, sans-serif;
+	padding: 0.75rem 2.5rem;
+	background-color: #282832;
+	border-radius: 0.25em;
+	box-shadow: 0.125rem 0.125rem 0.125rem rgba(0,0,0,0.25);
+}
+
+button:active,
+.button:active,
+summary:active {
+	box-shadow: -0.125rem -0.125rem 0.125rem rgba(0,0,0,0.25);
+}
+
+button[disabled] {
+	background-color: #e6e6e6;
+}
+
+button[disabled]:active {
+	box-shadow: 0.125rem 0.125rem 0.125rem rgba(0,0,0,0.25);
+}
+
+button.link {
+	color: #333;
+}
+
+button.link:hover {
+	color: #767676;
+}
+
+hr {
+	border-top: 0.0625rem solid #cd2814;
+}
+
+input,
+textarea,
+select {
+	font: 100%/1.5 Arial, Helvetica, sans-serif;
+	color: #333;
+	border-color: #333;
+	border-radius: 0.25em;
+}
+
+fieldset {
+	border: 0.0625rem solid #e6e6e6;
+}
+
+dialog {
+	border: 0.0625rem solid #e6e6e6;
+	border-radius: 0.25em;
+	box-shadow: 0.125rem 0.125rem 0.125rem rgba(0,0,0,0.25);
+}
+
+
+/*========================================
+Utility Classes
+========================================*/
+
+.dark {
+	background-color: #191919;
+	color: #ccc;
+}
+
+
+/*========================================
+Layout
+========================================*/
+
+html {
+	color: #333;
+	font: 100%/1.5 Arial, Helvetica, sans-serif;
+}
+
+main {
+	background-color: #e6e6e6;
+}
+
+
+/*========================================
+Header
+========================================*/
+
+header.site .main {
+	background-color: #cd2814;
+}
+
+header.site button {
+	border-left: 0.0625rem solid #e6e6e6;
+}
+
+header.site button .text {
+	color: #333;
+}
+
+header.site button:active {
+	box-shadow: -0.125rem -0.125rem 0.125rem rgba(0,0,0,0.25);
+}
+
+
+/*========================================
+Footer
+========================================*/
+
+.dark a,
+.dark a.button:hover {
+	color: #fff;
+}
+
+.dark a:visited,
+.dark a.button:visited {
+	color: #e6e6e6;
+}
+
+.dark a:hover {
+	color: #ccc;
+}
+
+.dark button,
+.dark .button {
+	background-color: #595959;
+}
+
+
+/*========================================
+	Browse.css
+========================================*/
+
+/*========================================
+	Topics
+========================================*/
+
+main.browse .topics summary {
+	background-color: #282832;
+}
+
+@media (min-width: 37.5rem) {
+	main.browse .topics details[open] summary {
+		color: #333;
+	}
+
+	main.browse .topics summary h2 {
+		border-bottom: 0.0625rem solid #cd2814;
+	}
+}
+
+
+/*========================================
+Results
+========================================*/
+
+main.browse .results h1 {
+	border-bottom: 0.0625rem solid #cd2814;
+}
+
+ul.articles-list > li > p {
+	color: #333;
+}
+
+
+/*========================================
+Contact
+========================================*/
+
+main.browse .contact h2 {
+	border-bottom: 0.0625rem solid #cd2814;
+}
+
+main.browse .contact dialog button {
+	color: #333;
+}
+
+main.browse .contact details[open] summary {
+	border-radius: 0.25em;
+}
+
+@media (min-width: 37.5rem) {
+	main.browse .contact details[open] .pop-out {
+		border: 0.0625rem solid #e6e6e6;
+		border-radius: 0.25em;
+		box-shadow: 0.125rem 0.125rem 0.125rem rgba(0,0,0,0.25);
+	}
+
+	main.browse .contact details[open] .pop-out::before {
+		top: calc(50% - 0.75rem);
+		left: calc(-0.8125rem);
+		border: 0.0625rem solid #e6e6e6;
+		width: 0.75rem;
+		height: 0.75rem;
+	}
+}
+
+
+/*========================================
+	Article.css
+========================================*/
+
+/*========================================
+	Article
+========================================*/
+
+main.article > article > header h1 {
+	border-bottom: 0.0625rem solid #cd2814;
+}
+
+
+/*========================================
+Related
+========================================*/
+
+main.article .related h2 {
+	border-bottom: 0.0625rem solid #cd2814;
+}
+
+
+/*========================================
+Contact
+========================================*/
+
+main.article .contact h2 {
+	border-bottom: 0.0625rem solid #cd2814;
+}
+
+main.article .contact dialog button {
+	color: #333;
+}
+
+
+/*========================================
+Contact.css
+========================================*/
+
+/*========================================
+	Layout
+========================================*/
+
+main.contact .container > section {
+	border: 0.0625rem solid #e6e6e6;
+}
+
+
+/*========================================
+Header
+========================================*/
+
+main.contact .container > header > h1 {
+	border-bottom: 0.0625rem solid #cd2814;
+}
+
+
+/*========================================
+Email
+========================================*/
+
+main.contact .email .previous {
+	color: #333;
+}

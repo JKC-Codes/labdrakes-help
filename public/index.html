@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+	<meta name="generator" content="Hugo 0.46" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home - Labdrakes Help - Labdrakes Help</title>
+	<link rel="icon" href="./img/favicon.png">
+	<link rel="stylesheet" href="./css/site.css">
+	<link rel="stylesheet" href="./css/browse.css">
+	<script src="./js/browse.js" defer></script>
+	<script src="./js/chatdialogue.js" defer></script>
+	<script>
+		
+		if (!('open' in document.createElement('details'))) {
+			document.write('<script src="./js/polyfill-details-summary.js"><\/script>');
+		}
+		
+		if (!('show' in document.createElement('dialog'))) {
+			document.write('<script src="./js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="./css/polyfill-dialog.css">');
+		}
+		
+		if (!this.CSS||!CSS.supports('--custom','properties')) {
+			document.write('<link rel="stylesheet" href="./css/fallback-customproperties.css">');
+		}
+		
+		if (!this.CSS||!CSS.supports('grid-area','auto')) {
+			document.write('<link rel="stylesheet" href="./css/fallback-grid.css">');
+		}
+	</script>
+</head>
+
+<body>
+
+	<header class="site">
+	<div class="return dark row">
+		<a href="https://jkc.codes" rel="noopener">Return to labdrakes.com</a>
+	</div>
+
+	<div class="main row">
+		<a href="./">
+			<picture>
+				<source media="(min-width: 37.5rem)" srcset="./img/logo-wide.png">
+				<img class="logo" src="./img/logo-narrow.png" alt="Labdrakes' logo">
+			</picture>
+		</a>
+		<form action="https://jkc.codes/projects/labdrakes-help" method="get" id="site-search">
+			<label for="site-search-bar" class="a11y">Search the site:</label>
+			<input type="search" id="site-search-bar" name="search" placeholder="How can we help?" required>
+			<button type="submit" form="site-search"><span class="text">Search</span></button>
+		</form>
+	</div>
+</header>
+
+	
+
+<main class="browse">
+	<nav class="topics">
+		<details id="topicsWidget">
+			<summary><h2 class="h4">Select A Topic</h2></summary>
+			<ul class="no-bullets">
+				<li><button value="account">Account</button></li>
+				<li><button value="sports">Sports</button></li>
+				<li><button value="casino">Casino</button></li>
+				<li><button value="games">Games</button></li>
+				<li><button value="exchange">Exchange</button></li>
+				<li><button value="poker">Poker</button></li>
+				<li><button value="bingo">Bingo</button></li>
+				<li><button value="lotto">Lotto</button></li>
+			</ul>
+		</details>
+		<script>
+			if (window.matchMedia("(min-width: 37.5rem)").matches) {
+				document.querySelector('#topicsWidget').open = true;
+			}
+		</script>
+	</nav>
+
+	<section class="column results">
+		<h1 id="articlesHeading">Popular Articles</h1>
+		<ul class="articles-list" id="articlesList">
+			<li><div class="loading">
+				<svg
+					viewBox="0 0 42.333332 42.333332"
+					height="80"
+					width="80">
+					<defs>
+						<linearGradient
+								id="linearGradient2293">
+							<stop
+								id="stop2289"
+								offset="0"
+								style="stop-color:#cd2814;stop-opacity:1;">
+							</stop>
+							<stop
+								id="stop2291"
+								offset="1"
+								style="stop-color:#fff;stop-opacity:0;">
+							</stop>
+						></linearGradient>
+						<linearGradient
+							gradientTransform="matrix(2.0232456,0,0,2.7328914,-16.705402,-459.72942)"
+							gradientUnits="userSpaceOnUse"
+							y2="269.15182"
+							x2="29.008533"
+							y1="269.15182"
+							x1="8.4284135"
+							id="linearGradient2295"
+							xlink:href="#linearGradient2293"
+						></linearGradient>
+					</defs>
+					<g
+						transform="translate(0,-254.66668)"
+						id="layer1">
+						<circle
+							r="18.678049"
+							cy="275.83337"
+							cx="21.166666"
+							id="path819"
+							style="opacity:1;fill:none;fill-opacity:1;stroke:url(#linearGradient2295);stroke-width:4.97723246;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+						></circle>
+					</g>
+				</svg>
+				<p>Loading&hellip;</p>
+				</div><a href="javascript:void(0)"></a>
+			</li>
+			<li><a href="javascript:void(0)"></a></li>
+			<li><a href="javascript:void(0)"></a></li>
+			<li><a href="javascript:void(0)"></a></li>
+			<li><a href="javascript:void(0)"></a></li>
+			<li><a href="javascript:void(0)"></a></li>
+			<li><a href="javascript:void(0)"></a></li>
+			<li><a href="javascript:void(0)"></a></li>
+		</ul>
+		<nav class="row" id="pagination">
+			<h3 class="a11y">Pagination</h3>
+			<div class="page-count">
+				<span class="page-text">Page</span>
+				<span id="pageLow">1</span> of <span id="pageHigh">1</span>
+			</div>
+			<div class="backward">
+				<button title="First" class="first" id="firstPage"><span class="a11y">First page</span></button><button title="Previous" class="previous" id="previousPage"><span class="a11y">Previous page</span></button>
+			</div>
+			<div class="forward">
+				<button title="Next" class="next" id="nextPage"><span class="a11y">Next page</span></button><button title="Last" class="last" id="lastPage"><span class="a11y">Last page</span></button>
+			</div>
+		</nav>
+	</section>
+
+	<aside class="contact">
+		<h2 class="h4">Contact Us</h2>
+		<ul class="no-bullets">
+			<li><button id="chatButton">Chat</button>
+				<dialog id="chatDialogue">
+					<p>You must be logged in to chat</p>
+					<a class="button" href="javascript:void(0)">Log In</a>
+					<button id="chatClose">Cancel</button>
+				</dialog>
+				<script>
+					
+					if (!('show' in document.createElement('dialog'))) {
+						
+						dialogPolyfill.registerDialog(chatDialogue);
+					}
+				</script>
+			</li>
+			<li><details>
+					<summary class="button">Call</summary>
+					<ul class="no-bullets pop-out">
+						<li>UK: <a class="no-wrap" href="tel:08081571234">0808 157 1234</a></li>
+						<li>Outside the UK: <a class="no-wrap" href="tel:+441632961234">+44 1632 961 234</a></li>
+					</ul>
+				</details>
+			</li>
+			<li><a href="./pages/contact.html" class="button">Email</a></li>
+		</ul>
+	</aside>
+</main>
+
+
+
+	<footer class="site dark">
+	<section class="page-links">
+		<h2 class="a11y">Important Articles</h2>
+		<ul class="no-bullets column">
+			<li><a href="./pages/terms-and-conditions.html" class="button">Terms and Conditions</a></li>
+			<li><a href="./pages/responsible-gambling.html" class="button">Responsible Gambling</a></li>
+			<li><a href="./pages/privacy-policy.html#cookies" class="button">Cookie Policy</a></li>
+		</ul>
+	</section>
+
+	<section class="icons">
+		<h2 class="a11y">Gambling Information</h2>
+		<ul class="no-bullets">
+			<li class="over-18">
+				<a href="./pages/18-plus-policy.html" class="icon over-18">
+					<span class="a11y">18 and over Policy</span>
+				</a>
+			</li>
+			<li class="essa">
+				<a href="javascript:void(0)" rel="noopener" class="icon essa">
+					<span class="a11y">ESSA Sports Betting Integrity</span>
+				</a>
+			</li>
+			<li class="therapy">
+				<a href="javascript:void(0)" rel="noopener" class="icon therapy">
+					<span class="a11y">Gambling Therapy</span>
+				</a>
+			</li>
+			<li class="gamcare">
+				<a href="javascript:void(0)" rel="noopener" class="icon gamcare">
+					<span class="a11y">Gamcare</span>
+				</a>
+			</li>
+			<li class="gib">
+				<a href="javascript:void(0)" rel="noopener" class="icon gib">
+					<span class="a11y">Government of Gibraltar</span>
+				</a>
+			</li>
+			<li class="commission">
+				<a href="javascript:void(0)" rel="noopener" class="icon commission">
+					<span class="a11y">Gambling Commission</span>
+				</a>
+			</li>
+			<li class="trust">
+				<a href="javascript:void(0)" rel="noopener" class="icon trust">
+					<span class="a11y">Responsible Gambling Trust</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+
+	<section class="about">
+		<h2 class="h4">About Labdrakes</h2>
+		<ul class="no-bullets">
+			<li><a href="javascript:void(0)" rel="noopener">About Us</a></li>
+			<li><a href="javascript:void(0)" rel="noopener">Affiliates</a></li>
+			<li><a href="javascript:void(0)" rel="noopener">Investor Centre</a></li>
+			<li><a href="./pages/restricted-territories.html">Restricted Territories</a></li>
+		</ul>
+	</section>
+
+	<section class="quick-links">
+		<h2 class="h4">Quick Links</h2>
+		<ul class="no-bullets">
+			<li><a href="javascript:void(0)" rel="noopener">Labdrakes.com</a></li>
+			<li><a href="javascript:void(0)" rel="noopener">Shop Locator</a></li>
+			<li><a href="./pages/other-ways-to-bet.html">Other Ways To Bet</a></li>
+			<li><a href="javascript:void(0)" rel="noopener">The Grid</a></li>
+		</ul>
+	</section>
+
+	<section class="social">
+		<h2 class="a11y">Social Media</h2>
+		<ul class="no-bullets row">
+			<li>
+				<a href="javascript:void(0)" rel="noopener" class="icon facebook">
+					<span class="a11y">Facebook</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" rel="noopener" class="icon twitter">
+					<span class="a11y">Twitter</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" rel="noopener" class="icon youtube">
+					<span class="a11y">YouTube</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+
+	<section class="legal">
+		<h2 class="a11y">Legal</h2>
+		<p><small>Labdrakes Betting &amp; Gaming Ltd. is licensed (<a href="javascript:void(0)" rel="noopener">licence no. 0000</a>) and regulated by the British Gambling Commission for persons gambling in Great Britain and LM International Limited, Suites 0-0, 0th Floor, Europort, Gibraltar are licensed (RGL Nos. 000, 000) by the Government of Gibraltar and regulated by the Gibraltar Gambling Commissioner.</small></p>
+		<p class="copyright"><small>Copyright &copy; 2018 Labdrakes</small></p>
+	</section>
+</footer>
+
+</body>
+</html>
