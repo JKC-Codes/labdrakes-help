@@ -2,27 +2,27 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{ title }} - Labdrakes Help</title>
-	<link rel="icon" href="{{ baseURL }}/img/favicon.png">
-	<link rel="stylesheet" href="{{ baseURL }}/css/site.css">
-	<link rel="stylesheet" href="{{ baseURL }}/css/{{ css }}.css">
-	<script src="{{ baseURL }}/js/{{ js }}.js" defer></script>
-	<script src="{{ baseURL }}/js/chatdialogue.js" defer></script>
+	<link rel="icon" href="{{ '/' | url }}img/favicon.png">
+	<link rel="stylesheet" href="{{ '/' | url }}css/site.css">
+	<link rel="stylesheet" href="{{ '/' | url }}css/{{ css }}.css">
+	<script src="{{ '/' | url }}js/{{ js }}.js" defer></script>
+	<script src="{{ '/' | url }}js/chatdialogue.js" defer></script>
 	<script>
 		// Check for Details element support
 		if (!('open' in document.createElement('details'))) {
-			document.write('<script src="{{ baseURL }}/js/polyfill-details-summary.js"><\/script>');
+			document.write('<script src="{{ '/' | url }}js/polyfill-details-summary.js"><\/script>');
 		}
 		// Check for Dialog element support
 		if (!('show' in document.createElement('dialog'))) {
-			document.write('<script src="{{ baseURL }}/js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="{{ baseURL }}/css/polyfill-dialog.css">');
+			document.write('<script src="{{ '/' | url }}js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="{{ '/' | url }}css/polyfill-dialog.css">');
 		}
 		// Check for Custom Properties support
 		if (!this.CSS||!CSS.supports('--custom','properties')) {
-			document.write('<link rel="stylesheet" href="{{ baseURL }}/css/fallback-customproperties.css">');
+			document.write('<link rel="stylesheet" href="{{ '/' | url }}css/fallback-customproperties.css">');
 		}
 		// Check for Grid support
 		if (!this.CSS||!CSS.supports('grid-area','auto')) {
-			document.write('<link rel="stylesheet" href="{{ baseURL }}/css/fallback-grid.css">');
+			document.write('<link rel="stylesheet" href="{{ '/' | url }}css/fallback-grid.css">');
 		}
 	</script>
 </head>

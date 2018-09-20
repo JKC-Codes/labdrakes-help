@@ -4,9 +4,10 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("js/");
   return {
     dir: {
-			output: "docs/staging/",
+			output: "docs/",
 			includes: "layout"
 		},
-		passthroughFileCopy: true
+		passthroughFileCopy: true,
+		pathPrefix: "/labdrakes-help"
   };
 };

@@ -4,27 +4,27 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Contact Us - Labdrakes Help</title>
-	<link rel="icon" href="/labdrakes-help/staging/img/favicon.png">
-	<link rel="stylesheet" href="/labdrakes-help/staging/css/site.css">
-	<link rel="stylesheet" href="/labdrakes-help/staging/css/contact.css">
-	<script src="/labdrakes-help/staging/js/contact.js" defer></script>
-	<script src="/labdrakes-help/staging/js/chatdialogue.js" defer></script>
+	<link rel="icon" href="/labdrakes-help/img/favicon.png">
+	<link rel="stylesheet" href="/labdrakes-help/css/site.css">
+	<link rel="stylesheet" href="/labdrakes-help/css/contact.css">
+	<script src="/labdrakes-help/js/contact.js" defer></script>
+	<script src="/labdrakes-help/js/chatdialogue.js" defer></script>
 	<script>
 		// Check for Details element support
 		if (!('open' in document.createElement('details'))) {
-			document.write('<script src="/labdrakes-help/staging/js/polyfill-details-summary.js"><\/script>');
+			document.write('<script src="/labdrakes-help/js/polyfill-details-summary.js"><\/script>');
 		}
 		// Check for Dialog element support
 		if (!('show' in document.createElement('dialog'))) {
-			document.write('<script src="/labdrakes-help/staging/js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="/labdrakes-help/staging/css/polyfill-dialog.css">');
+			document.write('<script src="/labdrakes-help/js/polyfill-dialog.js"><\/script><link rel="stylesheet" href="/labdrakes-help/css/polyfill-dialog.css">');
 		}
 		// Check for Custom Properties support
 		if (!this.CSS||!CSS.supports('--custom','properties')) {
-			document.write('<link rel="stylesheet" href="/labdrakes-help/staging/css/fallback-customproperties.css">');
+			document.write('<link rel="stylesheet" href="/labdrakes-help/css/fallback-customproperties.css">');
 		}
 		// Check for Grid support
 		if (!this.CSS||!CSS.supports('grid-area','auto')) {
-			document.write('<link rel="stylesheet" href="/labdrakes-help/staging/css/fallback-grid.css">');
+			document.write('<link rel="stylesheet" href="/labdrakes-help/css/fallback-grid.css">');
 		}
 	</script>
 </head>
@@ -35,13 +35,13 @@
 	</div>
 
 	<div class="main row">
-		<a href="/labdrakes-help/staging/">
+		<a href="/labdrakes-help/">
 			<picture>
-				<source media="(min-width: 37.5rem)" srcset="/labdrakes-help/staging/img/logo-wide.png">
-				<img class="logo" src="/labdrakes-help/staging/img/logo-narrow.png" alt="Labdrakes' logo">
+				<source media="(min-width: 37.5rem)" srcset="/labdrakes-help/img/logo-wide.png">
+				<img class="logo" src="/labdrakes-help/img/logo-narrow.png" alt="Labdrakes' logo">
 			</picture>
 		</a>
-		<form action="/labdrakes-help/staging/" method="get" id="site-search">
+		<form action="/labdrakes-help/" method="get" id="site-search">
 			<label for="site-search-bar" class="a11y">Search the site:</label>
 			<input type="search" id="site-search-bar" name="search" placeholder="How can we help?" required>
 			<button type="submit" form="site-search"><span class="text">Search</span></button>
@@ -187,9 +187,9 @@
 	<section class="page-links">
 		<h2 class="a11y">Important Articles</h2>
 		<ul class="no-bullets column">
-			<li><a href="/labdrakes-help/staging/articles/terms-and-conditions/" class="button">Terms and Conditions</a></li>
-			<li><a href="/labdrakes-help/staging/articles/responsible-gambling/" class="button">Responsible Gambling</a></li>
-			<li><a href="/labdrakes-help/staging/articles/privacy-policy/#cookies" class="button">Cookie Policy</a></li>
+			<li><a href="/labdrakes-help/articles/terms-and-conditions/" class="button">Terms and Conditions</a></li>
+			<li><a href="/labdrakes-help/articles/responsible-gambling/" class="button">Responsible Gambling</a></li>
+			<li><a href="/labdrakes-help/articles/privacy-policy/#cookies" class="button">Cookie Policy</a></li>
 		</ul>
 	</section>
 
@@ -197,7 +197,7 @@
 		<h2 class="a11y">Gambling Information</h2>
 		<ul class="no-bullets">
 			<li class="over-18">
-				<a href="/labdrakes-help/staging/articles/18-plus-policy/" class="icon over-18">
+				<a href="/labdrakes-help/articles/18-plus-policy/" class="icon over-18">
 					<span class="a11y">18 and over Policy</span>
 				</a>
 			</li>
@@ -240,7 +240,7 @@
 			<li><a href="javascript:void(0)" rel="noopener">About Us</a></li>
 			<li><a href="javascript:void(0)" rel="noopener">Affiliates</a></li>
 			<li><a href="javascript:void(0)" rel="noopener">Investor Centre</a></li>
-			<li><a href="/labdrakes-help/staging/articles/restricted-territories/">Restricted Territories</a></li>
+			<li><a href="/labdrakes-help/articles/restricted-territories/">Restricted Territories</a></li>
 		</ul>
 	</section>
 
@@ -249,7 +249,7 @@
 		<ul class="no-bullets">
 			<li><a href="javascript:void(0)" rel="noopener">Labdrakes.com</a></li>
 			<li><a href="javascript:void(0)" rel="noopener">Shop Locator</a></li>
-			<li><a href="/labdrakes-help/staging/articles/other-ways-to-bet/">Other Ways To Bet</a></li>
+			<li><a href="/labdrakes-help/articles/other-ways-to-bet/">Other Ways To Bet</a></li>
 			<li><a href="javascript:void(0)" rel="noopener">The Grid</a></li>
 		</ul>
 	</section>

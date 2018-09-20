@@ -4,13 +4,13 @@
 	</div>
 
 	<div class="main row">
-		<a href="{{ baseURL }}/">
+		<a href="{{ '/' | url }}">
 			<picture>
-				<source media="(min-width: 37.5rem)" srcset="{{ baseURL }}/img/logo-wide.png">
-				<img class="logo" src="{{ baseURL }}/img/logo-narrow.png" alt="Labdrakes' logo">
+				<source media="(min-width: 37.5rem)" srcset="{{ '/' | url }}img/logo-wide.png">
+				<img class="logo" src="{{ '/' | url }}img/logo-narrow.png" alt="Labdrakes' logo">
 			</picture>
 		</a>
-		<form action="{{ baseURL }}/" method="get" id="site-search">
+		<form action="{{ '/' | url }}" method="get" id="site-search">
 			<label for="site-search-bar" class="a11y">Search the site:</label>
 			<input type="search" id="site-search-bar" name="search" placeholder="How can we help?" required>
 			<button type="submit" form="site-search"><span class="text">Search</span></button>
