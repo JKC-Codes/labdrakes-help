@@ -5,7 +5,7 @@ module.exports = function(eleventyConfig) {
   return {
     dir: {
 			output: "docs/",
-			includes: "layout"
+			includes: "templates"
 		},
 		passthroughFileCopy: true,
 		pathPrefix: "/labdrakes-help"
