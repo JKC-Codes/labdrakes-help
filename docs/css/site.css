@@ -692,6 +692,7 @@
 		border-left: 0.0625rem solid var(--colour-light);
 		background: url('../img/search.svg') 50% 25%/1.5rem no-repeat content-box transparent;
 		position: absolute;
+		top: 0;
 		right: 0;
 	}
 
