@@ -326,13 +326,13 @@
 	ol.cascade,
 	ol.cascade ol,
 	ol.cascade ol ol {
-		counter-reset: section;
+		counter-reset: list-item cascade;
 		position: relative;
 	}
 
 	ol.cascade li::before {
-		counter-increment: section;
-		content: counters(section, ".") ".\00a0";
+		counter-increment: cascade;
+		content: counters(cascade, ".") ".\00a0";
 	}
 
 	ol.cascade li.heading::before {
@@ -346,7 +346,7 @@
 	ol.cascade li.heading > :first-child::before {
 		position: absolute;
 		right: 100%;
-		content: counters(section, ".") ".\00a0";
+		content: counters(cascade, ".") ".\00a0";
 	}
 
 	ol.cascade ul li::before {
