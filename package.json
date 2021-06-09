@@ -1,0 +1,19 @@
+{
+  "name": "labdrakes-help",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A help site for fictional bookmaker labdrakes",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JKC-Codes/labdrakes-help.git"
+  },
+  "author": "John Kemp-Cruz (https://jkc.codes/)",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}
